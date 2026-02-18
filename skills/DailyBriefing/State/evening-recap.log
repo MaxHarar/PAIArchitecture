@@ -1,0 +1,928 @@
+[2026-01-29T03:15:00.238Z] [evening-recap] Starting poll at 2026-01-29T03:15:00.237Z
+[2026-01-29T03:15:00.238Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T03:15:08.623Z] [evening-recap] Starting poll at 2026-01-29T03:15:08.622Z
+[2026-01-29T03:15:08.623Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T03:15:37.135Z] [evening-recap] Starting poll at 2026-01-29T03:15:37.134Z
+[2026-01-29T03:15:37.135Z] [evening-recap] Collecting data...
+[2026-01-29T03:17:52.569Z] [evening-recap] Starting poll at 2026-01-29T03:17:52.568Z
+[2026-01-29T03:17:52.569Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T03:22:52.644Z] [evening-recap] Starting poll at 2026-01-29T03:22:52.643Z
+[2026-01-29T03:22:52.644Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T05:22:35.842Z] [evening-recap] Starting poll at 2026-01-29T05:22:35.841Z
+[2026-01-29T05:22:35.842Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T08:57:28.310Z] [evening-recap] Starting poll at 2026-01-29T08:57:28.309Z
+[2026-01-29T08:57:28.310Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T10:53:39.363Z] [evening-recap] Starting poll at 2026-01-29T10:53:39.362Z
+[2026-01-29T10:53:39.363Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T10:58:39.426Z] [evening-recap] Starting poll at 2026-01-29T10:58:39.425Z
+[2026-01-29T10:58:39.426Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:03:39.492Z] [evening-recap] Starting poll at 2026-01-29T11:03:39.491Z
+[2026-01-29T11:03:39.492Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:08:39.577Z] [evening-recap] Starting poll at 2026-01-29T11:08:39.576Z
+[2026-01-29T11:08:39.578Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:13:39.660Z] [evening-recap] Starting poll at 2026-01-29T11:13:39.659Z
+[2026-01-29T11:13:39.661Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:18:39.735Z] [evening-recap] Starting poll at 2026-01-29T11:18:39.734Z
+[2026-01-29T11:18:39.735Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:23:39.816Z] [evening-recap] Starting poll at 2026-01-29T11:23:39.815Z
+[2026-01-29T11:23:39.817Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:28:39.905Z] [evening-recap] Starting poll at 2026-01-29T11:28:39.904Z
+[2026-01-29T11:28:39.906Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:33:39.982Z] [evening-recap] Starting poll at 2026-01-29T11:33:39.981Z
+[2026-01-29T11:33:39.983Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:38:40.056Z] [evening-recap] Starting poll at 2026-01-29T11:38:40.055Z
+[2026-01-29T11:38:40.057Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:43:40.136Z] [evening-recap] Starting poll at 2026-01-29T11:43:40.135Z
+[2026-01-29T11:43:40.136Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:48:40.220Z] [evening-recap] Starting poll at 2026-01-29T11:48:40.219Z
+[2026-01-29T11:48:40.221Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:53:40.307Z] [evening-recap] Starting poll at 2026-01-29T11:53:40.306Z
+[2026-01-29T11:53:40.307Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T11:58:40.374Z] [evening-recap] Starting poll at 2026-01-29T11:58:40.373Z
+[2026-01-29T11:58:40.374Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:03:40.450Z] [evening-recap] Starting poll at 2026-01-29T12:03:40.449Z
+[2026-01-29T12:03:40.450Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:08:40.530Z] [evening-recap] Starting poll at 2026-01-29T12:08:40.529Z
+[2026-01-29T12:08:40.530Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:13:40.611Z] [evening-recap] Starting poll at 2026-01-29T12:13:40.610Z
+[2026-01-29T12:13:40.612Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:18:40.688Z] [evening-recap] Starting poll at 2026-01-29T12:18:40.687Z
+[2026-01-29T12:18:40.689Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:23:40.783Z] [evening-recap] Starting poll at 2026-01-29T12:23:40.782Z
+[2026-01-29T12:23:40.783Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:28:40.862Z] [evening-recap] Starting poll at 2026-01-29T12:28:40.861Z
+[2026-01-29T12:28:40.863Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:33:40.935Z] [evening-recap] Starting poll at 2026-01-29T12:33:40.934Z
+[2026-01-29T12:33:40.935Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:38:41.017Z] [evening-recap] Starting poll at 2026-01-29T12:38:41.016Z
+[2026-01-29T12:38:41.017Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:43:41.095Z] [evening-recap] Starting poll at 2026-01-29T12:43:41.094Z
+[2026-01-29T12:43:41.095Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:48:41.161Z] [evening-recap] Starting poll at 2026-01-29T12:48:41.161Z
+[2026-01-29T12:48:41.162Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:53:41.238Z] [evening-recap] Starting poll at 2026-01-29T12:53:41.238Z
+[2026-01-29T12:53:41.239Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T12:58:41.312Z] [evening-recap] Starting poll at 2026-01-29T12:58:41.311Z
+[2026-01-29T12:58:41.313Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T13:03:41.396Z] [evening-recap] Starting poll at 2026-01-29T13:03:41.396Z
+[2026-01-29T13:03:41.397Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T13:08:41.485Z] [evening-recap] Starting poll at 2026-01-29T13:08:41.485Z
+[2026-01-29T13:08:41.486Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T13:13:41.537Z] [evening-recap] Starting poll at 2026-01-29T13:13:41.536Z
+[2026-01-29T13:13:41.538Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T13:18:41.614Z] [evening-recap] Starting poll at 2026-01-29T13:18:41.613Z
+[2026-01-29T13:18:41.614Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T13:56:39.304Z] [evening-recap] Starting poll at 2026-01-29T13:56:39.303Z
+[2026-01-29T13:56:39.304Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T14:31:30.350Z] [evening-recap] Starting poll at 2026-01-29T14:31:30.349Z
+[2026-01-29T14:31:30.350Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T14:52:42.386Z] [evening-recap] Starting poll at 2026-01-29T14:52:42.385Z
+[2026-01-29T14:52:42.386Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T15:16:23.887Z] [evening-recap] Starting poll at 2026-01-29T15:16:23.887Z
+[2026-01-29T15:16:23.888Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T15:50:56.536Z] [evening-recap] Starting poll at 2026-01-29T15:50:56.535Z
+[2026-01-29T15:50:56.536Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T16:41:17.632Z] [evening-recap] Starting poll at 2026-01-29T16:41:17.630Z
+[2026-01-29T16:41:17.633Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T17:10:52.303Z] [evening-recap] Starting poll at 2026-01-29T17:10:52.302Z
+[2026-01-29T17:10:52.303Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T17:51:20.050Z] [evening-recap] Starting poll at 2026-01-29T17:51:20.049Z
+[2026-01-29T17:51:20.051Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T18:24:29.705Z] [evening-recap] Starting poll at 2026-01-29T18:24:29.705Z
+[2026-01-29T18:24:29.706Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:24:22.540Z] [evening-recap] Starting poll at 2026-01-29T19:24:22.539Z
+[2026-01-29T19:24:22.540Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:33:56.312Z] [evening-recap] Starting poll at 2026-01-29T19:33:56.311Z
+[2026-01-29T19:33:56.314Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:38:56.389Z] [evening-recap] Starting poll at 2026-01-29T19:38:56.387Z
+[2026-01-29T19:38:56.389Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:43:56.471Z] [evening-recap] Starting poll at 2026-01-29T19:43:56.470Z
+[2026-01-29T19:43:56.472Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:48:56.556Z] [evening-recap] Starting poll at 2026-01-29T19:48:56.555Z
+[2026-01-29T19:48:56.557Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:53:56.642Z] [evening-recap] Starting poll at 2026-01-29T19:53:56.641Z
+[2026-01-29T19:53:56.643Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T19:58:56.716Z] [evening-recap] Starting poll at 2026-01-29T19:58:56.715Z
+[2026-01-29T19:58:56.717Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:03:56.794Z] [evening-recap] Starting poll at 2026-01-29T20:03:56.793Z
+[2026-01-29T20:03:56.795Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:08:56.878Z] [evening-recap] Starting poll at 2026-01-29T20:08:56.877Z
+[2026-01-29T20:08:56.879Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:13:56.952Z] [evening-recap] Starting poll at 2026-01-29T20:13:56.951Z
+[2026-01-29T20:13:56.953Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:18:57.027Z] [evening-recap] Starting poll at 2026-01-29T20:18:57.025Z
+[2026-01-29T20:18:57.027Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:23:57.460Z] [evening-recap] Starting poll at 2026-01-29T20:23:57.459Z
+[2026-01-29T20:23:57.461Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:28:57.548Z] [evening-recap] Starting poll at 2026-01-29T20:28:57.546Z
+[2026-01-29T20:28:57.548Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:33:57.633Z] [evening-recap] Starting poll at 2026-01-29T20:33:57.632Z
+[2026-01-29T20:33:57.634Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T20:38:57.715Z] [evening-recap] Starting poll at 2026-01-29T20:38:57.714Z
+[2026-01-29T20:38:57.715Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T21:04:23.261Z] [evening-recap] Starting poll at 2026-01-29T21:04:23.260Z
+[2026-01-29T21:04:23.261Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T21:25:55.619Z] [evening-recap] Starting poll at 2026-01-29T21:25:55.618Z
+[2026-01-29T21:25:55.619Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T21:36:20.508Z] [evening-recap] Starting poll at 2026-01-29T21:36:20.507Z
+[2026-01-29T21:36:20.509Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T21:59:30.957Z] [evening-recap] Starting poll at 2026-01-29T21:59:30.956Z
+[2026-01-29T21:59:30.957Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T22:21:59.978Z] [evening-recap] Starting poll at 2026-01-29T22:21:59.977Z
+[2026-01-29T22:21:59.979Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:09:55.748Z] [evening-recap] Starting poll at 2026-01-29T23:09:55.747Z
+[2026-01-29T23:09:55.750Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:19:48.591Z] [evening-recap] Starting poll at 2026-01-29T23:19:48.589Z
+[2026-01-29T23:19:48.591Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:24:48.675Z] [evening-recap] Starting poll at 2026-01-29T23:24:48.674Z
+[2026-01-29T23:24:48.676Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:29:48.751Z] [evening-recap] Starting poll at 2026-01-29T23:29:48.750Z
+[2026-01-29T23:29:48.751Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:34:48.832Z] [evening-recap] Starting poll at 2026-01-29T23:34:48.831Z
+[2026-01-29T23:34:48.833Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:39:48.909Z] [evening-recap] Starting poll at 2026-01-29T23:39:48.908Z
+[2026-01-29T23:39:48.910Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-29T23:44:48.991Z] [evening-recap] Starting poll at 2026-01-29T23:44:48.990Z
+[2026-01-29T23:44:48.992Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T00:25:22.196Z] [evening-recap] Starting poll at 2026-01-30T00:25:22.195Z
+[2026-01-30T00:25:22.197Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T01:23:19.928Z] [evening-recap] Starting poll at 2026-01-30T01:23:19.927Z
+[2026-01-30T01:23:19.929Z] [evening-recap] Collecting data...
+[2026-01-30T01:23:22.188Z] [evening-recap] Sending evening recap...
+[2026-01-30T01:23:22.631Z] [evening-recap] Evening recap sent successfully.
+[2026-01-30T01:37:16.844Z] [evening-recap] Starting poll at 2026-01-30T01:37:16.843Z
+[2026-01-30T01:37:16.845Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-30T01:51:36.784Z] [evening-recap] Starting poll at 2026-01-30T01:51:36.782Z
+[2026-01-30T01:51:36.784Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-30T02:18:55.302Z] [evening-recap] Starting poll at 2026-01-30T02:18:55.301Z
+[2026-01-30T02:18:55.303Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-30T03:00:20.358Z] [evening-recap] Starting poll at 2026-01-30T03:00:20.357Z
+[2026-01-30T03:00:20.358Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T03:47:36.906Z] [evening-recap] Starting poll at 2026-01-30T03:47:36.905Z
+[2026-01-30T03:47:36.908Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T04:09:19.713Z] [evening-recap] Starting poll at 2026-01-30T04:09:19.712Z
+[2026-01-30T04:09:19.714Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T04:47:24.468Z] [evening-recap] Starting poll at 2026-01-30T04:47:24.467Z
+[2026-01-30T04:47:24.469Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T05:11:26.914Z] [evening-recap] Starting poll at 2026-01-30T05:11:26.913Z
+[2026-01-30T05:11:26.915Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T05:51:12.768Z] [evening-recap] Starting poll at 2026-01-30T05:51:12.767Z
+[2026-01-30T05:51:12.769Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:12:29.609Z] [evening-recap] Starting poll at 2026-01-30T06:12:29.608Z
+[2026-01-30T06:12:29.610Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:33:51.698Z] [evening-recap] Starting poll at 2026-01-30T06:33:51.697Z
+[2026-01-30T06:33:51.699Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:38:51.782Z] [evening-recap] Starting poll at 2026-01-30T06:38:51.781Z
+[2026-01-30T06:38:51.783Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:43:51.867Z] [evening-recap] Starting poll at 2026-01-30T06:43:51.866Z
+[2026-01-30T06:43:51.868Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:48:51.947Z] [evening-recap] Starting poll at 2026-01-30T06:48:51.946Z
+[2026-01-30T06:48:51.949Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:53:52.024Z] [evening-recap] Starting poll at 2026-01-30T06:53:52.023Z
+[2026-01-30T06:53:52.024Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T06:58:52.105Z] [evening-recap] Starting poll at 2026-01-30T06:58:52.103Z
+[2026-01-30T06:58:52.105Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T07:03:52.188Z] [evening-recap] Starting poll at 2026-01-30T07:03:52.186Z
+[2026-01-30T07:03:52.189Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T07:08:52.271Z] [evening-recap] Starting poll at 2026-01-30T07:08:52.271Z
+[2026-01-30T07:08:52.272Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T12:56:16.489Z] [evening-recap] Starting poll at 2026-01-30T12:56:16.488Z
+[2026-01-30T12:56:16.490Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T12:59:10.972Z] [evening-recap] Starting poll at 2026-01-30T12:59:10.971Z
+[2026-01-30T12:59:10.972Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:04:11.066Z] [evening-recap] Starting poll at 2026-01-30T13:04:11.063Z
+[2026-01-30T13:04:11.066Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:09:11.159Z] [evening-recap] Starting poll at 2026-01-30T13:09:11.158Z
+[2026-01-30T13:09:11.160Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:14:11.271Z] [evening-recap] Starting poll at 2026-01-30T13:14:11.269Z
+[2026-01-30T13:14:11.271Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:19:11.376Z] [evening-recap] Starting poll at 2026-01-30T13:19:11.375Z
+[2026-01-30T13:19:11.377Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:24:11.496Z] [evening-recap] Starting poll at 2026-01-30T13:24:11.495Z
+[2026-01-30T13:24:11.497Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:29:11.607Z] [evening-recap] Starting poll at 2026-01-30T13:29:11.605Z
+[2026-01-30T13:29:11.607Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:34:11.709Z] [evening-recap] Starting poll at 2026-01-30T13:34:11.707Z
+[2026-01-30T13:34:11.709Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:39:11.784Z] [evening-recap] Starting poll at 2026-01-30T13:39:11.784Z
+[2026-01-30T13:39:11.785Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:44:11.879Z] [evening-recap] Starting poll at 2026-01-30T13:44:11.877Z
+[2026-01-30T13:44:11.879Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:49:11.977Z] [evening-recap] Starting poll at 2026-01-30T13:49:11.976Z
+[2026-01-30T13:49:11.977Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:54:12.068Z] [evening-recap] Starting poll at 2026-01-30T13:54:12.065Z
+[2026-01-30T13:54:12.068Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T13:59:12.168Z] [evening-recap] Starting poll at 2026-01-30T13:59:12.167Z
+[2026-01-30T13:59:12.168Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:04:12.258Z] [evening-recap] Starting poll at 2026-01-30T14:04:12.256Z
+[2026-01-30T14:04:12.258Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:09:12.341Z] [evening-recap] Starting poll at 2026-01-30T14:09:12.340Z
+[2026-01-30T14:09:12.342Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:14:12.452Z] [evening-recap] Starting poll at 2026-01-30T14:14:12.451Z
+[2026-01-30T14:14:12.453Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:19:12.564Z] [evening-recap] Starting poll at 2026-01-30T14:19:12.562Z
+[2026-01-30T14:19:12.565Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:24:12.658Z] [evening-recap] Starting poll at 2026-01-30T14:24:12.657Z
+[2026-01-30T14:24:12.659Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:29:12.729Z] [evening-recap] Starting poll at 2026-01-30T14:29:12.728Z
+[2026-01-30T14:29:12.729Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:34:12.813Z] [evening-recap] Starting poll at 2026-01-30T14:34:12.812Z
+[2026-01-30T14:34:12.814Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:39:12.912Z] [evening-recap] Starting poll at 2026-01-30T14:39:12.910Z
+[2026-01-30T14:39:12.913Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:44:13.007Z] [evening-recap] Starting poll at 2026-01-30T14:44:13.007Z
+[2026-01-30T14:44:13.008Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:49:13.104Z] [evening-recap] Starting poll at 2026-01-30T14:49:13.103Z
+[2026-01-30T14:49:13.104Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:54:13.191Z] [evening-recap] Starting poll at 2026-01-30T14:54:13.190Z
+[2026-01-30T14:54:13.191Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T14:59:13.290Z] [evening-recap] Starting poll at 2026-01-30T14:59:13.287Z
+[2026-01-30T14:59:13.290Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:04:13.370Z] [evening-recap] Starting poll at 2026-01-30T15:04:13.369Z
+[2026-01-30T15:04:13.370Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:09:13.451Z] [evening-recap] Starting poll at 2026-01-30T15:09:13.449Z
+[2026-01-30T15:09:13.451Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:14:13.550Z] [evening-recap] Starting poll at 2026-01-30T15:14:13.548Z
+[2026-01-30T15:14:13.550Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:19:13.654Z] [evening-recap] Starting poll at 2026-01-30T15:19:13.653Z
+[2026-01-30T15:19:13.654Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:24:13.750Z] [evening-recap] Starting poll at 2026-01-30T15:24:13.749Z
+[2026-01-30T15:24:13.750Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:29:13.848Z] [evening-recap] Starting poll at 2026-01-30T15:29:13.847Z
+[2026-01-30T15:29:13.848Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:34:13.925Z] [evening-recap] Starting poll at 2026-01-30T15:34:13.925Z
+[2026-01-30T15:34:13.926Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:39:14.004Z] [evening-recap] Starting poll at 2026-01-30T15:39:14.004Z
+[2026-01-30T15:39:14.005Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:44:14.103Z] [evening-recap] Starting poll at 2026-01-30T15:44:14.102Z
+[2026-01-30T15:44:14.103Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:49:14.182Z] [evening-recap] Starting poll at 2026-01-30T15:49:14.181Z
+[2026-01-30T15:49:14.182Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:54:14.264Z] [evening-recap] Starting poll at 2026-01-30T15:54:14.263Z
+[2026-01-30T15:54:14.264Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T15:59:14.359Z] [evening-recap] Starting poll at 2026-01-30T15:59:14.358Z
+[2026-01-30T15:59:14.360Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:04:14.427Z] [evening-recap] Starting poll at 2026-01-30T16:04:14.426Z
+[2026-01-30T16:04:14.428Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:09:14.515Z] [evening-recap] Starting poll at 2026-01-30T16:09:14.514Z
+[2026-01-30T16:09:14.515Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:14:14.588Z] [evening-recap] Starting poll at 2026-01-30T16:14:14.587Z
+[2026-01-30T16:14:14.589Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:19:14.672Z] [evening-recap] Starting poll at 2026-01-30T16:19:14.671Z
+[2026-01-30T16:19:14.673Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:24:14.770Z] [evening-recap] Starting poll at 2026-01-30T16:24:14.768Z
+[2026-01-30T16:24:14.770Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:29:14.868Z] [evening-recap] Starting poll at 2026-01-30T16:29:14.866Z
+[2026-01-30T16:29:14.868Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:34:14.940Z] [evening-recap] Starting poll at 2026-01-30T16:34:14.940Z
+[2026-01-30T16:34:14.941Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:39:15.026Z] [evening-recap] Starting poll at 2026-01-30T16:39:15.025Z
+[2026-01-30T16:39:15.027Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:44:15.121Z] [evening-recap] Starting poll at 2026-01-30T16:44:15.120Z
+[2026-01-30T16:44:15.122Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:49:15.200Z] [evening-recap] Starting poll at 2026-01-30T16:49:15.198Z
+[2026-01-30T16:49:15.200Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:54:15.286Z] [evening-recap] Starting poll at 2026-01-30T16:54:15.284Z
+[2026-01-30T16:54:15.286Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T16:59:15.410Z] [evening-recap] Starting poll at 2026-01-30T16:59:15.409Z
+[2026-01-30T16:59:15.412Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:04:15.491Z] [evening-recap] Starting poll at 2026-01-30T17:04:15.490Z
+[2026-01-30T17:04:15.491Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:09:15.577Z] [evening-recap] Starting poll at 2026-01-30T17:09:15.576Z
+[2026-01-30T17:09:15.577Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:14:15.657Z] [evening-recap] Starting poll at 2026-01-30T17:14:15.655Z
+[2026-01-30T17:14:15.657Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:19:15.743Z] [evening-recap] Starting poll at 2026-01-30T17:19:15.742Z
+[2026-01-30T17:19:15.743Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:24:15.843Z] [evening-recap] Starting poll at 2026-01-30T17:24:15.842Z
+[2026-01-30T17:24:15.843Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:29:15.911Z] [evening-recap] Starting poll at 2026-01-30T17:29:15.911Z
+[2026-01-30T17:29:15.912Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:34:16.000Z] [evening-recap] Starting poll at 2026-01-30T17:34:15.999Z
+[2026-01-30T17:34:16.001Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:39:16.059Z] [evening-recap] Starting poll at 2026-01-30T17:39:16.058Z
+[2026-01-30T17:39:16.059Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:44:16.136Z] [evening-recap] Starting poll at 2026-01-30T17:44:16.135Z
+[2026-01-30T17:44:16.136Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:49:16.200Z] [evening-recap] Starting poll at 2026-01-30T17:49:16.199Z
+[2026-01-30T17:49:16.200Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:54:16.270Z] [evening-recap] Starting poll at 2026-01-30T17:54:16.269Z
+[2026-01-30T17:54:16.270Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T17:59:16.357Z] [evening-recap] Starting poll at 2026-01-30T17:59:16.355Z
+[2026-01-30T17:59:16.357Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:04:16.420Z] [evening-recap] Starting poll at 2026-01-30T18:04:16.419Z
+[2026-01-30T18:04:16.420Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:09:16.484Z] [evening-recap] Starting poll at 2026-01-30T18:09:16.483Z
+[2026-01-30T18:09:16.484Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:14:16.576Z] [evening-recap] Starting poll at 2026-01-30T18:14:16.575Z
+[2026-01-30T18:14:16.577Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:19:16.667Z] [evening-recap] Starting poll at 2026-01-30T18:19:16.665Z
+[2026-01-30T18:19:16.667Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:24:16.748Z] [evening-recap] Starting poll at 2026-01-30T18:24:16.747Z
+[2026-01-30T18:24:16.748Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:29:16.833Z] [evening-recap] Starting poll at 2026-01-30T18:29:16.832Z
+[2026-01-30T18:29:16.833Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:34:16.913Z] [evening-recap] Starting poll at 2026-01-30T18:34:16.912Z
+[2026-01-30T18:34:16.913Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:39:16.992Z] [evening-recap] Starting poll at 2026-01-30T18:39:16.991Z
+[2026-01-30T18:39:16.992Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:44:17.070Z] [evening-recap] Starting poll at 2026-01-30T18:44:17.068Z
+[2026-01-30T18:44:17.070Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:49:17.148Z] [evening-recap] Starting poll at 2026-01-30T18:49:17.148Z
+[2026-01-30T18:49:17.149Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:54:17.219Z] [evening-recap] Starting poll at 2026-01-30T18:54:17.218Z
+[2026-01-30T18:54:17.219Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T18:59:17.295Z] [evening-recap] Starting poll at 2026-01-30T18:59:17.294Z
+[2026-01-30T18:59:17.295Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:04:17.377Z] [evening-recap] Starting poll at 2026-01-30T19:04:17.375Z
+[2026-01-30T19:04:17.377Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:09:17.450Z] [evening-recap] Starting poll at 2026-01-30T19:09:17.449Z
+[2026-01-30T19:09:17.450Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:14:17.537Z] [evening-recap] Starting poll at 2026-01-30T19:14:17.537Z
+[2026-01-30T19:14:17.538Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:19:17.637Z] [evening-recap] Starting poll at 2026-01-30T19:19:17.636Z
+[2026-01-30T19:19:17.638Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:24:17.730Z] [evening-recap] Starting poll at 2026-01-30T19:24:17.729Z
+[2026-01-30T19:24:17.731Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:29:17.826Z] [evening-recap] Starting poll at 2026-01-30T19:29:17.825Z
+[2026-01-30T19:29:17.826Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:34:17.916Z] [evening-recap] Starting poll at 2026-01-30T19:34:17.915Z
+[2026-01-30T19:34:17.916Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:39:18.009Z] [evening-recap] Starting poll at 2026-01-30T19:39:18.008Z
+[2026-01-30T19:39:18.009Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:44:18.091Z] [evening-recap] Starting poll at 2026-01-30T19:44:18.090Z
+[2026-01-30T19:44:18.092Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:49:18.192Z] [evening-recap] Starting poll at 2026-01-30T19:49:18.191Z
+[2026-01-30T19:49:18.193Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:54:18.281Z] [evening-recap] Starting poll at 2026-01-30T19:54:18.280Z
+[2026-01-30T19:54:18.282Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T19:59:18.358Z] [evening-recap] Starting poll at 2026-01-30T19:59:18.357Z
+[2026-01-30T19:59:18.358Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:04:18.465Z] [evening-recap] Starting poll at 2026-01-30T20:04:18.464Z
+[2026-01-30T20:04:18.465Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:09:18.571Z] [evening-recap] Starting poll at 2026-01-30T20:09:18.570Z
+[2026-01-30T20:09:18.571Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:14:18.669Z] [evening-recap] Starting poll at 2026-01-30T20:14:18.668Z
+[2026-01-30T20:14:18.669Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:19:18.774Z] [evening-recap] Starting poll at 2026-01-30T20:19:18.773Z
+[2026-01-30T20:19:18.775Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:24:18.860Z] [evening-recap] Starting poll at 2026-01-30T20:24:18.859Z
+[2026-01-30T20:24:18.861Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:29:18.963Z] [evening-recap] Starting poll at 2026-01-30T20:29:18.961Z
+[2026-01-30T20:29:18.963Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:34:19.046Z] [evening-recap] Starting poll at 2026-01-30T20:34:19.045Z
+[2026-01-30T20:34:19.047Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:39:19.157Z] [evening-recap] Starting poll at 2026-01-30T20:39:19.156Z
+[2026-01-30T20:39:19.158Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:44:19.269Z] [evening-recap] Starting poll at 2026-01-30T20:44:19.269Z
+[2026-01-30T20:44:19.270Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:49:19.386Z] [evening-recap] Starting poll at 2026-01-30T20:49:19.384Z
+[2026-01-30T20:49:19.387Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:54:19.502Z] [evening-recap] Starting poll at 2026-01-30T20:54:19.501Z
+[2026-01-30T20:54:19.502Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T20:59:19.607Z] [evening-recap] Starting poll at 2026-01-30T20:59:19.606Z
+[2026-01-30T20:59:19.608Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:04:19.707Z] [evening-recap] Starting poll at 2026-01-30T21:04:19.706Z
+[2026-01-30T21:04:19.708Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:09:19.800Z] [evening-recap] Starting poll at 2026-01-30T21:09:19.799Z
+[2026-01-30T21:09:19.801Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:14:19.904Z] [evening-recap] Starting poll at 2026-01-30T21:14:19.903Z
+[2026-01-30T21:14:19.905Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:19:20.007Z] [evening-recap] Starting poll at 2026-01-30T21:19:20.006Z
+[2026-01-30T21:19:20.008Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:24:20.100Z] [evening-recap] Starting poll at 2026-01-30T21:24:20.099Z
+[2026-01-30T21:24:20.101Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:29:20.167Z] [evening-recap] Starting poll at 2026-01-30T21:29:20.166Z
+[2026-01-30T21:29:20.167Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:34:20.241Z] [evening-recap] Starting poll at 2026-01-30T21:34:20.240Z
+[2026-01-30T21:34:20.241Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:39:20.325Z] [evening-recap] Starting poll at 2026-01-30T21:39:20.324Z
+[2026-01-30T21:39:20.325Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:44:20.436Z] [evening-recap] Starting poll at 2026-01-30T21:44:20.434Z
+[2026-01-30T21:44:20.437Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:49:20.540Z] [evening-recap] Starting poll at 2026-01-30T21:49:20.539Z
+[2026-01-30T21:49:20.541Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:54:20.639Z] [evening-recap] Starting poll at 2026-01-30T21:54:20.638Z
+[2026-01-30T21:54:20.640Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T21:59:20.746Z] [evening-recap] Starting poll at 2026-01-30T21:59:20.745Z
+[2026-01-30T21:59:20.747Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:04:20.840Z] [evening-recap] Starting poll at 2026-01-30T22:04:20.839Z
+[2026-01-30T22:04:20.840Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:09:20.911Z] [evening-recap] Starting poll at 2026-01-30T22:09:20.910Z
+[2026-01-30T22:09:20.912Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:14:20.996Z] [evening-recap] Starting poll at 2026-01-30T22:14:20.995Z
+[2026-01-30T22:14:20.997Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:19:21.044Z] [evening-recap] Starting poll at 2026-01-30T22:19:21.044Z
+[2026-01-30T22:19:21.044Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:24:21.134Z] [evening-recap] Starting poll at 2026-01-30T22:24:21.133Z
+[2026-01-30T22:24:21.134Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:29:21.212Z] [evening-recap] Starting poll at 2026-01-30T22:29:21.210Z
+[2026-01-30T22:29:21.213Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:34:21.288Z] [evening-recap] Starting poll at 2026-01-30T22:34:21.287Z
+[2026-01-30T22:34:21.288Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:39:21.365Z] [evening-recap] Starting poll at 2026-01-30T22:39:21.364Z
+[2026-01-30T22:39:21.365Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:44:21.438Z] [evening-recap] Starting poll at 2026-01-30T22:44:21.438Z
+[2026-01-30T22:44:21.439Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:49:21.537Z] [evening-recap] Starting poll at 2026-01-30T22:49:21.536Z
+[2026-01-30T22:49:21.538Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:54:21.624Z] [evening-recap] Starting poll at 2026-01-30T22:54:21.623Z
+[2026-01-30T22:54:21.624Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T22:59:21.711Z] [evening-recap] Starting poll at 2026-01-30T22:59:21.710Z
+[2026-01-30T22:59:21.711Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:04:21.803Z] [evening-recap] Starting poll at 2026-01-30T23:04:21.802Z
+[2026-01-30T23:04:21.803Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:09:21.860Z] [evening-recap] Starting poll at 2026-01-30T23:09:21.859Z
+[2026-01-30T23:09:21.860Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:14:21.915Z] [evening-recap] Starting poll at 2026-01-30T23:14:21.914Z
+[2026-01-30T23:14:21.915Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:19:22.004Z] [evening-recap] Starting poll at 2026-01-30T23:19:22.003Z
+[2026-01-30T23:19:22.005Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:24:22.093Z] [evening-recap] Starting poll at 2026-01-30T23:24:22.092Z
+[2026-01-30T23:24:22.093Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:29:22.172Z] [evening-recap] Starting poll at 2026-01-30T23:29:22.171Z
+[2026-01-30T23:29:22.172Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:34:22.263Z] [evening-recap] Starting poll at 2026-01-30T23:34:22.263Z
+[2026-01-30T23:34:22.264Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:39:22.354Z] [evening-recap] Starting poll at 2026-01-30T23:39:22.353Z
+[2026-01-30T23:39:22.354Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:44:22.411Z] [evening-recap] Starting poll at 2026-01-30T23:44:22.410Z
+[2026-01-30T23:44:22.411Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:49:22.507Z] [evening-recap] Starting poll at 2026-01-30T23:49:22.506Z
+[2026-01-30T23:49:22.508Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:54:22.587Z] [evening-recap] Starting poll at 2026-01-30T23:54:22.586Z
+[2026-01-30T23:54:22.587Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-30T23:59:22.665Z] [evening-recap] Starting poll at 2026-01-30T23:59:22.664Z
+[2026-01-30T23:59:22.665Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:04:22.755Z] [evening-recap] Starting poll at 2026-01-31T00:04:22.754Z
+[2026-01-31T00:04:22.755Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:09:22.851Z] [evening-recap] Starting poll at 2026-01-31T00:09:22.851Z
+[2026-01-31T00:09:22.852Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:14:22.917Z] [evening-recap] Starting poll at 2026-01-31T00:14:22.917Z
+[2026-01-31T00:14:22.918Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:19:22.982Z] [evening-recap] Starting poll at 2026-01-31T00:19:22.981Z
+[2026-01-31T00:19:22.983Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:24:23.044Z] [evening-recap] Starting poll at 2026-01-31T00:24:23.043Z
+[2026-01-31T00:24:23.044Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:29:23.118Z] [evening-recap] Starting poll at 2026-01-31T00:29:23.117Z
+[2026-01-31T00:29:23.118Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:34:23.183Z] [evening-recap] Starting poll at 2026-01-31T00:34:23.182Z
+[2026-01-31T00:34:23.183Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:39:23.241Z] [evening-recap] Starting poll at 2026-01-31T00:39:23.240Z
+[2026-01-31T00:39:23.241Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:44:23.299Z] [evening-recap] Starting poll at 2026-01-31T00:44:23.298Z
+[2026-01-31T00:44:23.299Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:49:23.354Z] [evening-recap] Starting poll at 2026-01-31T00:49:23.353Z
+[2026-01-31T00:49:23.354Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:54:23.424Z] [evening-recap] Starting poll at 2026-01-31T00:54:23.423Z
+[2026-01-31T00:54:23.424Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T00:59:23.485Z] [evening-recap] Starting poll at 2026-01-31T00:59:23.484Z
+[2026-01-31T00:59:23.485Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T01:04:23.578Z] [evening-recap] Starting poll at 2026-01-31T01:04:23.577Z
+[2026-01-31T01:04:23.579Z] [evening-recap] Collecting data...
+[2026-01-31T01:04:25.840Z] [evening-recap] Sending evening recap...
+[2026-01-31T01:04:26.291Z] [evening-recap] Evening recap sent successfully.
+[2026-01-31T01:09:26.381Z] [evening-recap] Starting poll at 2026-01-31T01:09:26.380Z
+[2026-01-31T01:09:26.383Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:14:26.464Z] [evening-recap] Starting poll at 2026-01-31T01:14:26.463Z
+[2026-01-31T01:14:26.465Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:19:26.548Z] [evening-recap] Starting poll at 2026-01-31T01:19:26.547Z
+[2026-01-31T01:19:26.549Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:24:26.598Z] [evening-recap] Starting poll at 2026-01-31T01:24:26.597Z
+[2026-01-31T01:24:26.599Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:29:26.672Z] [evening-recap] Starting poll at 2026-01-31T01:29:26.671Z
+[2026-01-31T01:29:26.674Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:34:26.741Z] [evening-recap] Starting poll at 2026-01-31T01:34:26.740Z
+[2026-01-31T01:34:26.742Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:39:26.792Z] [evening-recap] Starting poll at 2026-01-31T01:39:26.791Z
+[2026-01-31T01:39:26.793Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:44:26.855Z] [evening-recap] Starting poll at 2026-01-31T01:44:26.854Z
+[2026-01-31T01:44:26.857Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:49:26.907Z] [evening-recap] Starting poll at 2026-01-31T01:49:26.906Z
+[2026-01-31T01:49:26.908Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:54:26.963Z] [evening-recap] Starting poll at 2026-01-31T01:54:26.962Z
+[2026-01-31T01:54:26.965Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T01:59:27.016Z] [evening-recap] Starting poll at 2026-01-31T01:59:27.015Z
+[2026-01-31T01:59:27.018Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:04:27.073Z] [evening-recap] Starting poll at 2026-01-31T02:04:27.072Z
+[2026-01-31T02:04:27.075Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:09:27.134Z] [evening-recap] Starting poll at 2026-01-31T02:09:27.133Z
+[2026-01-31T02:09:27.134Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:14:27.189Z] [evening-recap] Starting poll at 2026-01-31T02:14:27.188Z
+[2026-01-31T02:14:27.189Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:19:27.241Z] [evening-recap] Starting poll at 2026-01-31T02:19:27.240Z
+[2026-01-31T02:19:27.241Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:24:27.292Z] [evening-recap] Starting poll at 2026-01-31T02:24:27.291Z
+[2026-01-31T02:24:27.293Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:29:27.359Z] [evening-recap] Starting poll at 2026-01-31T02:29:27.358Z
+[2026-01-31T02:29:27.360Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:34:27.409Z] [evening-recap] Starting poll at 2026-01-31T02:34:27.408Z
+[2026-01-31T02:34:27.409Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:39:27.463Z] [evening-recap] Starting poll at 2026-01-31T02:39:27.462Z
+[2026-01-31T02:39:27.463Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:44:27.514Z] [evening-recap] Starting poll at 2026-01-31T02:44:27.513Z
+[2026-01-31T02:44:27.515Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:49:27.562Z] [evening-recap] Starting poll at 2026-01-31T02:49:27.561Z
+[2026-01-31T02:49:27.562Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:54:27.614Z] [evening-recap] Starting poll at 2026-01-31T02:54:27.613Z
+[2026-01-31T02:54:27.614Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T02:59:27.665Z] [evening-recap] Starting poll at 2026-01-31T02:59:27.664Z
+[2026-01-31T02:59:27.665Z] [evening-recap] Recap already sent today. Exiting.
+[2026-01-31T03:04:27.720Z] [evening-recap] Starting poll at 2026-01-31T03:04:27.719Z
+[2026-01-31T03:04:27.720Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:09:27.769Z] [evening-recap] Starting poll at 2026-01-31T03:09:27.769Z
+[2026-01-31T03:09:27.770Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:14:27.822Z] [evening-recap] Starting poll at 2026-01-31T03:14:27.821Z
+[2026-01-31T03:14:27.822Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:19:27.870Z] [evening-recap] Starting poll at 2026-01-31T03:19:27.869Z
+[2026-01-31T03:19:27.870Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:24:27.921Z] [evening-recap] Starting poll at 2026-01-31T03:24:27.920Z
+[2026-01-31T03:24:27.921Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:29:27.969Z] [evening-recap] Starting poll at 2026-01-31T03:29:27.968Z
+[2026-01-31T03:29:27.970Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:34:28.021Z] [evening-recap] Starting poll at 2026-01-31T03:34:28.020Z
+[2026-01-31T03:34:28.021Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:39:28.112Z] [evening-recap] Starting poll at 2026-01-31T03:39:28.111Z
+[2026-01-31T03:39:28.112Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:44:28.164Z] [evening-recap] Starting poll at 2026-01-31T03:44:28.163Z
+[2026-01-31T03:44:28.164Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:49:28.220Z] [evening-recap] Starting poll at 2026-01-31T03:49:28.220Z
+[2026-01-31T03:49:28.221Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:54:28.275Z] [evening-recap] Starting poll at 2026-01-31T03:54:28.274Z
+[2026-01-31T03:54:28.275Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T03:59:28.331Z] [evening-recap] Starting poll at 2026-01-31T03:59:28.330Z
+[2026-01-31T03:59:28.331Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:04:28.383Z] [evening-recap] Starting poll at 2026-01-31T04:04:28.383Z
+[2026-01-31T04:04:28.383Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:09:28.427Z] [evening-recap] Starting poll at 2026-01-31T04:09:28.427Z
+[2026-01-31T04:09:28.427Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:14:28.482Z] [evening-recap] Starting poll at 2026-01-31T04:14:28.481Z
+[2026-01-31T04:14:28.482Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:19:28.534Z] [evening-recap] Starting poll at 2026-01-31T04:19:28.533Z
+[2026-01-31T04:19:28.534Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:24:28.588Z] [evening-recap] Starting poll at 2026-01-31T04:24:28.588Z
+[2026-01-31T04:24:28.589Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:29:28.640Z] [evening-recap] Starting poll at 2026-01-31T04:29:28.639Z
+[2026-01-31T04:29:28.640Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:34:28.693Z] [evening-recap] Starting poll at 2026-01-31T04:34:28.692Z
+[2026-01-31T04:34:28.693Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:39:28.747Z] [evening-recap] Starting poll at 2026-01-31T04:39:28.746Z
+[2026-01-31T04:39:28.747Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:44:28.801Z] [evening-recap] Starting poll at 2026-01-31T04:44:28.800Z
+[2026-01-31T04:44:28.801Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:49:28.857Z] [evening-recap] Starting poll at 2026-01-31T04:49:28.856Z
+[2026-01-31T04:49:28.857Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:54:28.925Z] [evening-recap] Starting poll at 2026-01-31T04:54:28.924Z
+[2026-01-31T04:54:28.926Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T04:59:29.005Z] [evening-recap] Starting poll at 2026-01-31T04:59:29.004Z
+[2026-01-31T04:59:29.006Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:04:29.084Z] [evening-recap] Starting poll at 2026-01-31T05:04:29.083Z
+[2026-01-31T05:04:29.086Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:09:29.166Z] [evening-recap] Starting poll at 2026-01-31T05:09:29.165Z
+[2026-01-31T05:09:29.167Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:14:29.245Z] [evening-recap] Starting poll at 2026-01-31T05:14:29.244Z
+[2026-01-31T05:14:29.246Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:19:29.335Z] [evening-recap] Starting poll at 2026-01-31T05:19:29.333Z
+[2026-01-31T05:19:29.336Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:24:29.419Z] [evening-recap] Starting poll at 2026-01-31T05:24:29.418Z
+[2026-01-31T05:24:29.420Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:29:29.498Z] [evening-recap] Starting poll at 2026-01-31T05:29:29.497Z
+[2026-01-31T05:29:29.500Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:34:29.580Z] [evening-recap] Starting poll at 2026-01-31T05:34:29.579Z
+[2026-01-31T05:34:29.581Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:39:29.652Z] [evening-recap] Starting poll at 2026-01-31T05:39:29.650Z
+[2026-01-31T05:39:29.653Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:44:29.727Z] [evening-recap] Starting poll at 2026-01-31T05:44:29.726Z
+[2026-01-31T05:44:29.729Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:49:29.806Z] [evening-recap] Starting poll at 2026-01-31T05:49:29.804Z
+[2026-01-31T05:49:29.806Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:54:29.882Z] [evening-recap] Starting poll at 2026-01-31T05:54:29.881Z
+[2026-01-31T05:54:29.883Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T05:59:29.955Z] [evening-recap] Starting poll at 2026-01-31T05:59:29.954Z
+[2026-01-31T05:59:29.956Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:04:30.033Z] [evening-recap] Starting poll at 2026-01-31T06:04:30.032Z
+[2026-01-31T06:04:30.033Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:09:30.110Z] [evening-recap] Starting poll at 2026-01-31T06:09:30.109Z
+[2026-01-31T06:09:30.111Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:14:30.182Z] [evening-recap] Starting poll at 2026-01-31T06:14:30.181Z
+[2026-01-31T06:14:30.182Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:19:30.262Z] [evening-recap] Starting poll at 2026-01-31T06:19:30.261Z
+[2026-01-31T06:19:30.263Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:24:30.347Z] [evening-recap] Starting poll at 2026-01-31T06:24:30.346Z
+[2026-01-31T06:24:30.348Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:29:30.420Z] [evening-recap] Starting poll at 2026-01-31T06:29:30.419Z
+[2026-01-31T06:29:30.421Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:34:30.495Z] [evening-recap] Starting poll at 2026-01-31T06:34:30.494Z
+[2026-01-31T06:34:30.497Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:39:30.576Z] [evening-recap] Starting poll at 2026-01-31T06:39:30.574Z
+[2026-01-31T06:39:30.576Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:44:30.657Z] [evening-recap] Starting poll at 2026-01-31T06:44:30.656Z
+[2026-01-31T06:44:30.657Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:49:30.734Z] [evening-recap] Starting poll at 2026-01-31T06:49:30.733Z
+[2026-01-31T06:49:30.737Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:54:30.812Z] [evening-recap] Starting poll at 2026-01-31T06:54:30.811Z
+[2026-01-31T06:54:30.813Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T06:59:30.888Z] [evening-recap] Starting poll at 2026-01-31T06:59:30.887Z
+[2026-01-31T06:59:30.888Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T07:04:30.969Z] [evening-recap] Starting poll at 2026-01-31T07:04:30.968Z
+[2026-01-31T07:04:30.970Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T07:09:31.044Z] [evening-recap] Starting poll at 2026-01-31T07:09:31.043Z
+[2026-01-31T07:09:31.044Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:01:35.908Z] [evening-recap] Starting poll at 2026-01-31T14:01:35.907Z
+[2026-01-31T14:01:35.908Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:06:35.982Z] [evening-recap] Starting poll at 2026-01-31T14:06:35.981Z
+[2026-01-31T14:06:35.983Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:11:36.054Z] [evening-recap] Starting poll at 2026-01-31T14:11:36.053Z
+[2026-01-31T14:11:36.056Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:16:36.143Z] [evening-recap] Starting poll at 2026-01-31T14:16:36.142Z
+[2026-01-31T14:16:36.144Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:21:36.223Z] [evening-recap] Starting poll at 2026-01-31T14:21:36.223Z
+[2026-01-31T14:21:36.225Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:26:36.277Z] [evening-recap] Starting poll at 2026-01-31T14:26:36.276Z
+[2026-01-31T14:26:36.277Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:31:36.332Z] [evening-recap] Starting poll at 2026-01-31T14:31:36.331Z
+[2026-01-31T14:31:36.333Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:36:36.392Z] [evening-recap] Starting poll at 2026-01-31T14:36:36.391Z
+[2026-01-31T14:36:36.393Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:41:36.449Z] [evening-recap] Starting poll at 2026-01-31T14:41:36.448Z
+[2026-01-31T14:41:36.450Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:46:36.498Z] [evening-recap] Starting poll at 2026-01-31T14:46:36.497Z
+[2026-01-31T14:46:36.499Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:51:36.581Z] [evening-recap] Starting poll at 2026-01-31T14:51:36.580Z
+[2026-01-31T14:51:36.583Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T14:56:36.662Z] [evening-recap] Starting poll at 2026-01-31T14:56:36.661Z
+[2026-01-31T14:56:36.663Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:01:36.716Z] [evening-recap] Starting poll at 2026-01-31T15:01:36.715Z
+[2026-01-31T15:01:36.717Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:06:36.789Z] [evening-recap] Starting poll at 2026-01-31T15:06:36.788Z
+[2026-01-31T15:06:36.789Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:11:36.844Z] [evening-recap] Starting poll at 2026-01-31T15:11:36.843Z
+[2026-01-31T15:11:36.844Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:16:36.898Z] [evening-recap] Starting poll at 2026-01-31T15:16:36.898Z
+[2026-01-31T15:16:36.899Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:21:36.946Z] [evening-recap] Starting poll at 2026-01-31T15:21:36.945Z
+[2026-01-31T15:21:36.947Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:26:36.996Z] [evening-recap] Starting poll at 2026-01-31T15:26:36.995Z
+[2026-01-31T15:26:36.996Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:31:37.048Z] [evening-recap] Starting poll at 2026-01-31T15:31:37.047Z
+[2026-01-31T15:31:37.049Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:36:37.105Z] [evening-recap] Starting poll at 2026-01-31T15:36:37.104Z
+[2026-01-31T15:36:37.106Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:41:37.165Z] [evening-recap] Starting poll at 2026-01-31T15:41:37.164Z
+[2026-01-31T15:41:37.166Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:46:37.221Z] [evening-recap] Starting poll at 2026-01-31T15:46:37.221Z
+[2026-01-31T15:46:37.223Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:51:37.276Z] [evening-recap] Starting poll at 2026-01-31T15:51:37.276Z
+[2026-01-31T15:51:37.277Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T15:56:37.331Z] [evening-recap] Starting poll at 2026-01-31T15:56:37.330Z
+[2026-01-31T15:56:37.332Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:01:37.383Z] [evening-recap] Starting poll at 2026-01-31T16:01:37.382Z
+[2026-01-31T16:01:37.384Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:06:37.437Z] [evening-recap] Starting poll at 2026-01-31T16:06:37.436Z
+[2026-01-31T16:06:37.438Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:11:37.488Z] [evening-recap] Starting poll at 2026-01-31T16:11:37.487Z
+[2026-01-31T16:11:37.489Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:16:37.533Z] [evening-recap] Starting poll at 2026-01-31T16:16:37.532Z
+[2026-01-31T16:16:37.534Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:21:37.582Z] [evening-recap] Starting poll at 2026-01-31T16:21:37.581Z
+[2026-01-31T16:21:37.583Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:26:37.634Z] [evening-recap] Starting poll at 2026-01-31T16:26:37.634Z
+[2026-01-31T16:26:37.635Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:31:37.691Z] [evening-recap] Starting poll at 2026-01-31T16:31:37.691Z
+[2026-01-31T16:31:37.692Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:36:37.769Z] [evening-recap] Starting poll at 2026-01-31T16:36:37.768Z
+[2026-01-31T16:36:37.770Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:41:37.848Z] [evening-recap] Starting poll at 2026-01-31T16:41:37.847Z
+[2026-01-31T16:41:37.849Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:46:37.905Z] [evening-recap] Starting poll at 2026-01-31T16:46:37.905Z
+[2026-01-31T16:46:37.906Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:51:37.956Z] [evening-recap] Starting poll at 2026-01-31T16:51:37.955Z
+[2026-01-31T16:51:37.956Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T16:56:38.037Z] [evening-recap] Starting poll at 2026-01-31T16:56:38.036Z
+[2026-01-31T16:56:38.037Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:01:38.103Z] [evening-recap] Starting poll at 2026-01-31T17:01:38.102Z
+[2026-01-31T17:01:38.103Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:06:38.184Z] [evening-recap] Starting poll at 2026-01-31T17:06:38.183Z
+[2026-01-31T17:06:38.185Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:11:38.260Z] [evening-recap] Starting poll at 2026-01-31T17:11:38.259Z
+[2026-01-31T17:11:38.261Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:16:38.352Z] [evening-recap] Starting poll at 2026-01-31T17:16:38.352Z
+[2026-01-31T17:16:38.353Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:21:38.432Z] [evening-recap] Starting poll at 2026-01-31T17:21:38.431Z
+[2026-01-31T17:21:38.432Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:26:38.531Z] [evening-recap] Starting poll at 2026-01-31T17:26:38.530Z
+[2026-01-31T17:26:38.532Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:31:38.630Z] [evening-recap] Starting poll at 2026-01-31T17:31:38.628Z
+[2026-01-31T17:31:38.630Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:36:38.700Z] [evening-recap] Starting poll at 2026-01-31T17:36:38.698Z
+[2026-01-31T17:36:38.700Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:41:38.760Z] [evening-recap] Starting poll at 2026-01-31T17:41:38.759Z
+[2026-01-31T17:41:38.761Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:46:38.821Z] [evening-recap] Starting poll at 2026-01-31T17:46:38.821Z
+[2026-01-31T17:46:38.822Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:51:38.885Z] [evening-recap] Starting poll at 2026-01-31T17:51:38.884Z
+[2026-01-31T17:51:38.885Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T17:56:38.976Z] [evening-recap] Starting poll at 2026-01-31T17:56:38.975Z
+[2026-01-31T17:56:38.977Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:01:39.050Z] [evening-recap] Starting poll at 2026-01-31T18:01:39.050Z
+[2026-01-31T18:01:39.051Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:06:39.108Z] [evening-recap] Starting poll at 2026-01-31T18:06:39.107Z
+[2026-01-31T18:06:39.108Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:11:39.178Z] [evening-recap] Starting poll at 2026-01-31T18:11:39.177Z
+[2026-01-31T18:11:39.178Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:16:39.234Z] [evening-recap] Starting poll at 2026-01-31T18:16:39.233Z
+[2026-01-31T18:16:39.234Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:21:39.329Z] [evening-recap] Starting poll at 2026-01-31T18:21:39.328Z
+[2026-01-31T18:21:39.330Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:26:39.416Z] [evening-recap] Starting poll at 2026-01-31T18:26:39.415Z
+[2026-01-31T18:26:39.417Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:31:39.495Z] [evening-recap] Starting poll at 2026-01-31T18:31:39.495Z
+[2026-01-31T18:31:39.496Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:36:39.592Z] [evening-recap] Starting poll at 2026-01-31T18:36:39.590Z
+[2026-01-31T18:36:39.593Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:41:39.670Z] [evening-recap] Starting poll at 2026-01-31T18:41:39.670Z
+[2026-01-31T18:41:39.671Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:46:39.745Z] [evening-recap] Starting poll at 2026-01-31T18:46:39.744Z
+[2026-01-31T18:46:39.745Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:51:39.883Z] [evening-recap] Starting poll at 2026-01-31T18:51:39.882Z
+[2026-01-31T18:51:39.884Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T18:56:39.999Z] [evening-recap] Starting poll at 2026-01-31T18:56:39.998Z
+[2026-01-31T18:56:40.000Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:01:40.080Z] [evening-recap] Starting poll at 2026-01-31T19:01:40.078Z
+[2026-01-31T19:01:40.080Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:06:40.173Z] [evening-recap] Starting poll at 2026-01-31T19:06:40.172Z
+[2026-01-31T19:06:40.173Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:11:40.261Z] [evening-recap] Starting poll at 2026-01-31T19:11:40.260Z
+[2026-01-31T19:11:40.262Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:16:40.352Z] [evening-recap] Starting poll at 2026-01-31T19:16:40.351Z
+[2026-01-31T19:16:40.353Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:21:40.465Z] [evening-recap] Starting poll at 2026-01-31T19:21:40.464Z
+[2026-01-31T19:21:40.465Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:26:40.524Z] [evening-recap] Starting poll at 2026-01-31T19:26:40.524Z
+[2026-01-31T19:26:40.525Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:31:40.597Z] [evening-recap] Starting poll at 2026-01-31T19:31:40.596Z
+[2026-01-31T19:31:40.597Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:36:40.663Z] [evening-recap] Starting poll at 2026-01-31T19:36:40.662Z
+[2026-01-31T19:36:40.663Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:41:40.718Z] [evening-recap] Starting poll at 2026-01-31T19:41:40.716Z
+[2026-01-31T19:41:40.718Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:46:40.771Z] [evening-recap] Starting poll at 2026-01-31T19:46:40.770Z
+[2026-01-31T19:46:40.772Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:51:40.829Z] [evening-recap] Starting poll at 2026-01-31T19:51:40.828Z
+[2026-01-31T19:51:40.829Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T19:56:40.893Z] [evening-recap] Starting poll at 2026-01-31T19:56:40.892Z
+[2026-01-31T19:56:40.894Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:01:40.953Z] [evening-recap] Starting poll at 2026-01-31T20:01:40.953Z
+[2026-01-31T20:01:40.954Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:06:41.017Z] [evening-recap] Starting poll at 2026-01-31T20:06:41.016Z
+[2026-01-31T20:06:41.017Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:11:41.152Z] [evening-recap] Starting poll at 2026-01-31T20:11:41.151Z
+[2026-01-31T20:11:41.154Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:16:41.239Z] [evening-recap] Starting poll at 2026-01-31T20:16:41.238Z
+[2026-01-31T20:16:41.239Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:21:41.311Z] [evening-recap] Starting poll at 2026-01-31T20:21:41.310Z
+[2026-01-31T20:21:41.311Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:26:41.379Z] [evening-recap] Starting poll at 2026-01-31T20:26:41.378Z
+[2026-01-31T20:26:41.380Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:31:41.451Z] [evening-recap] Starting poll at 2026-01-31T20:31:41.450Z
+[2026-01-31T20:31:41.452Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:36:41.521Z] [evening-recap] Starting poll at 2026-01-31T20:36:41.520Z
+[2026-01-31T20:36:41.521Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:41:41.590Z] [evening-recap] Starting poll at 2026-01-31T20:41:41.589Z
+[2026-01-31T20:41:41.590Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:46:41.651Z] [evening-recap] Starting poll at 2026-01-31T20:46:41.651Z
+[2026-01-31T20:46:41.652Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:51:41.715Z] [evening-recap] Starting poll at 2026-01-31T20:51:41.714Z
+[2026-01-31T20:51:41.716Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T20:56:41.787Z] [evening-recap] Starting poll at 2026-01-31T20:56:41.781Z
+[2026-01-31T20:56:41.789Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:01:41.863Z] [evening-recap] Starting poll at 2026-01-31T21:01:41.862Z
+[2026-01-31T21:01:41.864Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:06:41.945Z] [evening-recap] Starting poll at 2026-01-31T21:06:41.944Z
+[2026-01-31T21:06:41.945Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:11:42.010Z] [evening-recap] Starting poll at 2026-01-31T21:11:42.008Z
+[2026-01-31T21:11:42.010Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:16:42.077Z] [evening-recap] Starting poll at 2026-01-31T21:16:42.076Z
+[2026-01-31T21:16:42.078Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:21:42.179Z] [evening-recap] Starting poll at 2026-01-31T21:21:42.178Z
+[2026-01-31T21:21:42.180Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:26:42.285Z] [evening-recap] Starting poll at 2026-01-31T21:26:42.283Z
+[2026-01-31T21:26:42.286Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:31:42.362Z] [evening-recap] Starting poll at 2026-01-31T21:31:42.361Z
+[2026-01-31T21:31:42.362Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:36:42.449Z] [evening-recap] Starting poll at 2026-01-31T21:36:42.448Z
+[2026-01-31T21:36:42.450Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:41:42.526Z] [evening-recap] Starting poll at 2026-01-31T21:41:42.524Z
+[2026-01-31T21:41:42.526Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:46:42.603Z] [evening-recap] Starting poll at 2026-01-31T21:46:42.602Z
+[2026-01-31T21:46:42.603Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:51:42.689Z] [evening-recap] Starting poll at 2026-01-31T21:51:42.688Z
+[2026-01-31T21:51:42.689Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T21:56:42.746Z] [evening-recap] Starting poll at 2026-01-31T21:56:42.746Z
+[2026-01-31T21:56:42.747Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:01:42.806Z] [evening-recap] Starting poll at 2026-01-31T22:01:42.805Z
+[2026-01-31T22:01:42.806Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:06:42.862Z] [evening-recap] Starting poll at 2026-01-31T22:06:42.862Z
+[2026-01-31T22:06:42.863Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:11:42.948Z] [evening-recap] Starting poll at 2026-01-31T22:11:42.947Z
+[2026-01-31T22:11:42.948Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:16:43.044Z] [evening-recap] Starting poll at 2026-01-31T22:16:43.042Z
+[2026-01-31T22:16:43.045Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:21:43.137Z] [evening-recap] Starting poll at 2026-01-31T22:21:43.135Z
+[2026-01-31T22:21:43.137Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:26:43.233Z] [evening-recap] Starting poll at 2026-01-31T22:26:43.232Z
+[2026-01-31T22:26:43.234Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:31:43.335Z] [evening-recap] Starting poll at 2026-01-31T22:31:43.334Z
+[2026-01-31T22:31:43.336Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:36:43.436Z] [evening-recap] Starting poll at 2026-01-31T22:36:43.435Z
+[2026-01-31T22:36:43.437Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:41:43.537Z] [evening-recap] Starting poll at 2026-01-31T22:41:43.534Z
+[2026-01-31T22:41:43.537Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:46:43.675Z] [evening-recap] Starting poll at 2026-01-31T22:46:43.674Z
+[2026-01-31T22:46:43.676Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:51:43.768Z] [evening-recap] Starting poll at 2026-01-31T22:51:43.767Z
+[2026-01-31T22:51:43.769Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T22:56:43.865Z] [evening-recap] Starting poll at 2026-01-31T22:56:43.863Z
+[2026-01-31T22:56:43.865Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:01:43.960Z] [evening-recap] Starting poll at 2026-01-31T23:01:43.959Z
+[2026-01-31T23:01:43.961Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:06:44.054Z] [evening-recap] Starting poll at 2026-01-31T23:06:44.053Z
+[2026-01-31T23:06:44.054Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:11:44.140Z] [evening-recap] Starting poll at 2026-01-31T23:11:44.139Z
+[2026-01-31T23:11:44.141Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:16:44.230Z] [evening-recap] Starting poll at 2026-01-31T23:16:44.229Z
+[2026-01-31T23:16:44.230Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:21:44.318Z] [evening-recap] Starting poll at 2026-01-31T23:21:44.316Z
+[2026-01-31T23:21:44.319Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:26:44.410Z] [evening-recap] Starting poll at 2026-01-31T23:26:44.409Z
+[2026-01-31T23:26:44.411Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:31:44.505Z] [evening-recap] Starting poll at 2026-01-31T23:31:44.504Z
+[2026-01-31T23:31:44.505Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:36:44.602Z] [evening-recap] Starting poll at 2026-01-31T23:36:44.601Z
+[2026-01-31T23:36:44.603Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:41:44.693Z] [evening-recap] Starting poll at 2026-01-31T23:41:44.691Z
+[2026-01-31T23:41:44.693Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:46:44.768Z] [evening-recap] Starting poll at 2026-01-31T23:46:44.767Z
+[2026-01-31T23:46:44.769Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:51:44.858Z] [evening-recap] Starting poll at 2026-01-31T23:51:44.857Z
+[2026-01-31T23:51:44.858Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-01-31T23:56:44.949Z] [evening-recap] Starting poll at 2026-01-31T23:56:44.947Z
+[2026-01-31T23:56:44.949Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:01:45.041Z] [evening-recap] Starting poll at 2026-02-01T00:01:45.039Z
+[2026-02-01T00:01:45.042Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:06:45.133Z] [evening-recap] Starting poll at 2026-02-01T00:06:45.131Z
+[2026-02-01T00:06:45.133Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:11:45.226Z] [evening-recap] Starting poll at 2026-02-01T00:11:45.225Z
+[2026-02-01T00:11:45.227Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:16:45.290Z] [evening-recap] Starting poll at 2026-02-01T00:16:45.289Z
+[2026-02-01T00:16:45.290Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:21:45.348Z] [evening-recap] Starting poll at 2026-02-01T00:21:45.348Z
+[2026-02-01T00:21:45.349Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:27:21.053Z] [evening-recap] Starting poll at 2026-02-01T00:27:21.052Z
+[2026-02-01T00:27:21.053Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:32:21.111Z] [evening-recap] Starting poll at 2026-02-01T00:32:21.110Z
+[2026-02-01T00:32:21.112Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T00:37:21.186Z] [evening-recap] Starting poll at 2026-02-01T00:37:21.185Z
+[2026-02-01T00:37:21.186Z] [evening-recap] Outside time window (20:00-22:00). Exiting.
+[2026-02-01T01:18:59.108Z] [evening-recap] Starting poll at 2026-02-01T01:18:59.108Z
+[2026-02-01T01:18:59.109Z] [evening-recap] Collecting data...
+[2026-02-01T01:19:01.044Z] [evening-recap] Sending evening recap...
+[2026-02-01T01:19:01.504Z] [evening-recap] Evening recap sent successfully.
+[2026-02-01T01:24:01.568Z] [evening-recap] Starting poll at 2026-02-01T01:24:01.567Z
+[2026-02-01T01:24:01.571Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:29:01.627Z] [evening-recap] Starting poll at 2026-02-01T01:29:01.626Z
+[2026-02-01T01:29:01.628Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:34:01.680Z] [evening-recap] Starting poll at 2026-02-01T01:34:01.679Z
+[2026-02-01T01:34:01.682Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:39:01.759Z] [evening-recap] Starting poll at 2026-02-01T01:39:01.758Z
+[2026-02-01T01:39:01.761Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:44:01.836Z] [evening-recap] Starting poll at 2026-02-01T01:44:01.835Z
+[2026-02-01T01:44:01.837Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:49:01.922Z] [evening-recap] Starting poll at 2026-02-01T01:49:01.921Z
+[2026-02-01T01:49:01.924Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:54:02.001Z] [evening-recap] Starting poll at 2026-02-01T01:54:02.000Z
+[2026-02-01T01:54:02.003Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T01:59:02.055Z] [evening-recap] Starting poll at 2026-02-01T01:59:02.053Z
+[2026-02-01T01:59:02.055Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:04:02.136Z] [evening-recap] Starting poll at 2026-02-01T02:04:02.135Z
+[2026-02-01T02:04:02.137Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:09:02.192Z] [evening-recap] Starting poll at 2026-02-01T02:09:02.191Z
+[2026-02-01T02:09:02.193Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:14:02.256Z] [evening-recap] Starting poll at 2026-02-01T02:14:02.255Z
+[2026-02-01T02:14:02.257Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:19:02.312Z] [evening-recap] Starting poll at 2026-02-01T02:19:02.311Z
+[2026-02-01T02:19:02.313Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:24:02.368Z] [evening-recap] Starting poll at 2026-02-01T02:24:02.368Z
+[2026-02-01T02:24:02.369Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:29:02.424Z] [evening-recap] Starting poll at 2026-02-01T02:29:02.423Z
+[2026-02-01T02:29:02.425Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:34:02.481Z] [evening-recap] Starting poll at 2026-02-01T02:34:02.480Z
+[2026-02-01T02:34:02.482Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:39:02.539Z] [evening-recap] Starting poll at 2026-02-01T02:39:02.538Z
+[2026-02-01T02:39:02.540Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:44:02.591Z] [evening-recap] Starting poll at 2026-02-01T02:44:02.590Z
+[2026-02-01T02:44:02.592Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:49:02.644Z] [evening-recap] Starting poll at 2026-02-01T02:49:02.643Z
+[2026-02-01T02:49:02.645Z] [evening-recap] Recap already sent today. Exiting.
+[2026-02-01T02:54:02.697Z] [evening-recap] Starting poll at 2026-02-01T02:54:02.696Z
+[2026-02-01T02:54:02.697Z] [evening-recap] Recap already sent today. Exiting.

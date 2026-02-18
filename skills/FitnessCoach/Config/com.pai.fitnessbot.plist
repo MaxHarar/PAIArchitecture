@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.pai.fitnessbot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/bun</string>
+        <string>run</string>
+        <string>/Users/maxharar/.claude/skills/FitnessCoach/Tools/fitness-bot.ts</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+        <key>Crashed</key>
+        <true/>
+    </dict>
+
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/maxharar/.claude/skills/FitnessCoach/Logs/fitness-bot.error.log</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/maxharar/.claude/skills/FitnessCoach/Logs/fitness-bot.log</string>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/maxharar/.claude/skills/FitnessCoach</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/maxharar</string>
+    </dict>
+</dict>
+</plist>

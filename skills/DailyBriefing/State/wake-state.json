@@ -1,0 +1,15 @@
+{
+  "date": "2026-01-31",
+  "wakeDetected": true,
+  "wakeTime": "2026-01-29T05:35:52.000Z",
+  "triggerTime": "2026-01-29T05:50:52.000Z",
+  "briefingSent": true,
+  "briefingSentAt": "2026-01-31T14:01:35.632Z",
+  "sendMethod": "wake-triggered",
+  "garminConsecutiveFailures": 0,
+  "lastGarminError": null,
+  "lastPollTime": "2026-01-31T14:01:43.141Z",
+  "lastSent": "2026-01-31T14:01:35.632Z",
+  "lastWakeTime": "2026-01-29T05:35:52.000Z",
+  "lastTriggerTime": "2026-01-29T05:50:52.000Z"
+}

@@ -1,0 +1,26 @@
+{
+  "last_check": "2026-01-26T21:25:00Z",
+  "items_seen": [
+    "anthropic.com/news/claude-new-constitution",
+    "anthropic.com/news/mariano-florentino-long-term-benefit-trust",
+    "anthropic.com/news/anthropic-teach-for-all",
+    "anthropic.com/news/anthropic-appoints-irina-ghose-as-managing-director-of-india",
+    "anthropic.com/news/accelerating-scientific-research",
+    "deepmind.google/blog/gemini-3",
+    "deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions",
+    "deepmind.google/blog/veo-3-1-ingredients-to-video",
+    "deepmind.google/blog/2025-research-breakthroughs",
+    "deepmind.google/blog/gemma-scope-2",
+    "huggingface.co/blog/storage-strategy",
+    "huggingface.co/blog/hashhop-memory-models",
+    "huggingface.co/blog/glm4-moe-optimization",
+    "huggingface.co/blog/openenv-scaling",
+    "huggingface.co/blog/interpreto-toolkit",
+    "ai.meta.com/blog/sam-audio",
+    "ai.meta.com/blog/dino-sam-medical-triage",
+    "ai.meta.com/blog/sam-usra-flood-emergencies",
+    "ai.meta.com/blog/sam-3d",
+    "ai.meta.com/blog/sam-wildlife-monitoring"
+  ],
+  "last_items_count": 31
+}

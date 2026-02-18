@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "PAI_DIR": "/Users/YOUR_USERNAME/.claude",
+    "PROJECTS_DIR": "",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "128000",
+    "BASH_DEFAULT_TIMEOUT_MS": "600000",
+    "GREPTILE_API_KEY": "YOUR_GREPTILE_API_KEY",
+    "PAI_CONFIG_DIR": "/Users/YOUR_USERNAME/.claude/../.config/PAI",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Glob",
+      "Grep",
+      "LS",
+      "WebFetch",
+      "WebSearch",
+      "NotebookRead",
+      "NotebookEdit",
+      "TodoWrite",
+      "ExitPlanMode",
+      "Task",
+      "Skill",
+      "mcp__*"
+    ],
+    "deny": [],
+    "ask": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf /:*)",
+      "Bash(sudo rm -rf /)",
+      "Bash(sudo rm -rf /:*)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf ~:*)",
+      "Bash(rm -rf ~/.claude)",
+      "Bash(rm -rf ~/.claude:*)",
+      "Bash(diskutil eraseDisk:*)",
+      "Bash(diskutil zeroDisk:*)",
+      "Bash(diskutil partitionDisk:*)",
+      "Bash(diskutil apfs deleteContainer:*)",
+      "Bash(diskutil apfs eraseVolume:*)",
+      "Bash(dd if=/dev/zero:*)",
+      "Bash(mkfs:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(gh repo edit --visibility public:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git push origin --force:*)",
+      "Bash(git push origin -f:*)",
+      "Read(~/.ssh/id_*)",
+      "Read(~/.ssh/*.pem)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.gnupg/private*)",
+      "Write(~/.claude/settings.json)",
+      "Edit(~/.claude/settings.json)",
+      "Write(~/.ssh/*)",
+      "Edit(~/.ssh/*)"
+    ],
+    "defaultMode": "default"
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/VoiceGate.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SecurityValidator.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SecurityValidator.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SecurityValidator.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SecurityValidator.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SetQuestionTab.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AgentExecutionGuard.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SkillGuard.hook.ts"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/QuestionAnswered.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AlgorithmTracker.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "TaskCreate",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AlgorithmTracker.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "TaskUpdate",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AlgorithmTracker.hook.ts"
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AlgorithmTracker.hook.ts"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/WorkCompletionLearning.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SessionSummary.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/RelationshipMemory.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/UpdateCounts.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/IntegrityCheck.hook.ts"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/RatingCapture.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/AutoWorkCreation.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/UpdateTabTitle.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/SessionAutoName.hook.ts"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/TelegramClean.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/StartupGreeting.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/LoadContext.hook.ts"
+          },
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/CheckVersion.hook.ts"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PAI_DIR}/hooks/StopOrchestrator.hook.ts"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "${PAI_DIR}/statusline-command.sh"
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Hill-climbing",
+      "Observing",
+      "Reverse-engineering",
+      "Verifying",
+      "Pressure-testing",
+      "Iterating",
+      "Decomposing",
+      "Pattern-matching",
+      "Ideal-stating",
+      "Euphoric-surprising",
+      "Hill-climbing-toward-ideal",
+      "Criteria-blossoming",
+      "Algorithm-running",
+      "Seven-phasing",
+      "Quality-gating",
+      "PRD-writing",
+      "Agent-spawning",
+      "Parallelizing"
+    ]
+  },
+  "plansDirectory": "~/.claude/Plans/",
+  "teammateMode": "in-process",
+  "alwaysThinkingEnabled": true,
+  "paiVersion": "3.0",
+  "contextFiles": [
+    "skills/PAI/SKILL.md",
+    "skills/PAI/AISTEERINGRULES.md",
+    "skills/PAI/USER/AISTEERINGRULES.md",
+    "skills/PAI/USER/DAIDENTITY.md"
+  ],
+  "daidentity": {
+    "name": "YOUR_DA_NAME",
+    "fullName": "YOUR_DA_NAME - Personal AI",
+    "displayName": "YOUR_DA_NAME",
+    "color": "#3B82F6",
+    "voiceId": "YOUR_ELEVENLABS_VOICE_ID",
+    "voice": {
+      "stability": 0.35,
+      "similarity_boost": 0.8,
+      "style": 0.9,
+      "speed": 1.1,
+      "use_speaker_boost": true,
+      "volume": 0.8
+    },
+    "startupCatchphrase": "Ready to go."
+  },
+  "principal": {
+    "name": "YOUR_NAME",
+    "timezone": "America/New_York"
+  },
+  "telegram": {
+    "cleanOutput": true
+  },
+  "dailyBriefing": {
+    "botToken": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chatId": "YOUR_TELEGRAM_CHAT_ID"
+  },
+  "fitnessBot": {
+    "botToken": "YOUR_FITNESS_BOT_TOKEN",
+    "chatId": "YOUR_TELEGRAM_CHAT_ID",
+    "pollInterval": 1000
+  },
+  "contextDisplay": {
+    "compactionThreshold": 83,
+    "_docs": "Autocompact buffer is 16.5% of context window."
+  },
+  "pai": {
+    "repoUrl": "github.com/danielmiessler/PAI",
+    "version": "3.0"
+  },
+  "techStack": {
+    "browser": "arc",
+    "terminal": "terminal",
+    "packageManager": "bun",
+    "pythonPackageManager": "pip",
+    "language": "TypeScript",
+    "devServerPort": 5173
+  },
+  "costTracking": {
+    "enabled": true,
+    "_docs": "Tracks actual session cost from Claude Code."
+  },
+  "counts": {
+    "skills": 0,
+    "workflows": 0,
+    "hooks": 0,
+    "signals": 0,
+    "files": 0,
+    "work": 0,
+    "sessions": 0,
+    "research": 0,
+    "ratings": 0,
+    "updatedAt": ""
+  },
+  "_docs": {
+    "_overview": "PAI v3.0 settings. See README.md for setup instructions.",
+    "_sections": {
+      "daidentity": "AI identity (name, voice)",
+      "principal": "Your identity",
+      "permissions": "Tool permissions",
+      "hooks": "Lifecycle event hooks",
+      "contextFiles": "Files loaded at session start"
+    }
+  },
+  "max_tokens": 16000
+}

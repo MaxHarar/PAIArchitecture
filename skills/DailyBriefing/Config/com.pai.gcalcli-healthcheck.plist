@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.pai.gcalcli-healthcheck</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/bun</string>
+        <string>run</string>
+        <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools/gcalcli-healthcheck.ts</string>
+    </array>
+
+    <!-- Run every Monday at 9:00 AM -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Environment -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/maxharar</string>
+    </dict>
+
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools</string>
+
+    <!-- Logging -->
+    <key>StandardOutPath</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.error.log</string>
+
+    <!-- Run at load for initial check -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- Keep alive disabled - one-shot check -->
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>

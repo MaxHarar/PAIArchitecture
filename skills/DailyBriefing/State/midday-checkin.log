@@ -1,0 +1,942 @@
+[2026-01-29T03:14:59.275Z] [midday-checkin] Starting poll at 2026-01-29T03:14:59.274Z
+[2026-01-29T03:14:59.275Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T03:15:08.068Z] [midday-checkin] Starting poll at 2026-01-29T03:15:08.067Z
+[2026-01-29T03:15:08.068Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T03:15:27.613Z] [midday-checkin] Starting poll at 2026-01-29T03:15:27.612Z
+[2026-01-29T03:15:27.613Z] [midday-checkin] Collecting data...
+[2026-01-29T03:17:52.564Z] [midday-checkin] Starting poll at 2026-01-29T03:17:52.563Z
+[2026-01-29T03:17:52.564Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T03:22:52.642Z] [midday-checkin] Starting poll at 2026-01-29T03:22:52.640Z
+[2026-01-29T03:22:52.642Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T05:22:35.839Z] [midday-checkin] Starting poll at 2026-01-29T05:22:35.837Z
+[2026-01-29T05:22:35.839Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T08:57:28.308Z] [midday-checkin] Starting poll at 2026-01-29T08:57:28.306Z
+[2026-01-29T08:57:28.309Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T10:53:39.360Z] [midday-checkin] Starting poll at 2026-01-29T10:53:39.359Z
+[2026-01-29T10:53:39.361Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T10:58:39.412Z] [midday-checkin] Starting poll at 2026-01-29T10:58:39.411Z
+[2026-01-29T10:58:39.413Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:03:39.489Z] [midday-checkin] Starting poll at 2026-01-29T11:03:39.487Z
+[2026-01-29T11:03:39.490Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:08:39.573Z] [midday-checkin] Starting poll at 2026-01-29T11:08:39.572Z
+[2026-01-29T11:08:39.574Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:13:39.653Z] [midday-checkin] Starting poll at 2026-01-29T11:13:39.652Z
+[2026-01-29T11:13:39.654Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:18:39.732Z] [midday-checkin] Starting poll at 2026-01-29T11:18:39.730Z
+[2026-01-29T11:18:39.733Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:23:39.814Z] [midday-checkin] Starting poll at 2026-01-29T11:23:39.813Z
+[2026-01-29T11:23:39.814Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:28:39.903Z] [midday-checkin] Starting poll at 2026-01-29T11:28:39.901Z
+[2026-01-29T11:28:39.903Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:33:39.980Z] [midday-checkin] Starting poll at 2026-01-29T11:33:39.978Z
+[2026-01-29T11:33:39.980Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:38:40.053Z] [midday-checkin] Starting poll at 2026-01-29T11:38:40.052Z
+[2026-01-29T11:38:40.054Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:43:40.134Z] [midday-checkin] Starting poll at 2026-01-29T11:43:40.133Z
+[2026-01-29T11:43:40.136Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:48:40.218Z] [midday-checkin] Starting poll at 2026-01-29T11:48:40.217Z
+[2026-01-29T11:48:40.220Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:53:40.300Z] [midday-checkin] Starting poll at 2026-01-29T11:53:40.298Z
+[2026-01-29T11:53:40.301Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T11:58:40.371Z] [midday-checkin] Starting poll at 2026-01-29T11:58:40.370Z
+[2026-01-29T11:58:40.371Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:03:40.448Z] [midday-checkin] Starting poll at 2026-01-29T12:03:40.446Z
+[2026-01-29T12:03:40.449Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:08:40.527Z] [midday-checkin] Starting poll at 2026-01-29T12:08:40.526Z
+[2026-01-29T12:08:40.529Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:13:40.609Z] [midday-checkin] Starting poll at 2026-01-29T12:13:40.608Z
+[2026-01-29T12:13:40.610Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:18:40.686Z] [midday-checkin] Starting poll at 2026-01-29T12:18:40.684Z
+[2026-01-29T12:18:40.688Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:23:40.780Z] [midday-checkin] Starting poll at 2026-01-29T12:23:40.778Z
+[2026-01-29T12:23:40.780Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:28:40.860Z] [midday-checkin] Starting poll at 2026-01-29T12:28:40.858Z
+[2026-01-29T12:28:40.862Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:33:40.932Z] [midday-checkin] Starting poll at 2026-01-29T12:33:40.931Z
+[2026-01-29T12:33:40.932Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:38:41.014Z] [midday-checkin] Starting poll at 2026-01-29T12:38:41.013Z
+[2026-01-29T12:38:41.016Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:43:41.092Z] [midday-checkin] Starting poll at 2026-01-29T12:43:41.091Z
+[2026-01-29T12:43:41.094Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:48:41.160Z] [midday-checkin] Starting poll at 2026-01-29T12:48:41.159Z
+[2026-01-29T12:48:41.160Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:53:41.236Z] [midday-checkin] Starting poll at 2026-01-29T12:53:41.235Z
+[2026-01-29T12:53:41.238Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T12:58:41.310Z] [midday-checkin] Starting poll at 2026-01-29T12:58:41.309Z
+[2026-01-29T12:58:41.312Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T13:03:41.394Z] [midday-checkin] Starting poll at 2026-01-29T13:03:41.393Z
+[2026-01-29T13:03:41.395Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T13:08:41.478Z] [midday-checkin] Starting poll at 2026-01-29T13:08:41.477Z
+[2026-01-29T13:08:41.478Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T13:13:41.539Z] [midday-checkin] Starting poll at 2026-01-29T13:13:41.538Z
+[2026-01-29T13:13:41.539Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T13:18:41.611Z] [midday-checkin] Starting poll at 2026-01-29T13:18:41.610Z
+[2026-01-29T13:18:41.613Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T13:56:39.301Z] [midday-checkin] Starting poll at 2026-01-29T13:56:39.300Z
+[2026-01-29T13:56:39.303Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T14:31:30.342Z] [midday-checkin] Starting poll at 2026-01-29T14:31:30.341Z
+[2026-01-29T14:31:30.344Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T14:52:42.385Z] [midday-checkin] Starting poll at 2026-01-29T14:52:42.383Z
+[2026-01-29T14:52:42.385Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T15:16:23.884Z] [midday-checkin] Starting poll at 2026-01-29T15:16:23.883Z
+[2026-01-29T15:16:23.886Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T15:50:56.534Z] [midday-checkin] Starting poll at 2026-01-29T15:50:56.532Z
+[2026-01-29T15:50:56.534Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T16:41:17.628Z] [midday-checkin] Starting poll at 2026-01-29T16:41:17.627Z
+[2026-01-29T16:41:17.629Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T17:10:52.300Z] [midday-checkin] Starting poll at 2026-01-29T17:10:52.299Z
+[2026-01-29T17:10:52.302Z] [midday-checkin] Collecting data...
+[2026-01-29T17:10:55.219Z] [midday-checkin] Sending midday check-in...
+[2026-01-29T17:10:55.668Z] [midday-checkin] Midday check-in sent successfully.
+[2026-01-29T17:51:23.403Z] [midday-checkin] Starting poll at 2026-01-29T17:51:23.402Z
+[2026-01-29T17:51:23.405Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-29T18:24:33.059Z] [midday-checkin] Starting poll at 2026-01-29T18:24:33.058Z
+[2026-01-29T18:24:33.062Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-29T19:24:25.885Z] [midday-checkin] Starting poll at 2026-01-29T19:24:25.884Z
+[2026-01-29T19:24:25.885Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:33:59.668Z] [midday-checkin] Starting poll at 2026-01-29T19:33:59.666Z
+[2026-01-29T19:33:59.668Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:38:59.737Z] [midday-checkin] Starting poll at 2026-01-29T19:38:59.736Z
+[2026-01-29T19:38:59.737Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:43:59.810Z] [midday-checkin] Starting poll at 2026-01-29T19:43:59.809Z
+[2026-01-29T19:43:59.810Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:48:59.889Z] [midday-checkin] Starting poll at 2026-01-29T19:48:59.887Z
+[2026-01-29T19:48:59.889Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:53:59.970Z] [midday-checkin] Starting poll at 2026-01-29T19:53:59.969Z
+[2026-01-29T19:53:59.970Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T19:59:00.070Z] [midday-checkin] Starting poll at 2026-01-29T19:59:00.068Z
+[2026-01-29T19:59:00.070Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:04:00.137Z] [midday-checkin] Starting poll at 2026-01-29T20:04:00.136Z
+[2026-01-29T20:04:00.138Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:09:00.220Z] [midday-checkin] Starting poll at 2026-01-29T20:09:00.219Z
+[2026-01-29T20:09:00.220Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:14:00.297Z] [midday-checkin] Starting poll at 2026-01-29T20:14:00.296Z
+[2026-01-29T20:14:00.298Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:19:00.377Z] [midday-checkin] Starting poll at 2026-01-29T20:19:00.376Z
+[2026-01-29T20:19:00.377Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:24:00.457Z] [midday-checkin] Starting poll at 2026-01-29T20:24:00.455Z
+[2026-01-29T20:24:00.458Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:29:00.541Z] [midday-checkin] Starting poll at 2026-01-29T20:29:00.539Z
+[2026-01-29T20:29:00.541Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:34:00.640Z] [midday-checkin] Starting poll at 2026-01-29T20:34:00.639Z
+[2026-01-29T20:34:00.641Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T20:39:00.720Z] [midday-checkin] Starting poll at 2026-01-29T20:39:00.719Z
+[2026-01-29T20:39:00.720Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T21:04:26.250Z] [midday-checkin] Starting poll at 2026-01-29T21:04:26.249Z
+[2026-01-29T21:04:26.250Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T21:25:58.580Z] [midday-checkin] Starting poll at 2026-01-29T21:25:58.579Z
+[2026-01-29T21:25:58.580Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T21:36:23.465Z] [midday-checkin] Starting poll at 2026-01-29T21:36:23.464Z
+[2026-01-29T21:36:23.465Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T21:59:33.915Z] [midday-checkin] Starting poll at 2026-01-29T21:59:33.914Z
+[2026-01-29T21:59:33.916Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T22:22:02.945Z] [midday-checkin] Starting poll at 2026-01-29T22:22:02.944Z
+[2026-01-29T22:22:02.945Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:09:58.709Z] [midday-checkin] Starting poll at 2026-01-29T23:09:58.708Z
+[2026-01-29T23:09:58.709Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:19:51.549Z] [midday-checkin] Starting poll at 2026-01-29T23:19:51.548Z
+[2026-01-29T23:19:51.550Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:24:51.623Z] [midday-checkin] Starting poll at 2026-01-29T23:24:51.622Z
+[2026-01-29T23:24:51.624Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:29:51.698Z] [midday-checkin] Starting poll at 2026-01-29T23:29:51.697Z
+[2026-01-29T23:29:51.699Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:34:51.772Z] [midday-checkin] Starting poll at 2026-01-29T23:34:51.771Z
+[2026-01-29T23:34:51.772Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:39:51.812Z] [midday-checkin] Starting poll at 2026-01-29T23:39:51.811Z
+[2026-01-29T23:39:51.812Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-29T23:44:51.867Z] [midday-checkin] Starting poll at 2026-01-29T23:44:51.865Z
+[2026-01-29T23:44:51.867Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T00:25:25.081Z] [midday-checkin] Starting poll at 2026-01-30T00:25:25.080Z
+[2026-01-30T00:25:25.083Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T01:23:22.837Z] [midday-checkin] Starting poll at 2026-01-30T01:23:22.836Z
+[2026-01-30T01:23:22.839Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T01:37:17.041Z] [midday-checkin] Starting poll at 2026-01-30T01:37:17.040Z
+[2026-01-30T01:37:17.041Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T01:51:36.988Z] [midday-checkin] Starting poll at 2026-01-30T01:51:36.987Z
+[2026-01-30T01:51:36.990Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T02:18:55.514Z] [midday-checkin] Starting poll at 2026-01-30T02:18:55.513Z
+[2026-01-30T02:18:55.514Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T03:00:20.571Z] [midday-checkin] Starting poll at 2026-01-30T03:00:20.569Z
+[2026-01-30T03:00:20.572Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T03:47:37.116Z] [midday-checkin] Starting poll at 2026-01-30T03:47:37.115Z
+[2026-01-30T03:47:37.118Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T04:09:19.914Z] [midday-checkin] Starting poll at 2026-01-30T04:09:19.913Z
+[2026-01-30T04:09:19.914Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T04:47:24.686Z] [midday-checkin] Starting poll at 2026-01-30T04:47:24.685Z
+[2026-01-30T04:47:24.687Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T05:11:27.143Z] [midday-checkin] Starting poll at 2026-01-30T05:11:27.141Z
+[2026-01-30T05:11:27.144Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T05:51:12.995Z] [midday-checkin] Starting poll at 2026-01-30T05:51:12.993Z
+[2026-01-30T05:51:12.996Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:12:29.819Z] [midday-checkin] Starting poll at 2026-01-30T06:12:29.819Z
+[2026-01-30T06:12:29.821Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:33:51.895Z] [midday-checkin] Starting poll at 2026-01-30T06:33:51.894Z
+[2026-01-30T06:33:51.896Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:38:51.974Z] [midday-checkin] Starting poll at 2026-01-30T06:38:51.973Z
+[2026-01-30T06:38:51.975Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:43:52.047Z] [midday-checkin] Starting poll at 2026-01-30T06:43:52.045Z
+[2026-01-30T06:43:52.047Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:48:52.126Z] [midday-checkin] Starting poll at 2026-01-30T06:48:52.124Z
+[2026-01-30T06:48:52.128Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:53:52.206Z] [midday-checkin] Starting poll at 2026-01-30T06:53:52.204Z
+[2026-01-30T06:53:52.206Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T06:58:52.282Z] [midday-checkin] Starting poll at 2026-01-30T06:58:52.281Z
+[2026-01-30T06:58:52.282Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T07:03:52.361Z] [midday-checkin] Starting poll at 2026-01-30T07:03:52.360Z
+[2026-01-30T07:03:52.363Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T07:08:52.437Z] [midday-checkin] Starting poll at 2026-01-30T07:08:52.436Z
+[2026-01-30T07:08:52.438Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T12:56:16.488Z] [midday-checkin] Starting poll at 2026-01-30T12:56:16.487Z
+[2026-01-30T12:56:16.490Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T12:59:10.964Z] [midday-checkin] Starting poll at 2026-01-30T12:59:10.962Z
+[2026-01-30T12:59:10.965Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:04:11.060Z] [midday-checkin] Starting poll at 2026-01-30T13:04:11.059Z
+[2026-01-30T13:04:11.060Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:09:11.158Z] [midday-checkin] Starting poll at 2026-01-30T13:09:11.156Z
+[2026-01-30T13:09:11.158Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:14:11.269Z] [midday-checkin] Starting poll at 2026-01-30T13:14:11.266Z
+[2026-01-30T13:14:11.270Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:19:11.372Z] [midday-checkin] Starting poll at 2026-01-30T13:19:11.370Z
+[2026-01-30T13:19:11.373Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:24:11.492Z] [midday-checkin] Starting poll at 2026-01-30T13:24:11.491Z
+[2026-01-30T13:24:11.493Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:29:11.603Z] [midday-checkin] Starting poll at 2026-01-30T13:29:11.601Z
+[2026-01-30T13:29:11.603Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:34:11.704Z] [midday-checkin] Starting poll at 2026-01-30T13:34:11.702Z
+[2026-01-30T13:34:11.705Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:39:11.779Z] [midday-checkin] Starting poll at 2026-01-30T13:39:11.778Z
+[2026-01-30T13:39:11.779Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:44:11.875Z] [midday-checkin] Starting poll at 2026-01-30T13:44:11.873Z
+[2026-01-30T13:44:11.875Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:49:11.974Z] [midday-checkin] Starting poll at 2026-01-30T13:49:11.973Z
+[2026-01-30T13:49:11.975Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:54:12.063Z] [midday-checkin] Starting poll at 2026-01-30T13:54:12.062Z
+[2026-01-30T13:54:12.064Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T13:59:12.162Z] [midday-checkin] Starting poll at 2026-01-30T13:59:12.160Z
+[2026-01-30T13:59:12.162Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:04:12.254Z] [midday-checkin] Starting poll at 2026-01-30T14:04:12.253Z
+[2026-01-30T14:04:12.255Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:09:12.338Z] [midday-checkin] Starting poll at 2026-01-30T14:09:12.337Z
+[2026-01-30T14:09:12.338Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:14:12.451Z] [midday-checkin] Starting poll at 2026-01-30T14:14:12.448Z
+[2026-01-30T14:14:12.451Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:19:12.560Z] [midday-checkin] Starting poll at 2026-01-30T14:19:12.558Z
+[2026-01-30T14:19:12.560Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:24:12.652Z] [midday-checkin] Starting poll at 2026-01-30T14:24:12.650Z
+[2026-01-30T14:24:12.652Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:29:12.727Z] [midday-checkin] Starting poll at 2026-01-30T14:29:12.726Z
+[2026-01-30T14:29:12.727Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:34:12.810Z] [midday-checkin] Starting poll at 2026-01-30T14:34:12.808Z
+[2026-01-30T14:34:12.810Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:39:12.909Z] [midday-checkin] Starting poll at 2026-01-30T14:39:12.907Z
+[2026-01-30T14:39:12.909Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:44:13.005Z] [midday-checkin] Starting poll at 2026-01-30T14:44:13.003Z
+[2026-01-30T14:44:13.005Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:49:13.101Z] [midday-checkin] Starting poll at 2026-01-30T14:49:13.099Z
+[2026-01-30T14:49:13.101Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:54:13.187Z] [midday-checkin] Starting poll at 2026-01-30T14:54:13.186Z
+[2026-01-30T14:54:13.188Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T14:59:13.286Z] [midday-checkin] Starting poll at 2026-01-30T14:59:13.284Z
+[2026-01-30T14:59:13.286Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:04:13.367Z] [midday-checkin] Starting poll at 2026-01-30T15:04:13.366Z
+[2026-01-30T15:04:13.367Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:09:13.447Z] [midday-checkin] Starting poll at 2026-01-30T15:09:13.445Z
+[2026-01-30T15:09:13.447Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:14:13.546Z] [midday-checkin] Starting poll at 2026-01-30T15:14:13.545Z
+[2026-01-30T15:14:13.546Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:19:13.651Z] [midday-checkin] Starting poll at 2026-01-30T15:19:13.649Z
+[2026-01-30T15:19:13.651Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:24:13.747Z] [midday-checkin] Starting poll at 2026-01-30T15:24:13.745Z
+[2026-01-30T15:24:13.747Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:29:13.846Z] [midday-checkin] Starting poll at 2026-01-30T15:29:13.844Z
+[2026-01-30T15:29:13.847Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:34:13.922Z] [midday-checkin] Starting poll at 2026-01-30T15:34:13.922Z
+[2026-01-30T15:34:13.923Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:39:13.997Z] [midday-checkin] Starting poll at 2026-01-30T15:39:13.996Z
+[2026-01-30T15:39:13.998Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:44:14.094Z] [midday-checkin] Starting poll at 2026-01-30T15:44:14.093Z
+[2026-01-30T15:44:14.094Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:49:14.180Z] [midday-checkin] Starting poll at 2026-01-30T15:49:14.179Z
+[2026-01-30T15:49:14.180Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:54:14.261Z] [midday-checkin] Starting poll at 2026-01-30T15:54:14.260Z
+[2026-01-30T15:54:14.261Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T15:59:14.356Z] [midday-checkin] Starting poll at 2026-01-30T15:59:14.355Z
+[2026-01-30T15:59:14.357Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:04:14.415Z] [midday-checkin] Starting poll at 2026-01-30T16:04:14.414Z
+[2026-01-30T16:04:14.415Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:09:14.507Z] [midday-checkin] Starting poll at 2026-01-30T16:09:14.505Z
+[2026-01-30T16:09:14.507Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:14:14.582Z] [midday-checkin] Starting poll at 2026-01-30T16:14:14.581Z
+[2026-01-30T16:14:14.583Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:19:14.670Z] [midday-checkin] Starting poll at 2026-01-30T16:19:14.668Z
+[2026-01-30T16:19:14.670Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:24:14.765Z] [midday-checkin] Starting poll at 2026-01-30T16:24:14.764Z
+[2026-01-30T16:24:14.766Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:29:14.864Z] [midday-checkin] Starting poll at 2026-01-30T16:29:14.863Z
+[2026-01-30T16:29:14.865Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:34:14.923Z] [midday-checkin] Starting poll at 2026-01-30T16:34:14.922Z
+[2026-01-30T16:34:14.923Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:39:15.024Z] [midday-checkin] Starting poll at 2026-01-30T16:39:15.023Z
+[2026-01-30T16:39:15.025Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:44:15.118Z] [midday-checkin] Starting poll at 2026-01-30T16:44:15.117Z
+[2026-01-30T16:44:15.118Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:49:15.197Z] [midday-checkin] Starting poll at 2026-01-30T16:49:15.195Z
+[2026-01-30T16:49:15.197Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:54:15.282Z] [midday-checkin] Starting poll at 2026-01-30T16:54:15.281Z
+[2026-01-30T16:54:15.282Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T16:59:15.404Z] [midday-checkin] Starting poll at 2026-01-30T16:59:15.402Z
+[2026-01-30T16:59:15.404Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T17:04:15.478Z] [midday-checkin] Starting poll at 2026-01-30T17:04:15.477Z
+[2026-01-30T17:04:15.479Z] [midday-checkin] Collecting data...
+[2026-01-30T17:04:18.671Z] [midday-checkin] Sending midday check-in...
+[2026-01-30T17:04:19.139Z] [midday-checkin] Midday check-in sent successfully.
+[2026-01-30T17:09:19.226Z] [midday-checkin] Starting poll at 2026-01-30T17:09:19.225Z
+[2026-01-30T17:09:19.226Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:14:19.305Z] [midday-checkin] Starting poll at 2026-01-30T17:14:19.304Z
+[2026-01-30T17:14:19.306Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:19:19.371Z] [midday-checkin] Starting poll at 2026-01-30T17:19:19.370Z
+[2026-01-30T17:19:19.373Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:24:19.441Z] [midday-checkin] Starting poll at 2026-01-30T17:24:19.440Z
+[2026-01-30T17:24:19.443Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:29:19.518Z] [midday-checkin] Starting poll at 2026-01-30T17:29:19.517Z
+[2026-01-30T17:29:19.520Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:34:19.595Z] [midday-checkin] Starting poll at 2026-01-30T17:34:19.594Z
+[2026-01-30T17:34:19.597Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:39:19.677Z] [midday-checkin] Starting poll at 2026-01-30T17:39:19.676Z
+[2026-01-30T17:39:19.678Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:44:19.748Z] [midday-checkin] Starting poll at 2026-01-30T17:44:19.746Z
+[2026-01-30T17:44:19.750Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:49:19.824Z] [midday-checkin] Starting poll at 2026-01-30T17:49:19.823Z
+[2026-01-30T17:49:19.824Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:54:19.894Z] [midday-checkin] Starting poll at 2026-01-30T17:54:19.892Z
+[2026-01-30T17:54:19.894Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T17:59:19.942Z] [midday-checkin] Starting poll at 2026-01-30T17:59:19.942Z
+[2026-01-30T17:59:19.942Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:04:20.018Z] [midday-checkin] Starting poll at 2026-01-30T18:04:20.017Z
+[2026-01-30T18:04:20.020Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:09:20.097Z] [midday-checkin] Starting poll at 2026-01-30T18:09:20.096Z
+[2026-01-30T18:09:20.098Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:14:20.180Z] [midday-checkin] Starting poll at 2026-01-30T18:14:20.178Z
+[2026-01-30T18:14:20.182Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:19:20.255Z] [midday-checkin] Starting poll at 2026-01-30T18:19:20.254Z
+[2026-01-30T18:19:20.257Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:24:20.332Z] [midday-checkin] Starting poll at 2026-01-30T18:24:20.331Z
+[2026-01-30T18:24:20.332Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:29:20.407Z] [midday-checkin] Starting poll at 2026-01-30T18:29:20.406Z
+[2026-01-30T18:29:20.409Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:34:20.482Z] [midday-checkin] Starting poll at 2026-01-30T18:34:20.481Z
+[2026-01-30T18:34:20.483Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:39:20.560Z] [midday-checkin] Starting poll at 2026-01-30T18:39:20.559Z
+[2026-01-30T18:39:20.561Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:44:20.632Z] [midday-checkin] Starting poll at 2026-01-30T18:44:20.631Z
+[2026-01-30T18:44:20.633Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:49:20.702Z] [midday-checkin] Starting poll at 2026-01-30T18:49:20.701Z
+[2026-01-30T18:49:20.703Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:54:20.780Z] [midday-checkin] Starting poll at 2026-01-30T18:54:20.779Z
+[2026-01-30T18:54:20.780Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T18:59:20.864Z] [midday-checkin] Starting poll at 2026-01-30T18:59:20.862Z
+[2026-01-30T18:59:20.866Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-30T19:04:20.937Z] [midday-checkin] Starting poll at 2026-01-30T19:04:20.936Z
+[2026-01-30T19:04:20.937Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:09:21.009Z] [midday-checkin] Starting poll at 2026-01-30T19:09:21.008Z
+[2026-01-30T19:09:21.010Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:14:21.085Z] [midday-checkin] Starting poll at 2026-01-30T19:14:21.084Z
+[2026-01-30T19:14:21.087Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:19:21.161Z] [midday-checkin] Starting poll at 2026-01-30T19:19:21.160Z
+[2026-01-30T19:19:21.162Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:24:21.243Z] [midday-checkin] Starting poll at 2026-01-30T19:24:21.242Z
+[2026-01-30T19:24:21.244Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:29:21.324Z] [midday-checkin] Starting poll at 2026-01-30T19:29:21.323Z
+[2026-01-30T19:29:21.325Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:34:21.407Z] [midday-checkin] Starting poll at 2026-01-30T19:34:21.406Z
+[2026-01-30T19:34:21.409Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:39:21.485Z] [midday-checkin] Starting poll at 2026-01-30T19:39:21.484Z
+[2026-01-30T19:39:21.487Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:44:21.556Z] [midday-checkin] Starting poll at 2026-01-30T19:44:21.555Z
+[2026-01-30T19:44:21.556Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:49:21.624Z] [midday-checkin] Starting poll at 2026-01-30T19:49:21.623Z
+[2026-01-30T19:49:21.626Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:54:21.704Z] [midday-checkin] Starting poll at 2026-01-30T19:54:21.703Z
+[2026-01-30T19:54:21.706Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T19:59:21.786Z] [midday-checkin] Starting poll at 2026-01-30T19:59:21.784Z
+[2026-01-30T19:59:21.787Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:04:21.857Z] [midday-checkin] Starting poll at 2026-01-30T20:04:21.856Z
+[2026-01-30T20:04:21.858Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:09:21.916Z] [midday-checkin] Starting poll at 2026-01-30T20:09:21.915Z
+[2026-01-30T20:09:21.917Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:14:21.998Z] [midday-checkin] Starting poll at 2026-01-30T20:14:21.996Z
+[2026-01-30T20:14:21.999Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:19:22.081Z] [midday-checkin] Starting poll at 2026-01-30T20:19:22.079Z
+[2026-01-30T20:19:22.081Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:24:22.152Z] [midday-checkin] Starting poll at 2026-01-30T20:24:22.151Z
+[2026-01-30T20:24:22.153Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:29:22.236Z] [midday-checkin] Starting poll at 2026-01-30T20:29:22.235Z
+[2026-01-30T20:29:22.237Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:34:22.299Z] [midday-checkin] Starting poll at 2026-01-30T20:34:22.298Z
+[2026-01-30T20:34:22.300Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:39:22.354Z] [midday-checkin] Starting poll at 2026-01-30T20:39:22.353Z
+[2026-01-30T20:39:22.354Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:44:22.430Z] [midday-checkin] Starting poll at 2026-01-30T20:44:22.429Z
+[2026-01-30T20:44:22.431Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:49:22.502Z] [midday-checkin] Starting poll at 2026-01-30T20:49:22.501Z
+[2026-01-30T20:49:22.503Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:54:22.568Z] [midday-checkin] Starting poll at 2026-01-30T20:54:22.567Z
+[2026-01-30T20:54:22.570Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T20:59:22.646Z] [midday-checkin] Starting poll at 2026-01-30T20:59:22.645Z
+[2026-01-30T20:59:22.648Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:04:22.725Z] [midday-checkin] Starting poll at 2026-01-30T21:04:22.724Z
+[2026-01-30T21:04:22.727Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:09:22.807Z] [midday-checkin] Starting poll at 2026-01-30T21:09:22.806Z
+[2026-01-30T21:09:22.809Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:14:22.885Z] [midday-checkin] Starting poll at 2026-01-30T21:14:22.884Z
+[2026-01-30T21:14:22.885Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:19:22.960Z] [midday-checkin] Starting poll at 2026-01-30T21:19:22.959Z
+[2026-01-30T21:19:22.961Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:24:23.041Z] [midday-checkin] Starting poll at 2026-01-30T21:24:23.040Z
+[2026-01-30T21:24:23.041Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:29:23.115Z] [midday-checkin] Starting poll at 2026-01-30T21:29:23.114Z
+[2026-01-30T21:29:23.117Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:34:23.191Z] [midday-checkin] Starting poll at 2026-01-30T21:34:23.190Z
+[2026-01-30T21:34:23.192Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:39:23.268Z] [midday-checkin] Starting poll at 2026-01-30T21:39:23.266Z
+[2026-01-30T21:39:23.269Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:44:23.351Z] [midday-checkin] Starting poll at 2026-01-30T21:44:23.350Z
+[2026-01-30T21:44:23.351Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:49:23.405Z] [midday-checkin] Starting poll at 2026-01-30T21:49:23.404Z
+[2026-01-30T21:49:23.405Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:54:23.483Z] [midday-checkin] Starting poll at 2026-01-30T21:54:23.481Z
+[2026-01-30T21:54:23.483Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T21:59:23.565Z] [midday-checkin] Starting poll at 2026-01-30T21:59:23.564Z
+[2026-01-30T21:59:23.567Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:04:23.658Z] [midday-checkin] Starting poll at 2026-01-30T22:04:23.657Z
+[2026-01-30T22:04:23.660Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:09:23.712Z] [midday-checkin] Starting poll at 2026-01-30T22:09:23.711Z
+[2026-01-30T22:09:23.712Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:14:23.791Z] [midday-checkin] Starting poll at 2026-01-30T22:14:23.789Z
+[2026-01-30T22:14:23.792Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:19:23.842Z] [midday-checkin] Starting poll at 2026-01-30T22:19:23.841Z
+[2026-01-30T22:19:23.842Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:24:23.919Z] [midday-checkin] Starting poll at 2026-01-30T22:24:23.918Z
+[2026-01-30T22:24:23.919Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:29:23.992Z] [midday-checkin] Starting poll at 2026-01-30T22:29:23.991Z
+[2026-01-30T22:29:23.992Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:34:24.063Z] [midday-checkin] Starting poll at 2026-01-30T22:34:24.062Z
+[2026-01-30T22:34:24.064Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:39:24.136Z] [midday-checkin] Starting poll at 2026-01-30T22:39:24.135Z
+[2026-01-30T22:39:24.136Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:44:24.190Z] [midday-checkin] Starting poll at 2026-01-30T22:44:24.190Z
+[2026-01-30T22:44:24.191Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:49:24.270Z] [midday-checkin] Starting poll at 2026-01-30T22:49:24.268Z
+[2026-01-30T22:49:24.270Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:54:24.344Z] [midday-checkin] Starting poll at 2026-01-30T22:54:24.342Z
+[2026-01-30T22:54:24.344Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T22:59:24.424Z] [midday-checkin] Starting poll at 2026-01-30T22:59:24.423Z
+[2026-01-30T22:59:24.424Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:04:24.505Z] [midday-checkin] Starting poll at 2026-01-30T23:04:24.503Z
+[2026-01-30T23:04:24.505Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:09:24.587Z] [midday-checkin] Starting poll at 2026-01-30T23:09:24.586Z
+[2026-01-30T23:09:24.588Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:14:24.665Z] [midday-checkin] Starting poll at 2026-01-30T23:14:24.664Z
+[2026-01-30T23:14:24.665Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:19:24.741Z] [midday-checkin] Starting poll at 2026-01-30T23:19:24.740Z
+[2026-01-30T23:19:24.741Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:24:24.823Z] [midday-checkin] Starting poll at 2026-01-30T23:24:24.822Z
+[2026-01-30T23:24:24.823Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:29:24.908Z] [midday-checkin] Starting poll at 2026-01-30T23:29:24.906Z
+[2026-01-30T23:29:24.908Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:34:24.981Z] [midday-checkin] Starting poll at 2026-01-30T23:34:24.979Z
+[2026-01-30T23:34:24.981Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:39:25.055Z] [midday-checkin] Starting poll at 2026-01-30T23:39:25.054Z
+[2026-01-30T23:39:25.055Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:44:25.133Z] [midday-checkin] Starting poll at 2026-01-30T23:44:25.132Z
+[2026-01-30T23:44:25.134Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:49:25.211Z] [midday-checkin] Starting poll at 2026-01-30T23:49:25.210Z
+[2026-01-30T23:49:25.212Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:54:25.283Z] [midday-checkin] Starting poll at 2026-01-30T23:54:25.281Z
+[2026-01-30T23:54:25.283Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-30T23:59:25.361Z] [midday-checkin] Starting poll at 2026-01-30T23:59:25.360Z
+[2026-01-30T23:59:25.361Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:04:25.444Z] [midday-checkin] Starting poll at 2026-01-31T00:04:25.443Z
+[2026-01-31T00:04:25.444Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:09:25.519Z] [midday-checkin] Starting poll at 2026-01-31T00:09:25.518Z
+[2026-01-31T00:09:25.521Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:14:25.575Z] [midday-checkin] Starting poll at 2026-01-31T00:14:25.574Z
+[2026-01-31T00:14:25.576Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:19:25.638Z] [midday-checkin] Starting poll at 2026-01-31T00:19:25.637Z
+[2026-01-31T00:19:25.638Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:24:25.688Z] [midday-checkin] Starting poll at 2026-01-31T00:24:25.687Z
+[2026-01-31T00:24:25.688Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:29:25.748Z] [midday-checkin] Starting poll at 2026-01-31T00:29:25.748Z
+[2026-01-31T00:29:25.749Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:34:25.819Z] [midday-checkin] Starting poll at 2026-01-31T00:34:25.818Z
+[2026-01-31T00:34:25.819Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:39:25.880Z] [midday-checkin] Starting poll at 2026-01-31T00:39:25.879Z
+[2026-01-31T00:39:25.880Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:44:25.940Z] [midday-checkin] Starting poll at 2026-01-31T00:44:25.939Z
+[2026-01-31T00:44:25.940Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:49:25.994Z] [midday-checkin] Starting poll at 2026-01-31T00:49:25.992Z
+[2026-01-31T00:49:25.994Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:54:26.060Z] [midday-checkin] Starting poll at 2026-01-31T00:54:26.059Z
+[2026-01-31T00:54:26.060Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T00:59:26.113Z] [midday-checkin] Starting poll at 2026-01-31T00:59:26.112Z
+[2026-01-31T00:59:26.113Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:04:26.191Z] [midday-checkin] Starting poll at 2026-01-31T01:04:26.190Z
+[2026-01-31T01:04:26.191Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:09:26.250Z] [midday-checkin] Starting poll at 2026-01-31T01:09:26.249Z
+[2026-01-31T01:09:26.251Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:14:26.330Z] [midday-checkin] Starting poll at 2026-01-31T01:14:26.329Z
+[2026-01-31T01:14:26.332Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:19:26.411Z] [midday-checkin] Starting poll at 2026-01-31T01:19:26.410Z
+[2026-01-31T01:19:26.413Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:24:26.466Z] [midday-checkin] Starting poll at 2026-01-31T01:24:26.465Z
+[2026-01-31T01:24:26.467Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:29:26.541Z] [midday-checkin] Starting poll at 2026-01-31T01:29:26.540Z
+[2026-01-31T01:29:26.543Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:34:26.601Z] [midday-checkin] Starting poll at 2026-01-31T01:34:26.601Z
+[2026-01-31T01:34:26.603Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:39:26.648Z] [midday-checkin] Starting poll at 2026-01-31T01:39:26.647Z
+[2026-01-31T01:39:26.649Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:44:26.707Z] [midday-checkin] Starting poll at 2026-01-31T01:44:26.706Z
+[2026-01-31T01:44:26.708Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:49:26.760Z] [midday-checkin] Starting poll at 2026-01-31T01:49:26.759Z
+[2026-01-31T01:49:26.761Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:54:26.810Z] [midday-checkin] Starting poll at 2026-01-31T01:54:26.809Z
+[2026-01-31T01:54:26.810Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T01:59:26.859Z] [midday-checkin] Starting poll at 2026-01-31T01:59:26.858Z
+[2026-01-31T01:59:26.859Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:04:26.917Z] [midday-checkin] Starting poll at 2026-01-31T02:04:26.916Z
+[2026-01-31T02:04:26.918Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:09:26.969Z] [midday-checkin] Starting poll at 2026-01-31T02:09:26.969Z
+[2026-01-31T02:09:26.969Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:14:27.016Z] [midday-checkin] Starting poll at 2026-01-31T02:14:27.016Z
+[2026-01-31T02:14:27.017Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:19:27.062Z] [midday-checkin] Starting poll at 2026-01-31T02:19:27.061Z
+[2026-01-31T02:19:27.062Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:24:27.111Z] [midday-checkin] Starting poll at 2026-01-31T02:24:27.111Z
+[2026-01-31T02:24:27.112Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:29:27.167Z] [midday-checkin] Starting poll at 2026-01-31T02:29:27.167Z
+[2026-01-31T02:29:27.169Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:34:27.213Z] [midday-checkin] Starting poll at 2026-01-31T02:34:27.213Z
+[2026-01-31T02:34:27.214Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:39:27.257Z] [midday-checkin] Starting poll at 2026-01-31T02:39:27.256Z
+[2026-01-31T02:39:27.258Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:44:27.303Z] [midday-checkin] Starting poll at 2026-01-31T02:44:27.303Z
+[2026-01-31T02:44:27.303Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:49:27.345Z] [midday-checkin] Starting poll at 2026-01-31T02:49:27.345Z
+[2026-01-31T02:49:27.345Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:54:27.392Z] [midday-checkin] Starting poll at 2026-01-31T02:54:27.391Z
+[2026-01-31T02:54:27.392Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T02:59:27.438Z] [midday-checkin] Starting poll at 2026-01-31T02:59:27.437Z
+[2026-01-31T02:59:27.438Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:04:27.498Z] [midday-checkin] Starting poll at 2026-01-31T03:04:27.498Z
+[2026-01-31T03:04:27.499Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:09:27.545Z] [midday-checkin] Starting poll at 2026-01-31T03:09:27.544Z
+[2026-01-31T03:09:27.546Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:14:27.592Z] [midday-checkin] Starting poll at 2026-01-31T03:14:27.591Z
+[2026-01-31T03:14:27.592Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:19:27.641Z] [midday-checkin] Starting poll at 2026-01-31T03:19:27.641Z
+[2026-01-31T03:19:27.642Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:24:27.686Z] [midday-checkin] Starting poll at 2026-01-31T03:24:27.685Z
+[2026-01-31T03:24:27.686Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:29:27.732Z] [midday-checkin] Starting poll at 2026-01-31T03:29:27.731Z
+[2026-01-31T03:29:27.732Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:34:27.784Z] [midday-checkin] Starting poll at 2026-01-31T03:34:27.783Z
+[2026-01-31T03:34:27.784Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:39:27.839Z] [midday-checkin] Starting poll at 2026-01-31T03:39:27.838Z
+[2026-01-31T03:39:27.839Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:44:27.894Z] [midday-checkin] Starting poll at 2026-01-31T03:44:27.894Z
+[2026-01-31T03:44:27.894Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:49:27.944Z] [midday-checkin] Starting poll at 2026-01-31T03:49:27.943Z
+[2026-01-31T03:49:27.944Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:54:27.992Z] [midday-checkin] Starting poll at 2026-01-31T03:54:27.991Z
+[2026-01-31T03:54:27.992Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T03:59:28.040Z] [midday-checkin] Starting poll at 2026-01-31T03:59:28.039Z
+[2026-01-31T03:59:28.040Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:04:28.090Z] [midday-checkin] Starting poll at 2026-01-31T04:04:28.089Z
+[2026-01-31T04:04:28.090Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:09:28.136Z] [midday-checkin] Starting poll at 2026-01-31T04:09:28.136Z
+[2026-01-31T04:09:28.136Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:14:28.186Z] [midday-checkin] Starting poll at 2026-01-31T04:14:28.185Z
+[2026-01-31T04:14:28.186Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:19:28.244Z] [midday-checkin] Starting poll at 2026-01-31T04:19:28.243Z
+[2026-01-31T04:19:28.244Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:24:28.287Z] [midday-checkin] Starting poll at 2026-01-31T04:24:28.287Z
+[2026-01-31T04:24:28.287Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:29:28.335Z] [midday-checkin] Starting poll at 2026-01-31T04:29:28.335Z
+[2026-01-31T04:29:28.336Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:34:28.386Z] [midday-checkin] Starting poll at 2026-01-31T04:34:28.386Z
+[2026-01-31T04:34:28.386Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:39:28.431Z] [midday-checkin] Starting poll at 2026-01-31T04:39:28.431Z
+[2026-01-31T04:39:28.431Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:44:28.478Z] [midday-checkin] Starting poll at 2026-01-31T04:44:28.477Z
+[2026-01-31T04:44:28.478Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:49:28.552Z] [midday-checkin] Starting poll at 2026-01-31T04:49:28.551Z
+[2026-01-31T04:49:28.553Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:54:28.625Z] [midday-checkin] Starting poll at 2026-01-31T04:54:28.624Z
+[2026-01-31T04:54:28.626Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T04:59:28.705Z] [midday-checkin] Starting poll at 2026-01-31T04:59:28.704Z
+[2026-01-31T04:59:28.705Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:04:28.786Z] [midday-checkin] Starting poll at 2026-01-31T05:04:28.785Z
+[2026-01-31T05:04:28.787Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:09:28.867Z] [midday-checkin] Starting poll at 2026-01-31T05:09:28.866Z
+[2026-01-31T05:09:28.868Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:14:28.943Z] [midday-checkin] Starting poll at 2026-01-31T05:14:28.941Z
+[2026-01-31T05:14:28.944Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:19:29.013Z] [midday-checkin] Starting poll at 2026-01-31T05:19:29.012Z
+[2026-01-31T05:19:29.014Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:24:29.087Z] [midday-checkin] Starting poll at 2026-01-31T05:24:29.085Z
+[2026-01-31T05:24:29.088Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:29:29.161Z] [midday-checkin] Starting poll at 2026-01-31T05:29:29.160Z
+[2026-01-31T05:29:29.163Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:34:29.234Z] [midday-checkin] Starting poll at 2026-01-31T05:34:29.233Z
+[2026-01-31T05:34:29.234Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:39:29.305Z] [midday-checkin] Starting poll at 2026-01-31T05:39:29.303Z
+[2026-01-31T05:39:29.306Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:44:29.379Z] [midday-checkin] Starting poll at 2026-01-31T05:44:29.378Z
+[2026-01-31T05:44:29.380Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:49:29.461Z] [midday-checkin] Starting poll at 2026-01-31T05:49:29.460Z
+[2026-01-31T05:49:29.463Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:54:29.533Z] [midday-checkin] Starting poll at 2026-01-31T05:54:29.532Z
+[2026-01-31T05:54:29.533Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T05:59:29.609Z] [midday-checkin] Starting poll at 2026-01-31T05:59:29.608Z
+[2026-01-31T05:59:29.610Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:04:29.682Z] [midday-checkin] Starting poll at 2026-01-31T06:04:29.681Z
+[2026-01-31T06:04:29.684Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:09:29.756Z] [midday-checkin] Starting poll at 2026-01-31T06:09:29.755Z
+[2026-01-31T06:09:29.757Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:14:29.830Z] [midday-checkin] Starting poll at 2026-01-31T06:14:29.829Z
+[2026-01-31T06:14:29.832Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:19:29.901Z] [midday-checkin] Starting poll at 2026-01-31T06:19:29.900Z
+[2026-01-31T06:19:29.902Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:24:29.978Z] [midday-checkin] Starting poll at 2026-01-31T06:24:29.976Z
+[2026-01-31T06:24:29.978Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:29:30.056Z] [midday-checkin] Starting poll at 2026-01-31T06:29:30.055Z
+[2026-01-31T06:29:30.058Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:34:30.136Z] [midday-checkin] Starting poll at 2026-01-31T06:34:30.134Z
+[2026-01-31T06:34:30.137Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:39:30.219Z] [midday-checkin] Starting poll at 2026-01-31T06:39:30.218Z
+[2026-01-31T06:39:30.219Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:44:30.293Z] [midday-checkin] Starting poll at 2026-01-31T06:44:30.292Z
+[2026-01-31T06:44:30.295Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:49:30.371Z] [midday-checkin] Starting poll at 2026-01-31T06:49:30.370Z
+[2026-01-31T06:49:30.372Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:54:30.448Z] [midday-checkin] Starting poll at 2026-01-31T06:54:30.446Z
+[2026-01-31T06:54:30.449Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T06:59:30.526Z] [midday-checkin] Starting poll at 2026-01-31T06:59:30.525Z
+[2026-01-31T06:59:30.526Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T07:04:30.606Z] [midday-checkin] Starting poll at 2026-01-31T07:04:30.604Z
+[2026-01-31T07:04:30.607Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T07:09:30.682Z] [midday-checkin] Starting poll at 2026-01-31T07:09:30.680Z
+[2026-01-31T07:09:30.682Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:01:35.523Z] [midday-checkin] Starting poll at 2026-01-31T14:01:35.522Z
+[2026-01-31T14:01:35.524Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:06:35.596Z] [midday-checkin] Starting poll at 2026-01-31T14:06:35.595Z
+[2026-01-31T14:06:35.597Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:11:35.677Z] [midday-checkin] Starting poll at 2026-01-31T14:11:35.676Z
+[2026-01-31T14:11:35.678Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:16:35.760Z] [midday-checkin] Starting poll at 2026-01-31T14:16:35.759Z
+[2026-01-31T14:16:35.761Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:21:35.844Z] [midday-checkin] Starting poll at 2026-01-31T14:21:35.843Z
+[2026-01-31T14:21:35.845Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:26:35.897Z] [midday-checkin] Starting poll at 2026-01-31T14:26:35.896Z
+[2026-01-31T14:26:35.898Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:31:35.947Z] [midday-checkin] Starting poll at 2026-01-31T14:31:35.946Z
+[2026-01-31T14:31:35.948Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:36:35.994Z] [midday-checkin] Starting poll at 2026-01-31T14:36:35.993Z
+[2026-01-31T14:36:35.994Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:41:36.044Z] [midday-checkin] Starting poll at 2026-01-31T14:41:36.042Z
+[2026-01-31T14:41:36.044Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:46:36.093Z] [midday-checkin] Starting poll at 2026-01-31T14:46:36.092Z
+[2026-01-31T14:46:36.093Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:51:36.171Z] [midday-checkin] Starting poll at 2026-01-31T14:51:36.170Z
+[2026-01-31T14:51:36.172Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T14:56:36.255Z] [midday-checkin] Starting poll at 2026-01-31T14:56:36.254Z
+[2026-01-31T14:56:36.256Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:01:36.310Z] [midday-checkin] Starting poll at 2026-01-31T15:01:36.309Z
+[2026-01-31T15:01:36.310Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:06:36.379Z] [midday-checkin] Starting poll at 2026-01-31T15:06:36.378Z
+[2026-01-31T15:06:36.380Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:11:36.432Z] [midday-checkin] Starting poll at 2026-01-31T15:11:36.432Z
+[2026-01-31T15:11:36.433Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:16:36.489Z] [midday-checkin] Starting poll at 2026-01-31T15:16:36.488Z
+[2026-01-31T15:16:36.489Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:21:36.546Z] [midday-checkin] Starting poll at 2026-01-31T15:21:36.545Z
+[2026-01-31T15:21:36.546Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:26:36.598Z] [midday-checkin] Starting poll at 2026-01-31T15:26:36.597Z
+[2026-01-31T15:26:36.599Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:31:36.660Z] [midday-checkin] Starting poll at 2026-01-31T15:31:36.659Z
+[2026-01-31T15:31:36.661Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:36:36.721Z] [midday-checkin] Starting poll at 2026-01-31T15:36:36.720Z
+[2026-01-31T15:36:36.721Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:41:36.778Z] [midday-checkin] Starting poll at 2026-01-31T15:41:36.778Z
+[2026-01-31T15:41:36.779Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:46:36.828Z] [midday-checkin] Starting poll at 2026-01-31T15:46:36.827Z
+[2026-01-31T15:46:36.828Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:51:36.878Z] [midday-checkin] Starting poll at 2026-01-31T15:51:36.877Z
+[2026-01-31T15:51:36.878Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T15:56:36.934Z] [midday-checkin] Starting poll at 2026-01-31T15:56:36.933Z
+[2026-01-31T15:56:36.934Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:01:36.981Z] [midday-checkin] Starting poll at 2026-01-31T16:01:36.980Z
+[2026-01-31T16:01:36.981Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:06:37.027Z] [midday-checkin] Starting poll at 2026-01-31T16:06:37.027Z
+[2026-01-31T16:06:37.027Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:11:37.083Z] [midday-checkin] Starting poll at 2026-01-31T16:11:37.082Z
+[2026-01-31T16:11:37.083Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:16:37.140Z] [midday-checkin] Starting poll at 2026-01-31T16:16:37.139Z
+[2026-01-31T16:16:37.140Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:21:37.201Z] [midday-checkin] Starting poll at 2026-01-31T16:21:37.201Z
+[2026-01-31T16:21:37.202Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:26:37.269Z] [midday-checkin] Starting poll at 2026-01-31T16:26:37.268Z
+[2026-01-31T16:26:37.269Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:31:37.333Z] [midday-checkin] Starting poll at 2026-01-31T16:31:37.332Z
+[2026-01-31T16:31:37.333Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:36:37.408Z] [midday-checkin] Starting poll at 2026-01-31T16:36:37.407Z
+[2026-01-31T16:36:37.409Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:41:37.499Z] [midday-checkin] Starting poll at 2026-01-31T16:41:37.498Z
+[2026-01-31T16:41:37.500Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:46:37.553Z] [midday-checkin] Starting poll at 2026-01-31T16:46:37.553Z
+[2026-01-31T16:46:37.554Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:51:37.627Z] [midday-checkin] Starting poll at 2026-01-31T16:51:37.626Z
+[2026-01-31T16:51:37.628Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T16:56:37.716Z] [midday-checkin] Starting poll at 2026-01-31T16:56:37.715Z
+[2026-01-31T16:56:37.717Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T17:01:37.776Z] [midday-checkin] Starting poll at 2026-01-31T17:01:37.775Z
+[2026-01-31T17:01:37.778Z] [midday-checkin] Collecting data...
+[2026-01-31T17:01:39.867Z] [midday-checkin] Sending midday check-in...
+[2026-01-31T17:01:40.337Z] [midday-checkin] Midday check-in sent successfully.
+[2026-01-31T17:06:40.419Z] [midday-checkin] Starting poll at 2026-01-31T17:06:40.417Z
+[2026-01-31T17:06:40.420Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:11:40.495Z] [midday-checkin] Starting poll at 2026-01-31T17:11:40.494Z
+[2026-01-31T17:11:40.496Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:16:40.573Z] [midday-checkin] Starting poll at 2026-01-31T17:16:40.572Z
+[2026-01-31T17:16:40.573Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:21:40.625Z] [midday-checkin] Starting poll at 2026-01-31T17:21:40.624Z
+[2026-01-31T17:21:40.626Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:26:40.707Z] [midday-checkin] Starting poll at 2026-01-31T17:26:40.706Z
+[2026-01-31T17:26:40.709Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:31:40.785Z] [midday-checkin] Starting poll at 2026-01-31T17:31:40.784Z
+[2026-01-31T17:31:40.786Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:36:40.843Z] [midday-checkin] Starting poll at 2026-01-31T17:36:40.842Z
+[2026-01-31T17:36:40.844Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:41:40.898Z] [midday-checkin] Starting poll at 2026-01-31T17:41:40.897Z
+[2026-01-31T17:41:40.899Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:46:40.950Z] [midday-checkin] Starting poll at 2026-01-31T17:46:40.949Z
+[2026-01-31T17:46:40.950Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:51:40.995Z] [midday-checkin] Starting poll at 2026-01-31T17:51:40.994Z
+[2026-01-31T17:51:40.996Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T17:56:41.076Z] [midday-checkin] Starting poll at 2026-01-31T17:56:41.075Z
+[2026-01-31T17:56:41.077Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:01:41.137Z] [midday-checkin] Starting poll at 2026-01-31T18:01:41.136Z
+[2026-01-31T18:01:41.138Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:06:41.205Z] [midday-checkin] Starting poll at 2026-01-31T18:06:41.204Z
+[2026-01-31T18:06:41.206Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:11:41.276Z] [midday-checkin] Starting poll at 2026-01-31T18:11:41.274Z
+[2026-01-31T18:11:41.277Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:16:41.332Z] [midday-checkin] Starting poll at 2026-01-31T18:16:41.331Z
+[2026-01-31T18:16:41.333Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:21:41.413Z] [midday-checkin] Starting poll at 2026-01-31T18:21:41.411Z
+[2026-01-31T18:21:41.414Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:26:41.487Z] [midday-checkin] Starting poll at 2026-01-31T18:26:41.486Z
+[2026-01-31T18:26:41.488Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:31:41.544Z] [midday-checkin] Starting poll at 2026-01-31T18:31:41.543Z
+[2026-01-31T18:31:41.544Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:36:41.624Z] [midday-checkin] Starting poll at 2026-01-31T18:36:41.623Z
+[2026-01-31T18:36:41.625Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:41:41.698Z] [midday-checkin] Starting poll at 2026-01-31T18:41:41.697Z
+[2026-01-31T18:41:41.698Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:46:41.755Z] [midday-checkin] Starting poll at 2026-01-31T18:46:41.754Z
+[2026-01-31T18:46:41.755Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:51:41.810Z] [midday-checkin] Starting poll at 2026-01-31T18:51:41.809Z
+[2026-01-31T18:51:41.811Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T18:56:41.891Z] [midday-checkin] Starting poll at 2026-01-31T18:56:41.890Z
+[2026-01-31T18:56:41.893Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T19:01:41.982Z] [midday-checkin] Starting poll at 2026-01-31T19:01:41.981Z
+[2026-01-31T19:01:41.983Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:06:42.065Z] [midday-checkin] Starting poll at 2026-01-31T19:06:42.064Z
+[2026-01-31T19:06:42.066Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:11:42.143Z] [midday-checkin] Starting poll at 2026-01-31T19:11:42.141Z
+[2026-01-31T19:11:42.143Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:16:42.218Z] [midday-checkin] Starting poll at 2026-01-31T19:16:42.216Z
+[2026-01-31T19:16:42.220Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:21:42.308Z] [midday-checkin] Starting poll at 2026-01-31T19:21:42.307Z
+[2026-01-31T19:21:42.309Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:23:05.782Z] [midday-checkin] Starting poll at 2026-01-31T19:23:05.782Z
+[2026-01-31T19:23:05.785Z] [midday-checkin] Check-in already sent today. Exiting.
+[2026-01-31T19:23:11.510Z] [midday-checkin] Starting poll at 2026-01-31T19:23:11.509Z
+[2026-01-31T19:23:11.510Z] [midday-checkin] Collecting data...
+[2026-01-31T19:23:28.018Z] [midday-checkin] Starting poll at 2026-01-31T19:23:28.017Z
+[2026-01-31T19:23:28.018Z] [midday-checkin] Collecting data...
+[2026-01-31T19:23:30.630Z] [midday-checkin] Sending midday check-in...
+[2026-01-31T19:23:31.093Z] [midday-checkin] Midday check-in sent successfully.
+[2026-01-31T19:23:46.032Z] [midday-checkin] Starting poll at 2026-01-31T19:23:46.032Z
+[2026-01-31T19:23:46.033Z] [midday-checkin] Collecting data...
+[2026-01-31T19:23:48.450Z] [midday-checkin] [DRY-RUN] Would send midday check-in
+[2026-01-31T19:26:42.363Z] [midday-checkin] Starting poll at 2026-01-31T19:26:42.362Z
+[2026-01-31T19:26:42.363Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:31:42.422Z] [midday-checkin] Starting poll at 2026-01-31T19:31:42.421Z
+[2026-01-31T19:31:42.422Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:32:38.068Z] [midday-checkin] Starting poll at 2026-01-31T19:32:38.067Z
+[2026-01-31T19:32:38.070Z] [midday-checkin] Collecting data...
+[2026-01-31T19:32:40.154Z] [midday-checkin] [DRY-RUN] Would send midday check-in
+[2026-01-31T19:36:42.475Z] [midday-checkin] Starting poll at 2026-01-31T19:36:42.474Z
+[2026-01-31T19:36:42.475Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:41:42.529Z] [midday-checkin] Starting poll at 2026-01-31T19:41:42.528Z
+[2026-01-31T19:41:42.529Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:46:42.580Z] [midday-checkin] Starting poll at 2026-01-31T19:46:42.579Z
+[2026-01-31T19:46:42.580Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:51:42.629Z] [midday-checkin] Starting poll at 2026-01-31T19:51:42.629Z
+[2026-01-31T19:51:42.630Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T19:56:42.685Z] [midday-checkin] Starting poll at 2026-01-31T19:56:42.685Z
+[2026-01-31T19:56:42.686Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:01:42.738Z] [midday-checkin] Starting poll at 2026-01-31T20:01:42.737Z
+[2026-01-31T20:01:42.739Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:06:42.791Z] [midday-checkin] Starting poll at 2026-01-31T20:06:42.790Z
+[2026-01-31T20:06:42.791Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:11:42.848Z] [midday-checkin] Starting poll at 2026-01-31T20:11:42.847Z
+[2026-01-31T20:11:42.848Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:16:42.912Z] [midday-checkin] Starting poll at 2026-01-31T20:16:42.911Z
+[2026-01-31T20:16:42.912Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:21:42.960Z] [midday-checkin] Starting poll at 2026-01-31T20:21:42.959Z
+[2026-01-31T20:21:42.960Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:26:43.019Z] [midday-checkin] Starting poll at 2026-01-31T20:26:43.018Z
+[2026-01-31T20:26:43.019Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:31:43.069Z] [midday-checkin] Starting poll at 2026-01-31T20:31:43.068Z
+[2026-01-31T20:31:43.069Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:36:43.132Z] [midday-checkin] Starting poll at 2026-01-31T20:36:43.131Z
+[2026-01-31T20:36:43.132Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:41:43.189Z] [midday-checkin] Starting poll at 2026-01-31T20:41:43.188Z
+[2026-01-31T20:41:43.189Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:46:43.255Z] [midday-checkin] Starting poll at 2026-01-31T20:46:43.254Z
+[2026-01-31T20:46:43.255Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:51:43.308Z] [midday-checkin] Starting poll at 2026-01-31T20:51:43.308Z
+[2026-01-31T20:51:43.309Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T20:56:43.364Z] [midday-checkin] Starting poll at 2026-01-31T20:56:43.363Z
+[2026-01-31T20:56:43.364Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:01:43.419Z] [midday-checkin] Starting poll at 2026-01-31T21:01:43.419Z
+[2026-01-31T21:01:43.420Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:06:43.475Z] [midday-checkin] Starting poll at 2026-01-31T21:06:43.474Z
+[2026-01-31T21:06:43.475Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:11:43.529Z] [midday-checkin] Starting poll at 2026-01-31T21:11:43.529Z
+[2026-01-31T21:11:43.530Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:16:43.580Z] [midday-checkin] Starting poll at 2026-01-31T21:16:43.579Z
+[2026-01-31T21:16:43.580Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:21:43.654Z] [midday-checkin] Starting poll at 2026-01-31T21:21:43.653Z
+[2026-01-31T21:21:43.655Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:26:43.737Z] [midday-checkin] Starting poll at 2026-01-31T21:26:43.736Z
+[2026-01-31T21:26:43.738Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:31:43.828Z] [midday-checkin] Starting poll at 2026-01-31T21:31:43.826Z
+[2026-01-31T21:31:43.829Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:36:43.909Z] [midday-checkin] Starting poll at 2026-01-31T21:36:43.908Z
+[2026-01-31T21:36:43.910Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:41:43.978Z] [midday-checkin] Starting poll at 2026-01-31T21:41:43.976Z
+[2026-01-31T21:41:43.978Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:46:44.057Z] [midday-checkin] Starting poll at 2026-01-31T21:46:44.055Z
+[2026-01-31T21:46:44.057Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:51:44.135Z] [midday-checkin] Starting poll at 2026-01-31T21:51:44.134Z
+[2026-01-31T21:51:44.136Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T21:56:44.210Z] [midday-checkin] Starting poll at 2026-01-31T21:56:44.209Z
+[2026-01-31T21:56:44.211Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:01:44.294Z] [midday-checkin] Starting poll at 2026-01-31T22:01:44.292Z
+[2026-01-31T22:01:44.294Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:06:44.372Z] [midday-checkin] Starting poll at 2026-01-31T22:06:44.371Z
+[2026-01-31T22:06:44.373Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:11:44.452Z] [midday-checkin] Starting poll at 2026-01-31T22:11:44.451Z
+[2026-01-31T22:11:44.453Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:16:44.534Z] [midday-checkin] Starting poll at 2026-01-31T22:16:44.533Z
+[2026-01-31T22:16:44.535Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:21:44.608Z] [midday-checkin] Starting poll at 2026-01-31T22:21:44.607Z
+[2026-01-31T22:21:44.609Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:26:44.694Z] [midday-checkin] Starting poll at 2026-01-31T22:26:44.693Z
+[2026-01-31T22:26:44.695Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:31:44.774Z] [midday-checkin] Starting poll at 2026-01-31T22:31:44.772Z
+[2026-01-31T22:31:44.774Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:36:44.859Z] [midday-checkin] Starting poll at 2026-01-31T22:36:44.857Z
+[2026-01-31T22:36:44.859Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:41:44.939Z] [midday-checkin] Starting poll at 2026-01-31T22:41:44.937Z
+[2026-01-31T22:41:44.939Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:46:45.020Z] [midday-checkin] Starting poll at 2026-01-31T22:46:45.019Z
+[2026-01-31T22:46:45.020Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:51:45.097Z] [midday-checkin] Starting poll at 2026-01-31T22:51:45.096Z
+[2026-01-31T22:51:45.098Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T22:56:45.174Z] [midday-checkin] Starting poll at 2026-01-31T22:56:45.173Z
+[2026-01-31T22:56:45.175Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:01:45.254Z] [midday-checkin] Starting poll at 2026-01-31T23:01:45.252Z
+[2026-01-31T23:01:45.254Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:06:45.337Z] [midday-checkin] Starting poll at 2026-01-31T23:06:45.336Z
+[2026-01-31T23:06:45.338Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:11:45.417Z] [midday-checkin] Starting poll at 2026-01-31T23:11:45.416Z
+[2026-01-31T23:11:45.418Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:16:45.489Z] [midday-checkin] Starting poll at 2026-01-31T23:16:45.488Z
+[2026-01-31T23:16:45.490Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:21:45.559Z] [midday-checkin] Starting poll at 2026-01-31T23:21:45.558Z
+[2026-01-31T23:21:45.560Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:26:45.630Z] [midday-checkin] Starting poll at 2026-01-31T23:26:45.629Z
+[2026-01-31T23:26:45.630Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:31:45.718Z] [midday-checkin] Starting poll at 2026-01-31T23:31:45.716Z
+[2026-01-31T23:31:45.718Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:36:45.799Z] [midday-checkin] Starting poll at 2026-01-31T23:36:45.798Z
+[2026-01-31T23:36:45.800Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:41:45.858Z] [midday-checkin] Starting poll at 2026-01-31T23:41:45.858Z
+[2026-01-31T23:41:45.859Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:46:45.912Z] [midday-checkin] Starting poll at 2026-01-31T23:46:45.911Z
+[2026-01-31T23:46:45.912Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:51:45.961Z] [midday-checkin] Starting poll at 2026-01-31T23:51:45.960Z
+[2026-01-31T23:51:45.962Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-01-31T23:56:46.008Z] [midday-checkin] Starting poll at 2026-01-31T23:56:46.008Z
+[2026-01-31T23:56:46.009Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:01:46.065Z] [midday-checkin] Starting poll at 2026-02-01T00:01:46.065Z
+[2026-02-01T00:01:46.067Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:06:46.119Z] [midday-checkin] Starting poll at 2026-02-01T00:06:46.118Z
+[2026-02-01T00:06:46.120Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:11:46.171Z] [midday-checkin] Starting poll at 2026-02-01T00:11:46.171Z
+[2026-02-01T00:11:46.172Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:16:46.221Z] [midday-checkin] Starting poll at 2026-02-01T00:16:46.220Z
+[2026-02-01T00:16:46.222Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:21:46.273Z] [midday-checkin] Starting poll at 2026-02-01T00:21:46.273Z
+[2026-02-01T00:21:46.274Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:27:21.971Z] [midday-checkin] Starting poll at 2026-02-01T00:27:21.970Z
+[2026-02-01T00:27:21.972Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:32:22.019Z] [midday-checkin] Starting poll at 2026-02-01T00:32:22.018Z
+[2026-02-01T00:32:22.020Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T00:40:22.978Z] [midday-checkin] Starting poll at 2026-02-01T00:40:22.978Z
+[2026-02-01T00:40:22.979Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:19:00.045Z] [midday-checkin] Starting poll at 2026-02-01T01:19:00.044Z
+[2026-02-01T01:19:00.045Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:24:00.099Z] [midday-checkin] Starting poll at 2026-02-01T01:24:00.099Z
+[2026-02-01T01:24:00.100Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:29:00.153Z] [midday-checkin] Starting poll at 2026-02-01T01:29:00.152Z
+[2026-02-01T01:29:00.153Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:34:00.215Z] [midday-checkin] Starting poll at 2026-02-01T01:34:00.214Z
+[2026-02-01T01:34:00.216Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:39:00.295Z] [midday-checkin] Starting poll at 2026-02-01T01:39:00.293Z
+[2026-02-01T01:39:00.295Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:44:00.389Z] [midday-checkin] Starting poll at 2026-02-01T01:44:00.388Z
+[2026-02-01T01:44:00.389Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:49:00.473Z] [midday-checkin] Starting poll at 2026-02-01T01:49:00.471Z
+[2026-02-01T01:49:00.473Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:54:00.552Z] [midday-checkin] Starting poll at 2026-02-01T01:54:00.550Z
+[2026-02-01T01:54:00.553Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T01:59:00.645Z] [midday-checkin] Starting poll at 2026-02-01T01:59:00.644Z
+[2026-02-01T01:59:00.646Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:04:00.700Z] [midday-checkin] Starting poll at 2026-02-01T02:04:00.699Z
+[2026-02-01T02:04:00.700Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:09:00.768Z] [midday-checkin] Starting poll at 2026-02-01T02:09:00.767Z
+[2026-02-01T02:09:00.768Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:14:00.839Z] [midday-checkin] Starting poll at 2026-02-01T02:14:00.837Z
+[2026-02-01T02:14:00.839Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:19:00.939Z] [midday-checkin] Starting poll at 2026-02-01T02:19:00.938Z
+[2026-02-01T02:19:00.940Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:24:00.993Z] [midday-checkin] Starting poll at 2026-02-01T02:24:00.992Z
+[2026-02-01T02:24:00.994Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:29:01.055Z] [midday-checkin] Starting poll at 2026-02-01T02:29:01.055Z
+[2026-02-01T02:29:01.056Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:34:01.110Z] [midday-checkin] Starting poll at 2026-02-01T02:34:01.110Z
+[2026-02-01T02:34:01.111Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:39:01.165Z] [midday-checkin] Starting poll at 2026-02-01T02:39:01.164Z
+[2026-02-01T02:39:01.165Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:44:01.217Z] [midday-checkin] Starting poll at 2026-02-01T02:44:01.216Z
+[2026-02-01T02:44:01.217Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:49:01.271Z] [midday-checkin] Starting poll at 2026-02-01T02:49:01.270Z
+[2026-02-01T02:49:01.271Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.
+[2026-02-01T02:54:01.321Z] [midday-checkin] Starting poll at 2026-02-01T02:54:01.321Z
+[2026-02-01T02:54:01.322Z] [midday-checkin] Outside time window (12:00-14:00). Exiting.

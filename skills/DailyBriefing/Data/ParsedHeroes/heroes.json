@@ -1,0 +1,849 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2026-01-28T22:51:16.164Z",
+    "heroCount": 7,
+    "sourceDir": "/Users/maxharar/.claude/skills/DailyBriefing/Data/HeroDossiers"
+  },
+  "heroes": [
+    {
+      "id": "jocko-willink",
+      "name": "Jocko Willink",
+      "era": "1971-present",
+      "domain": "leadership",
+      "coreThesis": "Jocko Willink teaches that leadership is about Extreme Ownership—taking full responsibility for everything in your world, no excuses. Discipline doesn't restrict freedom; it creates it. The more disciplined your routines, preparation, and standards, the more freedom you have to act decisively when it matters. Default aggressive: when uncertain, move forward with initiative. \"Good\": when setbacks happen, immediately reframe them as opportunities. Decentralized Command: empower your team to make decisions by clearly communicating the mission's \"why.\" Prioritize and Execute: when overwhelmed, detach emotionally, identify the highest-priority problem, solve it, then move to the next. It's not what you preach; it's what you tolerate.",
+      "operatingPrinciples": [
+        "Extreme Ownership: as the leader, everything is your fault. No blame, no excuses.",
+        "Discipline equals freedom. Rigid routines create capacity for decisive action.",
+        "Default aggressive. Bias toward initiative and forward movement.",
+        "\"Good.\" Respond to every setback by finding the opportunity in it.",
+        "Prioritize and execute. Step back, identify the most critical issue, tackle it first.",
+        "Decentralized Command. Empower your team to make decisions; trust them.",
+        "Simple plans win. If the newest person can't understand it, simplify.",
+        "Check the ego. Humility enables learning; ego prevents it.",
+        "Detach. Step outside emotions to see the situation objectively.",
+        "Lead up and down. Manage your boss as much as you lead your team.",
+        "It's not what you preach, it's what you tolerate. Enforced standards become real standards.",
+        "Cover and Move. Teams must support each other; mission first, egos second."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Ownership Test",
+          "description": "Before blaming anyone, ask: \"How is this my fault?\""
+        },
+        {
+          "name": "The Complexity Filter",
+          "description": "Can the newest team member understand this plan? If no, simplify."
+        },
+        {
+          "name": "The Detach Check",
+          "description": "Am I emotionally hijacked? If yes, step back and reassess."
+        },
+        {
+          "name": "The Priority Question",
+          "description": "What single problem, if solved, would have the biggest impact?"
+        },
+        {
+          "name": "The \"Good\" Response",
+          "description": "What's the opportunity in this setback?"
+        }
+      ],
+      "failureModes": [
+        "Blaming others - Pointing fingers instead of taking ownership",
+        "Micromanaging - Not trusting decentralized command, controlling every detail",
+        "Overcomplicating - Plans too complex for execution under pressure",
+        "Ego-driven decisions - Prioritizing personal image over mission success",
+        "Hesitation - Waiting for perfect information instead of defaulting aggressive"
+      ],
+      "signatureTactics": [
+        "4:30 AM wake-up - Discipline starts with morning routine",
+        "Physical training daily - Builds discipline that transfers to leadership",
+        "\"Good\" response to setbacks - Immediate reframe to prevent emotional spiral",
+        "After Action Reviews (AAR) - Debrief every mission/project to extract lessons",
+        "Detachment practice - Mentally step outside situations to assess objectively",
+        "Leading up - Give your boss what they need before they ask",
+        "Simple brief-backs - Test team understanding by having them explain the plan back"
+      ],
+      "contextTags": [
+        "monday",
+        "low_recovery",
+        "adversity",
+        "leadership",
+        "decision",
+        "discipline",
+        "ownership",
+        "challenge",
+        "stress",
+        "monday",
+        "any"
+      ],
+      "oneLiner": "Own everything, execute with discipline, default aggressive on priorities, and respond to every setback with \"Good\"—now get after it.",
+      "quotes": [
+        {
+          "text": "Discipline equals freedom.",
+          "source": "Extreme Ownership / Discipline Equals Freedom (core principle, repeated throughout)",
+          "verified": true
+        },
+        {
+          "text": "I had to take complete ownership of what went wrong. That is what a leader does—even if it means getting fired.",
+          "source": "Extreme Ownership, p. 26",
+          "verified": true
+        },
+        {
+          "text": "It's not what you preach, it's what you tolerate.",
+          "source": "Extreme Ownership",
+          "verified": true
+        },
+        {
+          "text": "There are no bad teams, only bad leaders.",
+          "source": "Extreme Ownership (chapter title and principle)",
+          "verified": true
+        },
+        {
+          "text": "Default aggressive.",
+          "source": "Extreme Ownership (tactical principle)",
+          "verified": true
+        },
+        {
+          "text": "Prioritize and execute.",
+          "source": "Extreme Ownership, Chapter 10 (core principle)",
+          "verified": true
+        },
+        {
+          "text": "Discipline is the pathway to freedom.",
+          "source": "Discipline Equals Freedom (variation of core principle)",
+          "verified": true
+        },
+        {
+          "text": "There is no easy way. There is only hard work, late nights, early mornings, practice, rehearsal, repetition, study, sweat, blood, toil, frustration, and discipline.",
+          "source": "Discipline Equals Freedom",
+          "verified": true
+        },
+        {
+          "text": "Get after it.",
+          "source": "Jocko Podcast sign-off (not from books, but signature phrase)",
+          "verified": true
+        },
+        {
+          "text": "Good.",
+          "source": "Jocko Podcast / Extreme Ownership philosophy (response to adversity)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "naval-ravikant",
+      "name": "Naval Ravikant",
+      "era": "1974-present",
+      "domain": "wealth-wisdom",
+      "coreThesis": "Naval Ravikant teaches that wealth and happiness are both learnable skills, not luck. Build wealth through specific knowledge (what only you can do), leverage (capital/code/media that multiply effort), and accountability (take risks under your own name). Escape the time-for-money trap by owning equity, not renting your time. Play long-term games with long-term people—all returns come from compound interest. For happiness, recognize that desire is self-imposed suffering. Reduce desires, practice presence, meditate by doing nothing. The three big things are wealth, health, and happiness. We chase them in that order, but their importance is reversed. Read voraciously, think clearly, act decisively. Learn to sell, learn to build. If you can do both, you're unstoppable.",
+      "operatingPrinciples": [
+        "Wealth is assets that earn while you sleep. Own equity, don't rent your time.",
+        "Specific knowledge + Leverage + Accountability = wealth formula.",
+        "Play long-term games with long-term people. Compound interest dominates.",
+        "Wealth creation is positive-sum. Status is zero-sum. Choose wealth, ignore status.",
+        "Happiness is a learnable skill. Reduce desires, practice presence, accept reality.",
+        "Desire is a contract to be unhappy until you get what you want. Focus on one desire at a time.",
+        "Reading compounds knowledge. Read 1-2 hours daily. Read what you love until you love to read.",
+        "Clear thinking → better judgment → better outcomes. Optimize for clarity.",
+        "Meditation is doing nothing. Sit, close eyes, let happen what happens.",
+        "Learn to sell, learn to build. Combination makes you unstoppable.",
+        "True rewards come from ignoring others and improving yourself.",
+        "Inputs (effort) are controllable. Outputs (results) aren't. Optimize inputs, detach from outputs."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Long-Term People Filter",
+          "description": "Would I want to work with this person for 30+ years? If no, don't start."
+        },
+        {
+          "name": "The Equity Question",
+          "description": "Am I renting time or building equity? If renting, what's my equity path?"
+        },
+        {
+          "name": "The Desire Audit",
+          "description": "Which desires can I let go to reduce suffering? Focus on one."
+        },
+        {
+          "name": "The Reversibility Test",
+          "description": "Is this reversible (decide fast with 70% info) or irreversible (decide slow with deep judgment)?"
+        },
+        {
+          "name": "The Reading Vibe Check",
+          "description": "Does this excite me right now? If no, put it down and find what does."
+        }
+      ],
+      "failureModes": [
+        "Status-seeking over wealth-building - Playing zero-sum social hierarchy games instead of creating value",
+        "Time-for-money trap - Renting your time, capping upside, never building equity",
+        "Desire multiplication - Creating more wants, more suffering axes, less peace",
+        "Short-term optimization - Ignoring compound interest, chasing quick wins, burning long-term people",
+        "Judgment outsourcing - Letting others decide what you should want, do, or believe"
+      ],
+      "signatureTactics": [
+        "Specific knowledge development - Find what only you can do through obsessive curiosity, unique combinations",
+        "Leverage stacking - Use capital, code, or media to multiply effort beyond 1:1 time trades",
+        "Accountability practice - Take business risks under your own name, own consequences publicly",
+        "Daily reading habit - 1-2 hours daily, read what you love, treat books like blogs (skim/dive/abandon)",
+        "Desire reduction meditation - Sit, close eyes, do nothing, let thoughts come/go without effort",
+        "Long-term relationship filter - Only play iterated games with people you'd work with for 30 years",
+        "One-desire focus - Identify single most important goal, let all other desires dissolve"
+      ],
+      "contextTags": [
+        "wealth_building",
+        "career_decisions",
+        "entrepreneurship",
+        "happiness",
+        "meditation",
+        "reading",
+        "long_term_thinking",
+        "decision_making",
+        "freedom",
+        "any"
+      ],
+      "oneLiner": "Build wealth through specific knowledge, leverage, and accountability—but remember, the real game is reducing desires to find peace.",
+      "quotes": [
+        {
+          "text": "Arm yourself with specific knowledge, accountability, and leverage.",
+          "source": "The Almanack of Naval Ravikant, verified via [99 Signals](https://www.99signals.com/naval-ravikant-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "You're not going to get rich renting out your time. You must own equity — a piece of a business — to gain your financial freedom.",
+          "source": "Verified via [Sloww](https://www.sloww.co/naval-ravikant/)",
+          "verified": true
+        },
+        {
+          "text": "Play long-term games with long-term people. All returns in life, whether in wealth, relationships, or knowledge, come from compound interest.",
+          "source": "Verified via [The Mind Collection](https://themindcollection.com/inspiring-naval-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "Happiness is a choice and a skill you can dedicate yourself to learning.",
+          "source": "Verified via multiple sources including [Wisdom Quotes](https://wisdomquotes.com/naval-ravikant-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "Desire is a contract that you make with yourself to be unhappy until you get what you want.",
+          "source": "Joe Rogan Experience #1309, verified via [Podcast Notes](https://podcastnotes.org/joe-rogan-experience/naval-joe-rogan/)",
+          "verified": true
+        },
+        {
+          "text": "Every desire you have is an axis where you will suffer. So just don't focus on more than one desire at a time.",
+          "source": "Joe Rogan Experience #1309, verified via transcript",
+          "verified": true
+        },
+        {
+          "text": "The three big ones in life are wealth, health, and happiness. We pursue them in that order but their importance is in the reverse.",
+          "source": "Verified via [Hive](https://hive.com/blog/naval-ravikants-quotes-for-success/)",
+          "verified": true
+        },
+        {
+          "text": "True rewards — wealth, knowledge, love, fitness, and equanimity — come from ignoring others and improving ourselves.",
+          "source": "Verified via [Lifestyle Guide](https://lifestyleguide.com/article/naval-ravikant-quotes)",
+          "verified": true
+        },
+        {
+          "text": "Peace is happiness at rest, and happiness is peace in motion.",
+          "source": "Verified via [The Good Life Journey](https://www.thegoodlifejourney.com/home/naval-ravikant-happiness)",
+          "verified": true
+        },
+        {
+          "text": "If you commit to learning something useful every day, no matter how small, your learnings will compound quickly.",
+          "source": "Verified via [Wealest](https://www.wealest.com/articles/read-for-wealth)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "eliud-kipchoge",
+      "name": "Eliud Kipchoge",
+      "era": "1984-present",
+      "domain": "endurance",
+      "coreThesis": "Eliud Kipchoge teaches that no human is limited—limits exist in the mind, not the body. The greatest marathoner in history lives in a simple Kenyan training camp, makes chapatis for teammates, and hasn't questioned his coach in 18 years. Discipline equals freedom: structure liberates mental energy for performance. Athletics is about the heart and mind, not just the legs. Success comes from planning well, preparing well, and trusting the process without constant second-guessing. Run 80% easy, 20% hard—patience compounds over decades. Respect pain; it makes the mind strong. When setbacks happen (Paris DNF at age 39), treat them as challenges, not endings. Simplicity enables excellence. Humility despite greatness. Self-belief precedes possibility. Do your best—there's nothing else.",
+      "operatingPrinciples": [
+        "No human is limited. Mental limits are self-imposed; question every \"I can't.\"",
+        "Only the disciplined ones are free. Without discipline, you're a slave to moods and passions.",
+        "Athletics is about the heart and mind, not just the legs. Mental training precedes physical output.",
+        "Simplicity enables excellence. Cut complexity, focus on fundamentals, avoid distractions.",
+        "Trust the process without questioning. Kipchoge hasn't asked \"why\" in 18 years. If you trust the system, execute.",
+        "Plan meticulously, prepare thoroughly. Success comes when you plan well and prepare well.",
+        "80% easy, 20% hard. Slow runs build fast races. Consistency beats intensity over time.",
+        "Respect pain; it builds mental strength. \"Long runs make my mind strong, consistent, and respect that pain.\"",
+        "Self-belief is crucial. Belief must precede possibility. \"Any human can go beyond their thoughts.\"",
+        "Humility despite excellence. World's best marathoner still does camp chores, makes chapatis for teammates.",
+        "Setbacks are challenges, not endings. Paris DNF: \"I treat it as a challenge. Accept what happened and move on.\"",
+        "Do your best. There's nothing else. (Patrick Sang's teaching, Kipchoge's credo.)"
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Simplicity Test",
+          "description": "Does this simplify or complicate? If it adds complexity, default to no."
+        },
+        {
+          "name": "The Trust Check",
+          "description": "Do I trust this process? If yes, execute without questioning. If no, change it or leave."
+        },
+        {
+          "name": "The Mind-Body Question",
+          "description": "Is this my body failing or my mind quitting? Respect injury; dismiss mental excuses."
+        },
+        {
+          "name": "The Discipline-Freedom Balance",
+          "description": "Is this discipline creating freedom or imprisonment? Discipline should liberate, not jail."
+        },
+        {
+          "name": "The Challenge Reframe",
+          "description": "Is this setback an ending or a challenge? Every failure offers two paths: quit or rebuild."
+        }
+      ],
+      "failureModes": [
+        "Self-limitation - Accepting mental limits as real, believing \"I can't\" without testing",
+        "Undisciplined living - Slave to moods and passions, chaos instead of structure",
+        "Complexity addiction - Chasing gadgets, novelty, optimization hacks instead of fundamentals",
+        "Impatience - Overtraining, seeking intensity over consistency, wanting results now",
+        "Arrogance - Letting success create entitlement, forgetting community and humility"
+      ],
+      "signatureTactics": [
+        "Simple training camp - Minimalist environment in Kaptagat, Kenya, no distractions, shared chores",
+        "80-20 training principle - 80% easy running, 20% high intensity, patience over time",
+        "Trust without questioning - 18 years never asking coach \"why,\" receiving daily plan and executing",
+        "Meticulous planning - 1:59 Challenge took 2 years of preparation (location, pacemakers, weather, nutrition)",
+        "Morning routine - Consistent schedule, 220km weeks, laser focus on fundamentals",
+        "Voluntary simplicity - \"I want to live a simple life\" despite wealth and fame",
+        "Humility rituals - Cleaning rota, making chapatis on Thursdays for teammates",
+        "Challenge reframing - Paris DNF treated as setback to learn from, not career-ending failure"
+      ],
+      "contextTags": [
+        "marathon_training",
+        "discipline",
+        "simplicity",
+        "patience",
+        "mind_over_body",
+        "consistency",
+        "humility",
+        "resilience",
+        "no_limits",
+        "trust_process",
+        "any"
+      ],
+      "oneLiner": "No human is limited—the barrier is in your mind. Only the disciplined are free. Do your best. There's nothing else.",
+      "quotes": [
+        {
+          "text": "No human is limited.",
+          "source": "Signature mantra, verified via [Brainy Quote](https://www.brainyquote.com/quotes/eliud_kipchoge_1044577)",
+          "verified": true
+        },
+        {
+          "text": "Only the disciplined ones in life are free. If you are undisciplined, you are a slave to your moods and your passions.",
+          "source": "Verified via [Brainy Quote](https://www.brainyquote.com/quotes/eliud_kipchoge_1044572)",
+          "verified": true
+        },
+        {
+          "text": "Athletics is not so much about the legs. It's about the heart and mind.",
+          "source": "Verified via [Bookey](https://www.bookey.app/quote-author/eliud-kipchoge)",
+          "verified": true
+        },
+        {
+          "text": "Any human being can go beyond their limits. No human being should be limited in their thoughts, in what he or she should be doing.",
+          "source": "Verified via [INEOS 1:59 Challenge](https://www.ineos159challenge.com/news/chris-froome-supports-eliud-kipchoge-in-his-bid-to-inspire-the-world-that-no-human-is-limited)",
+          "verified": true
+        },
+        {
+          "text": "I have tried, I am the first man to run (full marathon) under two hours to inspire many people, to tell people no human is limited.",
+          "source": "Verified via [Quotes.net](https://www.quotes.net/quote/69514)",
+          "verified": true
+        },
+        {
+          "text": "How to plan and prepare is crucial. When you plan very well and prepare very well, then success can come on the way.",
+          "source": "Verified via [Brainy Quote](https://www.brainyquote.com/authors/eliud-kipchoge-quotes)",
+          "verified": true
+        },
+        {
+          "text": "Any human being can go beyond their thoughts. But self-belief is crucial.",
+          "source": "Verified via [Brainy Quote](https://www.brainyquote.com/authors/eliud-kipchoge-quotes)",
+          "verified": true
+        },
+        {
+          "text": "I want to open minds to think that no human is limited.",
+          "source": "Verified via [Olympics.com](https://www.olympics.com/en/news/exclusive-eliud-kipchoge-longevity-mind-strong-respect-pain)",
+          "verified": true
+        },
+        {
+          "text": "Long runs make my mind strong, consistent, and respect that pain.",
+          "source": "Olympics.com exclusive interview, verified via [Olympics.com](https://www.olympics.com/en/news/exclusive-eliud-kipchoge-longevity-mind-strong-respect-pain)",
+          "verified": true
+        },
+        {
+          "text": "It's really like a setback, but you know, I treat it as a challenge because sport is always challenging. The idea is to accept what has happened and move on.",
+          "source": "On Paris 2024 DNF, verified via [New Kerala](https://www.newkerala.com/news/2024/74077.htm)",
+          "verified": true
+        },
+        {
+          "text": "Do your best. There's nothing else.",
+          "source": "Patrick Sang's teaching, adopted as Kipchoge's credo, verified via [CITIUS Mag](https://citiusmag.com/podcast/citius-mag-podcast-patrick-sang)",
+          "verified": true
+        },
+        {
+          "text": "I want to live a simple life.",
+          "source": "Verified via [Olympics.com](https://www.olympics.com/en/news/eliud-kipchoge-training-methods-olympic-marathon-champion)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "andrew-huberman",
+      "name": "Andrew Huberman",
+      "era": "1975-present",
+      "domain": "neuroscience",
+      "coreThesis": "Andrew Huberman teaches that the nervous system is your operating system, and you have far more control over it than you think. Through neuroplasticity, you can rewire circuits for focus, stress resilience, motivation, and performance. The key is understanding mechanisms (why protocols work) and implementing zero-cost, science-based tools: morning sunlight for circadian alignment, NSDR for dopamine restoration, cold exposure for resilience, physiological sighs for immediate calm. Behavior change isn't mystery—it's applied neuroscience. The only things you truly control are attention and effort. Choose wisely, act deliberately, and leverage your nervous system's adaptability.",
+      "operatingPrinciples": [
+        "Neuroplasticity is real: every action rewires your brain. Direct this deliberately.",
+        "Morning sunlight (2-10 min, 30-60 min after waking) sets circadian biology. Non-negotiable foundation.",
+        "NSDR (yoga nidra, hypnosis) restores dopamine, compensates for bad sleep, aids learning consolidation.",
+        "Deliberate cold exposure builds stress resilience by training calm during sympathetic activation.",
+        "Dopamine releases during pursuit, not just achievement. Celebrate small wins to sustain motivation.",
+        "Physiological sigh (double inhale, long exhale) is fastest real-time stress reduction tool.",
+        "Visual focus (narrow gaze) triggers cognitive focus. Use before deep work.",
+        "Gratitude resets dopamine via serotonin. High performers use this to sustain effort.",
+        "Stress is tool when paired with recovery. Chronic stress without rest = burnout.",
+        "Understand mechanisms. Knowing why protocols work builds confidence and prevents cargo-cult behavior.",
+        "The nervous system loves predictability. Consistent routines reduce baseline anxiety.",
+        "Attention and effort are the only things you truly control. Allocate them wisely."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Circadian Check",
+          "description": "Does this align with my biology? (Light exposure, sleep timing, meal timing.)"
+        },
+        {
+          "name": "The Mechanism Question",
+          "description": "What's the peer-reviewed research? Can I explain why this works neurobiologically?"
+        },
+        {
+          "name": "The Dopamine Delta",
+          "description": "Will this deplete or restore my motivation baseline? Avoid cheap hits; seek earned rewards."
+        },
+        {
+          "name": "The Stress-Rest Ratio",
+          "description": "Do I have matching recovery protocol for this stressor? No rest = no adaptation."
+        },
+        {
+          "name": "The Attention Audit",
+          "description": "Where am I placing attention right now? Does it serve my goals?"
+        }
+      ],
+      "failureModes": [
+        "Protocol without mechanism - Following advice blindly without understanding why it works",
+        "Circadian disruption - Ignoring morning sunlight, inconsistent sleep, artificial light at night",
+        "Dopamine depletion - Chasing cheap rewards (social media, constant novelty) that crash baseline",
+        "Chronic stress without recovery - Grinding without NSDR, gratitude, or rest protocols",
+        "Passivity - Letting nervous system run on autopilot instead of taking deliberate control"
+      ],
+      "signatureTactics": [
+        "Morning sunlight exposure - 2-10 minutes outside within 30-60 min of waking, sets circadian clock",
+        "NSDR (Non-Sleep Deep Rest) - 10-20 min yoga nidra or hypnosis daily, restores dopamine",
+        "Deliberate cold exposure - 1-3 min cold plunge/shower, 2-3x per week, builds resilience",
+        "Physiological sigh - Double inhale through nose, extended exhale through mouth, calms in real-time",
+        "Visual focus training - Narrow gaze before deep work to trigger cognitive focus",
+        "Gratitude practice - Acknowledge small wins to reset dopamine baseline",
+        "Mechanism-first learning - Always ask \"why does this work?\" before implementing"
+      ],
+      "contextTags": [
+        "high_performance",
+        "focus",
+        "sleep_issues",
+        "stress",
+        "recovery",
+        "learning",
+        "motivation",
+        "resilience",
+        "science_based",
+        "protocol_driven",
+        "any"
+      ],
+      "oneLiner": "Your nervous system is trainable—get morning sunlight to set your clock, use NSDR to restore dopamine, and remember that attention and effort are the only things you truly control.",
+      "quotes": [
+        {
+          "text": "The only thing we can truly control is where we place our attention and where we place our effort. Choose wisely.",
+          "source": "LinkedIn post, verified via [LinkedIn](https://www.linkedin.com/posts/andrew-huberman_the-only-thing-we-can-truly-control-is-where-activity-7095142508321521664--b-M)",
+          "verified": true
+        },
+        {
+          "text": "Fear is a sensation. Courage is a decision.",
+          "source": "Frequently cited quote, verified via multiple quote databases ([Art of Poets](https://artofpoets.com/andrew-huberman-quotes/))",
+          "verified": true
+        },
+        {
+          "text": "Positive thinking is not about being delusional. It's about learning how to take control of internal processing and knowing it'll shape your external environment.",
+          "source": "Verified via [Gracious Quotes](https://graciousquotes.com/andrew-huberman/)",
+          "verified": true
+        },
+        {
+          "text": "Every action you take rewires your brain—so choose your actions wisely.",
+          "source": "Verified via [Wisely Told](https://wiselytold.com/andrew-huberman-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "Addiction is a progressive narrowing of the things that bring you pleasure. Happiness is a progressive expansion of the things that bring you pleasure. The former emerges passively. The latter takes work.",
+          "source": "Verified via [Art of Quote](https://artofquote.com/andrew-huberman-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "The human species was given this tremendous gift of neuroplasticity, the ability to change ourselves and be better in deliberate ways. And my definition of greatness is anyone that's making that effort, even in a tiny way, just to take this incredible machinery that we were given — this nervous system — and to leverage it toward being better, feeling better, and showing up better for other people.",
+          "source": "Verified via [Read Hoot](https://www.readhoot.com/andrew-d-huberman-quotes/)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "seneca",
+      "name": "Seneca (the Younger)",
+      "era": "present",
+      "domain": "philosophy",
+      "coreThesis": "Seneca teaches that life is not short—we waste it. Most of death is already gone; whatever time has passed is owned by death. Guard your time more carefully than your property. Fortune is fickle: never trust her favors (wealth, power, reputation); she can reclaim them instantly. The only true good is virtue. Death is not the end—it's continuous, already happening. Confront mortality daily to clarify priorities. Destructive passions (especially anger) must be mastered through reason. The whole future is uncertain—live immediately. Putting things off is the biggest waste of life. Practice voluntary discomfort to prepare for fortune's reversals. Philosophy is not a badge of superiority; it's a tool for self-improvement. Seneca never claimed to be a Stoic sage, just someone working toward virtue, often failing, always trying.",
+      "operatingPrinciples": [
+        "Time is your only non-renewable resource. Guard it more carefully than money.",
+        "Life is long if you know how to use it. Most squander it on trivia.",
+        "Most of death is already gone. Whatever time has passed is owned by death.",
+        "The whole future is uncertain. Live immediately. Don't postpone life.",
+        "Fortune is fickle. Never trust her gifts (wealth, power, reputation). She can reclaim them instantly.",
+        "Virtue is the only true good. External goods are preferred indifferents, not intrinsically good.",
+        "Confront mortality daily (memento mori). It clarifies priorities and removes death's terror.",
+        "Master destructive passions (anger, grief, fear) through reason. Anger is temporary madness.",
+        "Practice voluntary discomfort to prepare for fortune's reversals and prevent luxury dependence.",
+        "Philosophy is practice, not theory. Life without learning is death; learning without living is equally dead.",
+        "Control your responses, not events. You control judgments and values; Fortune controls outcomes.",
+        "Simplicity despite abundance. Whether rich or poor, cultivate inner detachment from externals."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Time Valuation Test",
+          "description": "Is this worth trading my life for? Time is non-renewable; guard it ruthlessly."
+        },
+        {
+          "name": "The Fortune Reversal Exercise",
+          "description": "Can I lose this tomorrow (job, money, status) without devastation? If no, I'm enslaved."
+        },
+        {
+          "name": "The Death Question",
+          "description": "If I died tonight, would I regret this choice? Mortality clarifies priorities."
+        },
+        {
+          "name": "The Anger Pause",
+          "description": "Before acting on anger, pause: \"Will I regret this tomorrow?\" Anger is temporary madness."
+        },
+        {
+          "name": "The Simplicity Check",
+          "description": "Practice voluntary discomfort regularly. Ask: \"Is this the condition I feared?\""
+        }
+      ],
+      "failureModes": [
+        "Time waste - Squandering life on trivia, postponing living until \"someday\"",
+        "Fortune-worship - Trusting external goods (wealth, power, reputation) as if they're permanent",
+        "Death avoidance - Refusing to confront mortality, living as if immortal",
+        "Anger indulgence - Letting external events trigger temporary madness, harming self and others",
+        "Luxury dependence - Becoming enslaved to comfort, losing resilience to fortune's reversals"
+      ],
+      "signatureTactics": [
+        "Daily memento mori meditation - \"Whatever can happen at any time can happen today. If I died tonight...\"",
+        "Time audit - Regularly ask: \"Am I trading life for this? Is this worth it?\"",
+        "Voluntary poverty practice - Set aside days/weeks for simple living: basic food, rough clothes, hard surfaces",
+        "Fortune reversal visualization - Before accepting external goods, imagine losing them tomorrow",
+        "Anger pause protocol - When feeling anger rise, pause before acting. Create space for reason.",
+        "Morning reflection - Review how you'll use today (not waste it), what matters (given mortality)",
+        "Philosophical journaling - Write to yourself (like Letters to Lucilius) tracking progress toward virtue"
+      ],
+      "contextTags": [
+        "mortality",
+        "time_management",
+        "adversity",
+        "fortune_reversal",
+        "anger",
+        "simplicity",
+        "discipline",
+        "memento_mori",
+        "stoicism",
+        "any"
+      ],
+      "oneLiner": "Life is not short—you waste it. Most of death is already gone. Guard your time, distrust Fortune's favors, and remember: whatever can happen at any time can happen today.",
+      "quotes": [
+        {
+          "text": "It is not that we have a short time to live, but that we waste a lot of it.",
+          "source": "On the Shortness of Life, verified via [Daily Stoic](https://dailystoic.com/time-management-6-techniques-from-the-stoic-philosopher-seneca/)",
+          "verified": true
+        },
+        {
+          "text": "Putting things off is the biggest waste of life: It snatches away each day as it comes and denies us the present by promising the future.",
+          "source": "On the Shortness of Life, verified via [Sloww](https://www.sloww.co/seneca-shortness-of-life/)",
+          "verified": true
+        },
+        {
+          "text": "This is our big mistake: to think we look forward to death. Most of death is already gone. Whatever time has passed is owned by death.",
+          "source": "Letters to Lucilius, verified via [Bobby Powers](https://bobbypowers.com/seneca-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "The day which we fear as our last is but the birthday of eternity.",
+          "source": "Verified via [Wonder Spain](https://wonderspain.com/en/100-seneca-quotes)",
+          "verified": true
+        },
+        {
+          "text": "The whole future lies in uncertainty: Live immediately.",
+          "source": "Verified via [Daily Stoic](https://dailystoic.com/time-management-6-techniques-from-the-stoic-philosopher-seneca/)",
+          "verified": true
+        },
+        {
+          "text": "Never have I trusted Fortune, even when she seemed to offer peace. All those blessings which she kindly bestowed on me—money, public office, influence—I relegated to a place whence she could claim them back without bothering me.",
+          "source": "Letters to Lucilius, verified via [Of Mind and Body](https://ofmindandbody.com/30-seneca-quotes-stoic-philosophy/)",
+          "verified": true
+        },
+        {
+          "text": "Life is long, if only you knew how to use it.",
+          "source": "On the Shortness of Life, verified via [Wonder Spain](https://wonderspain.com/en/100-seneca-quotes)",
+          "verified": true
+        },
+        {
+          "text": "Whatever can happen at any time can happen today.",
+          "source": "Verified via [Wonder Spain](https://wonderspain.com/en/100-seneca-quotes)",
+          "verified": true
+        },
+        {
+          "text": "Luck is what happens when preparation meets opportunity.",
+          "source": "Widely attributed, verified via [Daily Stoic](https://dailystoic.com/time-management-6-techniques-from-the-stoic-philosopher-seneca/)",
+          "verified": true
+        },
+        {
+          "text": "As far as I am concerned, I know that I have lost not wealth but distractions.",
+          "source": "On exile, verified via [Stoic Quotes](https://stoicquotes.com/seneca-quotes/)",
+          "verified": true
+        },
+        {
+          "text": "So it is inevitable that life will be not just very short but very miserable for those who acquire by great toil what they must keep by greater toil.",
+          "source": "On the Shortness of Life, verified via [The Stoic Gym](https://thestoicgym.com/the-stoic-magazine/article/633)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "marcus-aurelius",
+      "name": "Marcus Aurelius",
+      "era": "121-180 CE",
+      "domain": "philosophy",
+      "coreThesis": "Marcus Aurelius teaches that true power lies in mastering your mind, not controlling external events. The universe operates by rational order; suffering comes from resisting this order through false judgments about what's \"good\" or \"bad.\" The only genuine good is virtue (wisdom, justice, courage, temperance); everything else—health, wealth, reputation, even life itself—is \"indifferent.\" Obstacles aren't problems; they're opportunities for practicing virtue. Death is natural and imminent; this fact should focus your attention on living excellently now, not later. You have a duty to contribute to human community while maintaining inner tranquility.",
+      "operatingPrinciples": [
+        "Distinguish what you control (thoughts, judgments, responses) from what you don't (everything else). Invest energy only in your control.",
+        "Transform obstacles into opportunities. Every impediment is raw material for virtue.",
+        "Practice memento mori: remember you will die. This clarifies what matters.",
+        "Cultivate virtuous thoughts; your habitual thinking shapes your character.",
+        "Treat all humans as rational family members. Even those who harm act from ignorance.",
+        "The present moment is all you possess. Live it excellently.",
+        "Rehearse adversity before it arrives. Mental preparation prevents emotional hijacking.",
+        "Simplify. Luxury creates dependency; simplicity creates freedom.",
+        "Do your duty to community while maintaining inner independence.",
+        "Act with virtue, release attachment to outcomes.",
+        "Your mind is an impregnable fortress if you maintain it.",
+        "Don't complain about what nature provides. Acceptance reduces suffering."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Control Test",
+          "description": "Is this within my control? If no, release. If yes, what's the virtuous response?"
+        },
+        {
+          "name": "The Virtue Filter",
+          "description": "Does this align with wisdom, justice, courage, or temperance? If not, reject."
+        },
+        {
+          "name": "The Death Question",
+          "description": "If I died tonight, would this matter? Would I regret spending time on this?"
+        },
+        {
+          "name": "The Social Duty Check",
+          "description": "Does this serve the common good or just my ego?"
+        },
+        {
+          "name": "The Nature Alignment",
+          "description": "Am I resisting reality or working with it?"
+        }
+      ],
+      "failureModes": [
+        "Philosophical talk without philosophical action - Knowing virtue isn't practicing it",
+        "Anger at \"difficult people\" - Forgetting they act from ignorance, not malice",
+        "Attachment to outcomes - Seeking control over externals (reputation, success, others' opinions)",
+        "Procrastination - Delaying virtue until circumstances improve (they won't)",
+        "Complaint - Resisting what nature provides, creating unnecessary suffering"
+      ],
+      "signatureTactics": [
+        "Morning preparation ritual - Rehearse the day's likely challenges and difficult people",
+        "Evening review - Reflect on actions and judgments; identify improvements",
+        "Negative visualization - Imagine losing what you value to increase gratitude",
+        "View from above - Step back and see events from cosmic perspective",
+        "Inner citadel retreat - Withdraw into mind when external chaos overwhelms",
+        "Death meditation - Regular contemplation of mortality to focus priorities",
+        "Obstacle reframe - Immediately ask: \"How does this obstacle reveal the way forward?\""
+      ],
+      "contextTags": [
+        "low_recovery",
+        "monday",
+        "adversity",
+        "difficult_people",
+        "stress",
+        "uncertainty",
+        "mortality",
+        "duty",
+        "discipline",
+        "resilience",
+        "any"
+      ],
+      "oneLiner": "Control what you can (your mind), accept what you can't (everything else), and remember—you'll be dead soon, so waste no time on trivialities.",
+      "quotes": [
+        {
+          "text": "The impediment to action advances action. What stands in the way becomes the way.",
+          "source": "Meditations 5.20",
+          "verified": true
+        },
+        {
+          "text": "Such as are thy habitual thoughts, such also will be the character of thy mind; for the soul is dyed by the thoughts.",
+          "source": "Meditations 5.16",
+          "verified": true
+        },
+        {
+          "text": "Begin the morning by saying to thyself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial.",
+          "source": "Meditations 2.1",
+          "verified": true
+        },
+        {
+          "text": "Waste no more time arguing about what a good man should be. Be one.",
+          "source": "Meditations 10.16",
+          "verified": true
+        },
+        {
+          "text": "It is not death that a man should fear, but he should fear never beginning to live.",
+          "source": "Meditations (Book not verified)",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "david-goggins",
+      "name": "David Goggins",
+      "era": "1975-present",
+      "domain": "mental-toughness",
+      "coreThesis": "David Goggins teaches that most humans operate at 40% of their true capability and never discover what they're made of. The mind quits to protect you from discomfort—not danger. When you think you're done, you're only 40% done; there's 60% more in reserve. Growth only happens through suffering. Comfort is the enemy of potential. The Accountability Mirror (facing brutal truth about yourself), the Cookie Jar (banking past wins to draw on), and callusing your mind through repeated voluntary suffering are how you become unbreakable. Motivation is garbage; drive is everything. There is no finish line—you're either growing or dying.",
+      "operatingPrinciples": [
+        "When your mind says quit, you're only 40% done. Push through to access the other 60%.",
+        "Callous your mind through repeated voluntary suffering (cold, hard workouts, discomfort).",
+        "The Accountability Mirror: write failures and goals on Post-its, tag your mirror, face truth daily.",
+        "The Cookie Jar: mentally bank every hard thing you've overcome. Pull from it when you want to quit.",
+        "Motivation is trash. Driven people execute regardless of feelings.",
+        "Take souls: outwork everyone so dominantly they feel demoralized by your output.",
+        "Comfort is the enemy. If it's easy, you're not growing.",
+        "Own your past. Use trauma/failure as fuel, not excuse.",
+        "There is no finish line. You're either growing or declining—choose growth.",
+        "Stay hard. Not a phrase, a permanent operating state.",
+        "Do the thing you're avoiding. Your weaknesses define your ceiling.",
+        "Early mornings separate committed from casual. 4AM is the standard."
+      ],
+      "decisionFilters": [
+        {
+          "name": "The Comfort Test",
+          "description": "If it's comfortable, reject it. Choose the harder path."
+        },
+        {
+          "name": "The 4AM Question",
+          "description": "Would I wake up at 4AM to do this? If no, I'm not serious."
+        },
+        {
+          "name": "The Suffering Filter",
+          "description": "Does this make me better or just feel better? Reject comfort-seeking."
+        },
+        {
+          "name": "The Soul-Taking Check",
+          "description": "Is my effort level demoralizing to my competition? If no, increase output."
+        },
+        {
+          "name": "The Mirror Question",
+          "description": "Can I justify this decision to my Accountability Mirror?"
+        }
+      ],
+      "failureModes": [
+        "Making excuses - Any justification for not doing the work",
+        "Seeking comfort - Taking easy path, avoiding discomfort",
+        "Waiting for motivation - Needing to \"feel like it\" before acting",
+        "Playing victim - Using past trauma as excuse for current failure",
+        "Quitting when it's hard - Listening to the 40% quit signal instead of pushing to 100%"
+      ],
+      "signatureTactics": [
+        "4AM wake-ups - Dominate the morning before others are awake",
+        "Accountability Mirror - Post-it notes with failures/goals on bathroom mirror",
+        "Cookie Jar - Mental inventory of past hard wins to draw on when struggling",
+        "Callusing routine - Repeated exposure to cold, fatigue, discomfort",
+        "Ultra-endurance training - Long suffering sessions to build mental armor",
+        "Taking souls - Outwork everyone to demoralize competition",
+        "No days off mentality - Every day is a training day"
+      ],
+      "contextTags": [
+        "workout_day",
+        "high_recovery",
+        "monday",
+        "low_recovery",
+        "adversity",
+        "challenge",
+        "discipline",
+        "mental_toughness",
+        "performance",
+        "competition",
+        "any"
+      ],
+      "oneLiner": "You're operating at 40%—stop making excuses, face the mirror, pull from your cookie jar, and stay hard.",
+      "quotes": [
+        {
+          "text": "You are in danger of living a life so comfortable that you will die without ever realizing your true potential.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "The most important conversations you'll ever have are the ones you'll have with yourself.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "Motivation changes exactly nobody.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "Don't focus on what you think you deserve. Take aim on what you are willing to earn!",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "We live in a world where a lot of people need goals and want to pursue them, but don't want to pay the price to achieve them.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "You will never learn from people if you always tap dance around the truth.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "It won't always go your way, so you can't get trapped in this idea that just because you imagined a possibility for yourself that you somehow deserve it.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "The only way that you're going to get to the other side of this journey is by suffering. You have to suffer in order to grow.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "We all have the ability to come from nothing to something.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

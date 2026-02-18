@@ -1,0 +1,146 @@
+{
+  "sources": [
+    {
+      "id": "anthropic",
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/news",
+      "type": "company_blog",
+      "categories": ["news", "research"],
+      "priority": 1
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog",
+      "type": "company_blog",
+      "categories": ["news", "research"],
+      "priority": 1
+    },
+    {
+      "id": "deepmind",
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/discover/blog/",
+      "type": "company_blog",
+      "categories": ["news", "research"],
+      "priority": 1
+    },
+    {
+      "id": "meta_ai",
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "type": "company_blog",
+      "categories": ["news", "research"],
+      "priority": 2
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "type": "company_blog",
+      "categories": ["news", "research"],
+      "priority": 2
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "url": "https://mistral.ai/news/",
+      "type": "company_blog",
+      "categories": ["news"],
+      "priority": 2
+    },
+    {
+      "id": "the_batch",
+      "name": "The Batch (Andrew Ng)",
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "type": "newsletter",
+      "categories": ["news", "ideas"],
+      "priority": 1
+    },
+    {
+      "id": "import_ai",
+      "name": "Import AI (Jack Clark)",
+      "url": "https://importai.substack.com/",
+      "type": "newsletter",
+      "categories": ["news", "research", "ideas"],
+      "priority": 1
+    },
+    {
+      "id": "algorithmic_bridge",
+      "name": "The Algorithmic Bridge",
+      "url": "https://thealgorithmicbridge.substack.com/",
+      "type": "newsletter",
+      "categories": ["ideas"],
+      "priority": 2
+    },
+    {
+      "id": "arxiv_ai",
+      "name": "arXiv cs.AI",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "type": "research",
+      "categories": ["research"],
+      "priority": 1
+    },
+    {
+      "id": "arxiv_lg",
+      "name": "arXiv cs.LG",
+      "url": "https://arxiv.org/list/cs.LG/recent",
+      "type": "research",
+      "categories": ["research"],
+      "priority": 2
+    },
+    {
+      "id": "papers_with_code",
+      "name": "Papers With Code",
+      "url": "https://paperswithcode.com/",
+      "type": "research",
+      "categories": ["research"],
+      "priority": 2
+    },
+    {
+      "id": "hacker_news",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "type": "community",
+      "categories": ["news", "ideas"],
+      "priority": 3
+    },
+    {
+      "id": "ai_news",
+      "name": "AI News",
+      "url": "https://www.artificialintelligence-news.com/",
+      "type": "news",
+      "categories": ["news"],
+      "priority": 3
+    }
+  ],
+  "categories": {
+    "news": {
+      "name": "AI News",
+      "emoji": ":rocket:",
+      "description": "Product launches, model releases, API updates, company announcements",
+      "target_items": 12
+    },
+    "research": {
+      "name": "AI Research",
+      "emoji": ":test_tube:",
+      "description": "Papers, benchmarks, technical breakthroughs, architecture innovations",
+      "target_items": 12
+    },
+    "ideas": {
+      "name": "AI Ideas",
+      "emoji": ":bulb:",
+      "description": "Opinion pieces, industry analysis, policy, ethics, predictions",
+      "target_items": 8
+    }
+  },
+  "limits": {
+    "max_total_items": 32,
+    "max_per_source": 5,
+    "dedup_window_days": 7
+  },
+  "fetch_settings": {
+    "parallel_requests": 8,
+    "timeout_ms": 30000,
+    "retry_count": 2
+  }
+}

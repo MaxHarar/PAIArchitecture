@@ -1,0 +1,114 @@
+# ============================================================
+# PAI Architecture - Public/Private Boundary
+# ============================================================
+# This .gitignore defines what gets published to GitHub.
+# Everything NOT listed here is PUBLIC architecture.
+# Everything listed here is PRIVATE personal data.
+# ============================================================
+
+# ── Credentials & Secrets (CRITICAL) ──────────────────────
+.env
+settings.json
+settings.json.backup*
+authority.json
+authority/
+garmin-tokens/
+
+# Telegram bot secrets and nested git (NOT the source code)
+claude-telegram-bot/.env
+claude-telegram-bot/node_modules/
+claude-telegram-bot/bun.lock
+claude-telegram-bot/.git/
+
+# ── Personal Data ─────────────────────────────────────────
+# USER/ directories inside skills contain personal data
+# (identity, contacts, finances, health goals, Telos life data)
+skills/*/USER/
+skills/CORE/USER.backup*
+
+# Backup skill directories
+skills/DailyBrief.backup*
+
+# Memory system (work sessions, relationship notes, learning)
+MEMORY/
+
+# Fitness & health data
+fitness/
+
+# Daily briefings
+dailybrief/
+
+# Conversation history
+history.jsonl
+
+# Claude Code session transcripts
+projects/
+
+# Plans (may contain personal context)
+plans/
+
+# ── Generated / Runtime ───────────────────────────────────
+node_modules/
+bun.lock
+debug/
+todos/
+session-env/
+file-history/
+cache/
+image-cache/
+paste-cache/
+stats-cache.json
+shell-snapshots/
+ide/
+learnings/
+logs/
+tasks/
+telemetry/
+statsig/
+models/
+
+# Claude Code internal data
+.claude/
+
+# Media uploads (personal content)
+MEDIA/
+
+# Temp directories
+~/
+
+# macOS
+.DS_Store
+
+# Training plans (personal)
+training-plan-*.md
+
+# PAI installer wizard (standalone script, superseded by PAI-Install/)
+PAIInstallWizard.ts
+
+# ── Observability app build artifacts ─────────────────────
+Observability/MenuBar/PAI-StatusBar/.build/
+Observability/MenuBar/PAI-StatusBar/build/
+Observability/MenuBar/PAI-StatusBar/DerivedData/
+Observability/MenuBar/PAI-StatusBar/*.xcworkspace/
+Observability/MenuBar/PAI-StatusBar/.swiftpm/
+
+# ── Voice server runtime ─────────────────────────────────
+VoiceServer/node_modules/
+VoiceServer/bun.lock
+VoiceServer/*.wav
+VoiceServer/*.mp3
+
+# ── Web UI build artifacts ────────────────────────────────
+pai-web-ui/node_modules/
+pai-web-ui/bun.lock
+pai-web-ui/.next/
+pai-web-ui/out/
+
+# ── Hook test/debug artifacts ─────────────────────────────
+hooks/__tests__/
+hooks/subagent-stop-debug.log
+
+# ── Misc runtime/generated ────────────────────────────────
+*.pyc
+__pycache__/
+.pytest_cache/

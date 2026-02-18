@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.pai.tribriefing</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/bun</string>
+        <string>run</string>
+        <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools/tri-brief-daemon.ts</string>
+    </array>
+
+    <!-- Run every 300 seconds (5 minutes) -->
+    <key>StartInterval</key>
+    <integer>300</integer>
+
+    <!-- Prevent rapid restarts on failure -->
+    <key>ThrottleInterval</key>
+    <integer>60</integer>
+
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/maxharar</string>
+    </dict>
+
+    <!-- Log output -->
+    <key>StandardOutPath</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/tri-brief-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/tri-brief-stderr.log</string>
+
+    <!-- Run immediately on load -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/maxharar/.claude/skills/DailyBriefing</string>
+</dict>
+</plist>
