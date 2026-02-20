@@ -115,3 +115,4 @@ hooks/subagent-stop-debug.log
 *.pyc
 __pycache__/
 .pytest_cache/
+backups/

@@ -11,6 +11,9 @@
  *                 ISC criteria pass or maxIterations reached. No human needed.
  *   interactive — Launches a full interactive `claude` session with PRD context
  *                 loaded as the initial prompt. Human-in-the-loop.
+ *   bestofn     — Spawns N parallel solution agents in isolated git worktrees.
+ *                 Each agent independently solves all failing criteria. The agent
+ *                 with the most passing criteria wins. ISC = fitness function.
  *
  * DASHBOARD INTEGRATION (v0.5.9):
  *   - Creates a persistent algorithm state entry in MEMORY/STATE/algorithms/
@@ -22,6 +25,7 @@
  * USAGE:
  *   algorithm -m loop -p <PRD> [-n 128]        Autonomous loop execution
  *   algorithm -m interactive -p <PRD>           Interactive claude session
+ *   algorithm -m bestofn -p <PRD> -a N          N parallel solutions, pick best
  *   algorithm status [-p <PRD>]                 Show PRD status
  *   algorithm pause -p <PRD>                    Pause a running loop
  *   algorithm resume -p <PRD>                   Resume a paused loop
@@ -190,9 +194,10 @@ Usage:
 Modes:
   loop          Autonomous iteration — no human interaction
   interactive   Full claude session with PRD context loaded
+  bestofn       Parallel N solutions, pick best via ISC scoring
 
 Flags:
-  -m, --mode <mode>     Execution mode: loop or interactive
+  -m, --mode <mode>     Execution mode: loop, interactive, or bestofn
   -p, --prd <path>      PRD file path or PRD ID
   -n, --max <N>         Max iterations (loop mode only, default: 128)
   -a, --agents <N>      Parallel agents per iteration (1-16, default: 1)
@@ -206,6 +211,7 @@ PRD Resolution:
 Examples:
   algorithm -m loop -p PRD-20260213-surface -n 20
   algorithm -m loop -p PRD-20260213-surface -n 20 -a 4     # 4 parallel agents
+  algorithm -m bestofn -p PRD-20260213-surface -a 3        # 3 parallel solutions, pick best
   algorithm -m interactive -p PRD-20260213-surface
   algorithm status
   algorithm status -p PRD-20260213-surface
@@ -644,6 +650,7 @@ async function runParallelIteration(
       cwd: dirname(prdPath),
       stdout: "pipe",
       stderr: "pipe",
+      env: { ...process.env, CLAUDECODE: undefined },
     });
     return { assignment, proc };
   });
@@ -729,6 +736,468 @@ async function runParallelIteration(
   const pct = postCriteria.total > 0 ? Math.round((postCriteria.passing / postCriteria.total) * 100) : 0;
   console.log(`  \x1b[90m── ${postCriteria.passing}/${postCriteria.total} passing (${pct}%) ────────────────────────────────────\x1b[0m`);
   console.log("");
+}
+
+// ─── Best-of-N: Workspace Isolation ─────────────────────────────────────────
+
+interface IsolatedWorkspace {
+  id: number;
+  path: string;
+  branch: string;
+  type: "worktree" | "tempdir";
+  prdPath: string; // PRD path within this workspace
+}
+
+function isGitRepo(dir: string): boolean {
+  const result = spawnSync("git", ["rev-parse", "--is-inside-work-tree"], { cwd: dir, stdio: "pipe" });
+  return result.status === 0;
+}
+
+function getGitRoot(dir: string): string {
+  const result = spawnSync("git", ["rev-parse", "--show-toplevel"], { cwd: dir, stdio: "pipe" });
+  if (result.status !== 0) throw new Error("Not a git repository");
+  return result.stdout.toString().trim();
+}
+
+function createIsolatedWorkspaces(
+  prdPath: string,
+  agentCount: number,
+): IsolatedWorkspace[] {
+  const prdDir = dirname(prdPath);
+  const workspaces: IsolatedWorkspace[] = [];
+
+  if (isGitRepo(prdDir)) {
+    // Git worktree isolation
+    const gitRoot = getGitRoot(prdDir);
+    const currentBranch = spawnSync("git", ["rev-parse", "--abbrev-ref", "HEAD"], { cwd: gitRoot, stdio: "pipe" })
+      .stdout.toString().trim() || "main";
+
+    for (let i = 1; i <= agentCount; i++) {
+      const branch = `bestofn-agent-${i}-${Date.now()}`;
+      const worktreePath = join(gitRoot, `.bestofn-workspace-${i}`);
+
+      // Create branch from current HEAD
+      spawnSync("git", ["branch", branch, "HEAD"], { cwd: gitRoot, stdio: "pipe" });
+
+      // Create worktree
+      const wtResult = spawnSync("git", ["worktree", "add", worktreePath, branch], { cwd: gitRoot, stdio: "pipe" });
+      if (wtResult.status !== 0) {
+        const err = wtResult.stderr?.toString() || "unknown error";
+        throw new Error(`Failed to create worktree ${i}: ${err}`);
+      }
+
+      // Calculate PRD path relative to git root, then map to worktree
+      const prdRelative = resolve(prdPath).replace(gitRoot + "/", "");
+      const worktreePrdPath = join(worktreePath, prdRelative);
+
+      workspaces.push({
+        id: i,
+        path: worktreePath,
+        branch,
+        type: "worktree",
+        prdPath: worktreePrdPath,
+      });
+    }
+  } else {
+    // Temp directory fallback for non-git projects
+    const tmpBase = join(require("os").tmpdir(), `bestofn-${Date.now()}`);
+    mkdirSync(tmpBase, { recursive: true });
+
+    for (let i = 1; i <= agentCount; i++) {
+      const wsPath = join(tmpBase, `agent-${i}`);
+      // Copy the PRD's directory tree
+      spawnSync("cp", ["-R", prdDir, wsPath], { stdio: "pipe" });
+
+      const prdRelative = basename(prdPath);
+      workspaces.push({
+        id: i,
+        path: wsPath,
+        branch: `tempdir-${i}`,
+        type: "tempdir",
+        prdPath: join(wsPath, prdRelative),
+      });
+    }
+  }
+
+  return workspaces;
+}
+
+function cleanupWorkspaces(workspaces: IsolatedWorkspace[]): void {
+  for (const ws of workspaces) {
+    try {
+      if (ws.type === "worktree") {
+        const gitRoot = dirname(ws.path);
+        // Remove worktree first, then branch
+        spawnSync("git", ["worktree", "remove", ws.path, "--force"], { cwd: gitRoot, stdio: "pipe" });
+        spawnSync("git", ["branch", "-D", ws.branch], { cwd: gitRoot, stdio: "pipe" });
+      } else {
+        // Remove temp directory
+        spawnSync("rm", ["-rf", ws.path], { stdio: "pipe" });
+      }
+    } catch {
+      // Best effort cleanup
+    }
+  }
+
+  // Clean up parent tempdir if empty
+  if (workspaces.length > 0 && workspaces[0].type === "tempdir") {
+    const tmpBase = dirname(workspaces[0].path);
+    try { spawnSync("rmdir", [tmpBase], { stdio: "pipe" }); } catch {}
+  }
+}
+
+// ─── Best-of-N: Agent Prompt ────────────────────────────────────────────────
+
+function buildBestOfNPrompt(
+  workspace: IsolatedWorkspace,
+  originalPrdPath: string,
+  agentId: number,
+  totalAgents: number,
+): string {
+  let contextSection = "";
+  let failingList = "";
+  let verificationSummary = "unknown";
+
+  try {
+    const { frontmatter, content } = readPRD(workspace.prdPath);
+    verificationSummary = frontmatter.verification_summary || "0/0";
+
+    const ctxMatch = content.match(/## CONTEXT\n([\s\S]*?)(?=\n## (?!CONTEXT))/);
+    if (ctxMatch) contextSection = ctxMatch[1].trim();
+
+    const criteria = countCriteria(content);
+    if (criteria.failingIds.length > 0) {
+      const details: string[] = [];
+      for (const id of criteria.failingIds) {
+        const lineMatch = content.match(new RegExp(`- \\[ \\] ${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}:.*`));
+        details.push(lineMatch ? lineMatch[0].replace(/^- \[ \] /, "") : id);
+      }
+      failingList = details.join("\n  ");
+    }
+  } catch {}
+
+  return `You are Solution Agent ${agentId} of ${totalAgents} in a Best-of-N parallel competition.
+
+${totalAgents} agents are independently solving the SAME problem. The solution with the most passing ISC criteria WINS. Your goal: maximize criteria passing.
+
+PRD: ${workspace.prdPath}
+Workspace: ${workspace.path}
+Current progress: ${verificationSummary}
+
+CONTEXT:
+${contextSection || "Read the PRD CONTEXT section."}
+
+Failing criteria:
+  ${failingList || "Read the PRD IDEAL STATE CRITERIA section."}
+
+RULES:
+1. Read the PRD IDEAL STATE CRITERIA section carefully.
+2. Work ONLY within your workspace directory: ${workspace.path}
+3. Make changes to solve as many failing criteria as possible.
+4. Run each criterion's Verify: method after making changes.
+5. Update the PRD in YOUR workspace:
+   - Check off criteria that now pass: \`- [ ]\` → \`- [x]\`
+   - Update verification_summary in frontmatter
+   - Update failing_criteria in frontmatter
+6. Be BOLD. Try creative approaches. The best solution wins.
+7. Focus on getting ALL criteria to pass, not just some.
+8. Do NOT skip Verify: Custom criteria — give your best attempt.
+
+You are competing. Quality and completeness determine the winner.`;
+}
+
+// ─── Best-of-N: Solution Evaluation ─────────────────────────────────────────
+
+interface SolutionScore {
+  agentId: number;
+  workspace: IsolatedWorkspace;
+  passing: number;
+  failing: number;
+  total: number;
+  percentage: number;
+  criteria: CriteriaInfo["criteria"];
+}
+
+function evaluateSolutions(workspaces: IsolatedWorkspace[]): SolutionScore[] {
+  const scores: SolutionScore[] = [];
+
+  for (const ws of workspaces) {
+    try {
+      const { content } = readPRD(ws.prdPath);
+      const criteria = countCriteria(content);
+      scores.push({
+        agentId: ws.id,
+        workspace: ws,
+        passing: criteria.passing,
+        failing: criteria.failing,
+        total: criteria.total,
+        percentage: criteria.total > 0 ? Math.round((criteria.passing / criteria.total) * 100) : 0,
+        criteria: criteria.criteria,
+      });
+    } catch {
+      scores.push({
+        agentId: ws.id,
+        workspace: ws,
+        passing: 0,
+        failing: 0,
+        total: 0,
+        percentage: 0,
+        criteria: [],
+      });
+    }
+  }
+
+  // Sort by passing count (descending), then by percentage
+  scores.sort((a, b) => b.passing - a.passing || b.percentage - a.percentage);
+  return scores;
+}
+
+// ─── Best-of-N: Merge Winning Solution ──────────────────────────────────────
+
+function mergeWinningSolution(
+  winner: SolutionScore,
+  originalPrdPath: string,
+): void {
+  const ws = winner.workspace;
+
+  if (ws.type === "worktree") {
+    const gitRoot = getGitRoot(dirname(originalPrdPath));
+
+    // Generate diff from the worktree's branch against the original
+    const diffResult = spawnSync("git", ["diff", "HEAD", ws.branch, "--", "."], {
+      cwd: gitRoot,
+      stdio: "pipe",
+      maxBuffer: 50 * 1024 * 1024, // 50MB buffer for large diffs
+    });
+
+    if (diffResult.status === 0 && diffResult.stdout.length > 0) {
+      // Apply the diff to the main working directory
+      const applyResult = spawnSync("git", ["apply", "--3way", "-"], {
+        cwd: gitRoot,
+        stdio: ["pipe", "pipe", "pipe"],
+        input: diffResult.stdout,
+      });
+
+      if (applyResult.status !== 0) {
+        // Fallback: direct file copy for the PRD at minimum
+        const { copyFileSync } = require("fs");
+        copyFileSync(ws.prdPath, originalPrdPath);
+        console.log(`  \x1b[33m⚠ Diff apply had conflicts — PRD updated directly\x1b[0m`);
+      }
+    }
+
+    // Also ensure the PRD itself is updated from winner
+    const { copyFileSync } = require("fs");
+    copyFileSync(ws.prdPath, originalPrdPath);
+
+  } else {
+    // Temp dir: copy all changed files back
+    const { copyFileSync } = require("fs");
+    copyFileSync(ws.prdPath, originalPrdPath);
+    // For non-git, we copy back the PRD (primary artifact)
+    // Additional files would need explicit tracking — future enhancement
+  }
+}
+
+// ─── Best-of-N: Scoreboard Display ─────────────────────────────────────────
+
+function printBestOfNScoreboard(scores: SolutionScore[], winnerId: number): void {
+  const bar = (p: number, t: number, w: number = 20) => {
+    const pct = t > 0 ? p / t : 0;
+    const filled = Math.round(pct * w);
+    return `${"█".repeat(filled)}${"░".repeat(w - filled)}`;
+  };
+
+  console.log("");
+  console.log(`\x1b[36m╔${"═".repeat(66)}╗\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  \x1b[1mBEST-OF-N SCOREBOARD\x1b[0m${" ".repeat(44)}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m╠${"═".repeat(66)}╣\x1b[0m`);
+
+  for (const score of scores) {
+    const isWinner = score.agentId === winnerId;
+    const icon = isWinner ? "\x1b[32m★\x1b[0m" : "\x1b[90m·\x1b[0m";
+    const label = isWinner ? "\x1b[32mWINNER\x1b[0m" : "\x1b[90m      \x1b[0m";
+    const agentLabel = `Agent ${score.agentId}`.padEnd(8);
+    const progress = `${score.passing}/${score.total}`.padEnd(7);
+    const progressBar = bar(score.passing, score.total);
+    const pct = `${score.percentage}%`.padStart(4);
+    const line = `  ${icon} ${agentLabel} ${progress} ${progressBar} ${pct} ${label}`;
+    // Pad to fit box (accounting for ANSI escape codes)
+    console.log(`\x1b[36m║\x1b[0m${line}${"".padEnd(3)}\x1b[36m║\x1b[0m`);
+  }
+
+  console.log(`\x1b[36m╚${"═".repeat(66)}╝\x1b[0m`);
+  console.log("");
+}
+
+// ─── Best-of-N: Core Runner ─────────────────────────────────────────────────
+
+async function runBestOfN(prdPath: string, agentCount: number = 3): Promise<void> {
+  const absPath = resolve(prdPath);
+  if (!existsSync(absPath)) {
+    console.error(`\x1b[31mError:\x1b[0m PRD not found: ${absPath}`);
+    process.exit(1);
+  }
+
+  const { frontmatter, content } = readPRD(absPath);
+  const prdTitle = extractPRDTitle(content);
+  const initialCriteria = countCriteria(content);
+  const effortLevel = frontmatter.effort_level || "Standard";
+
+  if (agentCount < 2) {
+    console.error(`\x1b[31mError:\x1b[0m Best-of-N requires at least 2 agents (-a 2+). Got: ${agentCount}`);
+    process.exit(1);
+  }
+
+  // ── Dashboard: Create state ──
+  const sessionId = randomUUID();
+  const state = createLoopState(sessionId, absPath, frontmatter.id, prdTitle, 1, initialCriteria, effortLevel, agentCount);
+  state.mode = "bestofn" as any;
+  state.taskDescription = `Best-of-${agentCount}: ${prdTitle}`;
+  writeAlgorithmState(state);
+  writeSessionName(sessionId, `Best-of-${agentCount}: ${prdTitle}`);
+
+  // ── Voice: Starting ──
+  voiceNotify(`Starting Best of ${agentCount} on ${prdTitle}. ${initialCriteria.total} criteria to satisfy.`);
+
+  // ── Banner ──
+  console.log("");
+  console.log(`\x1b[36m╔${"═".repeat(66)}╗\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  \x1b[1mTHE ALGORITHM\x1b[0m — Best-of-${agentCount} Mode${" ".repeat(Math.max(0, 38 - String(agentCount).length))}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m╠${"═".repeat(66)}╣\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  PRD:       ${frontmatter.id.padEnd(53)}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  Title:     ${prdTitle.slice(0, 53).padEnd(53)}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  Agents:    ${String(agentCount).padEnd(53)}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m║\x1b[0m  Criteria:  ${`${initialCriteria.passing}/${initialCriteria.total} passing`.padEnd(53)}\x1b[36m║\x1b[0m`);
+  console.log(`\x1b[36m╚${"═".repeat(66)}╝\x1b[0m`);
+  console.log("");
+
+  // ── Step 1: Create isolated workspaces ──
+  console.log(`  \x1b[36m◉\x1b[0m Creating ${agentCount} isolated workspaces...`);
+  let workspaces: IsolatedWorkspace[] = [];
+
+  try {
+    workspaces = createIsolatedWorkspaces(absPath, agentCount);
+    for (const ws of workspaces) {
+      const typeLabel = ws.type === "worktree" ? "worktree" : "tempdir";
+      console.log(`    Agent ${ws.id}: ${typeLabel} → ${ws.path}`);
+    }
+    console.log("");
+
+    // ── Step 2: Spawn all agents in parallel ──
+    console.log(`  \x1b[36m◉\x1b[0m Spawning ${agentCount} solution agents in parallel...`);
+
+    // Update dashboard state with agent info
+    state.agents = workspaces.map(ws => ({
+      name: `solution-${ws.id}`,
+      agentType: "bestofn-solver",
+      status: "active",
+      task: `Solve all criteria in workspace ${ws.id}`,
+      phase: "EXECUTE" as const,
+    }));
+    writeAlgorithmState(state);
+
+    const startTime = Date.now();
+    const processes = workspaces.map(ws => {
+      const prompt = buildBestOfNPrompt(ws, absPath, ws.id, agentCount);
+      const proc = Bun.spawn(["claude", "-p", prompt,
+        "--allowedTools", "Edit,Write,Bash,Read,Glob,Grep,WebFetch,WebSearch,NotebookEdit",
+      ], {
+        cwd: ws.path,
+        stdout: "pipe",
+        stderr: "pipe",
+        env: { ...process.env, CLAUDECODE: undefined },
+      });
+      return { workspace: ws, proc };
+    });
+
+    // Wait for all agents to complete
+    const results = await Promise.all(
+      processes.map(async ({ workspace, proc }) => {
+        const exitCode = await proc.exited;
+        const stdout = await new Response(proc.stdout).text();
+        const stderr = await new Response(proc.stderr).text();
+        return { workspace, exitCode, stdout, stderr };
+      })
+    );
+
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
+    console.log(`  \x1b[90m⏱ All agents completed in ${elapsed}s\x1b[0m`);
+    console.log("");
+
+    // ── Voice: Agents done ──
+    voiceNotify(`All ${agentCount} solution agents have completed in ${elapsed} seconds. Evaluating results.`);
+
+    // Update agent statuses
+    for (const { workspace, exitCode } of results) {
+      const agent = state.agents.find(a => a.name === `solution-${workspace.id}`);
+      if (agent) agent.status = exitCode === 0 ? "completed" : "failed";
+    }
+    writeAlgorithmState(state);
+
+    // ── Step 3: Evaluate all solutions ──
+    console.log(`  \x1b[36m◉\x1b[0m Evaluating solutions against ISC criteria...`);
+
+    const scores = evaluateSolutions(workspaces);
+    const winner = scores[0]; // Already sorted best-first
+
+    // ── Step 4: Display scoreboard ──
+    printBestOfNScoreboard(scores, winner.agentId);
+
+    // ── Step 5: Merge winning solution ──
+    console.log(`  \x1b[36m◉\x1b[0m Merging winning solution (Agent ${winner.agentId}: ${winner.passing}/${winner.total} passing)...`);
+    mergeWinningSolution(winner, absPath);
+    console.log(`  \x1b[32m✓\x1b[0m Winner merged successfully`);
+    console.log("");
+
+    // ── Voice: Winner ──
+    voiceNotify(`Agent ${winner.agentId} wins with ${winner.passing} of ${winner.total} criteria passing. Solution merged.`);
+
+    // ── Step 6: Final state ──
+    const postPrd = readPRD(absPath);
+    const postCriteria = countCriteria(postPrd.content);
+
+    // Update PRD frontmatter
+    updateFrontmatter(absPath, {
+      verification_summary: `"${postCriteria.passing}/${postCriteria.total}"`,
+      failing_criteria: postCriteria.failingIds.length > 0
+        ? `[${postCriteria.failingIds.join(", ")}]`
+        : "[]",
+      last_phase: "VERIFY",
+      updated: new Date().toISOString().split("T")[0],
+      ...(postCriteria.passing >= postCriteria.total && { status: "COMPLETE" }),
+    });
+
+    // Dashboard: Finalize
+    syncCriteriaToState(state, postCriteria);
+    state.active = false;
+    state.completedAt = Date.now();
+    state.currentPhase = postCriteria.passing >= postCriteria.total ? "COMPLETE" : "VERIFY";
+    state.summary = `Best-of-${agentCount}: Agent ${winner.agentId} won with ${winner.passing}/${winner.total}`;
+    state.agents = state.agents.map(a => ({ ...a, status: a.name === `solution-${winner.agentId}` ? "completed" : a.status }));
+    writeAlgorithmState(state);
+    writeSessionName(sessionId, `Best-of-${agentCount}: ${prdTitle} [${postCriteria.passing}/${postCriteria.total}]`);
+
+    // ── Final summary ──
+    const improvement = postCriteria.passing - initialCriteria.passing;
+    console.log(`\x1b[32m╔${"═".repeat(66)}╗\x1b[0m`);
+    console.log(`\x1b[32m║\x1b[0m  \x1b[1m\x1b[32m✓ BEST-OF-${agentCount} COMPLETE\x1b[0m${" ".repeat(Math.max(0, 49 - String(agentCount).length))}\x1b[32m║\x1b[0m`);
+    console.log(`\x1b[32m╠${"═".repeat(66)}╣\x1b[0m`);
+    console.log(`\x1b[32m║\x1b[0m  Winner:     ${"Agent " + winner.agentId}${" ".repeat(Math.max(0, 52 - String(winner.agentId).length - 6))}\x1b[32m║\x1b[0m`);
+    console.log(`\x1b[32m║\x1b[0m  Score:      ${`${winner.passing}/${winner.total} (${winner.percentage}%)`.padEnd(53)}\x1b[32m║\x1b[0m`);
+    console.log(`\x1b[32m║\x1b[0m  Improved:   ${`+${improvement} criteria`.padEnd(53)}\x1b[32m║\x1b[0m`);
+    console.log(`\x1b[32m║\x1b[0m  Time:       ${`${elapsed}s`.padEnd(53)}\x1b[32m║\x1b[0m`);
+    console.log(`\x1b[32m╚${"═".repeat(66)}╝\x1b[0m`);
+
+  } finally {
+    // ── Step 7: Cleanup (ALWAYS runs) ──
+    if (workspaces.length > 0) {
+      console.log("");
+      console.log(`  \x1b[90m◉ Cleaning up ${workspaces.length} workspaces...\x1b[0m`);
+      cleanupWorkspaces(workspaces);
+      console.log(`  \x1b[90m✓ Cleanup complete\x1b[0m`);
+    }
+  }
 }
 
 // ─── Interactive Prompt ──────────────────────────────────────────────────────
@@ -1009,6 +1478,7 @@ async function runLoop(prdPath: string, maxOverride?: number, agentCount: number
       stdio: ["pipe", "pipe", "pipe"],
       timeout: 600_000, // 10 minute timeout per iteration
       cwd: dirname(absPath), // Run from PRD's directory context
+      env: { ...process.env, CLAUDECODE: undefined }, // Allow nested launch
     });
 
     const iterEndTime = Date.now();
@@ -1311,7 +1781,7 @@ if (parsed.subcommand) {
       break;
   }
 } else if (parsed.mode) {
-  // Run mode: -m loop or -m interactive
+  // Run mode: -m loop, -m interactive, or -m bestofn
   if (!parsed.prdPath) {
     console.error("Error: -p <PRD> is required when using -m <mode>");
     console.error("Usage: algorithm -m <mode> -p <PRD> [-n N]");
@@ -1327,8 +1797,11 @@ if (parsed.subcommand) {
     case "interactive":
       runInteractive(resolvedPath);
       break;
+    case "bestofn":
+      await runBestOfN(resolvedPath, parsed.agentCount);
+      break;
     default:
-      console.error(`Unknown mode: ${parsed.mode}. Use 'loop' or 'interactive'.`);
+      console.error(`Unknown mode: ${parsed.mode}. Use 'loop', 'interactive', or 'bestofn'.`);
       process.exit(1);
   }
 } else {

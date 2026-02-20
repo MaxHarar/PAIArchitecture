@@ -70,8 +70,10 @@ export async function inference(options: InferenceOptions): Promise<InferenceRes
 
   return new Promise((resolve) => {
     // Build environment WITHOUT ANTHROPIC_API_KEY to force subscription auth
+    // Also remove CLAUDECODE to allow running from within Claude Code sessions
     const env = { ...process.env };
     delete env.ANTHROPIC_API_KEY;
+    delete env.CLAUDECODE;
 
     const args = [
       '--print',
