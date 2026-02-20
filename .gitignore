@@ -13,6 +13,9 @@ settings.json.backup*
 authority.json
 authority/
 garmin-tokens/
+secrets.json
+*.pem
+*.key
 
 # Telegram bot secrets and nested git (NOT the source code)
 claude-telegram-bot/.env
