@@ -28,6 +28,7 @@ import { handleRebuildSkill } from './handlers/RebuildSkill';
 import { handleAlgorithmEnrichment } from './handlers/AlgorithmEnrichment';
 import { handleDocCrossRefIntegrity } from './handlers/DocCrossRefIntegrity';
 import { handleAutoMemoryExtract } from './handlers/AutoMemoryExtract';
+import { handleCapture } from './handlers/ResponseCapture';
 import { existsSync } from 'fs';
 import { join } from 'path';
 import { homedir } from 'os';
@@ -107,8 +108,9 @@ async function main() {
     handleAlgorithmEnrichment(parsed, hookInput.session_id),
     handleDocCrossRefIntegrity(parsed, hookInput),
     handleAutoMemoryExtract(),
+    handleCapture(parsed, hookInput),
   ];
-  const handlerNames = ['TabState', 'RebuildSkill', 'AlgorithmEnrichment', 'DocCrossRefIntegrity', 'AutoMemoryExtract'];
+  const handlerNames = ['TabState', 'RebuildSkill', 'AlgorithmEnrichment', 'DocCrossRefIntegrity', 'AutoMemoryExtract', 'ResponseCapture'];
 
   if (voiceEnabled) {
     handlers.unshift(handleVoice(parsed, hookInput.session_id));

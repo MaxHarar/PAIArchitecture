@@ -26,7 +26,8 @@ export type NotificationEvent =
   | 'longTask'
   | 'backgroundAgent'
   | 'error'
-  | 'security';
+  | 'security'
+  | 'upgradeComplete';
 
 export interface NotificationOptions {
   title?: string;
@@ -72,7 +73,8 @@ const DEFAULT_CONFIG: NotificationConfig = {
     longTask: ['ntfy'],
     backgroundAgent: ['ntfy'],
     error: ['ntfy'],
-    security: ['ntfy']
+    security: ['ntfy'],
+    upgradeComplete: ['ntfy']
   }
 };
 
@@ -232,6 +234,21 @@ export async function notifyError(message: string, options: NotificationOptions 
   });
 }
 
+export async function notifySecurityAlert(message: string, options: NotificationOptions = {}): Promise<void> {
+  await notify('security', message, {
+    priority: 'urgent',
+    tags: ['rotating_light', 'lock'],
+    ...options
+  });
+}
+
+export async function notifyUpgradeComplete(message: string, options: NotificationOptions = {}): Promise<void> {
+  await notify('upgradeComplete', message, {
+    tags: ['rocket', 'white_check_mark'],
+    ...options
+  });
+}
+
 // ============================================================================
 // Helpers
 // ============================================================================
@@ -243,7 +260,8 @@ function getDefaultTitle(event: NotificationEvent): string {
     longTask: `${DA_NAME} - Task Complete`,
     backgroundAgent: `${DA_NAME} - Agent Complete`,
     error: `${DA_NAME} - Error`,
-    security: `${DA_NAME} - Security Alert`
+    security: `${DA_NAME} - Security Alert`,
+    upgradeComplete: `${DA_NAME} - Upgrade Complete`
   };
   return titles[event];
 }
@@ -254,7 +272,8 @@ function getDefaultPriority(event: NotificationEvent): NotificationPriority {
     longTask: 'default',
     backgroundAgent: 'default',
     error: 'high',
-    security: 'urgent'
+    security: 'urgent',
+    upgradeComplete: 'default'
   };
   return priorities[event];
 }
@@ -265,7 +284,8 @@ function getDefaultTags(event: NotificationEvent): string[] {
     longTask: ['hourglass', 'white_check_mark'],
     backgroundAgent: ['robot', 'white_check_mark'],
     error: ['warning', 'x'],
-    security: ['rotating_light', 'lock']
+    security: ['rotating_light', 'lock'],
+    upgradeComplete: ['rocket', 'white_check_mark']
   };
   return tags[event];
 }
