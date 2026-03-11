@@ -12,6 +12,7 @@
 
 import { algorithmEnd, sweepStaleActive, readState, writeState } from '../lib/algorithm-state';
 import type { AlgorithmCriterion, AlgorithmState } from '../lib/algorithm-state';
+import { appendEvent } from '../lib/event-emitter';
 import type { ParsedTranscript } from '../../skills/PAI/Tools/TranscriptParser';
 
 // ── Extraction helpers ──
@@ -158,6 +159,11 @@ export async function handleAlgorithmEnrichment(
   const compaction = isLikelyCompaction(sessionId);
   if (compaction) {
     process.stderr.write(`[AlgorithmEnrichment] compaction detected for ${sessionId.slice(0, 8)}... — enriching without terminal marking\n`);
+    appendEvent('algorithm.phase', {
+      phase: 'compaction-enrichment',
+      isCompaction: true,
+      isAlgorithmResponse: isAlgo,
+    }, sessionId);
     // Still extract enrichment data (effort level, task description) but skip algorithmEnd
     // which would mark the session as complete
     const state = readState(sessionId);
@@ -194,6 +200,14 @@ export async function handleAlgorithmEnrichment(
 
   // Sweep stale sessions (cleans up other sessions, not current)
   sweepStaleActive(sessionId);
+
+  // Emit unified event for algorithm completion enrichment
+  appendEvent('algorithm.complete', {
+    isAlgorithmResponse: isAlgo,
+    sla: effectiveSla || null,
+    slaRegexHit: !!extractedSla,
+    taskDescription: extractTaskDescription(text)?.slice(0, 100) || null,
+  }, sessionId);
 
   process.stderr.write(`[AlgorithmEnrichment] enriched session ${sessionId.slice(0, 8)}... (isAlgo=${isAlgo}, sla=${effectiveSla || 'none'}, regex=${extractedSla || 'miss'})\n`);
 }
