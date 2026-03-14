@@ -9,7 +9,7 @@
  *   - Completion titles (✓): past tense, NO gerund ("Fixed auth bug.")
  *   - Question titles: noun phrase, no period ("Auth method")
  *
- * Renamed from response-format.ts (v0.2.32) — old name was misleading.
+ * Renamed from response-format.ts (v3.7.0) — old name was misleading.
  */
 
 // Conversational filler — always invalid for voice output

@@ -110,7 +110,7 @@ run_in_background is NOT set to true. This will BLOCK the user interface.
 
 FIX: Add run_in_background: true to this Task call.
 
-The Algorithm (v0.2.31) requires ALL non-fast agents to run in background:
+The Algorithm (v3.7.0) requires ALL non-fast agents to run in background:
 - Spawn with run_in_background: true
 - Report immediately: "Spawned [type] in background..."
 - Poll with TaskOutput(block=false) every 15-30s

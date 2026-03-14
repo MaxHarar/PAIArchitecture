@@ -335,7 +335,8 @@ function validateInput(input: any): { valid: boolean; error?: string; sanitized?
   }
 
   if (input.length > 500) {
-    return { valid: false, error: 'Message too long (max 500 characters)' };
+    // Gracefully truncate instead of rejecting — callers may send long content
+    input = input.substring(0, 497) + "...";
   }
 
   const sanitized = sanitizeForSpeech(input);
@@ -497,6 +498,7 @@ async function sendNotification(
   voiceId: string | null = null,
   callerVoiceSettings?: Partial<ElevenLabsVoiceSettings> | null,
   callerVolume?: number | null,
+  telegramChatId?: string | null,
 ) {
   const titleValidation = validateInput(title);
   const messageValidation = validateInput(message);
@@ -514,6 +516,8 @@ async function sendNotification(
 
   const { cleaned, emotion } = extractEmotionalMarker(safeMessage);
   safeMessage = cleaned;
+
+  let audioFilePath: string | null = null;
 
   // Generate and play voice using ElevenLabs
   if (voiceEnabled && (TTS_BACKEND === "kokoro" || ELEVENLABS_API_KEY)) {
@@ -562,21 +566,35 @@ async function sendNotification(
       console.log(`🎙️  Generating speech [${TTS_BACKEND}] (voice: ${TTS_BACKEND === 'kokoro' ? KOKORO_DEFAULT_VOICE : voice}, speed: ${resolvedSettings.speed}, volume: ${resolvedVolume})`);
 
       const { buffer: audioBuffer, format: audioFormat } = await generateSpeech(safeMessage, voice, resolvedSettings);
-      await playAudio(audioBuffer, resolvedVolume, audioFormat);
+
+      if (telegramChatId) {
+        // Telegram mode: save audio file and return path (don't play locally)
+        const ext = audioFormat === "wav" ? "wav" : "mp3";
+        audioFilePath = `/tmp/voice-telegram-${Date.now()}.${ext}`;
+        await Bun.write(audioFilePath, audioBuffer);
+        console.log(`📱 Saved audio for Telegram: ${audioFilePath}`);
+      } else {
+        // Local mode: play via afplay
+        await playAudio(audioBuffer, resolvedVolume, audioFormat);
+      }
     } catch (error) {
       console.error("Failed to generate/play speech:", error);
     }
   }
 
-  // Display macOS notification
-  try {
-    const escapedTitle = escapeForAppleScript(safeTitle);
-    const escapedMessage = escapeForAppleScript(safeMessage);
-    const script = `display notification "${escapedMessage}" with title "${escapedTitle}" sound name ""`;
-    await spawnSafe('/usr/bin/osascript', ['-e', script]);
-  } catch (error) {
-    console.error("Notification display error:", error);
+  // Display macOS notification (skip for Telegram-only requests)
+  if (!telegramChatId) {
+    try {
+      const escapedTitle = escapeForAppleScript(safeTitle);
+      const escapedMessage = escapeForAppleScript(safeMessage);
+      const script = `display notification "${escapedMessage}" with title "${escapedTitle}" sound name ""`;
+      await spawnSafe('/usr/bin/osascript', ['-e', script]);
+    } catch (error) {
+      console.error("Notification display error:", error);
+    }
   }
+
+  return { audioFilePath };
 }
 
 // Rate limiting
@@ -609,8 +627,16 @@ const server = serve({
 
     const clientIp = req.headers.get('x-forwarded-for') || 'localhost';
 
+    // Allow requests from browser, Tauri webview, and local dev servers
+    const origin = req.headers.get("origin") || "";
+    const allowOrigin = origin.startsWith("http://localhost") ||
+      origin.startsWith("http://127.0.0.1") ||
+      origin.startsWith("tauri://")
+        ? origin
+        : "http://localhost";
+
     const corsHeaders = {
-      "Access-Control-Allow-Origin": "http://localhost",
+      "Access-Control-Allow-Origin": allowOrigin,
       "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type"
     };
@@ -638,17 +664,23 @@ const server = serve({
         const voiceId = data.voice_id || data.voice_name || null;
         const voiceSettings = data.voice_settings || null;
         const volume = data.volume ?? null;
+        const telegramChatId = data.telegram_chat_id || null;
 
         if (voiceId && typeof voiceId !== 'string') {
           throw new Error('Invalid voice_id');
         }
 
-        console.log(`📨 Notification: "${title}" - "${message}" (voice: ${voiceEnabled}, voiceId: ${voiceId || DEFAULT_VOICE_ID})`);
+        console.log(`📨 Notification: "${title}" - "${message}" (voice: ${voiceEnabled}, voiceId: ${voiceId || DEFAULT_VOICE_ID}${telegramChatId ? `, telegram: ${telegramChatId}` : ''})`);
 
-        await sendNotification(title, message, voiceEnabled, voiceId, voiceSettings, volume);
+        const result = await sendNotification(title, message, voiceEnabled, voiceId, voiceSettings, volume, telegramChatId);
+
+        const responseBody: Record<string, string> = { status: "success", message: "Notification sent" };
+        if (result.audioFilePath) {
+          responseBody.audio_file_path = result.audioFilePath;
+        }
 
         return new Response(
-          JSON.stringify({ status: "success", message: "Notification sent" }),
+          JSON.stringify(responseBody),
           {
             headers: { ...corsHeaders, "Content-Type": "application/json" },
             status: 200
@@ -675,7 +707,7 @@ const server = serve({
 
         console.log(`🎭 Personality notification: "${message}"`);
 
-        await sendNotification("PAI Notification", message, true, null);
+        const _personalityResult = await sendNotification("PAI Notification", message, true, null);
 
         return new Response(
           JSON.stringify({ status: "success", message: "Personality notification sent" }),
@@ -704,7 +736,7 @@ const server = serve({
 
         console.log(`🤖 PAI notification: "${title}" - "${message}"`);
 
-        await sendNotification(title, message, true, null);
+        const _paiResult = await sendNotification(title, message, true, null);
 
         return new Response(
           JSON.stringify({ status: "success", message: "PAI notification sent" }),
@@ -725,6 +757,82 @@ const server = serve({
       }
     }
 
+    // /transcribe — Speech-to-text using mlx-whisper (local, Apple Silicon)
+    if (url.pathname === "/transcribe" && req.method === "POST") {
+      try {
+        const contentType = req.headers.get("content-type") || "";
+        let audioBuffer: ArrayBuffer;
+        let ext = "webm";
+
+        if (contentType.includes("multipart/form-data")) {
+          const formData = await req.formData();
+          const file = formData.get("audio") as File | null;
+          if (!file) {
+            return new Response(
+              JSON.stringify({ error: "No audio file in form data" }),
+              { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 400 }
+            );
+          }
+          audioBuffer = await file.arrayBuffer();
+          // Detect extension from file name or mime type
+          if (file.name?.endsWith(".wav")) ext = "wav";
+          else if (file.type?.includes("wav")) ext = "wav";
+        } else {
+          // Raw binary body
+          audioBuffer = await req.arrayBuffer();
+          if (contentType.includes("wav")) ext = "wav";
+        }
+
+        // Save to temp file
+        const tempPath = `/tmp/stt-${Date.now()}.${ext}`;
+        await Bun.write(tempPath, audioBuffer);
+
+        console.log(`🎤 Transcribing audio (${(audioBuffer.byteLength / 1024).toFixed(1)}KB, ${ext})`);
+
+        // Run whisper transcription via Python script
+        // Use anaconda python which has mlx-whisper installed
+        const pythonPath = process.env.PYTHON_PATH || "/opt/anaconda3/bin/python";
+        const transcribeScript = join(import.meta.dir, "transcribe.py");
+        const proc = Bun.spawn([pythonPath, transcribeScript, tempPath], {
+          stdout: "pipe",
+          stderr: "pipe",
+          env: {
+            ...process.env,
+            PATH: `/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:${process.env.PATH || ""}`,
+          },
+        });
+
+        const stdout = await new Response(proc.stdout).text();
+        const stderr = await new Response(proc.stderr).text();
+        await proc.exited;
+
+        // Clean up temp file
+        try { await Bun.write(tempPath, ""); spawn("/bin/rm", [tempPath]); } catch {}
+
+        if (proc.exitCode !== 0) {
+          console.error("Whisper error:", stderr);
+          return new Response(
+            JSON.stringify({ error: "Transcription failed", details: stderr }),
+            { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }
+          );
+        }
+
+        const result = JSON.parse(stdout.trim());
+        console.log(`✅ Transcribed: "${result.text}"`);
+
+        return new Response(
+          JSON.stringify(result),
+          { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 200 }
+        );
+      } catch (error: any) {
+        console.error("Transcription error:", error);
+        return new Response(
+          JSON.stringify({ error: error.message || "Transcription failed" }),
+          { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }
+        );
+      }
+    }
+
     if (url.pathname === "/health") {
       const kokoroUp = TTS_BACKEND === "kokoro" ? await checkKokoroHealth() : null;
       return new Response(
@@ -735,6 +843,7 @@ const server = serve({
           voice_system: TTS_BACKEND === "kokoro" ? "Kokoro (mlx-audio)" : "ElevenLabs",
           kokoro_server: TTS_BACKEND === "kokoro" ? (kokoroUp ? "connected" : "unreachable") : "n/a",
           kokoro_voice: TTS_BACKEND === "kokoro" ? KOKORO_DEFAULT_VOICE : "n/a",
+          stt_backend: "mlx-whisper (whisper-tiny)",
           default_voice_id: DEFAULT_VOICE_ID,
           api_key_configured: !!ELEVENLABS_API_KEY,
           pronunciation_rules: pronunciationRules.length,

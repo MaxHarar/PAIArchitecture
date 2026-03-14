@@ -52,7 +52,7 @@ PAI uses three separate Telegram bots:
 
 | Bot | Purpose | Direction | Config Location |
 |-----|---------|-----------|-----------------|
-| **Jarvis Bot** | General AI assistant | Two-way | `~/.claude/settings.json` |
+| **Sentinel Bot** | General AI assistant | Two-way | `~/.claude/settings.json` |
 | **MaxsDailyBreifBot** | Morning briefings | One-way | `~/.claude/skills/DailyBriefing/Config/settings.json` |
 | **GogginsFitnessCoachBot** | Wellness questionnaires | Two-way | `~/.claude/skills/FitnessCoach/Config/settings.json` |
 
@@ -72,7 +72,7 @@ This skill manages the **FitnessCoach bot only**.
    - Send `/newbot` to @BotFather
    - Name: "GogginsFitnessCoachBot" (or your preference)
    - Copy the bot token
-   - **Important:** This is SEPARATE from your Jarvis assistant and DailyBriefing bots
+   - **Important:** This is SEPARATE from your Sentinel assistant and DailyBriefing bots
 
 2. **Get your chat ID**:
    - Send a message to your new bot
@@ -90,7 +90,7 @@ This skill manages the **FitnessCoach bot only**.
    }
    ```
 
-   **Note:** Do NOT use the same token as DailyBriefing or Jarvis.
+   **Note:** Do NOT use the same token as DailyBriefing or Sentinel.
 
 4. **Test the bot**:
    ```bash

@@ -31,7 +31,7 @@ function loadVariables(): Record<string, string> {
       "{DAIDENTITY.DISPLAYNAME}": settings.daidentity?.displayName || "PAI",
       "{PRINCIPAL.NAME}": settings.principal?.name || "User",
       "{PRINCIPAL.TIMEZONE}": settings.principal?.timezone || "UTC",
-      "{DAIDENTITY.ALGORITHMVOICEID}": settings.daidentity?.algorithmVoiceID || "",
+      "{DAIDENTITY.VOICEID}": settings.daidentity?.voiceId || "",
     };
   } catch {
     console.warn("⚠️ Could not read settings.json, using defaults");
@@ -41,7 +41,7 @@ function loadVariables(): Record<string, string> {
       "{DAIDENTITY.DISPLAYNAME}": "PAI",
       "{PRINCIPAL.NAME}": "User",
       "{PRINCIPAL.TIMEZONE}": "UTC",
-      "{DAIDENTITY.ALGORITHMVOICEID}": "",
+      "{DAIDENTITY.VOICEID}": "",
     };
   }
 }

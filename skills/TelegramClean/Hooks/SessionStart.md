@@ -39,7 +39,7 @@ TelegramClean: Telegram session detected. Using minimal output format.
 - Skip all algorithm phases (OBSERVE, THINK, PLAN, BUILD, EXECUTE, VERIFY, LEARN)
 - Skip ISC tracker tables
 - Skip emojis and formatting
-- Output ONLY the voice line content: "🗣️ Jarvis: [message]"
+- Output ONLY the voice line content: "🗣️ Sentinel: [message]"
 
 This is a Telegram session. Keep responses concise and mobile-friendly.
 </system-reminder>

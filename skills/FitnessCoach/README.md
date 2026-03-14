@@ -11,7 +11,7 @@ Intelligent workout prescription system that eliminates decision fatigue by auto
 - Mental energy wasted on planning instead of executing
 
 **Solution:**
-- One decision: "Do the workout Jarvis prescribed"
+- One decision: "Do the workout Sentinel prescribed"
 - 5 seconds of decision time
 - Science-backed recommendations
 - Automatic load management

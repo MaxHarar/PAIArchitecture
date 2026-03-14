@@ -396,21 +396,28 @@ async function runPhase1(options: {
 // Phase 2: Consolidate raw extractions into MEMORY.md using Sonnet
 // ============================================================================
 
-const CONSOLIDATION_SYSTEM_PROMPT = `You are a memory consolidation assistant. You receive:
-1. The current MEMORY.md file content
+const CONSOLIDATION_SYSTEM_PROMPT = `You are a memory consolidation assistant using a BOOTLOADER architecture. You receive:
+1. The current MEMORY.md file content (the bootloader — auto-loaded every session)
 2. New raw memory extractions (JSON)
 
-Your job is to produce an UPDATED MEMORY.md that:
-- Preserves ALL existing content (do not remove anything unless it's clearly superseded)
-- Integrates new memories into the appropriate sections
-- Deduplicates: if a new memory restates something already present, skip it
-- Groups by topic using ## headers (e.g., "## Jarvis Voice System", "## PR Workflow")
-- Creates new sections for topics not yet covered
-- Uses concise bullet points (- prefix)
-- Keeps the file under 180 lines to stay within the 200-line system prompt limit
-- If approaching the limit, prioritize high-confidence memories over low
+MEMORY.md uses a bootloader pattern:
+- Section 1: Identity (INLINE — always relevant, ~4 lines)
+- Section 2: Rules (INLINE — behavioral corrections, ~7 lines)
+- Section 3: Priority Projects (POINTERS to files in projects/ subdir)
+- Section 4: Other Projects (POINTERS to files in projects/ subdir)
+- Section 5: References (POINTERS to files in reference/ and feedback/ subdirs)
 
-Output ONLY the complete updated MEMORY.md content. No explanations, no markdown fences, just the file content starting with "# PAI Memory".`;
+Your job is to produce an UPDATED MEMORY.md that:
+- Preserves the bootloader structure (inline essentials + pointers)
+- NEVER adds inline content beyond Identity and Rules sections
+- For new project/reference memories: add a pointer line to a subdir file (don't create the file — just add the pointer)
+- For identity/preference updates: update the Identity section inline
+- For behavioral corrections: update the Rules section inline
+- Deduplicates: skip memories that restate existing pointers or rules
+- Keeps under 50 lines total (bootloader must be lean)
+- If a new memory doesn't fit any existing pointer, suggest a new pointer line
+
+Output ONLY the complete updated MEMORY.md content. No explanations, no markdown fences, just the file content starting with "# Sentinel Memory".`;
 
 async function runPhase2(options: {
   dryRun: boolean;
@@ -482,14 +489,14 @@ async function runPhase2(options: {
 
   let updatedMemory = result.output.trim();
 
-  // Validate: must start with "# PAI Memory"
-  if (!updatedMemory.startsWith("# PAI Memory")) {
+  // Validate: must start with "# Sentinel Memory" or legacy "# PAI Memory"
+  if (!updatedMemory.startsWith("# Sentinel Memory") && !updatedMemory.startsWith("# PAI Memory")) {
     // Try to extract from potential markdown fence
-    const match = updatedMemory.match(/# PAI Memory[\s\S]*/);
+    const match = updatedMemory.match(/# (?:Sentinel|PAI) Memory[\s\S]*/);
     if (match) {
       updatedMemory = match[0];
     } else {
-      console.error("Phase 2 failed: Consolidation output doesn't start with '# PAI Memory'");
+      console.error("Phase 2 failed: Consolidation output doesn't start with '# Sentinel Memory'");
       return;
     }
   }

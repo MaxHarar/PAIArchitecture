@@ -8,7 +8,7 @@ PAI uses three separate Telegram bots:
 
 | Bot | Purpose | Config Location |
 |-----|---------|-----------------|
-| **Jarvis Bot** | General AI assistant (two-way) | `~/.claude/settings.json` |
+| **Sentinel Bot** | General AI assistant (two-way) | `~/.claude/settings.json` |
 | **MaxsDailyBreifBot** | Morning briefings (one-way) | `~/.claude/skills/DailyBriefing/Config/settings.json` |
 | **GogginsFitnessCoachBot** | Wellness questionnaires (two-way) | `~/.claude/skills/FitnessCoach/Config/settings.json` |
 
@@ -24,7 +24,7 @@ This workflow configures the **DailyBriefing bot only**.
 4. Name: "MaxsDailyBreifBot" (or your preference)
 5. Username: must end in `_bot` (e.g., `maxs_daily_breif_bot`)
 6. **Save the token** - you'll need it
-7. **Important:** This should be a SEPARATE bot from your Jarvis assistant bot
+7. **Important:** This should be a SEPARATE bot from your Sentinel assistant bot
 
 ### 2. Get Your Chat ID
 
@@ -67,7 +67,7 @@ Send real briefing to verify bot token works:
 bun run ~/.claude/skills/DailyBriefing/Tools/briefing.ts
 ```
 
-**Verify:** Message should arrive in your **DailyBriefing bot chat**, NOT your Jarvis chat.
+**Verify:** Message should arrive in your **DailyBriefing bot chat**, NOT your Sentinel chat.
 
 ### 6. Install Wake-Triggered System (Recommended)
 

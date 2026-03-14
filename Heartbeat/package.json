@@ -1,0 +1,16 @@
+{
+  "name": "pai-heartbeat",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run heartbeat.ts",
+    "daily": "bun run heartbeat.ts --mode daily-review",
+    "nightly": "bun run heartbeat.ts --mode nightly-reflection",
+    "dry": "bun run heartbeat.ts --dry-run",
+    "test": "bun run heartbeat.ts --test"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}

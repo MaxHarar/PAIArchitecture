@@ -36,7 +36,12 @@ interface HookInput {
 
 function isMainSession(sessionId: string): boolean {
   const paiDir = process.env.PAI_DIR || join(homedir(), '.claude');
-  return existsSync(join(paiDir, 'MEMORY', 'STATE', 'kitty-sessions', `${sessionId}.json`));
+  // Check kitty-sessions file (Kitty terminal)
+  if (existsSync(join(paiDir, 'MEMORY', 'STATE', 'kitty-sessions', `${sessionId}.json`))) return true;
+  // Fallback: if CLAUDE_CODE_ENTRYPOINT=cli, this is a direct terminal session (not a subagent).
+  // Subagents spawned via Agent/Task tool don't have this env var set to 'cli'.
+  if (process.env.CLAUDE_CODE_ENTRYPOINT === 'cli') return true;
+  return false;
 }
 
 async function main() {

@@ -37,7 +37,7 @@ The PAI system uses three separate Telegram bots for different purposes:
 
 | Bot | Direction | Purpose | Token Location |
 |-----|-----------|---------|----------------|
-| **Jarvis Bot** | Two-way | General AI assistant, all PAI interactions | `~/.claude/settings.json` |
+| **Sentinel Bot** | Two-way | General AI assistant, all PAI interactions | `~/.claude/settings.json` |
 | **MaxsDailyBreifBot** | One-way | Morning briefing delivery | `~/.claude/skills/DailyBriefing/Config/settings.json` |
 | **GogginsFitnessCoachBot** | Two-way | Interactive wellness questionnaires | `~/.claude/skills/FitnessCoach/Config/settings.json` |
 
@@ -75,7 +75,7 @@ Edit `Config/settings.json`:
    - Message @BotFather on Telegram
    - Send `/newbot`, name it "MaxsDailyBreifBot" (or your preference)
    - Copy the token to `~/.claude/skills/DailyBriefing/Config/settings.json`
-   - **Important:** This is a SEPARATE bot from your main Jarvis assistant bot
+   - **Important:** This is a SEPARATE bot from your main Sentinel assistant bot
 
 2. **Get Your Chat ID:**
    - Message @RawDataBot on Telegram
@@ -87,7 +87,7 @@ Edit `Config/settings.json`:
 
 4. **Test:**
    - Run `bun run ~/.claude/skills/DailyBriefing/Tools/briefing.ts --test`
-   - Verify message arrives in the briefing bot chat, NOT your Jarvis chat
+   - Verify message arrives in the briefing bot chat, NOT your Sentinel chat
 
 5. **Install Wake-Triggered System:**
    See "Wake-Triggered Setup" section below.

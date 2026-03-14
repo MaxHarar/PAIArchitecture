@@ -654,7 +654,7 @@ function createNeofetchBanner(): string {
   lines.push("");
 
   // GitHub URL with targeting reticle
-  const githubUrl = `${f}${RETICLE.topLeft}${RESET} ${tl}github.com/danielmiessler/PAI${RESET} ${f}${RETICLE.topRight}${RESET}`;
+  const githubUrl = `${f}${RETICLE.topLeft}${RESET} ${tl}github.com/MaxHarar/PAIArchitecture${RESET} ${f}${RETICLE.topRight}${RESET}`;
   lines.push(center(githubUrl, width));
 
   // ─────────────────────────────────────────────────────────────────

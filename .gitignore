@@ -111,6 +111,19 @@ pai-web-ui/out/
 hooks/__tests__/
 hooks/subagent-stop-debug.log
 
+# ── MCP & Runtime Cache ───────────────────────────────────
+.mcp.json
+mcp-needs-auth-cache.json
+plugins/install-counts-cache.json
+sessions/
+demand-packet-tokens/
+
+# ── Personal content (not architecture) ───────────────────
+History/
+download.html
+world-threat-model-*.md
+GATEWAY-SECURITY-ARCHITECTURE.md
+
 # ── Misc runtime/generated ────────────────────────────────
 *.pyc
 __pycache__/

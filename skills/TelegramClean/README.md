@@ -55,7 +55,7 @@ export TELEGRAM_CLEAN_OUTPUT=false
 ━━━ 👁️  O B S E R V E ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/7
 [... phases, tables, etc ...]
 
-🗣️ Jarvis: Done!
+🗣️ Sentinel: Done!
 ```
 
 ### Clean Format (Telegram)

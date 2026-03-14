@@ -96,7 +96,49 @@ function loadConfig(): Config {
   };
 }
 
+function getGarminDataFromDB(): GarminData | null {
+  try {
+    const db = getDatabase();
+    // Get most recent daily_metrics (today or yesterday)
+    const row = db.db.prepare(`
+      SELECT * FROM daily_metrics
+      WHERE date >= date('now', '-1 day')
+      ORDER BY date DESC LIMIT 1
+    `).get() as Record<string, unknown> | null;
+    db.close();
+
+    if (!row) return null;
+
+    const sleepSec = (row.sleep_duration_seconds as number) || 0;
+    const deepSec = (row.deep_sleep_seconds as number) || 0;
+    const remSec = (row.rem_sleep_seconds as number) || 0;
+    const lightSec = (row.light_sleep_seconds as number) || 0;
+
+    return {
+      sleepHours: sleepSec / 3600,
+      sleepScore: (row.sleep_score as number) || 0,
+      deepSleepMin: Math.round(deepSec / 60),
+      remSleepMin: Math.round(remSec / 60),
+      lightSleepMin: Math.round(lightSec / 60),
+      hrv: (row.hrv_rmssd as number) || 50,
+      hrvStatus: (row.hrv_status as string) || 'Normal',
+      restingHR: (row.resting_heart_rate as number) || 55,
+      recoveryScore: (row.training_readiness as number) || 70,
+      bodyBattery: (row.body_battery as number) || 0,
+    };
+  } catch {
+    return null;
+  }
+}
+
 function getGarminData(): GarminData {
+  // If orchestrator already synced Garmin, read from DB instead of re-syncing
+  if (process.env.GARMIN_ALREADY_SYNCED === '1') {
+    const fromDB = getGarminDataFromDB();
+    if (fromDB) return fromDB;
+    // Fall through to sync if DB had no recent data
+  }
+
   try {
     const syncScript = `${homedir()}/.claude/skills/FitnessCoach/Tools/GarminSync.py`;
     // Use --days 7 to ensure we get recent sleep/HRV data (today's data may not be available yet)

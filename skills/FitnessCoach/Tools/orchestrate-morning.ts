@@ -178,17 +178,11 @@ async function verifyFreshData(): Promise<boolean> {
 }
 
 // =============================================================================
-// STEP 3: GENERATE PRESCRIPTION
+// STEP 3: GENERATE PRESCRIPTION (saves to DB for briefing to read)
 // =============================================================================
 
-interface PrescriptionResult {
-  success: boolean;
-  message?: { text: string; parseMode: string };
-  error?: string;
-}
-
-async function generatePrescription(): Promise<PrescriptionResult> {
-  log("Step 3: Generating prescription...");
+async function generatePrescription(): Promise<{ success: boolean; error?: string }> {
+  log("Step 3: Generating workout prescription...");
 
   try {
     const { getDatabase } = await import(
@@ -197,63 +191,13 @@ async function generatePrescription(): Promise<PrescriptionResult> {
     const { prescribeWorkout } = await import(
       join(HOME, ".claude", "skills", "FitnessCoach", "Tools", "prescription-engine.ts")
     );
-    const {
-      formatPrescriptionForTelegram,
-      formatRestDayMessage,
-    } = await import(
-      join(HOME, ".claude", "skills", "FitnessCoach", "Notifications", "prescription-formatter.ts")
-    );
 
     const db = getDatabase();
     const today = new Date().toISOString().split("T")[0]!;
 
     const prescription = await prescribeWorkout(db, today, null);
 
-    // Calculate race countdown
-    const goal = db.queryOne<{ name: string; target_date: string | null }>(
-      `SELECT name, target_date FROM goals WHERE status = 'active' ORDER BY created_at DESC LIMIT 1`
-    );
-
-    let raceCountdown = "";
-    if (goal?.target_date) {
-      const daysUntil = Math.ceil(
-        (new Date(goal.target_date).getTime() - new Date(today).getTime()) / (1000 * 60 * 60 * 24)
-      );
-      if (daysUntil > 0 && daysUntil <= 120) {
-        raceCountdown = `\n\n🏁 <b>${daysUntil} days to ${goal.name}</b>`;
-      }
-    }
-
-    // Format message
-    let message: { text: string; parseMode: string };
-
-    if (prescription.template.category === "rest" || prescription.targetLoad === 0) {
-      // REST day — use rest formatter
-      const restMsg = formatRestDayMessage(
-        prescription.adaptationReason.primary,
-        prescription.readinessScore
-      );
-      // Add ACWR context if dangerous
-      let acwrWarning = "";
-      if (prescription.loadContext.acwr > 1.5) {
-        acwrWarning = `\n\n⚠️ <b>ACWR: ${prescription.loadContext.acwr.toFixed(2)}</b>\n` +
-          `Your recent training load is much higher than what your body is adapted to. ` +
-          `This is why rest is prescribed — to prevent injury.`;
-      }
-      message = {
-        text: restMsg.text + acwrWarning + raceCountdown,
-        parseMode: restMsg.parseMode,
-      };
-    } else {
-      // Normal workout — use standard formatter
-      const workoutMsg = formatPrescriptionForTelegram(prescription);
-      message = {
-        text: workoutMsg.text + raceCountdown,
-        parseMode: workoutMsg.parseMode,
-      };
-    }
-
-    // Save prescription to database
+    // Save prescription to database so briefing.ts can read it
     const prescriptionDate = new Date(prescription.scheduledDate);
     const dayOfWeek = prescriptionDate.getDay();
 
@@ -285,13 +229,64 @@ async function generatePrescription(): Promise<PrescriptionResult> {
       ]
     );
 
-    log(`Prescription generated: ${prescription.template.name} (ACWR: ${prescription.loadContext.acwr.toFixed(2)})`);
-
+    log(`Prescription saved: ${prescription.template.name} (ACWR: ${prescription.loadContext.acwr.toFixed(2)}, readiness: ${prescription.readinessScore})`);
     db.close();
-    return { success: true, message };
+    return { success: true };
   } catch (error) {
     const errorMsg = error instanceof Error ? error.message : String(error);
-    log(`Prescription failed: ${errorMsg}`);
+    log(`Prescription generation failed: ${errorMsg}`);
+    return { success: false, error: errorMsg };
+  }
+}
+
+// =============================================================================
+// STEP 4: RUN FULL DAILY BRIEFING
+// =============================================================================
+// The DailyBriefing orchestrator (briefing.ts) reads the prescription from the DB
+// (saved in Step 3) and assembles the full morning message:
+// - Garmin health data display
+// - Workout prescription (from DB)
+// - Hero insight (wisdom from historical figures)
+// - AI news (Hacker News + Reddit ML)
+// - TELOS goals with progress bars
+// - Calendar events
+// - Sends the consolidated message to Telegram
+
+const BRIEFING_SCRIPT = join(
+  HOME, ".claude", "skills", "DailyBriefing", "Tools", "briefing.ts"
+);
+
+interface BriefingResult {
+  success: boolean;
+  error?: string;
+}
+
+async function runDailyBriefing(): Promise<BriefingResult> {
+  log("Step 4: Running full daily briefing (health + prescription + hero + news + TELOS)...");
+
+  try {
+    const proc = Bun.spawn(["bun", "run", BRIEFING_SCRIPT], {
+      stdout: "pipe",
+      stderr: "pipe",
+      timeout: 120_000, // 2 min timeout for news fetching + AI summarization
+      env: { ...process.env, GARMIN_ALREADY_SYNCED: "1" },
+    });
+
+    const stdout = await new Response(proc.stdout).text();
+    const stderr = await new Response(proc.stderr).text();
+    const exitCode = await proc.exited;
+
+    if (exitCode !== 0) {
+      log(`Briefing script failed (exit ${exitCode}): ${stderr.slice(0, 500)}`);
+      return { success: false, error: stderr.slice(0, 200) };
+    }
+
+    if (stdout.trim()) log(`Briefing output: ${stdout.trim().slice(0, 200)}`);
+    log("Full daily briefing sent successfully");
+    return { success: true };
+  } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    log(`Briefing failed: ${errorMsg}`);
     return { success: false, error: errorMsg };
   }
 }
@@ -321,35 +316,29 @@ async function main(): Promise<void> {
   const hasData = await verifyFreshData();
 
   if (!syncResult.success) {
-    log("Garmin sync failed — prescription engine will use safety defaults");
+    log("Garmin sync failed — briefing will use safety defaults");
   }
 
-  // STEP 3: Generate Prescription
-  const prescriptionResult = await generatePrescription();
+  // STEP 3: Generate prescription (saves to DB for briefing to read)
+  const rxResult = await generatePrescription();
+  if (!rxResult.success) {
+    log("Prescription failed — briefing will show without workout section");
+  }
 
-  // STEP 4: Send to Telegram
-  if (prescriptionResult.success && prescriptionResult.message) {
-    log("Step 4: Sending prescription to Telegram...");
-    const sent = await sendTelegramMessage(
-      config,
-      prescriptionResult.message.text,
-      prescriptionResult.message.parseMode
-    );
+  // STEP 4: Run full daily briefing (reads prescription from DB + health + hero + news + TELOS)
+  const briefingResult = await runDailyBriefing();
 
-    if (sent) {
-      log("Morning orchestration complete — prescription delivered");
-    } else {
-      log("WARNING: Prescription generated but Telegram delivery failed");
-    }
+  if (briefingResult.success) {
+    log("Morning orchestration complete — full briefing delivered");
   } else {
-    // Prescription generation failed — send fallback REST message
-    log("Step 4: Prescription failed — sending REST fallback to Telegram...");
+    // Briefing failed — send fallback REST message via direct Telegram API
+    log("Step 5: Briefing failed — sending REST fallback to Telegram...");
 
     const fallbackMessage =
       `🛌 REST DAY PRESCRIBED\n\n` +
-      `<b>Reason:</b> Prescription system error\n` +
-      `📊 Unable to generate today's prescription.\n\n` +
-      `<b>Error:</b> ${prescriptionResult.error}\n\n` +
+      `<b>Reason:</b> Morning briefing system error\n` +
+      `📊 Unable to generate today's briefing.\n\n` +
+      `<b>Error:</b> ${briefingResult.error}\n\n` +
       `When in doubt, rest. Focus today:\n` +
       `• Sleep 8+ hours\n` +
       `• Hydrate well\n` +

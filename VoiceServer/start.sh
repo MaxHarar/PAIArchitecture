@@ -14,16 +14,17 @@ NC='\033[0m'
 
 echo -e "${YELLOW}> Starting Voice Server (Kokoro TTS)...${NC}"
 
-# Step 1: Ensure Kokoro TTS server is running
+# Step 1: Ensure Kokoro TTS server is running (launchd-managed)
 echo -e "${YELLOW}  Checking Kokoro TTS server...${NC}"
 if curl -s -f http://localhost:${KOKORO_PORT:-8000}/health > /dev/null 2>&1; then
-    echo -e "${GREEN}  Kokoro TTS already running${NC}"
+    echo -e "${GREEN}  Kokoro TTS already running (launchd-managed)${NC}"
 else
-    echo -e "${YELLOW}  Starting Kokoro TTS server...${NC}"
+    echo -e "${YELLOW}  Starting Kokoro TTS server via launchd...${NC}"
     "$SCRIPT_DIR/start-kokoro.sh"
     if [ $? -ne 0 ]; then
         echo -e "${RED}X Failed to start Kokoro TTS server${NC}"
         echo "  Voice server will start but TTS will be unavailable"
+        echo "  Check launchd status: launchctl list | grep kokoro"
     fi
 fi
 
