@@ -15,6 +15,7 @@ import { paiPath } from '../lib/paths';
 import { getIdentity, type VoicePersonality } from '../lib/identity';
 import { getISOTimestamp } from '../lib/time';
 import { isValidVoiceCompletion, getVoiceFallback } from '../lib/output-validators';
+import { appendEvent } from '../lib/event-emitter';
 import type { ParsedTranscript } from '../../skills/PAI/Tools/TranscriptParser';
 
 const DA_IDENTITY = getIdentity();
@@ -120,12 +121,23 @@ async function sendNotification(payload: ElevenLabsNotificationPayload, sessionI
         status_code: response.status,
         error: response.statusText,
       });
+      appendEvent('voice.failed', {
+        message: payload.message.slice(0, 100),
+        charCount: payload.message.length,
+        statusCode: response.status,
+        error: response.statusText,
+      }, sessionId);
     } else {
       logVoiceEvent({
         ...baseEvent,
         event_type: 'sent',
         status_code: response.status,
       });
+      appendEvent('voice.sent', {
+        message: payload.message.slice(0, 100),
+        charCount: payload.message.length,
+        voiceId: voiceId,
+      }, sessionId);
     }
   } catch (error) {
     console.error('[Voice] Failed to send:', error);
@@ -134,6 +146,11 @@ async function sendNotification(payload: ElevenLabsNotificationPayload, sessionI
       event_type: 'failed',
       error: error instanceof Error ? error.message : String(error),
     });
+    appendEvent('voice.failed', {
+      message: payload.message.slice(0, 100),
+      charCount: payload.message.length,
+      error: error instanceof Error ? error.message : String(error),
+    }, sessionId);
   } finally {
     clearTimeout(timeout);
   }
