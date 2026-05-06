@@ -1,329 +1,131 @@
-# PAI Hook System
+# PAIArchitecture Hook System
 
-> **Lifecycle event handlers that extend Claude Code with voice, memory, security, and observability.**
+## Overview
+Hooks in `PAIArchitecture` are small TypeScript programs that intercept Claude Code lifecycle events. Each hook receives an event payload on `stdin`, inspects the structured JSON input for that event, and writes its result to `stdout`, usually as a JSON decision or a reminder that changes how the session proceeds.
 
-This document is the authoritative reference for PAI's hook system. When modifying any hook, update both the hook's inline documentation AND this README.
+This repository uses hooks to gate tool calls, keep session state in sync, update terminal state, and persist working-memory artifacts around a Claude Code session. The event boundary stays consistent even when the hook behavior differs: Claude Code invokes the hook for a lifecycle event, passes the payload on `stdin`, and consumes the hook output before moving to the next step.
 
----
+## Lifecycle Events
+The hook system in this repository is organized around six Claude Code lifecycle events.
 
-## Table of Contents
+| Event | When it fires | What hooks at this stage typically do |
+| --- | --- | --- |
+| `PreToolUse` | Immediately before Claude Code executes a tool call. | Gate or shape the tool invocation, such as validating a command, blocking an unsafe action, or changing terminal state before a question is shown. |
+| `PostToolUse` | Immediately after a tool call completes. | Persist state derived from structured tool input, sync working artifacts, or restore UI state after a tool-mediated interaction. |
+| `UserPromptSubmit` | When a user submits a new prompt into the session. | Create or update work state, capture ratings or sentiment, and derive session naming or tab metadata from the prompt text. |
+| `SessionStart` | When a Claude Code session starts. | Load baseline context, render startup status, and adjust the session mode before the first working turn. |
+| `Stop` | After Claude finishes generating a response. | Cache the final response state and run response-level orchestration that should happen after each assistant turn. |
+| `SessionEnd` | As the Claude Code session closes. | Finalize work tracking, refresh counts, run integrity checks, and capture learning artifacts at a clean session boundary. |
 
-1. [Architecture Overview](#architecture-overview)
-2. [Hook Lifecycle Events](#hook-lifecycle-events)
-3. [Hook Registry](#hook-registry)
-4. [Inter-Hook Dependencies](#inter-hook-dependencies)
-5. [Data Flow Diagrams](#data-flow-diagrams)
-6. [Shared Libraries](#shared-libraries)
-7. [Configuration](#configuration)
-8. [Documentation Standards](#documentation-standards)
-9. [Maintenance Checklist](#maintenance-checklist)
+## Hook Reference
+The repository currently registers 23 hooks across those six lifecycle events.
 
----
+| Hook | Event | Description |
+| --- | --- | --- |
+| `AgentExecutionGuard` | `PreToolUse` | Enforces background execution for Task spawns by injecting a warning when `run_in_background: true` is missing on non-fast tasks. |
+| `SecurityValidator` | `PreToolUse` | Validates Bash commands and file operations against security patterns; allows, asks, or blocks tool calls before they execute. |
+| `SetQuestionTab` | `PreToolUse` | Sets the terminal tab color to teal when AskUserQuestion fires, signaling that a user response is pending. |
+| `SkillGuard` | `PreToolUse` | Blocks false-positive Skill invocations, notably the position-biased `keybindings-help`, on ambiguous prompts. |
+| `VoiceGate` | `PreToolUse` | Blocks voice notification curls originating from background agents and subagents; only the main session may emit voice. |
+| `AlgorithmTracker` | `PostToolUse` | Consolidated Algorithm state tracker for phase transitions, ISC criteria updates, and agent spawn tracking from structured tool input. |
+| `PRDSync` | `PostToolUse` | Persists Algorithm phase changes and criteria updates into `PRD.md` files on disk to keep working memory and PRD aligned. |
+| `QuestionAnswered` | `PostToolUse` | Resets the terminal tab from question state back to working state after the user answers an AskUserQuestion prompt. |
+| `AutoWorkCreation` | `UserPromptSubmit` | Creates the per-session and per-task directory structure, including `META.yaml`, `ISC.json`, and `THREAD.md`, on each user prompt. |
+| `RatingCapture` | `UserPromptSubmit` | Captures explicit `1-10` ratings and infers implicit sentiment, logs to `ratings.jsonl`, and emits the Algorithm format reminder. |
+| `SessionAutoName` | `UserPromptSubmit` | Generates a concise `2-3` word session title from the first user prompt so the status line always shows a meaningful name. |
+| `UpdateTabTitle` | `UserPromptSubmit` | Updates the terminal tab title from the user prompt using a strict gerund-based naming convention. |
+| `CheckVersion` | `SessionStart` | Compares the installed Claude Code version against the latest published package release and prints an update notice if a newer release is available. |
+| `LoadContext` | `SessionStart` | Foundational context injection that loads `SKILL.md`, AI Steering Rules, and the active work summary into the session as a system reminder. |
+| `StartupGreeting` | `SessionStart` | Renders the responsive neofetch-style startup banner with skill, session, and learning counts. |
+| `TelegramClean` | `SessionStart` | Detects Telegram bot sessions and switches output to a minimal format suited for chat transport. |
+| `LastResponseCache` | `Stop` | Caches a summary of the final assistant response, including `sessionId`, summary, tools used, and phase, to `MEMORY/STATE/last-response.json`. |
+| `StopOrchestrator` | `Stop` | Single Stop entry point that parses the transcript once and dispatches to handlers for voice notification, tab state, skill rebuild, and doc cross-reference integrity. |
+| `IntegrityCheck` | `SessionEnd` | Runs system-file integrity and documentation cross-reference integrity checks on session end, flagging drift in authoritative docs. |
+| `RelationshipMemory` | `SessionEnd` | Extracts relationship-relevant learnings from the session transcript and appends them to the dated relationship log. |
+| `SessionSummary` | `SessionEnd` | Marks the active work directory as `COMPLETED` and clears session state for clean session boundaries. |
+| `UpdateCounts` | `SessionEnd` | Refreshes `settings.json` counts for skills, hooks, and ratings, and updates the API usage cache so the next session banner has fresh numbers. |
+| `WorkCompletionLearning` | `SessionEnd` | Bridges `WORK/` to `LEARNING/` by capturing completed work metadata, such as files changed, tools used, and criteria, into a learning file for future compounding. |
 
-## Architecture Overview
-
-Hooks are TypeScript scripts that execute at specific lifecycle events in Claude Code. They enable:
-
-- **Voice Feedback**: Spoken announcements of tasks and completions
-- **Memory Capture**: Session summaries, work tracking, learnings
-- **Security Validation**: Command filtering, path protection, prompt injection defense
-- **Observability**: Tab titles, sentiment tracking, ratings
-- **Context Injection**: Identity, preferences, format specifications
-
-### Design Principles
-
-1. **Non-blocking by default**: Hooks should not delay the user experience
-2. **Fail gracefully**: Errors in one hook must not crash the session
-3. **Single responsibility**: Each hook does one thing well
-4. **Orchestration over duplication**: Use StopOrchestrator for shared data needs
-
-### Execution Model
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Claude Code Session                          │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  SessionStart ──┬──► StartupGreeting (banner + stats)               │
-│                 ├──► LoadContext (CORE skill injection)             │
-│                 └──► CheckVersion (update notification)             │
-│                                                                     │
-│  UserPromptSubmit ──┬──► FormatEnforcer (response spec injection)   │
-│                     ├──► AutoWorkCreation (work directory setup)    │
-│                     ├──► ExplicitRatingCapture (1-10 ratings)       │
-│                     ├──► ImplicitSentimentCapture (mood detection)  │
-│                     └──► UpdateTabTitle (tab + voice announcement)  │
-│                                                                     │
-│  PreToolUse ──┬──► SecurityValidator (Bash/Edit/Write/Read)         │
-│               └──► SetQuestionTab (AskUserQuestion)                 │
-│                                                                     │
-│  SubagentStop ──► AgentOutputCapture (subagent results)             │
-│                                                                     │
-│  Stop ──► StopOrchestrator ──┬──► ResponseCapture                   │
-│                              ├──► TabTitleReset                     │
-│                              └──► VoiceCompletion                   │
-│                                                                     │
-│  SessionEnd ──┬──► WorkCompletionLearning (insight extraction)      │
-│               └──► SessionSummary (work directory completion)       │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Hook Lifecycle Events
-
-| Event | When It Fires | Typical Use Cases |
-|-------|---------------|-------------------|
-| `SessionStart` | Session begins | Context loading, banner display, version check |
-| `UserPromptSubmit` | User sends a message | Format injection, work tracking, sentiment analysis |
-| `PreToolUse` | Before a tool executes | Security validation, UI state changes |
-| `SubagentStop` | Subagent completes | Capture subagent outputs for memory |
-| `Stop` | Claude responds | Voice feedback, tab updates, response capture |
-| `SessionEnd` | Session terminates | Summary generation, learning extraction |
-
-### Event Payload Structure
-
-All hooks receive JSON via stdin with event-specific fields:
+## TypeScript Pattern
+A typical hook follows a compact pattern: define the input and output types, read the event payload from `stdin`, make a decision from structured fields, write one JSON object to `stdout`, and exit `0`.
 
 ```typescript
-// Common fields
-interface BasePayload {
-  session_id: string;
-  transcript_path: string;
-  hook_event_name: string;
-}
+#!/usr/bin/env bun
+import process from "node:process";
 
-// UserPromptSubmit
-interface UserPromptPayload extends BasePayload {
-  prompt: string;
-}
-
-// PreToolUse
-interface PreToolUsePayload extends BasePayload {
+type HookInput = {
+  session_id?: string;
   tool_name: string;
-  tool_input: Record<string, any>;
+  tool_input?: {
+    command?: string;
+  };
+};
+
+type HookOutput =
+  | { continue: true }
+  | {
+      decision: "ask";
+      reason: string;
+      message: string;
+    };
+
+async function readStdin(): Promise<string> {
+  const chunks: Uint8Array[] = [];
+
+  for await (const chunk of process.stdin) {
+    chunks.push(typeof chunk === "string" ? Buffer.from(chunk) : chunk);
+  }
+
+  return Buffer.concat(chunks).toString("utf8").trim();
 }
 
-// Stop
-interface StopPayload extends BasePayload {
-  stop_hook_active: boolean;
+async function main(): Promise<void> {
+  const raw = await readStdin();
+
+  if (!raw) {
+    process.stdout.write(`${JSON.stringify({ continue: true })}\n`);
+    process.exit(0);
+  }
+
+  const input = JSON.parse(raw) as HookInput;
+  const command = input.tool_input?.command ?? "";
+
+  const output: HookOutput = /\bgit\s+push\s+--force\b/.test(command)
+    ? {
+        decision: "ask",
+        reason: "force-push-detected",
+        message: "Confirm the force push before continuing."
+      }
+    : { continue: true };
+
+  process.stdout.write(`${JSON.stringify(output)}\n`);
+  process.exit(0);
 }
+
+main().catch(() => {
+  process.stdout.write(`${JSON.stringify({ continue: true })}\n`);
+  process.exit(0);
+});
 ```
 
----
-
-## Hook Registry
-
-### SessionStart Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `StartupGreeting.hook.ts` | Display PAI banner with system stats | No | None |
-| `LoadContext.hook.ts` | Inject CORE skill into context | Yes (stdout) | `skills/CORE/SKILL.md` |
-| `CheckVersion.hook.ts` | Notify if CC update available | No | npm registry |
-
-### UserPromptSubmit Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `FormatEnforcer.hook.ts` | Inject response format spec | Yes (stdout) | `USER/RESPONSEFORMAT.md` |
-| `AutoWorkCreation.hook.ts` | Create/update work directories | No | `MEMORY/STATE/current-work.json` |
-| `ExplicitRatingCapture.hook.ts` | Capture 1-10 ratings | No | `MEMORY/LEARNING/SIGNALS/ratings.jsonl` |
-| `ImplicitSentimentCapture.hook.ts` | Detect emotional sentiment | No | Inference API, `ratings.jsonl` |
-| `UpdateTabTitle.hook.ts` | Set tab title + voice announcement | No | Inference API, Voice Server |
-
-### PreToolUse Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `SecurityValidator.hook.ts` | Validate Bash/Edit/Write/Read | Yes (decision) | `patterns.yaml`, `MEMORY/SECURITY/` |
-| `SetQuestionTab.hook.ts` | Set teal tab for questions | No | Kitty terminal |
-
-### SubagentStop Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `AgentOutputCapture.hook.ts` | Capture subagent results | No | `MEMORY/STATE/` |
-
-### Stop Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `StopOrchestrator.hook.ts` | Coordinate all Stop handlers | No | Voice Server, Kitty |
-
-### SessionEnd Hooks
-
-| Hook | Purpose | Blocking | Dependencies |
-|------|---------|----------|--------------|
-| `WorkCompletionLearning.hook.ts` | Extract learnings from work | No | Inference API, `MEMORY/LEARNING/` |
-| `SessionSummary.hook.ts` | Mark work as completed | No | `MEMORY/WORK/`, `current-work.json` |
-
----
-
-## Inter-Hook Dependencies
-
-### Rating System Flow
-
-```
-User Message
-    │
-    ├─► ExplicitRatingCapture ─── detects "8 - great work" ───┐
-    │                                                         │
-    └─► ImplicitSentimentCapture ─── detects "amazing!" ──────┤
-                                                              │
-                                                              ▼
-                                              ratings.jsonl ◄───┘
-                                                    │
-                                                    ▼
-                                            Status Line Display
-                                            (statusline-command.sh)
+```bash
+printf '%s\n' '{"tool_name":"Bash","tool_input":{"command":"git push --force"}}' | bun run hooks/YourHook.hook.ts
 ```
 
-**Coordination**: Both rating hooks write to the same `ratings.jsonl`. ExplicitRatingCapture checks for explicit patterns FIRST; if detected, ImplicitSentimentCapture defers (checks `isExplicitRating()`).
-
-### Work Tracking Flow
-
-```
-SessionStart
-    │
-    ▼
-UserPromptSubmit ─► AutoWorkCreation ─► Creates WORK/<date>/<session>/
-    │                                          │
-    │                                          ▼
-    │                               current-work.json (state)
-    │                                          │
-    ▼                                          │
-Stop ─► StopOrchestrator ─► ResponseCapture ───┤
-                                               │
-SessionEnd ─┬─► WorkCompletionLearning ────────┤
-            │                                  │
-            └─► SessionSummary ─► Marks as COMPLETED
-```
-
-**Coordination**: `current-work.json` is the shared state file. AutoWorkCreation creates it, ResponseCapture updates it, SessionSummary clears it.
-
-### Security Validation Flow
-
-```
-PreToolUse (Bash/Edit/Write/Read)
-    │
-    ▼
-SecurityValidator ─► patterns.yaml
-    │
-    ├─► {continue: true} ──────────────► Tool executes
-    │
-    ├─► {decision: "ask", message} ────► User prompted
-    │
-    └─► exit(2) ───────────────────────► Hard block
-
-All events logged to: MEMORY/SECURITY/security-events.jsonl
-```
-
-### Voice + Tab State Flow
-
-```
-UserPromptSubmit
-    │
-    ▼
-UpdateTabTitle
-    ├─► Sets tab to PURPLE (#5B21B6) ─► "Processing..."
-    │
-    ├─► Inference summarizes prompt
-    │
-    ├─► Sets tab to ORANGE (#B35A00) ─► "Fixing auth..."
-    │
-    └─► Voice announces: "Fixing auth bug"
-
-PreToolUse (AskUserQuestion)
-    │
-    ▼
-SetQuestionTab ─► Sets tab to TEAL (#085050) ─► Waiting for input
-
-Stop
-    │
-    ▼
-StopOrchestrator
-    ├─► Resets tab to DEFAULT (UL blue)
-    └─► Voice announces completion
-```
-
----
-
-## Data Flow Diagrams
-
-### Memory System Integration
-
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                         MEMORY/                                  │
-├────────────────┬─────────────────┬───────────────────────────────┤
-│    WORK/       │   LEARNING/     │   STATE/                      │
-│                │                 │                               │
-│ ┌────────────┐ │ ┌─────────────┐ │ ┌───────────────────────────┐ │
-│ │ Session    │ │ │ SIGNALS/    │ │ │ current-work.json         │ │
-│ │ Directories│ │ │ ratings.jsonl│ │ │ trending-cache.json       │ │
-│ │            │ │ │             │ │ │ model-cache.txt           │ │
-│ └─────▲──────┘ │ └──────▲──────┘ │ └───────────▲───────────────┘ │
-│       │        │        │        │             │                 │
-└───────┼────────┴────────┼────────┴─────────────┼─────────────────┘
-        │                 │                      │
-        │                 │                      │
-┌───────┴─────────────────┴──────────────────────┴─────────────────┐
-│                        HOOKS                                     │
-│                                                                  │
-│  AutoWorkCreation ──────────────────────────► current-work.json  │
-│  ResponseCapture ───────────────────────────► WORK/ + state      │
-│  ExplicitRatingCapture ─────────────────────► ratings.jsonl      │
-│  ImplicitSentimentCapture ──────────────────► ratings.jsonl      │
-│  WorkCompletionLearning ────────────────────► LEARNING/          │
-│  SessionSummary ────────────────────────────► WORK/ + state      │
-│                                                                  │
-└──────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Shared Libraries
-
-Located in `hooks/lib/`:
-
-| Library | Purpose | Used By |
-|---------|---------|---------|
-| `identity.ts` | Get DA name, principal from settings | Most hooks |
-| `time.ts` | PST timestamps, ISO formatting | Rating hooks, work hooks |
-| `paths.ts` | Canonical path construction | Work hooks, security |
-| `notifications.ts` | Voice server + ntfy integration | Stop hooks, UpdateTabTitle |
-| `response-format.ts` | Tab summary validation | UpdateTabTitle |
-| `learning-utils.ts` | Learning categorization | Rating hooks, WorkCompletion |
-| `observability.ts` | Trace emitting | Future use |
-| `TraceEmitter.ts` | OpenTelemetry-style traces | Future use |
-| `IdealState.ts` | ISC tracking utilities | Algorithm integration |
-| `metadata-extraction.ts` | Parse assistant responses | Stop handlers |
-| `recovery-types.ts` | Recovery journal types | Security system |
-
----
-
-## Configuration
-
-Hooks are configured in `settings.json` under the `hooks` key:
+## Registration
+Claude Code registers hooks through a top-level `hooks` object keyed by event name. Each event entry holds one or more matcher records, and each matcher record holds a `hooks` array of command descriptors.
 
 ```json
 {
   "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          { "type": "command", "command": "${PAI_DIR}/hooks/StartupGreeting.hook.ts" },
-          { "type": "command", "command": "${PAI_DIR}/hooks/LoadContext.hook.ts" }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
         "hooks": [
-          { "type": "command", "command": "${PAI_DIR}/hooks/SecurityValidator.hook.ts" }
+          {
+            "type": "command",
+            "command": "bun run hooks/YourHook.hook.ts"
+          }
         ]
       }
     ]
@@ -331,146 +133,5 @@ Hooks are configured in `settings.json` under the `hooks` key:
 }
 ```
 
-### Matcher Patterns
-
-For `PreToolUse` hooks, matchers filter by tool name:
-- `"Bash"` - Matches Bash tool calls
-- `"Edit"` - Matches Edit tool calls
-- `"Write"` - Matches Write tool calls
-- `"Read"` - Matches Read tool calls
-- `"AskUserQuestion"` - Matches question prompts
-
----
-
-## Documentation Standards
-
-### Hook File Structure
-
-Every hook MUST follow this documentation structure:
-
-```typescript
-#!/usr/bin/env bun
-/**
- * HookName.hook.ts - [Brief Description] ([Event Type])
- *
- * PURPOSE:
- * [2-3 sentences explaining what this hook does and why it exists]
- *
- * TRIGGER: [Event type, e.g., UserPromptSubmit]
- *
- * INPUT:
- * - [Field]: [Description]
- * - [Field]: [Description]
- *
- * OUTPUT:
- * - stdout: [What gets injected into context, if any]
- * - exit(0): [Normal completion]
- * - exit(2): [Hard block, for security hooks]
- *
- * SIDE EFFECTS:
- * - [File writes]
- * - [External calls]
- * - [State changes]
- *
- * INTER-HOOK RELATIONSHIPS:
- * - DEPENDS ON: [Other hooks this requires]
- * - COORDINATES WITH: [Hooks that share data/state]
- * - MUST RUN BEFORE: [Ordering constraints]
- * - MUST RUN AFTER: [Ordering constraints]
- *
- * ERROR HANDLING:
- * - [How errors are handled]
- * - [What happens on failure]
- *
- * PERFORMANCE:
- * - [Blocking vs async]
- * - [Typical execution time]
- * - [Resource usage notes]
- */
-
-// Implementation follows...
-```
-
-### Inline Documentation
-
-Functions should have JSDoc comments explaining:
-- What the function does
-- Parameters and return values
-- Any side effects
-- Error conditions
-
-### Update Protocol
-
-When modifying ANY hook:
-
-1. Update the hook's header documentation
-2. Update this README's Hook Registry section
-3. Update Inter-Hook Dependencies if relationships change
-4. Update Data Flow Diagrams if data paths change
-5. Test the hook in isolation AND with related hooks
-
----
-
-## Maintenance Checklist
-
-Use this checklist when adding or modifying hooks:
-
-### Adding a New Hook
-
-- [ ] Create hook file with full documentation header
-- [ ] Add to `settings.json` under appropriate event
-- [ ] Add to Hook Registry table in this README
-- [ ] Document inter-hook dependencies
-- [ ] Update Data Flow Diagrams if needed
-- [ ] Add to shared library imports if using lib/
-- [ ] Test hook in isolation
-- [ ] Test hook with related hooks
-- [ ] Verify no performance regressions
-
-### Modifying an Existing Hook
-
-- [ ] Update inline documentation
-- [ ] Update hook header if behavior changes
-- [ ] Update this README if interface changes
-- [ ] Update inter-hook docs if dependencies change
-- [ ] Test modified hook
-- [ ] Test hooks that depend on this hook
-- [ ] Verify no performance regressions
-
-### Removing a Hook
-
-- [ ] Remove from `settings.json`
-- [ ] Remove from Hook Registry in this README
-- [ ] Update inter-hook dependencies
-- [ ] Update Data Flow Diagrams
-- [ ] Check for orphaned shared state files
-- [ ] Delete hook file
-- [ ] Test related hooks still function
-
----
-
-## Troubleshooting
-
-### Hook Not Executing
-
-1. Verify hook is in `settings.json` under correct event
-2. Check file is executable: `chmod +x hook.ts`
-3. Check shebang: `#!/usr/bin/env bun`
-4. Run manually: `echo '{"session_id":"test"}' | bun hooks/HookName.hook.ts`
-
-### Hook Blocking Session
-
-1. Check if hook writes to stdout (only LoadContext/FormatEnforcer should)
-2. Verify timeouts are set for external calls
-3. Check for infinite loops or blocking I/O
-
-### Security Validation Issues
-
-1. Check `patterns.yaml` for matching patterns
-2. Review `MEMORY/SECURITY/security-events.jsonl` for logs
-3. Test pattern matching: `bun hooks/SecurityValidator.hook.ts < test-input.json`
-
----
-
-*Last updated: 2026-01-12*
-*Hooks count: 14 | Events: 6 | Shared libs: 11*
+## Security Note
+`SecurityValidator` is the `PreToolUse` hook that gates `Bash`, `Edit`, `Write`, and `Read` against repository security patterns before those tools execute. It may allow the call with `{"continue": true}`, return an ask response such as `{"decision":"ask","reason":"confirm-write","message":"Confirm before continuing."}`, or block the call outright when a command or path crosses a hard boundary. In practice, that makes `SecurityValidator` the enforcement point for the security pipeline on every sensitive tool call in `PAIArchitecture`.
