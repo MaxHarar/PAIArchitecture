@@ -2,17 +2,18 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   validate:
-    name: Install dependencies and check for credential leaks
+    name: Validate dependencies and check for credential leaks
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
+      - name: Check out the repository
         uses: actions/checkout@v4
 
       - name: Set up Bun
@@ -28,39 +29,53 @@ jobs:
         working-directory: Heartbeat
         run: bun install --frozen-lockfile || bun install
 
-      - name: Validate agent definitions exist
+      - name: Validate that at least one agent definition exists
+        shell: bash
         run: |
-          count=$(ls agents/*.md 2>/dev/null | wc -l | tr -d ' ')
-          echo "Found $count agent definitions"
-          if [ "$count" -lt 1 ]; then
-            echo "ERROR: No agent definitions found in agents/"
+          shopt -s nullglob
+          files=(agents/*.md)
+          count=${#files[@]}
+          echo "Agent definition files: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "No agent definitions found in agents/."
             exit 1
           fi
 
-      - name: Scan for credential patterns
+      - name: Scan tracked source files for credential leaks
+        shell: bash
         run: |
-          echo "Scanning for potential credentials in source files..."
-          found=0
-          if grep -r --include="*.ts" --include="*.js" --include="*.json" \
-               -E "sk-ant-[a-zA-Z0-9\-]+" \
-               --exclude-dir=node_modules . 2>/dev/null; then
-            echo "WARNING: Possible Anthropic API key pattern found"
-            found=1
+          set -euo pipefail
+
+          mapfile -t files < <(
+            git ls-files --cached --others --exclude-standard -- '*.ts' '*.js' '*.json' |
+            grep -Ev '(^|/)node_modules/' || true
+          )
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No .ts, .js, or .json files to scan."
+            exit 0
           fi
-          if grep -r --include="*.ts" --include="*.js" \
-               -E "ANTHROPIC_API_KEY\s*=\s*['\"][^'\"]{10}" \
-               --exclude-dir=node_modules . 2>/dev/null; then
-            echo "WARNING: Hardcoded ANTHROPIC_API_KEY assignment found"
-            found=1
-          fi
-          if grep -r --include="*.ts" --include="*.js" --include="*.json" \
-               -E "bot[0-9]{9,}:[A-Za-z0-9_\-]{35}" \
-               --exclude-dir=node_modules . 2>/dev/null; then
-            echo "WARNING: Possible Telegram bot token found"
-            found=1
-          fi
-          if [ "$found" -eq 1 ]; then
-            echo "Credential scan failed — review findings above"
+
+          set +e
+          grep -REn \
+            --include='*.ts' \
+            --include='*.js' \
+            --include='*.json' \
+            --exclude-dir=node_modules \
+            'sk-ant-|ANTHROPIC_API_KEY=|bot[0-9]{9,}:' \
+            "${files[@]}"
+          status=$?
+          set -e
+
+          if [ "$status" -eq 0 ]; then
+            echo "Credential patterns detected."
             exit 1
           fi
-          echo "Credential scan passed — no patterns detected"
+
+          if [ "$status" -eq 1 ]; then
+            echo "No credential patterns detected."
+            exit 0
+          fi
+
+          echo "Credential scan failed with exit code $status."
+          exit "$status"
