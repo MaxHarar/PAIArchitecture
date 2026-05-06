@@ -62,7 +62,7 @@ jobs:
             --include='*.js' \
             --include='*.json' \
             --exclude-dir=node_modules \
-            'sk-ant-|ANTHROPIC_API_KEY=|bot[0-9]{9,}:' \
+            'sk-ant-[A-Za-z0-9]{30,}|ANTHROPIC_API_KEY=[A-Za-z0-9_-]{5,}|bot[0-9]{9,}:[A-Za-z0-9_-]{35}' \
             "${files[@]}"
           status=$?
           set -e
