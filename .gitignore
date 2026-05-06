@@ -16,6 +16,8 @@ garmin-tokens/
 secrets.json
 *.pem
 *.key
+.credentials.json
+*.credentials.json
 
 # Telegram bot secrets and nested git (NOT the source code)
 claude-telegram-bot/.env
