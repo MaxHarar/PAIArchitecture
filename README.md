@@ -37,6 +37,7 @@ PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) fro
 | **Verification** | Claims "done" | Requires evidence — tests, screenshots, diffs |
 | **Agents** | Single model | 13 specialized agents with Best-of-N parallelization |
 | **Skills** | Generic capabilities | 55+ domain-specific skills |
+| **MCP Servers** | No integrations | Custom MCP servers — Telegram ask_user, context bridges |
 | **Voice** | Text only | Local TTS with spoken phase announcements |
 | **Integration** | API calls | Gmail, Telegram, Vercel, Google Calendar, X/Twitter |
 
@@ -135,7 +136,7 @@ PRDs are stored in `MEMORY/WORK/` and serve as the single source of truth for ea
      │          │          │          │          │
 ┌────▼───┐ ┌───▼───┐ ┌────▼───┐ ┌───▼────┐ ┌───▼────┐
 │ Skills │ │ Hooks │ │ Agents │ │ Memory │ │ Voice  │
-│  (55+) │ │ (23)  │ │  (13)  │ │ System │ │ Server │
+│ (55+)  │ │ (23)  │ │  (13)  │ │ System │ │ Server │
 └────────┘ └───────┘ └────────┘ └────────┘ └────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -362,6 +363,39 @@ PAI deploys **13 specialized agents**, each with distinct expertise, personality
 - **Background Execution** — Non-blocking research and exploration
 - **Team Coordination** — Agent teams with shared task boards and message passing
 - **Best-of-N Selection** — Spawn N agents on the same task, pick the best result
+
+---
+
+## MCP Servers
+
+PAI includes custom MCP (Model Context Protocol) servers that connect Claude Code agents to external systems and interactive interfaces. These are built with the official `@modelcontextprotocol/sdk` and run as stdio-transport servers.
+
+### ask_user — Telegram Interactive Decisions
+
+Bridges Claude's decision points to Telegram inline keyboard buttons, enabling human-in-the-loop confirmation without breaking the agent's execution flow. Built with the official `@modelcontextprotocol/sdk` using stdio transport.
+
+```typescript
+import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+
+const server = new Server(
+  { name: "ask-user", version: "1.0.0" },
+  { capabilities: { tools: {} } }
+);
+
+// Claude calls ask_user() → server writes request file →
+// Telegram bot renders inline buttons → user taps →
+// choice is injected back as Claude's next input
+```
+
+**How it works:**
+1. Claude's agent calls `ask_user({ question, options })` during autonomous execution
+2. The MCP server writes a request file to a monitored directory
+3. The Telegram bot picks up the request and renders inline keyboard buttons
+4. The user taps a choice on their phone
+5. The button response is routed back to Claude as input — no polling, no blocking
+
+**Why this matters:** Most autonomous agents either run fully unattended (risky) or require you to be at a terminal (defeats the purpose). The `ask_user` MCP server creates a middle path — the agent runs autonomously and only surfaces decisions that genuinely need human input, delivered wherever you are.
 
 ---
 

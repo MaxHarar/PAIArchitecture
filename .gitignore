@@ -131,3 +131,8 @@ GATEWAY-SECURITY-ARCHITECTURE.md
 __pycache__/
 .pytest_cache/
 backups/
+
+# ── Skill runtime state ───────────────────────────────────
+skills/*/State/*.json
+skills/*/State/*.log
+plugins/blocklist.json
