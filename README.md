@@ -21,7 +21,7 @@
 
 PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) from a code assistant into an **autonomous AI agent** with its own workspace, integrations, persistent memory, and a 24/7 heartbeat loop. It monitors, acts, and grows independently while keeping you informed via Telegram.
 
-**Built on [The Algorithm](https://github.com/danielmiessler/TheAlgorithm)** by [Daniel Miessler](https://danielmiessler.com) — a framework for transitioning from current state to ideal state through discrete, testable criteria.
+**Foundation: [The Algorithm](https://github.com/danielmiessler/TheAlgorithm)** by [Daniel Miessler](https://danielmiessler.com). This repo ships PAI 5.0.0 — an evolved fork that adds the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.3.0.md`](PAI/ALGORITHM/v6.3.0.md) for the full spec.
 
 > **Why PAI?** Most AI tools are reactive — you ask, they answer. PAI is proactive. It checks your email, monitors your deployments, generates daily briefings, reviews PRs, and proposes automations — all while you sleep. Every task goes through a 7-phase reasoning algorithm with verifiable criteria, so nothing gets marked "done" without evidence.
 
@@ -35,8 +35,8 @@ PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) fro
 | **Reasoning** | Single-shot response | 7-phase Algorithm with Ideal State Criteria |
 | **Memory** | Forgets between sessions | Persistent memory system across conversations |
 | **Verification** | Claims "done" | Requires evidence — tests, screenshots, diffs |
-| **Agents** | Single model | 13 specialized agents with Best-of-N parallelization |
-| **Skills** | Generic capabilities | 55+ domain-specific skills |
+| **Agents** | Single model | 18 specialized agents — multi-vendor (Anthropic, OpenAI, Moonshot) |
+| **Skills** | Generic capabilities | 60+ domain-specific skills |
 | **MCP Servers** | No integrations | Custom MCP servers — Telegram ask_user, context bridges |
 | **Voice** | Text only | Local TTS with spoken phase announcements |
 | **Integration** | API calls | Gmail, Telegram, Vercel, Google Calendar, X/Twitter |

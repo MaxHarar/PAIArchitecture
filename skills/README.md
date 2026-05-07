@@ -2,7 +2,7 @@
 
 Skills are the self-activating capability units of PAI. Each skill is a self-contained directory under `skills/` that bundles a behavior contract (`SKILL.md`), optional step-by-step `Workflows/`, and optional executable `Tools/`. The DA routes to a skill automatically when a user message matches the trigger phrases declared in that skill's frontmatter — no explicit invocation required for routing, though invocation is supported.
 
-This README is the index of every skill currently shipped with PAI.
+This README is the index of every skill currently shipped with PAI 5.0.0.
 
 ---
 
@@ -208,6 +208,19 @@ Manage agent personas, voices, and parallel orchestration.
 | Skill | Description |
 |-------|-------------|
 | `Agents` | Dynamic agent composition and management — personalities, voice mapping, parallel orchestration. Use for create custom agents, specialized agents, agent personalities. |
+
+### Analysis & Thinking (PAI 5.0.0)
+
+Structured thinking capabilities from the Algorithm's closed capability enumeration. Each is a named, invocable thinking mode — not ad-hoc reasoning.
+
+| Skill | Description |
+|-------|-------------|
+| `ApertureOscillation` | 3-pass scope oscillation — narrow/tactical, wide/strategic, synthesis. Surfaces design tensions invisible at any single zoom level. Use for architecture decisions, feature-fits-system checks, design reviews, scope negotiation. |
+| `BitterPillEngineering` | Post-build audit for over-engineering, dead weight, and fragile scaffolding. Returns LEAN / TRIM / RETHINK verdict. Use after substantial implementation at VERIFY phase. |
+| `Ideate` | 9-phase evolutionary idea generation — seed, diverge, cross-pollinate, stress-test, prune, refine, select, synthesize, present. Use when BeCreative isn't deep enough. |
+| `ISA` | Ideal State Artifact — scaffolds, audits, and manages the 12-section living document that defines "done" for any task or project. Mandatory at E2+. |
+| `RootCauseAnalysis` | Structured incident investigation using 5 Whys, Fishbone, and IS/IS-NOT framing. Produces contributing factors (plural). Use for postmortems, defect investigation. |
+| `SystemsThinking` | Iceberg Model, causal loop diagrams, Meadows leverage points. Surfaces structural causes under recurring events. Use for "why does this keep happening?" |
 
 ---
 
