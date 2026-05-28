@@ -21,7 +21,7 @@
 
 PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) from a code assistant into an **autonomous AI agent** with its own workspace, integrations, persistent memory, and a 24/7 heartbeat loop. It monitors, acts, and grows independently while keeping you informed via Telegram.
 
-**Foundation: [The Algorithm](https://github.com/danielmiessler/TheAlgorithm)** by [Daniel Miessler](https://danielmiessler.com). This repo ships PAI 5.0.0 — an evolved fork that adds the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.3.0.md`](PAI/ALGORITHM/v6.3.0.md) for the full spec.
+**Foundation: [PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com), built on his [The Algorithm](https://github.com/danielmiessler/TheAlgorithm). This repo is an evolved fork of [`danielmiessler/PAI`](https://github.com/danielmiessler/PAI) shipping **PAI 5.0.0** with **Algorithm v6.3.0** — adding the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.3.0.md`](PAI/ALGORITHM/v6.3.0.md) for the full spec.
 
 > **Why PAI?** Most AI tools are reactive — you ask, they answer. PAI is proactive. It checks your email, monitors your deployments, generates daily briefings, reviews PRs, and proposes automations — all while you sleep. Every task goes through a 7-phase reasoning algorithm with verifiable criteria, so nothing gets marked "done" without evidence.
 
@@ -734,6 +734,7 @@ PAI takes security seriously:
 
 ## Inspiration & Credits
 
+- **[PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com) — The upstream Personal AI Infrastructure this repo is forked from
 - **[The Algorithm](https://github.com/danielmiessler/TheAlgorithm)** by [Daniel Miessler](https://danielmiessler.com) — The systematic reasoning framework at the core of PAI
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** by [Anthropic](https://anthropic.com) — The AI platform PAI extends
 - **[Fabric](https://github.com/danielmiessler/fabric)** by Daniel Miessler — 240+ prompt patterns integrated as a PAI skill
