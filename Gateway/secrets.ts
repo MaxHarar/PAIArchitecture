@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Secrets Management
+ * PAI Gateway — Secrets Management
  *
  * macOS Keychain integration with in-memory caching.
  * Secrets are stored via the `security` CLI with account "pai-gateway".
@@ -20,7 +20,7 @@ const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
 const EXEC_TIMEOUT_MS = 5_000; // 5 second timeout for security CLI
 const KEYCHAIN_ACCOUNT = "pai-gateway";
 const ENV_FALLBACK_PATH = join(
-  process.env.HOME ?? "/Users/maxharar",
+  process.env.HOME ?? "/Users/YOUR_USERNAME",
   ".claude",
   ".env",
 );
@@ -194,7 +194,7 @@ export function getTelegramBotToken(): string {
   return getSecret("telegram-bot-token");
 }
 
-/** Telegram chat ID for the owner (Max) */
+/** Telegram chat ID for the owner */
 export function getTelegramChatId(): string {
   return getSecret("telegram-chat-id");
 }

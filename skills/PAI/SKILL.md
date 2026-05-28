@@ -32,7 +32,7 @@ The CapabilityRecommender hook uses AI inference to classify depth. Its classifi
 
 🔧 CHANGE: [What you're doing differently]
 ✅ VERIFY: [Evidence it worked]
-🗣️ Sentinel: [Result summary]
+🗣️ PAI: [Result summary]
 ```
 
 **Default:** FULL. MINIMAL is rare — only pure social interaction with zero task content. Short prompts can demand FULL depth. The word "just" does not reduce depth.
@@ -355,7 +355,7 @@ Fill in all bracketed values from the current session. `implied_sentiment` is yo
 ### Critical Rules (Zero Exceptions)
 
 - **Surgical fixes only — never add or remove components as a fix (CRITICAL).** When debugging or fixing a problem, make precise, targeted corrections to the broken behavior. Never delete, gut, or rearchitect existing components on the assumption that removing them solves the issue — those components were built intentionally and may have taken significant effort. Fix the actual bug with the smallest possible change.
-- **Never assert without verification (CRITICAL).** NEVER tell Max something "is" a certain way unless you have verified it with your own tools. After making changes, verify the result before claiming success. Evidence required — tests, screenshots, diffs. Never "Done!" without proof.
+- **Never assert without verification (CRITICAL).** NEVER tell the user something "is" a certain way unless you have verified it with your own tools. After making changes, verify the result before claiming success. Evidence required — tests, screenshots, diffs. Never "Done!" without proof.
 - **Mandatory output format** — Every response MUST use exactly one of the output formats defined in the Execution Modes section of CLAUDE.md (ALGORITHM, NATIVE, ITERATION, or MINIMAL). No freeform output. No exceptions.
 - **Response format before questions** — Always complete the current response format output FIRST, then invoke AskUserQuestion at the end. Never interrupt or replace the response format to ask questions.
 - **Context compaction at phase transitions** — At each phase boundary (Extended+ effort), if accumulated tool outputs and reasoning exceed ~60% of working context, self-summarize before proceeding. Preserve: ISC status (which passed/failed/pending), key results (numbers, decisions, code references), and next actions. Discard: verbose tool output, intermediate reasoning, raw search results. This prevents context rot — the #1 cause of late-phase failures in long Algorithm runs.
@@ -397,8 +397,8 @@ If after compaction you don't know your current phase or criteria status:
 ## Configuration
 
 Custom values in `settings.json`:
-- `daidentity.name` - DA's name (Sentinel)
-- `principal.name` - User's name (Max)
+- `daidentity.name` - DA's name (PAI)
+- `principal.name` - User's name
 - `principal.timezone` - User's timezone
 
 ---

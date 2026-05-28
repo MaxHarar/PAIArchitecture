@@ -131,7 +131,7 @@ function formatDate(dateStr: string): string {
  */
 export function formatPrescriptionForTelegram(
   prescription: WorkoutPrescription,
-  userName: string = "Max"
+  userName: string = "User"
 ): TelegramMessage {
   const intensity = getIntensityEmoji(prescription.intensityZone);
   const readiness = getReadinessEmoji(prescription.readinessScore);

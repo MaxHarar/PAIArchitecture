@@ -11,7 +11,7 @@
     <array>
         <string>/opt/homebrew/bin/bun</string>
         <string>run</string>
-        <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools/briefing.ts</string>
+        <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Tools/briefing.ts</string>
     </array>
     <key>StartCalendarInterval</key>
     <dict>
@@ -21,9 +21,9 @@
         <integer>45</integer>
     </dict>
     <key>StandardOutPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/stdout.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/State/stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/stderr.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/State/stderr.log</string>
     <key>RunAtLoad</key>
     <false/>
 </dict>

@@ -11,7 +11,7 @@ Intelligent workout prescription system that eliminates decision fatigue by auto
 - Mental energy wasted on planning instead of executing
 
 **Solution:**
-- One decision: "Do the workout Sentinel prescribed"
+- One decision: "Do the workout PAI prescribed"
 - 5 seconds of decision time
 - Science-backed recommendations
 - Automatic load management
@@ -119,7 +119,7 @@ bun run CLI/prescribe.ts feedback <workout_id> too_hard "Felt sluggish"
 Morning workflow sends formatted workout message:
 
 ```
-☀️ Good morning Max!
+☀️ Good morning!
 
 🏃 TODAY'S WORKOUT
 ───────────────────────────────────────

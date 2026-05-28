@@ -306,7 +306,7 @@ describe('Training Readiness Calculator', () => {
   describe('CLI Output', () => {
     it('should produce valid JSON when --output json flag used', async () => {
       const proc = Bun.spawn(['bun', 'run', './training-readiness.ts', '--output', 'json', '--db', TEST_DB_PATH], {
-        cwd: '/Users/maxharar/.claude/skills/FitnessCoach/Tools',
+        cwd: '/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools',
         stdout: 'pipe',
       });
       const output = await new Response(proc.stdout).text();
@@ -318,7 +318,7 @@ describe('Training Readiness Calculator', () => {
 
     it('should handle --days flag to limit data', async () => {
       const proc = Bun.spawn(['bun', 'run', './training-readiness.ts', '--days', '3', '--output', 'json', '--db', TEST_DB_PATH], {
-        cwd: '/Users/maxharar/.claude/skills/FitnessCoach/Tools',
+        cwd: '/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools',
         stdout: 'pipe',
       });
       const output = await new Response(proc.stdout).text();

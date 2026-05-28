@@ -2,7 +2,7 @@
 
 **Created:** 2026-02-12
 **Status:** Plan Mode - Ready for Review
-**Owner:** Max
+**Owner:** <Your Name>
 
 ---
 
@@ -447,7 +447,7 @@ Morning Briefing (wake-triggered)
   ├─ Workout ← [workouts.db + weekly_plan if Sunday]
   └─ Hero ← [HeroDossiers]
   ↓
-Telegram Message → MaxsDailyBreifBot → Max
+Telegram Message → OwnerDailyBriefBot → the owner
 ```
 
 ---
@@ -676,7 +676,7 @@ If any phase causes issues:
 ## Next Steps
 
 ### Immediate (Today)
-1. **Max:** Run `gcalcli init` to restore calendar access
+1. **Owner:** Run `gcalcli init` to restore calendar access
 2. **Review:** Review this plan, approve/modify phases
 3. **Prioritize:** Confirm Phase 1 is the starting point
 
@@ -696,7 +696,7 @@ If any phase causes issues:
 
 ---
 
-## Questions for Max
+## Questions for the owner
 
 Before starting implementation, please confirm:
 
@@ -709,4 +709,4 @@ Before starting implementation, please confirm:
 ---
 
 **Status:** Ready for review and approval
-**Next Action:** Max reviews plan, provides feedback, approves Phase 1 start
+**Next Action:** the owner reviews plan, provides feedback, approves Phase 1 start

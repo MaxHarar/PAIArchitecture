@@ -21,7 +21,7 @@ import { homedir } from "os";
 
 const HOME = homedir();
 const MEMORIES_PATH = `${HOME}/.claude/Gateway/memory/brain-memories.jsonl`;
-const MEMORY_MD_PATH = `${HOME}/.claude/projects/-Users-maxharar--claude/memory/MEMORY.md`;
+const MEMORY_MD_PATH = `${HOME}/.claude/projects/-Users-YOUR_USERNAME--claude/memory/MEMORY.md`;
 const SECTION_HEADER = "## Gateway Brain Memories";
 const MAX_ENTRIES_PER_TYPE = 15;
 

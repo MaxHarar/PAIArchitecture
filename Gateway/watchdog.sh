@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ---------------------------------------------------------------------------
-# Sentinel Gateway -- External Watchdog
+# PAI Gateway -- External Watchdog
 #
 # Runs from launchd or cron. Checks /health, restarts if unhealthy,
 # and alerts via Telegram (bypassing the gateway entirely).

@@ -106,7 +106,7 @@ Time-bounded goals for the current year.
 
 | Goal | Description | Completed | Key Outcome |
 |------|-------------|-----------|-------------|
-| - | Graduate Bucknell CS/Econ | 2024 | Foundation for career |
+| - | Graduate University (Example Degree) | 2024 | Foundation for career |
 `;
 
 const EMPTY_GOALS_MD = `# Goals

@@ -4,4 +4,4 @@ Repositories currently indexed in Greptile. Updated automatically by the IndexRe
 
 | Repository | Branch | Remote | Status | Last Indexed |
 |-----------|--------|--------|--------|-------------|
-| maxharar/suitlog | master | github | completed | 2026-02-12 |
+| YOUR_USERNAME/example-repo | master | github | completed | 2026-02-12 |

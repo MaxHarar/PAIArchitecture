@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Channel Adapter Interface
+ * PAI Gateway -- Channel Adapter Interface
  *
  * Every inbound channel (Telegram, heartbeat, webhooks) implements this
  * interface. The gateway routes requests through the appropriate adapter

@@ -173,7 +173,7 @@ const WELCOME_MESSAGE: Message = {
   id: "welcome",
   role: "assistant",
   content:
-    "Welcome to the PAI Command Center, Max. This is a full-featured interface for complex tasks - I can research, execute skills, and work on multi-step projects. How can I help you today?",
+    "Welcome to the PAI Command Center. This is a full-featured interface for complex tasks - I can research, execute skills, and work on multi-step projects. How can I help you today?",
 };
 
 // LocalStorage keys for persistence

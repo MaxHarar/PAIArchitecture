@@ -568,7 +568,7 @@ describe('Wellness CLI Tool', () => {
     // This test verifies CLI functionality
     // Run the wellness-check CLI with test input
     const proc = Bun.spawn([
-      'bun', 'run', '/Users/maxharar/.claude/skills/FitnessCoach/Tools/wellness-check.ts',
+      'bun', 'run', '/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools/wellness-check.ts',
       '--sleep', '7',
       '--soreness', '3',
       '--stress', '4',
@@ -590,7 +590,7 @@ describe('Wellness CLI Tool', () => {
 
   it('should fail with helpful error for invalid input', async () => {
     const proc = Bun.spawn([
-      'bun', 'run', '/Users/maxharar/.claude/skills/FitnessCoach/Tools/wellness-check.ts',
+      'bun', 'run', '/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools/wellness-check.ts',
       '--sleep', '15',  // Invalid - out of range
       '--soreness', '3',
       '--stress', '4',

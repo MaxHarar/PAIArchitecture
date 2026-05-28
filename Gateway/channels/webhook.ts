@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Webhook Channel Adapter
+ * PAI Gateway -- Webhook Channel Adapter
  *
  * Generic adapter for external webhook sources (Gmail, X/Twitter, Sentry, Vercel).
  * Trust level: EXTERNAL (read-only context injection, NO action triggering).

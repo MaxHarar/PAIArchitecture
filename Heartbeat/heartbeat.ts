@@ -2,7 +2,7 @@
 /**
  * PAI Heartbeat - Autonomous Execution Loop
  *
- * The core "pulse" of Sentinel. Runs on three schedules:
+ * The core "pulse" of PAI. Runs on three schedules:
  *
  *   REGULAR  (every 15 min) - Check integrations, run pending jobs, log
  *   DAILY    (6:00 AM)      - Morning report with metrics and focus items
@@ -68,9 +68,9 @@ if (existsSync(TELEGRAM_ENV_PATH)) {
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
 const CHAT_ID = process.env.TELEGRAM_ALLOWED_USERS || "";
-const SENTINEL_DIR = join(homedir(), "Sentinel");
-const THOUGHTS_DIR = join(SENTINEL_DIR, "Thoughts");
-const LOGS_DIR = join(SENTINEL_DIR, "Logs");
+const PAI_DIR = join(homedir(), "PAI");
+const THOUGHTS_DIR = join(PAI_DIR, "Thoughts");
+const LOGS_DIR = join(PAI_DIR, "Logs");
 
 // ---------------------------------------------------------------------------
 // CLI argument parsing
@@ -122,7 +122,7 @@ async function runConfigTest(): Promise<void> {
   console.log("=== PAI Heartbeat Configuration Test ===\n");
 
   // Check directories
-  const dirs = [SENTINEL_DIR, THOUGHTS_DIR, LOGS_DIR];
+  const dirs = [PAI_DIR, THOUGHTS_DIR, LOGS_DIR];
   for (const dir of dirs) {
     const exists = existsSync(dir);
     console.log(`  ${exists ? "OK" : "MISSING"} ${dir}`);
@@ -222,7 +222,7 @@ interface ServiceDef {
   name: string;
   url: string;
   launchdLabel: string;
-  critical: boolean;  // Critical = alert Max immediately if restart fails
+  critical: boolean;  // Critical = alert the owner immediately if restart fails
 }
 
 const SERVICES: ServiceDef[] = [
@@ -317,12 +317,12 @@ async function restartService(service: ServiceDef): Promise<boolean> {
 }
 
 /**
- * Send an alert to Max via the gateway /outbound endpoint.
+ * Send an alert to the owner via the gateway /outbound endpoint.
  * Falls back to direct Telegram API if gateway is down.
  */
 async function alertMax(message: string, dryRun: boolean): Promise<void> {
   if (dryRun) {
-    console.log(`[DRY RUN] Would alert Max: ${message}`);
+    console.log(`[DRY RUN] Would alert the owner: ${message}`);
     return;
   }
 
@@ -362,7 +362,7 @@ async function alertMax(message: string, dryRun: boolean): Promise<void> {
 
 /**
  * Check that core PAI services are responsive.
- * Auto-restarts failed services and alerts Max if they stay down.
+ * Auto-restarts failed services and alerts the owner if they stay down.
  */
 async function checkIntegrationHealth(dryRun: boolean): Promise<void> {
   const failures: ServiceDef[] = [];
@@ -404,7 +404,7 @@ async function checkIntegrationHealth(dryRun: boolean): Promise<void> {
     }
   }
 
-  // Alert Max about persistent failures
+  // Alert the owner about persistent failures
   if (failures.length > 0 && !dryRun) {
     const failNames = failures.map((f) => f.name).join(", ");
     const critical = failures.some((f) => f.critical);
@@ -446,7 +446,7 @@ async function dailyReview(dryRun: boolean): Promise<void> {
   const yesterdaySummary = getDaySummary(yesterdayStr);
 
   // Build context for Claude
-  const prompt = `You are Sentinel, Max's personal AI assistant. Generate a concise morning briefing.
+  const prompt = `You are PAI, the owner's personal AI assistant. Generate a concise morning briefing.
 
 Yesterday's heartbeat stats:
 - Total actions: ${yesterdaySummary.total}
@@ -471,7 +471,7 @@ Keep it under 300 words. Be direct and actionable.`;
   const level = canDo("send briefing");
   if (level === "autonomous") {
     if (!dryRun) {
-      const header = `Good morning, Max.\n\n`;
+      const header = `Good morning.\n\n`;
       const sent = await sendTelegramMessage(BOT_TOKEN, CHAT_ID, header + report);
       if (sent) {
         logAction("daily_review", "Morning report sent to Telegram", "success", "telegram", "daily-review");
@@ -502,11 +502,11 @@ async function nightlyReflection(dryRun: boolean): Promise<void> {
   const todayEntries = getDayLog();
   const todaySummary = getDaySummary();
 
-  // Find entries where escalation happened (Max had to step in)
+  // Find entries where escalation happened (the owner had to step in)
   const escalatedEntries = todayEntries.filter((e) => e.escalated);
   const failedEntries = todayEntries.filter((e) => e.outcome === "failure");
 
-  const prompt = `You are Sentinel, Max's personal AI assistant. Perform an end-of-day reflection.
+  const prompt = `You are PAI, the owner's personal AI assistant. Perform an end-of-day reflection.
 
 Today's heartbeat stats:
 - Total actions: ${todaySummary.total}
@@ -514,7 +514,7 @@ Today's heartbeat stats:
 - Failures: ${todaySummary.failures}
 - Escalations: ${todaySummary.escalations}
 
-Escalated actions (Max had to decide):
+Escalated actions (the owner had to decide):
 ${escalatedEntries.length > 0 ? escalatedEntries.map((e) => `- ${e.action_type}: ${e.details}`).join("\n") : "None today"}
 
 Failed actions:
@@ -538,7 +538,7 @@ Keep it focused and under 400 words. Use markdown formatting.`;
   const thoughtsFile = join(THOUGHTS_DIR, `${today}.md`);
 
   if (!dryRun) {
-    const header = `# Sentinel Nightly Reflection - ${today}\n\n`;
+    const header = `# PAI Nightly Reflection - ${today}\n\n`;
     const content = existsSync(thoughtsFile)
       ? readFileSync(thoughtsFile, "utf-8") + "\n\n---\n\n## Evening Reflection\n\n" + reflection
       : header + reflection;
@@ -547,14 +547,14 @@ Keep it focused and under 400 words. Use markdown formatting.`;
     logAction("nightly_reflection", `Reflection written to ${thoughtsFile}`, "success", "thoughts", "nightly-reflection");
 
     // Send full reflection to Telegram as readable plain text
-    const telegramHeader = `📊 SENTINEL NIGHTLY REFLECTION\n${today}\n\n`;
+    const telegramHeader = `📊 PAI NIGHTLY REFLECTION\n${today}\n\n`;
     let telegramMessage = telegramHeader + reflection;
 
     // Telegram has 4096 char limit - truncate if needed
     const MAX_LENGTH = 4096;
     if (telegramMessage.length > MAX_LENGTH) {
       const truncated = telegramMessage.slice(0, MAX_LENGTH - 120);
-      telegramMessage = truncated + "\n\n...(truncated)\n\nFull reflection: ~/Sentinel/Thoughts/" + today + ".md";
+      telegramMessage = truncated + "\n\n...(truncated)\n\nFull reflection: ~/PAI/Thoughts/" + today + ".md";
     }
 
     const sent = await sendTelegramMessage(BOT_TOKEN, CHAT_ID, telegramMessage);
@@ -577,7 +577,7 @@ async function main(): Promise<void> {
   const args = parseArgs();
 
   // Ensure directories exist
-  for (const dir of [SENTINEL_DIR, THOUGHTS_DIR, LOGS_DIR]) {
+  for (const dir of [PAI_DIR, THOUGHTS_DIR, LOGS_DIR]) {
     if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
   }
 
@@ -606,12 +606,12 @@ async function main(): Promise<void> {
     logError("heartbeat_fatal", errorMsg);
     console.error(`Heartbeat fatal error: ${errorMsg}`);
 
-    // Try to notify Max of fatal errors
+    // Try to notify the owner of fatal errors
     if (BOT_TOKEN && CHAT_ID && !args.dryRun) {
       await sendTelegramMessage(
         BOT_TOKEN,
         CHAT_ID,
-        `Sentinel Heartbeat Error (${args.mode}): ${errorMsg}`
+        `PAI Heartbeat Error (${args.mode}): ${errorMsg}`
       );
     }
 

@@ -20,7 +20,7 @@ import { calculateBanisterTRIMP, calculateSessionRPE, getHRZone } from "./load-c
 // CONFIGURATION
 // =============================================================================
 
-const DB_PATH = "/Users/maxharar/.claude/fitness/workouts.db";
+const DB_PATH = "/Users/YOUR_USERNAME/.claude/fitness/workouts.db";
 
 // Default values when data is missing
 const DEFAULTS = {

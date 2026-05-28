@@ -111,7 +111,7 @@ describe("MemoryExtractor", () => {
   describe("technical detection", () => {
     test("detects file path references", async () => {
       await extractor.extract(
-        "The config file is at /Users/maxharar/.claude/settings.json",
+        "The config file is at /Users/YOUR_USERNAME/.claude/settings.json",
         "I see the config file.",
         "test-session-1"
       );
@@ -146,7 +146,7 @@ describe("MemoryExtractor", () => {
     test("limits to max 3 extractions per turn", async () => {
       // This message triggers many signals at once
       await extractor.extract(
-        "Remember to always deploy to /Users/maxharar/prod and never use Python. I prefer bun over npm. Configure the port to 3000.",
+        "Remember to always deploy to /Users/YOUR_USERNAME/prod and never use Python. I prefer bun over npm. Configure the port to 3000.",
         "Got it all.",
         "test-session-1"
       );

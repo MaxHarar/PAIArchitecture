@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Health Monitoring
+ * PAI Gateway -- Health Monitoring
  *
  * Tracks runtime health metrics and exposes them via /health.
  * Other modules import `gatewayState` and update it directly.

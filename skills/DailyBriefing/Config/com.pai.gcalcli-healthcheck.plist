@@ -9,7 +9,7 @@
     <array>
         <string>/opt/homebrew/bin/bun</string>
         <string>run</string>
-        <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools/gcalcli-healthcheck.ts</string>
+        <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Tools/gcalcli-healthcheck.ts</string>
     </array>
 
     <!-- Run every Monday at 9:00 AM -->
@@ -29,18 +29,18 @@
         <key>PATH</key>
         <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
         <key>HOME</key>
-        <string>/Users/maxharar</string>
+        <string>/Users/YOUR_USERNAME</string>
     </dict>
 
     <!-- Working directory -->
     <key>WorkingDirectory</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Tools</string>
 
     <!-- Logging -->
     <key>StandardOutPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.error.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Logs/gcalcli-healthcheck.error.log</string>
 
     <!-- Run at load for initial check -->
     <key>RunAtLoad</key>

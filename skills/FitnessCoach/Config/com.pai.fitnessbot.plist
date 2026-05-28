@@ -9,7 +9,7 @@
     <array>
         <string>/opt/homebrew/bin/bun</string>
         <string>run</string>
-        <string>/Users/maxharar/.claude/skills/FitnessCoach/Tools/fitness-bot.ts</string>
+        <string>/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools/fitness-bot.ts</string>
     </array>
 
     <key>RunAtLoad</key>
@@ -27,20 +27,20 @@
     <integer>10</integer>
 
     <key>StandardErrorPath</key>
-    <string>/Users/maxharar/.claude/skills/FitnessCoach/Logs/fitness-bot.error.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Logs/fitness-bot.error.log</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/maxharar/.claude/skills/FitnessCoach/Logs/fitness-bot.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Logs/fitness-bot.log</string>
 
     <key>WorkingDirectory</key>
-    <string>/Users/maxharar/.claude/skills/FitnessCoach</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/FitnessCoach</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
         <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
         <key>HOME</key>
-        <string>/Users/maxharar</string>
+        <string>/Users/YOUR_USERNAME</string>
     </dict>
 </dict>
 </plist>

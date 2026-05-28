@@ -40,7 +40,7 @@ import { inference } from "./Inference";
 
 const HOME = homedir();
 const CLAUDE_DIR = join(HOME, ".claude");
-const TRANSCRIPTS_DIR = join(CLAUDE_DIR, "projects", "-Users-maxharar--claude");
+const TRANSCRIPTS_DIR = join(CLAUDE_DIR, "projects", "-Users-YOUR_USERNAME--claude");
 const MEMORY_DIR = join(TRANSCRIPTS_DIR, "memory");
 const MEMORY_MD = join(MEMORY_DIR, "MEMORY.md");
 const LEARNING_AUTO_DIR = join(CLAUDE_DIR, "MEMORY", "LEARNING", "AUTO");
@@ -417,7 +417,7 @@ Your job is to produce an UPDATED MEMORY.md that:
 - Keeps under 50 lines total (bootloader must be lean)
 - If a new memory doesn't fit any existing pointer, suggest a new pointer line
 
-Output ONLY the complete updated MEMORY.md content. No explanations, no markdown fences, just the file content starting with "# Sentinel Memory".`;
+Output ONLY the complete updated MEMORY.md content. No explanations, no markdown fences, just the file content starting with "# PAI Memory".`;
 
 async function runPhase2(options: {
   dryRun: boolean;
@@ -489,14 +489,14 @@ async function runPhase2(options: {
 
   let updatedMemory = result.output.trim();
 
-  // Validate: must start with "# Sentinel Memory" or legacy "# PAI Memory"
-  if (!updatedMemory.startsWith("# Sentinel Memory") && !updatedMemory.startsWith("# PAI Memory")) {
+  // Validate: must start with "# PAI Memory" or legacy "# PAI Memory"
+  if (!updatedMemory.startsWith("# PAI Memory") && !updatedMemory.startsWith("# PAI Memory")) {
     // Try to extract from potential markdown fence
-    const match = updatedMemory.match(/# (?:Sentinel|PAI) Memory[\s\S]*/);
+    const match = updatedMemory.match(/# (?:PAI|PAI) Memory[\s\S]*/);
     if (match) {
       updatedMemory = match[0];
     } else {
-      console.error("Phase 2 failed: Consolidation output doesn't start with '# Sentinel Memory'");
+      console.error("Phase 2 failed: Consolidation output doesn't start with '# PAI Memory'");
       return;
     }
   }

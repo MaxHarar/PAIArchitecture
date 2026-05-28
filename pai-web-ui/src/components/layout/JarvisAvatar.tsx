@@ -43,11 +43,11 @@ export function JarvisAvatar({ size = 48, showTooltip = true }: JarvisAvatarProp
 
     roles.forEach(role => {
       const img = new Image();
-      img.src = `/api/documents/file?path=/Users/maxharar/.claude/MEDIA/ART/jarvis-avatars/${role}.png`;
+      img.src = `/api/documents/file?path=/Users/YOUR_USERNAME/.claude/MEDIA/ART/jarvis-avatars/${role}.png`;
     });
   }, []);
 
-  const avatarUrl = `/api/documents/file?path=/Users/maxharar/.claude/MEDIA/ART/jarvis-avatars/${currentRole}.png`;
+  const avatarUrl = `/api/documents/file?path=/Users/YOUR_USERNAME/.claude/MEDIA/ART/jarvis-avatars/${currentRole}.png`;
   const tooltipText = ROLE_LABELS[currentRole];
 
   // Fallback to gradient "J" if image fails

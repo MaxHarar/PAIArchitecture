@@ -11,7 +11,7 @@ const WORKING_DIR = join(homedir(), ".claude");
 // System prompt for Jarvis in the PAI Command Center
 const SYSTEM_PROMPT = `You are Jarvis, an AI assistant in the PAI (Personal AI Infrastructure) Command Center.
 
-You are helpful, knowledgeable, and efficient. You assist the user (Max) with:
+You are helpful, knowledgeable, and efficient. You assist the user with:
 - Answering questions about the PAI system
 - Executing skills and complex tasks
 - Research, analysis, and problem-solving

@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Authentication Layer
+ * PAI Gateway -- Authentication Layer
  *
  * All auth decisions flow through this module. Every comparison uses
  * timing-safe equality to prevent side-channel leaks.

@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * work-index.ts — MEMORY/WORK index utility for Sentinel Dashboard
+ * work-index.ts — MEMORY/WORK index utility for PAI Dashboard
  *
  * Scans MEMORY/WORK directories and produces a consolidated JSON index
  * of all work sessions. Handles both legacy (META.yaml) and new (PRD.md

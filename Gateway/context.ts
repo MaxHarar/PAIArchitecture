@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Context Window Management
+ * PAI Gateway — Context Window Management
  *
  * Manages conversation history with smart compression for long-running sessions.
  * Non-compressible turns (security rules, autonomy framework) survive all compression.

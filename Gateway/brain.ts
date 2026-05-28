@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Brain Module
+ * PAI Gateway — Brain Module
  *
  * Persistent Claude session wrapper using the Agent SDK V1 query() function.
  * Maintains a long-running session with automatic rotation every 24 hours,
@@ -31,7 +31,7 @@ const COST_PER_CACHE_READ = 0.3 / 1_000_000;
 const COST_PER_CACHE_WRITE = 3.75 / 1_000_000;
 
 // ---------------------------------------------------------------------------
-// Event types emitted by SentinelBrain
+// Event types emitted by PAIBrain
 // ---------------------------------------------------------------------------
 
 export interface BrainEvents {
@@ -42,10 +42,10 @@ export interface BrainEvents {
 }
 
 // ---------------------------------------------------------------------------
-// SentinelBrain
+// PAIBrain
 // ---------------------------------------------------------------------------
 
-export class SentinelBrain extends EventEmitter {
+export class PAIBrain extends EventEmitter {
   private config: GatewayConfig;
   private context: ContextManager;
   private sessionId: string | null = null;
@@ -72,7 +72,7 @@ export class SentinelBrain extends EventEmitter {
     this.sessionFilePath = `${config.workspacePath}/gateway-session.json`;
     this.memoryExtractor = new MemoryExtractor({
       memoriesPath: `${homedir()}/.claude/Gateway/memory/brain-memories.jsonl`,
-      memoryMdPath: `${homedir()}/.claude/projects/-Users-maxharar--claude/memory/MEMORY.md`,
+      memoryMdPath: `${homedir()}/.claude/projects/-Users-YOUR_USERNAME--claude/memory/MEMORY.md`,
     });
   }
 

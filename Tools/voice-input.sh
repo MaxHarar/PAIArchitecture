@@ -8,7 +8,7 @@
 set -euo pipefail
 
 # ── Configuration ──────────────────────────────────────────────────────────────
-WHISPER_MODEL="/Users/maxharar/.claude/models/whisper/ggml-base.en.bin"
+WHISPER_MODEL="/Users/YOUR_USERNAME/.claude/models/whisper/ggml-base.en.bin"
 MAX_SECONDS="${1:-30}"
 TEMP_DIR="/tmp/pai-voice"
 AUDIO_FILE="${TEMP_DIR}/input.wav"

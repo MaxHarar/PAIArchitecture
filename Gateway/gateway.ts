@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Main Entry Point & HTTP/WebSocket Server
+ * PAI Gateway -- Main Entry Point & HTTP/WebSocket Server
  *
  * Security-hardened persistent AI gateway. Binds to 127.0.0.1:18800 ONLY.
  * Uses Bun.serve built-in -- zero external dependencies.
@@ -63,7 +63,7 @@ import {
   getConnectionCount,
 } from "./rate-limiter.ts";
 import { getHealthStatus, isHealthy, gatewayState } from "./health.ts";
-import { SentinelBrain } from "./brain.ts";
+import { PAIBrain } from "./brain.ts";
 import { interceptToolCall } from "./interceptor.ts";
 import { wrapExternalContent } from "./injection.ts";
 import { AuditLogger } from "./audit.ts";
@@ -88,7 +88,7 @@ import {
 // Brain & Audit (initialized on startup, not on import)
 // ---------------------------------------------------------------------------
 
-let brain: SentinelBrain | null = null;
+let brain: PAIBrain | null = null;
 let audit: AuditLogger | null = null;
 
 // ---------------------------------------------------------------------------
@@ -723,7 +723,7 @@ export function startServer(): ReturnType<typeof Bun.serve> {
   gatewayState.claudeSessionAlive = true;
   gatewayState.startedAt = new Date().toISOString();
 
-  console.log(`[gateway] Sentinel Gateway listening on ${HOST}:${PORT}`);
+  console.log(`[gateway] PAI Gateway listening on ${HOST}:${PORT}`);
   console.log(`[gateway] Security: localhost-only, DNS rebinding guard active`);
 
   return server;
@@ -805,7 +805,7 @@ if (args.includes("--test")) {
     console.log("[gateway] Audit logger initialized");
 
     // Initialize brain with persistent Claude session
-    brain = new SentinelBrain(DEFAULT_CONFIG);
+    brain = new PAIBrain(DEFAULT_CONFIG);
 
     // Wire tool call interception
     brain.on("tool_call", (event) => {

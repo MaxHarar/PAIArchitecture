@@ -605,7 +605,7 @@ ${news.map((n, i) => {
 <i>"${wisdom}"</i>
 <code>════════════════════════════════</code>
 
-Have a great day, Max.
+Have a great day.
 `.trim();
 }
 

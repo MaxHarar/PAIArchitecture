@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Five-Layer Prompt Injection Defense
+ * PAI Gateway -- Five-Layer Prompt Injection Defense
  *
  * Processes all external content through:
  *   Layer 1: Schema validation (Zod)
@@ -276,7 +276,7 @@ const SYSTEM_PROMPT_MARKERS: string[] = [
   "/.claude/Gateway",
   "/.claude/settings.json",
   "/.claude/skills",
-  "/Sentinel/Logs",
+  "/PAI/Logs",
 
   // Gateway internals
   "pai-gateway",

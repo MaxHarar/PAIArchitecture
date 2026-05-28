@@ -60,9 +60,9 @@ Query, search, and index codebases using Greptile's AI-powered code understandin
 
 **Example 1: Ask about code architecture**
 ```
-User: "How does claims validation work in suitlog?"
+User: "How does claims validation work in example-repo?"
 → Invokes QueryCode workflow
-→ Resolves repo to maxharar/suitlog from Repositories.md
+→ Resolves repo to YOUR_USERNAME/example-repo from Repositories.md
 → Queries with genius mode (architectural question)
 → Returns answer with source file references
 ```

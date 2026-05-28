@@ -1,12 +1,12 @@
 /**
- * Sentinel Gateway -- Telegram Channel Adapter
+ * PAI Gateway -- Telegram Channel Adapter
  *
- * Bridges Telegram messages from Max into the gateway.
+ * Bridges Telegram messages from the owner into the gateway.
  * Trust level: OWNER (highest — can trigger all autonomy tiers).
  *
  * Auth:
  *   1. Gateway bearer token (handled by auth.ts)
- *   2. Telegram chat_id must match Max's verified ID (handled here)
+ *   2. Telegram chat_id must match the owner's verified ID (handled here)
  *
  * Messages are HMAC-signed into envelopes for tamper detection
  * within the gateway pipeline.
@@ -40,7 +40,7 @@ export class TelegramAdapter implements ChannelAdapter {
 
   /**
    * Parse a Telegram webhook update into a GatewayMessage.
-   * Returns null if the message is not from Max or has no text content.
+   * Returns null if the message is not from the owner or has no text content.
    */
   async parseMessage(req: Request): Promise<GatewayMessage | null> {
     let body: Record<string, unknown>;
@@ -74,7 +74,7 @@ export class TelegramAdapter implements ChannelAdapter {
       return null; // No text content (could be sticker, photo, etc.)
     }
 
-    // Verify chat_id matches Max
+    // Verify chat_id matches the owner
     const expectedChatId = getSecret("telegram-chat-id");
     if (String(msg.chat.id) !== expectedChatId) {
       console.warn(
@@ -119,7 +119,7 @@ export class TelegramAdapter implements ChannelAdapter {
   }
 
   /**
-   * Send a response back to Max via Telegram Bot API.
+   * Send a response back to the owner via Telegram Bot API.
    */
   async sendResponse(response: GatewayResponse): Promise<void> {
     const botToken = getSecret("telegram-bot-token");

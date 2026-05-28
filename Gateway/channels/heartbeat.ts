@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Heartbeat Channel Adapter
+ * PAI Gateway -- Heartbeat Channel Adapter
  *
  * Handles cron-driven heartbeat messages from launchd scheduled tasks.
  * Trust level: TRUSTED (can trigger AUTONOMOUS actions only, not ASK_FIRST).

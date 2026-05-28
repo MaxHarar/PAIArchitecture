@@ -1,9 +1,9 @@
 /**
- * Sentinel Gateway -- Background Worker
+ * PAI Gateway -- Background Worker
  *
  * Manages autonomous background task execution. Accepts a task description,
  * spawns a Claude subprocess via the Agent SDK, tracks status, and notifies
- * Max on Telegram when complete.
+ * the owner on Telegram when complete.
  *
  * Concurrency limited to 3 simultaneous background tasks.
  * Completed task records are cleaned up after 1 hour.
@@ -218,7 +218,7 @@ async function executeTask(
       `${PREFIX} Task ${task.id.slice(0, 8)} completed (${task.result.length} chars)`,
     );
 
-    // Notify Max on Telegram
+    // Notify the owner on Telegram
     const notificationText = formatCompletionNotification(task);
     await sendOutbound(notificationText, {
       voice: options.voice,
@@ -250,7 +250,7 @@ async function executeTask(
 
     console.error(`${PREFIX} Task ${task.id.slice(0, 8)} failed: ${errMsg}`);
 
-    // Notify Max about failure too
+    // Notify the owner about failure too
     const failureText = [
       "Background task failed.",
       "",
@@ -334,7 +334,7 @@ async function runClaudeQuery(
  */
 function buildWorkerSystemPrompt(): string {
   return [
-    "You are a background worker for Sentinel, an autonomous AI agent.",
+    "You are a background worker for PAI, an autonomous AI agent.",
     "You have been given a task to complete asynchronously.",
     "Execute the task efficiently and report your findings concisely.",
     "Keep your response under 3000 characters since it will be sent via Telegram.",

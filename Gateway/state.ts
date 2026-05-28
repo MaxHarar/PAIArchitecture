@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- SQLite State Persistence
+ * PAI Gateway -- SQLite State Persistence
  *
  * Uses Bun's built-in SQLite for zero-dependency persistence.
  * WAL journal mode for concurrent reads during writes.

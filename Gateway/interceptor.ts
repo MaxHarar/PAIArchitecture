@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Code-Enforced Tool Call Interceptor
+ * PAI Gateway — Code-Enforced Tool Call Interceptor
  *
  * HARDCODED permission tiers. Not in a config file. Not in a prompt. IN THE CODE.
  * The NEVER tier is UNCONDITIONAL. No argument, no context, no channel trust

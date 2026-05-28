@@ -34,7 +34,7 @@
 import { homedir } from "os";
 import { join } from "path";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import { inference } from "/Users/maxharar/.claude/skills/CORE/Tools/Inference.ts";
+import { inference } from "/Users/YOUR_USERNAME/.claude/skills/CORE/Tools/Inference.ts";
 
 // ============================================================================
 // TYPES

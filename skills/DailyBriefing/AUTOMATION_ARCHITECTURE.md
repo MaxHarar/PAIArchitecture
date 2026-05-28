@@ -499,7 +499,7 @@ def get_client():
     <array>
         <string>/opt/homebrew/bin/bun</string>
         <string>run</string>
-        <string>/Users/maxharar/.claude/skills/DailyBriefing/Tools/briefing-on-wake.ts</string>
+        <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/Tools/briefing-on-wake.ts</string>
     </array>
 
     <!-- Run every 300 seconds (5 minutes) -->
@@ -516,14 +516,14 @@ def get_client():
         <key>PATH</key>
         <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
         <key>HOME</key>
-        <string>/Users/maxharar</string>
+        <string>/Users/YOUR_USERNAME</string>
     </dict>
 
     <!-- Log output -->
     <key>StandardOutPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/stdout.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/State/stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing/State/stderr.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing/State/stderr.log</string>
 
     <!-- Run immediately on load -->
     <key>RunAtLoad</key>
@@ -531,7 +531,7 @@ def get_client():
 
     <!-- Working directory -->
     <key>WorkingDirectory</key>
-    <string>/Users/maxharar/.claude/skills/DailyBriefing</string>
+    <string>/Users/YOUR_USERNAME/.claude/skills/DailyBriefing</string>
 </dict>
 </plist>
 ```

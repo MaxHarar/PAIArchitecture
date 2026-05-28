@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Shared Types
+ * PAI Gateway — Shared Types
  *
  * Foundation types used across all gateway modules.
  * This file has ZERO dependencies — import freely from anywhere.
@@ -11,7 +11,7 @@
 
 /** Trust tier determines what actions a channel can trigger */
 export enum ChannelTrust {
-  /** Direct message from verified Max via Telegram */
+  /** Direct message from the verified owner via Telegram */
   OWNER = "owner",
   /** Internal services: cron heartbeat, local tools */
   TRUSTED = "trusted",
@@ -139,7 +139,7 @@ export interface ToolCallDecision {
   allowed: boolean;
   /** Reason for blocking (if not allowed) */
   reason?: string;
-  /** Whether to escalate to Max via Telegram */
+  /** Whether to escalate to the owner via Telegram */
   escalate?: boolean;
 }
 
@@ -227,7 +227,7 @@ export interface GatewayConfig {
   dbPath: string;
   /** Path to audit log directory */
   logDir: string;
-  /** Path to Sentinel workspace */
+  /** Path to PAI workspace */
   workspacePath: string;
   /** Cost budget configuration */
   costBudget: CostBudget;
@@ -245,9 +245,9 @@ export interface GatewayConfig {
 export const DEFAULT_CONFIG: GatewayConfig = {
   host: "127.0.0.1",
   port: 18800,
-  dbPath: `${process.env.HOME}/Sentinel/gateway.db`,
-  logDir: `${process.env.HOME}/Sentinel/Logs`,
-  workspacePath: `${process.env.HOME}/Sentinel`,
+  dbPath: `${process.env.HOME}/PAI/gateway.db`,
+  logDir: `${process.env.HOME}/PAI/Logs`,
+  workspacePath: `${process.env.HOME}/PAI`,
   costBudget: {
     maxTokensPerTurn: 32_000,
     maxTurnsPerMessage: 25,

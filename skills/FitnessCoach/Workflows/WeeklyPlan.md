@@ -49,7 +49,7 @@ Identify:
 
 ### 3. Apply Weekly Template
 
-**Max's Preferred Structure:**
+**the owner's Preferred Structure:**
 
 | Day | AM Session | PM Session |
 |-----|------------|------------|

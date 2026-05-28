@@ -29,7 +29,7 @@ Running **QueryCode** in **Greptile**...
 
 Follow this cascade — stop at the first match:
 
-1. **Explicit mention:** User names a repo (e.g., "in suitlog", "in my-project")
+1. **Explicit mention:** User names a repo (e.g., "in example-repo", "in my-project")
    → Match against entries in `~/.claude/skills/Greptile/Repositories.md`
 
 2. **Auto-detect from cwd:** Run `git remote get-url origin` in the current working directory

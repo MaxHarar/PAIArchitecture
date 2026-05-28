@@ -1,12 +1,12 @@
 /**
- * Sentinel Gateway — Tamper-Evident Audit Logging
+ * PAI Gateway — Tamper-Evident Audit Logging
  *
  * Hash-chained JSONL audit logs with:
  *   - SHA-256 hash chaining (each entry includes hash of previous)
  *   - Sensitive pattern scrubbing before writing
  *   - Log rotation (7-day retention)
  *   - File permissions: chmod 0o600
- *   - One JSONL file per day: ~/Sentinel/Logs/audit-YYYY-MM-DD.jsonl
+ *   - One JSONL file per day: ~/PAI/Logs/audit-YYYY-MM-DD.jsonl
  */
 
 import { createHash } from "crypto";

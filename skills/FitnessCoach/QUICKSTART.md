@@ -27,7 +27,7 @@ The fitness coach is fully configured and running! You'll receive daily workout 
 You receive a Telegram message like:
 
 ```
-☀️ Good morning Max!
+☀️ Good morning!
 
 🏃 TODAY'S WORKOUT
 ───────────────────────────────────────

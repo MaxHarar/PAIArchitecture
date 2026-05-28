@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Message Scheduler
+ * PAI Gateway — Message Scheduler
  *
  * In-memory scheduler for proactive outbound messages.
  * Supports one-shot delayed messages and recurring cron-like patterns.
@@ -91,7 +91,7 @@ async function sendTelegramVoice(voiceText: string): Promise<boolean> {
       body: JSON.stringify({
         message: voiceText,
         telegram_chat_id: chatId,
-        title: "Sentinel",
+        title: "PAI",
       }),
     });
 

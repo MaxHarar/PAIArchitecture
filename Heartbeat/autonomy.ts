@@ -1,12 +1,12 @@
 /**
  * PAI Autonomy Framework
  *
- * Three-tier escalation system that governs what Sentinel can do independently
- * vs. what requires Max's explicit approval.
+ * Three-tier escalation system that governs what PAI can do independently
+ * vs. what requires the owner's explicit approval.
  *
  * Levels:
- *   AUTONOMOUS  - Sentinel does it without asking
- *   ASK_FIRST   - Sentinel asks Max via Telegram and waits for approval
+ *   AUTONOMOUS  - PAI does it without asking
+ *   ASK_FIRST   - PAI asks the owner via Telegram and waits for approval
  *   NEVER       - Hard block, cannot be overridden
  */
 
@@ -99,13 +99,13 @@ export function canDo(action: string): AutonomyLevel {
 const TELEGRAM_API = "https://api.telegram.org";
 
 /**
- * Send a Telegram message asking Max for approval.
+ * Send a Telegram message asking the owner for approval.
  * Returns the approval status.
  *
  * In the current implementation, this sends the question and returns false
  * (defaulting to "not approved") because true interactive polling requires
  * the Telegram bot's callback infrastructure. For now, this logs the
- * escalation and notifies Max -- he can then act through the Telegram bot.
+ * escalation and notifies the owner -- he can then act through the Telegram bot.
  */
 export async function escalate(
   action: string,
@@ -115,10 +115,10 @@ export async function escalate(
   dryRun: boolean = false
 ): Promise<boolean> {
   const message =
-    `*Sentinel Escalation*\n\n` +
+    `*PAI Escalation*\n\n` +
     `*Action:* ${escapeMarkdown(action)}\n` +
     `*Context:* ${escapeMarkdown(context)}\n\n` +
-    `Reply to the Sentinel bot to approve or deny\\.`;
+    `Reply to the PAI bot to approve or deny\\.`;
 
   if (dryRun) {
     console.log(`[DRY RUN] Would escalate to Telegram: ${action}`);

@@ -1,8 +1,8 @@
 #!/usr/bin/env bun
 
 /**
- * Sentinel Banner — Terminal HUD Interface
- * Matches Sentinel Dashboard aesthetic: cyan on void, boot-sequence style
+ * PAI Banner — Terminal HUD Interface
+ * Matches PAI Dashboard aesthetic: cyan on void, boot-sequence style
  *
  * Responsive: Full (85+) → Medium (70+) → Compact (55+) → Minimal (45+) → Ultra (<45)
  */
@@ -83,7 +83,7 @@ const ITALIC = "\x1b[3m";
 
 const rgb = (r: number, g: number, b: number) => `\x1b[38;2;${r};${g};${b}m`;
 
-// Box drawing (only h and v used in Sentinel banner)
+// Box drawing (only h and v used in PAI banner)
 const BOX = {
   h: "\u2500", v: "\u2502",
 };
@@ -98,7 +98,7 @@ const RETICLE = {
 };
 
 // ═══════════════════════════════════════════════════════════════════════════
-// Sentinel Design System (from Sentinel Dashboard globals.css)
+// PAI Design System (from PAI Dashboard globals.css)
 // ═══════════════════════════════════════════════════════════════════════════
 
 const SC = {
@@ -112,7 +112,7 @@ const SC = {
   muted:      rgb(107, 138, 173),   // #6B8AAD — secondary text
 
   // Border
-  border:     rgb(0, 70, 90),       // frame borders (approx sentinel-border)
+  border:     rgb(0, 70, 90),       // frame borders (approx pai-border)
 
   // Status
   online:     rgb(34, 197, 94),     // #22c55e — green
@@ -134,7 +134,7 @@ interface SystemStats {
 }
 
 function getStats(): SystemStats {
-  let name = "Sentinel";
+  let name = "PAI";
   let paiVersion = "3.0";
   let algorithmVersion = "0.2";
   let catchphrase = "Jarvis here, ready to go.";
@@ -144,7 +144,7 @@ function getStats(): SystemStats {
   // Single settings.json read for all fields
   try {
     const settings = JSON.parse(readFileSync(join(CLAUDE_DIR, "settings.json"), "utf-8"));
-    name = settings.daidentity?.displayName || settings.daidentity?.name || "Sentinel";
+    name = settings.daidentity?.displayName || settings.daidentity?.name || "PAI";
     paiVersion = settings.pai?.version || "2.0";
     catchphrase = settings.daidentity?.startupCatchphrase || catchphrase;
     repoUrl = settings.pai?.repoUrl || repoUrl;
@@ -185,7 +185,7 @@ function center(str: string, width: number): string {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// Sentinel Shield Mark
+// PAI Shield Mark
 // ═══════════════════════════════════════════════════════════════════════════
 
 // Large shield: 20 wide × 10 tall
@@ -198,7 +198,7 @@ function getLargeShield(): string[] {
     // Open frame
     `${SC.cyan}${B.repeat(4)}${RESET}            ${SC.cyan}${B.repeat(4)}${RESET}`,
     `${SC.cyan}${B.repeat(4)}${RESET}            ${SC.cyan}${B.repeat(4)}${RESET}`,
-    // Inner core — bright sentinel eye
+    // Inner core — bright pai eye
     `${SC.cyan}${B.repeat(4)}${RESET}  ${SC.cyanBright}${B.repeat(8)}${RESET}  ${SC.cyan}${B.repeat(4)}${RESET}`,
     `${SC.cyan}${B.repeat(4)}${RESET}  ${SC.cyanBright}${B.repeat(8)}${RESET}  ${SC.cyan}${B.repeat(4)}${RESET}`,
     // Open frame
@@ -277,10 +277,10 @@ function buildHeader(stats: SystemStats, width: number): { headerLine: string; h
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// FULL SENTINEL BANNER (85+ cols) — Frame + Shield + System Status
+// FULL PAI BANNER (85+ cols) — Frame + Shield + System Status
 // ═══════════════════════════════════════════════════════════════════════════
 
-function createSentinelBanner(stats: SystemStats, width: number): string {
+function createPAIBanner(stats: SystemStats, width: number): string {
   const { headerLine, headerVisLen } = buildHeader(stats, width);
 
   const frameWidth = 70;
@@ -319,7 +319,7 @@ function createSentinelBanner(stats: SystemStats, width: number): string {
 // MEDIUM BANNER (70-84 cols) — No frame, full content
 // ═══════════════════════════════════════════════════════════════════════════
 
-function createSentinelMediumBanner(stats: SystemStats, width: number): string {
+function createPAIMediumBanner(stats: SystemStats, width: number): string {
   const { headerLine, headerVisLen } = buildHeader(stats, width);
 
   const lines: string[] = [""];
@@ -346,7 +346,7 @@ function createSentinelMediumBanner(stats: SystemStats, width: number): string {
 // COMPACT BANNER (55-69 cols) — Small shield, condensed stats
 // ═══════════════════════════════════════════════════════════════════════════
 
-function createSentinelCompactBanner(stats: SystemStats, width: number): string {
+function createPAICompactBanner(stats: SystemStats, width: number): string {
   const logo = getSmallShield();
   const LOGO_WIDTH = 10;
   const SEPARATOR = `${SC.border}${BOX.v}${RESET}`;
@@ -395,7 +395,7 @@ function createSentinelCompactBanner(stats: SystemStats, width: number): string 
 // MINIMAL BANNER (45-54 cols) — Very condensed
 // ═══════════════════════════════════════════════════════════════════════════
 
-function createSentinelMinimalBanner(stats: SystemStats, width: number): string {
+function createPAIMinimalBanner(stats: SystemStats, width: number): string {
   const logo = getSmallShield();
   const LOGO_WIDTH = 10;
 
@@ -426,7 +426,7 @@ function createSentinelMinimalBanner(stats: SystemStats, width: number): string 
 // ULTRA-COMPACT BANNER (<45 cols) — Text only
 // ═══════════════════════════════════════════════════════════════════════════
 
-function createSentinelUltraBanner(stats: SystemStats, width: number): string {
+function createPAIUltraBanner(stats: SystemStats, width: number): string {
   const nameStr = `${BOLD}${SC.cyan}${stats.name.toUpperCase()}${RESET}`;
 
   const lines: string[] = [""];
@@ -450,8 +450,8 @@ const BREAKPOINTS = {
   MINIMAL: 45,
 };
 
-type DesignName = "sentinel" | "sentinel-medium" | "sentinel-compact" | "sentinel-minimal" | "sentinel-ultra";
-const ALL_DESIGNS: DesignName[] = ["sentinel", "sentinel-medium", "sentinel-compact", "sentinel-minimal", "sentinel-ultra"];
+type DesignName = "pai" | "pai-medium" | "pai-compact" | "pai-minimal" | "pai-ultra";
+const ALL_DESIGNS: DesignName[] = ["pai", "pai-medium", "pai-compact", "pai-minimal", "pai-ultra"];
 
 function createBanner(forceDesign?: string): string {
   const width = getTerminalWidth();
@@ -459,29 +459,29 @@ function createBanner(forceDesign?: string): string {
 
   if (forceDesign) {
     switch (forceDesign) {
-      case "sentinel": return createSentinelBanner(stats, width);
-      case "sentinel-medium": return createSentinelMediumBanner(stats, width);
-      case "sentinel-compact": return createSentinelCompactBanner(stats, width);
-      case "sentinel-minimal": return createSentinelMinimalBanner(stats, width);
-      case "sentinel-ultra": return createSentinelUltraBanner(stats, width);
+      case "pai": return createPAIBanner(stats, width);
+      case "pai-medium": return createPAIMediumBanner(stats, width);
+      case "pai-compact": return createPAICompactBanner(stats, width);
+      case "pai-minimal": return createPAIMinimalBanner(stats, width);
+      case "pai-ultra": return createPAIUltraBanner(stats, width);
       // Legacy design names — backward compat
-      case "navy": return createSentinelBanner(stats, width);
-      case "navy-medium": return createSentinelMediumBanner(stats, width);
-      case "navy-compact": return createSentinelCompactBanner(stats, width);
-      case "navy-minimal": return createSentinelMinimalBanner(stats, width);
-      case "navy-ultra": return createSentinelUltraBanner(stats, width);
-      case "electric": return createSentinelBanner(stats, width);
-      case "teal": return createSentinelBanner(stats, width);
-      case "ice": return createSentinelBanner(stats, width);
+      case "navy": return createPAIBanner(stats, width);
+      case "navy-medium": return createPAIMediumBanner(stats, width);
+      case "navy-compact": return createPAICompactBanner(stats, width);
+      case "navy-minimal": return createPAIMinimalBanner(stats, width);
+      case "navy-ultra": return createPAIUltraBanner(stats, width);
+      case "electric": return createPAIBanner(stats, width);
+      case "teal": return createPAIBanner(stats, width);
+      case "ice": return createPAIBanner(stats, width);
     }
   }
 
   // Width-based responsive routing
-  if (width >= BREAKPOINTS.FULL) return createSentinelBanner(stats, width);
-  if (width >= BREAKPOINTS.MEDIUM) return createSentinelMediumBanner(stats, width);
-  if (width >= BREAKPOINTS.COMPACT) return createSentinelCompactBanner(stats, width);
-  if (width >= BREAKPOINTS.MINIMAL) return createSentinelMinimalBanner(stats, width);
-  return createSentinelUltraBanner(stats, width);
+  if (width >= BREAKPOINTS.FULL) return createPAIBanner(stats, width);
+  if (width >= BREAKPOINTS.MEDIUM) return createPAIMediumBanner(stats, width);
+  if (width >= BREAKPOINTS.COMPACT) return createPAICompactBanner(stats, width);
+  if (width >= BREAKPOINTS.MINIMAL) return createPAIMinimalBanner(stats, width);
+  return createPAIUltraBanner(stats, width);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════

@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Token Bucket Rate Limiter
+ * PAI Gateway -- Token Bucket Rate Limiter
  *
  * Per-channel and global rate limiting with automatic bucket refill.
  * No external dependencies. All limits are code-enforced constants.

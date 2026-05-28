@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway — Memory Extractor
+ * PAI Gateway — Memory Extractor
  *
  * Extracts memory-worthy insights from conversations using heuristic
  * pattern matching (no AI inference — too expensive per message).

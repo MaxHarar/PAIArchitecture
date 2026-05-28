@@ -2,7 +2,7 @@
  * PAI Heartbeat - Telegram Integration
  *
  * Lightweight Telegram message sender for the heartbeat system.
- * Uses the same bot token as the main Sentinel Telegram bot.
+ * Uses the same bot token as the main PAI Telegram bot.
  */
 
 const TELEGRAM_API = "https://api.telegram.org";

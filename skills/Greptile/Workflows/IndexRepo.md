@@ -37,7 +37,7 @@ Parse user intent into one of four actions:
 
 ### Step 2: Resolve Repository (for index/re-index/status)
 
-If user specifies a repo explicitly (e.g., "index maxharar/suitlog"), use that.
+If user specifies a repo explicitly (e.g., "index YOUR_USERNAME/example-repo"), use that.
 
 Otherwise, auto-detect from current working directory:
 

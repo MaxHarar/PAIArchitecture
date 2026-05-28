@@ -2,7 +2,7 @@
  * PAI Heartbeat Logger
  *
  * Structured JSONL logging for all heartbeat activity.
- * Each day gets its own log file at ~/Sentinel/Logs/YYYY-MM-DD.jsonl
+ * Each day gets its own log file at ~/PAI/Logs/YYYY-MM-DD.jsonl
  */
 
 import { appendFileSync, existsSync, mkdirSync, readFileSync } from "fs";
@@ -28,7 +28,7 @@ export interface LogEntry {
 // Paths
 // ---------------------------------------------------------------------------
 
-const LOGS_DIR = join(homedir(), "Sentinel", "Logs");
+const LOGS_DIR = join(homedir(), "PAI", "Logs");
 
 function ensureLogsDir(): void {
   if (!existsSync(LOGS_DIR)) {
@@ -77,7 +77,7 @@ export function logAction(
 }
 
 /**
- * Log an action that was escalated to Max for approval.
+ * Log an action that was escalated to the owner for approval.
  */
 export function logEscalation(
   actionType: string,

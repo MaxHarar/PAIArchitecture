@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 /**
- * notify-max — Send a proactive message to Max via Telegram.
+ * notify-max — Send a proactive message to the owner via Telegram.
  *
  * Usage:
  *   bun notify-max.ts "Your message here"

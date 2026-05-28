@@ -273,7 +273,7 @@ Processing 56 sessions extracted **181 memories**, which consolidated from 24 li
 
 All extraction data stays in gitignored directories:
 - Raw extractions: `~/.claude/MEMORY/LEARNING/AUTO/` (gitignored via `MEMORY/`)
-- MEMORY.md: `~/.claude/projects/-Users-maxharar--claude/memory/` (gitignored via `projects/`)
+- MEMORY.md: `~/.claude/projects/-Users-YOUR_USERNAME--claude/memory/` (gitignored via `projects/`)
 - No session transcript data ever touches git-tracked files
 
 ### Concurrency & Performance

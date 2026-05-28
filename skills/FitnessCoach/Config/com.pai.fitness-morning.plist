@@ -9,7 +9,7 @@
     <array>
         <string>/opt/homebrew/bin/bun</string>
         <string>run</string>
-        <string>/Users/maxharar/.claude/skills/FitnessCoach/Tools/orchestrate-morning.ts</string>
+        <string>/Users/YOUR_USERNAME/.claude/skills/FitnessCoach/Tools/orchestrate-morning.ts</string>
     </array>
 
     <!-- Run at 5:30 AM daily -->
@@ -22,20 +22,20 @@
     </dict>
 
     <key>WorkingDirectory</key>
-    <string>/Users/maxharar/.claude</string>
+    <string>/Users/YOUR_USERNAME/.claude</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/maxharar/.claude/fitness/logs/morning-orchestrator.log</string>
+    <string>/Users/YOUR_USERNAME/.claude/fitness/logs/morning-orchestrator.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/maxharar/.claude/fitness/logs/morning-orchestrator.err</string>
+    <string>/Users/YOUR_USERNAME/.claude/fitness/logs/morning-orchestrator.err</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
-        <string>/Users/maxharar/.bun/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <string>/Users/YOUR_USERNAME/.bun/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
         <key>HOME</key>
-        <string>/Users/maxharar</string>
+        <string>/Users/YOUR_USERNAME</string>
     </dict>
 
     <key>RunAtLoad</key>

@@ -6,7 +6,7 @@
  * Required setup:
  *   1. Google Cloud project with Gmail API enabled
  *   2. OAuth2 credentials (client_id, client_secret)
- *   3. Run OAuth flow to generate tokens (Max does this manually)
+ *   3. Run OAuth flow to generate tokens (the owner does this manually)
  *
  * Env keys in ~/.claude/.env:
  *   GMAIL_CLIENT_ID      — OAuth2 client ID

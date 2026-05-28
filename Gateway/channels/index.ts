@@ -1,5 +1,5 @@
 /**
- * Sentinel Gateway -- Channel Registry
+ * PAI Gateway -- Channel Registry
  *
  * Central registry for all channel adapters. The gateway routes
  * incoming requests through the appropriate adapter based on

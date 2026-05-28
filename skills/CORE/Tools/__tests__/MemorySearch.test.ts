@@ -767,7 +767,7 @@ describe('CLI Interface', () => {
   it('should search and return JSON output', async () => {
     const proc = Bun.spawn([
       'bun', 'run',
-      '/Users/maxharar/.claude/skills/CORE/Tools/MemorySearch.ts',
+      '/Users/YOUR_USERNAME/.claude/skills/CORE/Tools/MemorySearch.ts',
       'search', 'distributed systems',
       '--db', TEST_DB_PATH,
       '--output', 'json'
@@ -786,7 +786,7 @@ describe('CLI Interface', () => {
   it('should support --limit flag', async () => {
     const proc = Bun.spawn([
       'bun', 'run',
-      '/Users/maxharar/.claude/skills/CORE/Tools/MemorySearch.ts',
+      '/Users/YOUR_USERNAME/.claude/skills/CORE/Tools/MemorySearch.ts',
       'search', 'architecture',
       '--db', TEST_DB_PATH,
       '--limit', '2',
@@ -805,7 +805,7 @@ describe('CLI Interface', () => {
 
     const proc = Bun.spawn([
       'bun', 'run',
-      '/Users/maxharar/.claude/skills/CORE/Tools/MemorySearch.ts',
+      '/Users/YOUR_USERNAME/.claude/skills/CORE/Tools/MemorySearch.ts',
       'index', TEST_DIR,
       '--db', TEST_DB_PATH,
       '--output', 'json'
@@ -820,7 +820,7 @@ describe('CLI Interface', () => {
   it('should provide help text', async () => {
     const proc = Bun.spawn([
       'bun', 'run',
-      '/Users/maxharar/.claude/skills/CORE/Tools/MemorySearch.ts',
+      '/Users/YOUR_USERNAME/.claude/skills/CORE/Tools/MemorySearch.ts',
       '--help'
     ], { stdout: 'pipe' });
 
