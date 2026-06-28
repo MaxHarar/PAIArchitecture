@@ -21,7 +21,7 @@
 
 PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) from a code assistant into an **autonomous AI agent** with its own workspace, integrations, persistent memory, and a 24/7 heartbeat loop. It monitors, acts, and grows independently while keeping you informed via Telegram.
 
-**Foundation: [PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com), built on his [The Algorithm](https://github.com/danielmiessler/TheAlgorithm). This repo is an evolved fork of [`danielmiessler/PAI`](https://github.com/danielmiessler/PAI) shipping **PAI 5.0.0** with **Algorithm v6.3.0** — adding the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.3.0.md`](PAI/ALGORITHM/v6.3.0.md) for the full spec.
+**Foundation: [PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com), built on his [The Algorithm](https://github.com/danielmiessler/TheAlgorithm). This repo is an evolved fork of [`danielmiessler/PAI`](https://github.com/danielmiessler/PAI) shipping **PAI 5.0.0** with **Algorithm v6.4.0** — adding the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.4.0.md`](PAI/ALGORITHM/v6.4.0.md) for the full spec.
 
 > **Why PAI?** Most AI tools are reactive — you ask, they answer. PAI is proactive. It checks your email, monitors your deployments, generates daily briefings, reviews PRs, and proposes automations — all while you sleep. Every task goes through a 7-phase reasoning algorithm with verifiable criteria, so nothing gets marked "done" without evidence.
 
@@ -35,8 +35,8 @@ PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) fro
 | **Reasoning** | Single-shot response | 7-phase Algorithm with Ideal State Criteria |
 | **Memory** | Forgets between sessions | Persistent memory system across conversations |
 | **Verification** | Claims "done" | Requires evidence — tests, screenshots, diffs |
-| **Agents** | Single model | 18 specialized agents — multi-vendor (Anthropic, OpenAI, Moonshot) |
-| **Skills** | Generic capabilities | 60+ domain-specific skills |
+| **Agents** | Single model | 18 specialized agents — multi-vendor (Anthropic, OpenAI, Moonshot, Google, xAI) |
+| **Skills** | Generic capabilities | 54 domain-specific skills |
 | **MCP Servers** | No integrations | Custom MCP servers — Telegram ask_user, context bridges |
 | **Voice** | Text only | Local TTS with spoken phase announcements |
 | **Integration** | API calls | Gmail, Telegram, Vercel, Google Calendar, X/Twitter |
@@ -148,9 +148,9 @@ flowchart LR
 | Component | Purpose | Implementation |
 |-----------|---------|---------------|
 | **Algorithm Engine** | 7-phase systematic reasoning | `skills/PAI/SKILL.md` + `Components/Algorithm/` |
-| **Skill System** | Domain-specific capabilities | `skills/` — 55+ skill directories |
-| **Hook System** | Lifecycle event handlers | `hooks/` — 23 TypeScript hooks |
-| **Agent System** | Specialized AI workers | `agents/` — 13 agent definitions |
+| **Skill System** | Domain-specific capabilities | `skills/` — 54 skill directories |
+| **Hook System** | Lifecycle event handlers | `hooks/` — 37 TypeScript hooks |
+| **Agent System** | Specialized AI workers | `agents/` — 18 agent definitions |
 | **Memory System** | Persistent cross-session context | `MEMORY/` — WORK, STATE, LEARNING |
 | **Gateway** | HTTP/WebSocket server | `Gateway/gateway.ts` — Bun.serve |
 | **Heartbeat** | Autonomous execution loop | `Heartbeat/heartbeat.ts` — launchd |
@@ -210,100 +210,95 @@ PAI implements a **Best-of-N parallelization pattern** for complex tasks where c
 
 ## Skills
 
-PAI has **55+ domain-specific skills** — each a self-contained capability with its own tools, workflows, and documentation.
+PAI has **54 domain-specific skills** — each a self-contained capability with its own tools, workflows, and documentation.
 
 ### Skill Categories
 
-#### Core System
+#### Core System & Algorithm
 | Skill | Description |
 |-------|-------------|
-| **PAI** | The Algorithm — core reasoning engine, ISC generation, PRD management |
-| **CORE** | System architecture, documentation, identity, banners |
+| **ISA** | Ideal State Artifact — the universal primitive that drives and verifies every build |
 | **Agents** | Dynamic agent composition, personality assignment, voice mapping |
+| **Delegation** | Task delegation and multi-agent orchestration |
 | **Fabric** | 240+ prompt patterns for content analysis and transformation |
+| **find-skills** | Skill discovery and routing |
+| **CreateSkill** | Skill creation, validation, and effectiveness testing |
+| **CreateCLI** | TypeScript CLI generation |
+| **Migrate** | System and codebase migration |
+| **PAIUpgrade** | System upgrade recommendations from sources and reflections |
+| **Loop** | Iterative execution loops |
+| **Daemon** | Background daemon management |
+| **use-railway** | Railway deployment workflows |
 
-#### Research & Analysis
+#### Reasoning & Analysis
 | Skill | Description |
 |-------|-------------|
-| **Research** | Multi-mode research system (quick/standard/extensive) with 5 researcher agents |
-| **ExtractWisdom** | Content-adaptive extraction of insights from any media |
-| **FirstPrinciples** | Root cause analysis and fundamental decomposition |
+| **FirstPrinciples** | Physics-based decomposition to fundamental truths |
 | **IterativeDepth** | Multi-angle iterative exploration for deeper analysis |
+| **ApertureOscillation** | Tactical/strategic scope oscillation to surface design tensions |
+| **SystemsThinking** | Structural analysis — feedback loops, archetypes, leverage points |
+| **RootCauseAnalysis** | Incident investigation — 5 Whys, fishbone, postmortem, fault tree |
+| **Science** | Hypothesis-test-analyze cycles for structured problem-solving |
 | **Council** | Multi-agent debate with diverse perspectives |
 | **RedTeam** | Adversarial analysis with 32 attack agents |
-| **Science** | Hypothesis-test-analyze cycles for structured problem-solving |
-| **BeCreative** | Extended thinking mode for deep creative reasoning |
+| **BeCreative** | Divergent ideation via Verbalized Sampling + extended thinking |
+| **Ideate** | Evolutionary multi-cycle idea generation |
+| **Evals** | Agent evaluation framework with graders and metrics |
+| **BitterPillEngineering** | Audits instruction sets for over-prompting |
+| **Prompting** | Meta-prompting and dynamic prompt generation |
 
-#### Security
+#### Research & Knowledge
 | Skill | Description |
 |-------|-------------|
-| **WebAssessment** | Web application penetration testing |
-| **Recon** | Attack surface reconnaissance and enumeration |
-| **OSINT** | Open source intelligence gathering |
-| **PromptInjection** | LLM security testing and jailbreak analysis |
-| **PrivateInvestigator** | Ethical people-finding and skip tracing |
-| **SECUpdates** | Security news aggregation from industry sources |
-| **AnnualReports** | Security report analysis and trend extraction |
-| **WorldThreatModelHarness** | Multi-horizon adversarial future analysis (6mo–50yr) |
+| **Research** | Multi-mode research system (quick/standard/extensive/deep) with researcher agents |
+| **ExtractWisdom** | Content-adaptive extraction of insights from any media |
+| **ArXiv** | Academic paper search and analysis |
+| **Knowledge** | Knowledge archive management and retrieval |
+| **ContextSearch** | Cold-start context recovery across sessions and ISAs |
+| **USMetrics** | Real-time US economic indicators |
 
 #### Content & Media
 | Skill | Description |
 |-------|-------------|
-| **Art** | Image generation with multiple models (Flux, GPT-image-1, Gemini) |
+| **Art** | Image generation with multiple models (Flux, Nano Banana Pro, GPT-Image-1) |
 | **Remotion** | Programmatic video creation with React |
+| **AudioEditor** | Audio editing and processing |
+| **Canva** | Canva design creation and editing |
+| **Webdesign** | Web and app interface design |
 | **WriteStory** | Fiction writing using Will Storr's storytelling science |
-| **Prompting** | Meta-prompting and dynamic prompt generation |
 | **Aphorisms** | Quote and saying management |
+| **AdFactory** | Ad creative generation |
+| **Marketer** | Marketing content and campaign workflows |
+| **_FUNDRAISER** | Fundraiser launch kits — carousels, flyers, bundled deliverables |
 
-#### Document Processing
+#### Web & Data
 | Skill | Description |
 |-------|-------------|
-| **pdf** | Full PDF operations — read, merge, split, encrypt, OCR |
-| **docx** | Word document creation, editing, and formatting |
-| **pptx** | PowerPoint presentation management |
-| **xlsx** | Spreadsheet operations with formulas and charts |
-| **Documents** | General document processing |
-| **google-docs** | Google Docs and Drive integration |
-| **Parser** | Universal URL/file/video parsing to structured JSON |
-
-#### Infrastructure & DevOps
-| Skill | Description |
-|-------|-------------|
-| **deploy-to-vercel** | Vercel deployment automation |
-| **Cloudflare** | Workers/Pages deployment |
-| **CreateCLI** | TypeScript CLI generation |
-| **CreateSkill** | Skill creation and validation |
-| **Browser** | Debug-first Playwright browser automation |
-| **Greptile** | AI-powered codebase intelligence |
-| **Evals** | Agent evaluation framework with graders and metrics |
-
-#### Data & Intelligence
-| Skill | Description |
-|-------|-------------|
+| **Browser** | Headless browser automation via agent-browser |
+| **Interceptor** | Real-Chrome automation for verification and bot-detection bypass |
 | **BrightData** | Progressive URL scraping across tiers |
 | **Apify** | Social media and e-commerce scraping via Apify actors |
-| **USMetrics** | Real-time US economic indicators |
-| **AIUpdates** | AI industry news monitoring |
-| **PAIUpgrade** | System improvement extraction from content |
 
-#### Personal
+#### Security & Intelligence
 | Skill | Description |
 |-------|-------------|
-| **DailyBriefing** | Executive daily summary to Telegram |
-| **FitnessCoach** | Personal fitness with Garmin + Calendar integration |
-| **Telos** | Life OS — goals, projects, dependencies |
-| **GmailManager** | Inbox cleanup — mass unsubscribe, bulk delete, organize |
+| **PrivateInvestigator** | Ethical people-finding and identity verification |
+| **WorldThreatModel** | Multi-horizon adversarial future analysis |
+
+#### Business & Sales
+| Skill | Description |
+|-------|-------------|
 | **Sales** | Sales workflows, proposals, and pricing |
-| **TelegramClean** | Automatic clean output formatting for Telegram |
-| **VoiceServer** | Voice server management and TTS configuration |
+| **Hormozi** | Offer-design and business frameworks |
 
-#### Best Practices
+#### Personal & Life OS
 | Skill | Description |
 |-------|-------------|
-| **vercel-react-best-practices** | React/Next.js performance optimization |
-| **vercel-composition-patterns** | Scalable React composition patterns |
-| **vercel-react-native-skills** | React Native and Expo best practices |
-| **web-design-guidelines** | Web Interface Guidelines compliance |
+| **Telos** | Life OS — goals, projects, missions, narratives |
+| **FitnessCoach** | Adaptive fitness coaching with wearable + calendar integration |
+| **DailyBrief** | Executive daily summary |
+| **Interview** | Structured interview workflows |
+| **Optimize** | Optimization and tuning workflows |
 
 ### Skill Structure
 
@@ -327,22 +322,27 @@ skills/SkillName/
 
 ## Agents
 
-PAI deploys **13 specialized agents**, each with distinct expertise, personality, and tools. Agents are spawned as sub-processes with isolated context.
+PAI deploys **18 specialized agents** — multi-vendor (Anthropic, OpenAI, Moonshot, Google, xAI) — each with distinct expertise, personality, and tools. Agents are spawned as sub-processes with isolated context.
 
 | Agent | Role | Specialization |
 |-------|------|---------------|
 | **Algorithm** | Core reasoning | ISC generation, phase execution, criteria evolution |
-| **Architect** | System design | PhD-level distributed systems, constitutional principles |
-| **Engineer** | Implementation | TDD, Fortune 10 experience, strategic planning |
-| **Designer** | UX/UI | Design school pedigree, accessibility, scalable solutions |
+| **Architect** | System design | Distributed systems, constitutional principles, feature specs |
+| **Engineer** | Implementation | TDD, strategic planning (Claude-family) |
+| **Forge** | Code production | Quality + completeness (OpenAI GPT-5 family) |
+| **Anvil** | Code production | Long-context generation (Moonshot Kimi family) |
+| **Cato** | Cross-vendor audit | Read-only ISA auditor surfacing Anthropic-family blind spots |
+| **Designer** | UX/UI | Accessibility, scalable design solutions |
 | **Artist** | Visual content | Prompt engineering, model selection, editorial standards |
 | **QATester** | Quality assurance | Browser automation, Gate 4 verification |
-| **Pentester** | Offensive security | Vulnerability assessment, ethical penetration testing |
-| **Intern** | General purpose | 176 IQ polymath, high-agency problem solving |
+| **UIReviewer** | UI validation | User-story validation, structured PASS/FAIL reports |
+| **BrowserAgent** | Browser automation | Web scraping, page interaction, screenshots |
+| **Silas** | Offensive security | Vulnerability assessment, ethical penetration testing |
+| **Arthur** | Credential custodian | Narrates deterministic authorization decisions |
 | **ClaudeResearcher** | Academic research | Multi-query decomposition, scholarly synthesis |
 | **GeminiResearcher** | Multi-perspective research | Parallel investigations via Google Gemini |
 | **GrokResearcher** | Contrarian research | Unbiased analysis via xAI Grok |
-| **CodexResearcher** | Technical archaeology | Multi-model consultation (O3, GPT-5, GPT-4) |
+| **CodexResearcher** | Technical archaeology | Multi-model consultation (OpenAI family) |
 | **PerplexityResearcher** | Investigative analysis | Triple-checked sources, evidence-based findings |
 
 ### Agent Capabilities
@@ -390,33 +390,40 @@ const server = new Server(
 
 ## Hooks
 
-PAI's **23 lifecycle hooks** fire on specific events, providing automatic behavior without explicit invocation.
+PAI's **37 lifecycle hooks** fire on specific events, providing automatic behavior without explicit invocation. Key hooks include:
 
 | Hook | Event | Purpose |
 |------|-------|---------|
-| **StartupGreeting** | Session start | Display banner, load context, announce identity |
 | **LoadContext** | Session start | Load PAI system context and active work |
-| **SessionAutoName** | Session start | Auto-generate session names |
-| **AlgorithmTracker** | Task creation | Track ISC criteria and progress |
-| **AutoWorkCreation** | Task start | Create WORK directories and PRD stubs |
-| **PRDSync** | PRD write/edit | Sync PRD state for dashboard visibility |
-| **AgentExecutionGuard** | Agent spawn | Validate agent permissions and scope |
-| **SecurityValidator** | Tool execution | Block dangerous commands, scan for secrets |
-| **SkillGuard** | Skill invocation | Validate skill access and parameters |
-| **VoiceGate** | Voice output | Route voice announcements to TTS server |
+| **RestoreContext** | Post-compact | Restore full context after compaction |
+| **InstructionsLoadedHandler** | Session start | Confirm instruction load |
+| **PromptProcessing** | User prompt | Pre-process and route prompts |
+| **PromptGuard** | User prompt | Block unsafe prompt patterns |
+| **SecurityPipeline** | Tool execution | Multi-inspector security pipeline |
+| **ContainmentGuard** | Tool execution | Enforce file and path containment |
+| **ContentScanner** | Tool execution | Scan for secrets and private data |
+| **ConfigAudit** | Config change | Audit settings integrity |
 | **IntegrityCheck** | System check | Validate system configuration integrity |
-| **CheckVersion** | Session start | Check for PAI system updates |
-| **RatingCapture** | User feedback | Capture satisfaction ratings (1–10) |
+| **ISASync** | Write/Edit | Sync ISA to MEMORY/WORK |
+| **CheckpointPerISC** | Write/Edit | Per-ISC auto-commit checkpoint |
+| **AgentInvocation** | Agent spawn | Validate agent invocation and scope |
+| **TaskGovernance** | Task lifecycle | Govern background task lifecycle |
+| **SmartApprover** | Approval | Route approval decisions |
+| **ElicitationHandler** | Q&A | Handle elicitation requests |
+| **QuestionAnswered** | Q&A | Track answered questions |
+| **SatisfactionCapture** | User feedback | Capture satisfaction ratings |
 | **RelationshipMemory** | Interaction | Track interaction patterns and preferences |
-| **SessionSummary** | Session end | Generate session summary for continuity |
-| **WorkCompletionLearning** | Task complete | Extract lessons and update learning system |
-| **LastResponseCache** | Response | Cache last response for quick reference |
-| **QuestionAnswered** | Q&A | Track answered questions for future reference |
-| **SetQuestionTab** | Tab focus | Set terminal tab context for questions |
-| **UpdateTabTitle** | Phase change | Update terminal tab title with current phase |
+| **ToolActivityTracker** | Tool execution | Observability — tool activity log |
+| **ToolFailureTracker** | Tool failure | Track and surface tool failures |
+| **WorkCompletionLearning** | Task complete | Extract lessons into the learning system |
+| **SessionHarvest** | Session end | Harvest knowledge from the session |
+| **SessionCleanup** | Session end | Clean up session state |
+| **DocIntegrity** | Stop | Cross-reference documentation integrity check |
+| **VoiceCompletion** | Response | Voice phase and completion announcements |
 | **UpdateCounts** | Stats change | Update system statistics |
-| **StopOrchestrator** | Stop signal | Graceful shutdown of background processes |
-| **TelegramClean** | Telegram output | Format output for Telegram readability |
+| **TelosSummarySync** | Telos change | Sync the Telos summary |
+| **LastResponseCache** | Response | Cache last response for quick reference |
+| **PreCompact** | Pre-compact | Prepare state before compaction |
 
 ---
 
@@ -499,33 +506,32 @@ PAI has a local text-to-speech system for spoken phase announcements and notific
 ├── README.md                     # This file
 ├── .gitignore                    # Public/private boundary
 │
-├── skills/                       # 55+ domain skills
-│   ├── PAI/                      #   The Algorithm — core reasoning
-│   │   ├── SKILL.md              #     Algorithm definition
-│   │   ├── Components/           #     Algorithm versions
-│   │   │   └── Algorithm/        #       v3.7.0 (latest)
-│   │   ├── Tools/                #     RebuildPAI, AutoMemory, Banner
-│   │   └── USER/                 #     Personal data (gitignored)
-│   ├── CORE/                     #   System architecture & docs
-│   │   ├── SYSTEM/               #     Architecture, memory, hooks docs
-│   │   └── USER/                 #     Identity, contacts (gitignored)
+├── skills/                       # 54 domain skills
+│   ├── ISA/                      #   Ideal State Artifact primitive
+│   ├── Agents/                   #   Agent composition & voice mapping
 │   ├── Research/                 #   Multi-mode research system
 │   ├── Art/                      #   Image generation
-│   ├── Browser/                  #   Playwright automation
-│   └── ...                       #   50+ more skills
+│   ├── Interceptor/              #   Real-Chrome verification
+│   └── ...                       #   49 more skills
 │
-├── hooks/                        # 23 lifecycle event handlers
-│   ├── SecurityValidator.hook.ts #   Block dangerous commands
-│   ├── AlgorithmTracker.hook.ts  #   Track ISC criteria
-│   ├── VoiceGate.hook.ts         #   Route voice to TTS
-│   ├── PRDSync.hook.ts           #   Sync PRD state
-│   └── ...                       #   19 more hooks
+├── PAI/ALGORITHM/                # The Algorithm
+│   ├── LATEST                    #   v6.4.0 (latest)
+│   ├── v6.4.0.md                 #   Full Algorithm spec
+│   ├── capabilities.md           #   Closed capability enumeration
+│   └── mode-detection.md         #   Effort-tier detection
 │
-├── agents/                       # 13 specialized agent definitions
+├── hooks/                        # 37 lifecycle event handlers
+│   ├── SecurityPipeline.hook.ts  #   Multi-inspector security pipeline
+│   ├── ISASync.hook.ts           #   Sync ISA to MEMORY/WORK
+│   ├── VoiceCompletion.hook.ts   #   Route voice to TTS
+│   ├── LoadContext.hook.ts       #   Load PAI system context
+│   └── ...                       #   33 more hooks
+│
+├── agents/                       # 18 specialized agent definitions
 │   ├── Algorithm.md              #   Core reasoning agent
 │   ├── Architect.md              #   System design specialist
 │   ├── Engineer.md               #   Implementation specialist
-│   └── ...                       #   10 more agents
+│   └── ...                       #   15 more agents
 │
 ├── Gateway/                      # HTTP/WebSocket server
 │   ├── gateway.ts                #   Main entry point

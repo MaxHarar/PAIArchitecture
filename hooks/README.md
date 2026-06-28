@@ -18,7 +18,7 @@ The hook system in this repository is organized around six Claude Code lifecycle
 | `SessionEnd` | As the Claude Code session closes. | Finalize work tracking, refresh counts, run integrity checks, and capture learning artifacts at a clean session boundary. |
 
 ## Hook Reference
-The repository currently registers 23 hooks across those six lifecycle events.
+The repository registers 37 hooks across those six lifecycle events; the most significant are listed below.
 
 | Hook | Event | Description |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 # PAI Agent System
 
-PAI deploys **13 specialized agents**, each with a distinct persona, expertise domain, voice, and permission set. Agents are sub-processes spawned by the primary DA — they run in isolated context, have no access to conversation history, and receive only what the primary DA passes in the prompt.
+PAI deploys **18 specialized agents** — multi-vendor (Anthropic, OpenAI, Moonshot, Google, xAI) — each with a distinct persona, expertise domain, voice, and permission set. Agents are sub-processes spawned by the primary DA — they run in isolated context, have no access to conversation history, and receive only what the primary DA passes in the prompt.
 
 ---
 
@@ -8,19 +8,24 @@ PAI deploys **13 specialized agents**, each with a distinct persona, expertise d
 
 | Agent | Persona | Specialization | Model |
 |-------|---------|---------------|-------|
-| **Algorithm** | Vera Sterling — *The Verification Purist* | ISC generation, phase execution, criteria evolution | opus |
-| **Architect** | Serena Blackwood — *The Academic Visionary* | Distributed systems design, constitutional principles | opus |
-| **Engineer** | Marcus Webb — *The Battle-Scarred Leader* | TDD, Fortune 10-scale implementation, strategic planning | opus |
+| **Algorithm** | — *The Verification Purist* | ISC generation, phase execution, criteria evolution | opus |
+| **Architect** | — *The Academic Visionary* | Distributed systems design, constitutional principles | opus |
+| **Engineer** | — *The Battle-Scarred Leader* | TDD, large-scale implementation, strategic planning | opus |
+| **Forge** | — | Code production — quality + completeness (OpenAI GPT-5 family) | gpt-5 |
+| **Anvil** | — | Code production — long-context generation (Moonshot Kimi family) | kimi |
+| **Cato** | — | Cross-vendor read-only ISA auditor (OpenAI GPT-5 family) | gpt-5 |
 | **Designer** | — | UX/UI, accessibility, scalable design systems | opus |
-| **Artist** | Priya Desai — *The Aesthetic Anarchist* | Prompt engineering, Flux/GPT-Image-1/Nano Banana | opus |
+| **Artist** | — *The Aesthetic Anarchist* | Prompt engineering, Flux/GPT-Image-1/Nano Banana | opus |
 | **QATester** | — | Browser automation, Gate 4 verification, user flow testing | opus |
-| **Pentester** | — | Vulnerability assessment, ethical penetration testing | opus |
-| **Intern** | — | General-purpose high-agency problem solving | opus |
+| **UIReviewer** | — | User-story validation, structured PASS/FAIL reports | opus |
+| **BrowserAgent** | — | Browser automation, web scraping, screenshots | opus |
+| **Silas** | — *The Quiet Operator* | Vulnerability assessment, ethical penetration testing | opus |
+| **Arthur** | — *The Custodian* | Narrates deterministic authorization decisions | opus |
 | **ClaudeResearcher** | — | Academic multi-query decomposition, scholarly synthesis | sonnet |
 | **GeminiResearcher** | — | Parallel multi-perspective research via Google Gemini | sonnet |
-| **GrokResearcher** | Johannes — *Contrarian analyst* | Unbiased analysis via xAI Grok | sonnet |
-| **CodexResearcher** | Remy — *Technical archaeologist* | Multi-model research (O3, GPT-5, GPT-4) | sonnet |
-| **PerplexityResearcher** | Ava — *Investigative analyst* | Triple-checked web research via Perplexity | sonnet |
+| **GrokResearcher** | — *Contrarian analyst* | Unbiased analysis via xAI Grok | sonnet |
+| **CodexResearcher** | — *Technical archaeologist* | Multi-model research (OpenAI family) | sonnet |
+| **PerplexityResearcher** | — *Investigative analyst* | Triple-checked web research via Perplexity | sonnet |
 
 ---
 
