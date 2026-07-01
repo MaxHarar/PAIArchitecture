@@ -48,6 +48,7 @@ import { getIdentity, getPrincipal, getPrincipalName } from './lib/identity';
 import { getLearningCategory } from './lib/learning-utils';
 import { getISOTimestamp, getPSTComponents } from './lib/time';
 import { captureFailure } from '../skills/PAI/Tools/FailureCapture';
+import { appendEvent } from './lib/event-emitter';
 
 // ── Algorithm Format Reminder (absorbed from AlgorithmEnforcement) ──
 // Output IMMEDIATELY before any async work — this is blocking stdout injection.
@@ -368,6 +369,10 @@ async function main() {
       if (explicitResult.comment) entry.comment = explicitResult.comment;
 
       writeRating(entry);
+      appendEvent('rating.explicit', {
+        rating: explicitResult.rating,
+        comment: explicitResult.comment?.slice(0, 100) || null,
+      }, data.session_id);
       triggerTrending();
 
       if (explicitResult.rating < 6) {
@@ -453,6 +458,12 @@ async function main() {
       };
 
       writeRating(entry);
+      appendEvent('rating.implicit', {
+        rating: sentiment.rating,
+        sentiment: sentiment.sentiment,
+        confidence: sentiment.confidence,
+        summary: sentiment.summary?.slice(0, 100) || null,
+      }, data.session_id);
       triggerTrending();
 
       if (sentiment.rating < 6) {
