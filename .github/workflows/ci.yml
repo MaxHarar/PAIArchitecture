@@ -100,7 +100,7 @@ jobs:
               --include='*.md' --include='*.yaml' --include='*.yml' \
               --include='*.sh' --include='*.plist' --include='*.log' \
               --exclude-dir=node_modules --exclude-dir=.github \
-              "$1" . | grep -v 'YOUR_USERNAME' || true
+              "$1" . | grep -vE 'YOUR_USERNAME|/Users/(username|foo|jane|john)\b|[.-]555[.-]' || true
           }
 
           scan "$generic" > /tmp/pii-hits.txt

@@ -117,7 +117,7 @@ export function determineUrgency(timeline: string): UrgencyLevel {
 export function selectEmoji(title: string): string {
   const lower = title.toLowerCase();
 
-  // Education/study/learning - check FIRST (before legal, since "study for LSAT" = education)
+  // Education/study/learning - check FIRST (before legal, since "study for finals" = education)
   if (/\b(study|school|learn|education|read|mba|degree|book)\b/.test(lower)) {
     return '\uD83D\uDCDA'; // Books
   }
@@ -132,7 +132,7 @@ export function selectEmoji(title: string): string {
     return '\uD83D\uDD25'; // Fire
   }
 
-  // Law/legal (after education, so "Study for LSAT" -> education, "Pass the Bar" -> legal)
+  // Law/legal (after education, so "Study for the exam" -> education, "Pass the Bar" -> legal)
   if (/\b(law|legal|attorney|lawyer|bar|lsat|court)\b/.test(lower)) {
     return '\u2696\uFE0F'; // Scales
   }
