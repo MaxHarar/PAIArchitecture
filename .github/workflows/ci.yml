@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate dependencies and check for credential leaks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install Gateway dependencies
+        working-directory: Gateway
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Install Heartbeat dependencies
+        working-directory: Heartbeat
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Validate that at least one agent definition exists
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=(agents/*.md)
+          count=${#files[@]}
+          echo "Agent definition files: $count"
+          if [ "$count" -eq 0 ]; then
+            echo "No agent definitions found in agents/."
+            exit 1
+          fi
+
+      - name: Scan tracked source files for credential leaks
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t files < <(
+            git ls-files --cached --others --exclude-standard -- '*.ts' '*.js' '*.json' |
+            grep -Ev '(^|/)node_modules/' || true
+          )
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No .ts, .js, or .json files to scan."
+            exit 0
+          fi
+
+          set +e
+          grep -REn \
+            --include='*.ts' \
+            --include='*.js' \
+            --include='*.json' \
+            --exclude-dir=node_modules \
+            'sk-ant-[A-Za-z0-9]{30,}|ANTHROPIC_API_KEY=[A-Za-z0-9_-]{5,}|bot[0-9]{9,}:[A-Za-z0-9_-]{35}' \
+            "${files[@]}"
+          status=$?
+          set -e
+
+          if [ "$status" -eq 0 ]; then
+            echo "Credential patterns detected."
+            exit 1
+          fi
+
+          if [ "$status" -eq 1 ]; then
+            echo "No credential patterns detected."
+            exit 0
+          fi
+
+          echo "Credential scan failed with exit code $status."
+          exit "$status"
+
+      - name: Scan tracked files for PII markers
+        shell: bash
+        env:
+          PII_EXTRA_PATTERNS: ${{ secrets.PII_EXTRA_PATTERNS }}
+        run: |
+          set -euo pipefail
+
+          # Generic PII classes: real absolute home paths (template placeholder
+          # excluded), personal-provider email shapes, US phone shapes.
+          # Author-specific marker terms live in the PII_EXTRA_PATTERNS repo
+          # secret so this public workflow file does not advertise them.
+          # Secrets-only scanning shipped personal data once; never again.
+          generic='/Users/[A-Za-z0-9_-]+|[A-Za-z0-9._%+-]+@(gmail|icloud|yahoo|outlook)\.com|[0-9]{3}[.-][0-9]{3}[.-][0-9]{4}'
+
+          scan() {
+            grep -REn \
+              --include='*.ts' --include='*.js' --include='*.json' \
+              --include='*.md' --include='*.yaml' --include='*.yml' \
+              --include='*.sh' --include='*.plist' --include='*.log' \
+              --exclude-dir=node_modules --exclude-dir=.github \
+              "$1" . | grep -v 'YOUR_USERNAME' || true
+          }
+
+          scan "$generic" > /tmp/pii-hits.txt
+          if [ -n "${PII_EXTRA_PATTERNS:-}" ]; then
+            scan "$PII_EXTRA_PATTERNS" >> /tmp/pii-hits.txt
+          fi
+
+          if [ -s /tmp/pii-hits.txt ]; then
+            echo "PII markers detected:"
+            cat /tmp/pii-hits.txt
+            exit 1
+          fi
+          echo "No PII markers detected."

@@ -1,0 +1,372 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-28",
+  "description": "Hero Council - A curated selection of influential figures for daily wisdom and guidance",
+  "heroes": [
+    {
+      "id": "marcus-aurelius",
+      "name": "Marcus Aurelius",
+      "title": "Philosopher Emperor",
+      "era": "121-180 AD",
+      "domain": "stoic-philosophy",
+      "principles": [
+        "Control what you can control; accept what you cannot.",
+        "The obstacle is the way - use adversity as fuel.",
+        "Begin each day by telling yourself: I shall meet interference.",
+        "Your thoughts shape your reality - choose them wisely.",
+        "Focus on the present moment; past and future are illusions."
+      ],
+      "contextTriggers": {
+        "keywords": ["stress", "adversity", "control", "challenge", "difficult", "obstacle", "worry"],
+        "situations": ["high-stress-day", "facing-obstacles", "need-perspective", "emotional-turbulence"],
+        "metrics": {
+          "lowRecovery": true,
+          "highWorkload": true
+        }
+      },
+      "insightTemplate": {
+        "morningGreeting": "The Emperor reminds you: What stands in the way becomes the way.",
+        "focusAdvice": "Focus only on what is within your control today.",
+        "challengeReframe": "See obstacles not as barriers but as opportunities for growth.",
+        "actionPrompt": "What one thing can you control completely today?",
+        "closingWisdom": "Waste no more time arguing what a good person should be. Be one."
+      },
+      "actions": [
+        "Identify one thing outside your control today and release it.",
+        "Reframe today's biggest challenge as an opportunity.",
+        "Spend 5 minutes in morning reflection before checking your phone.",
+        "When frustrated, pause and ask: Is this within my control?",
+        "Write down three things you're grateful for right now."
+      ],
+      "ifThens": [
+        "If I encounter an obstacle, then I will ask: How can this make me stronger?",
+        "If I feel anxious, then I will focus only on my next action.",
+        "If someone frustrates me, then I will consider their perspective first.",
+        "If I wake up unmotivated, then I will start with the smallest possible step.",
+        "If my plans fail, then I will adapt rather than despair."
+      ],
+      "questions": [
+        "What is within my control right now?",
+        "How would my best self handle this situation?",
+        "Am I acting from principle or from emotion?",
+        "Will this matter in five years?",
+        "What would I advise a friend in my situation?"
+      ],
+      "quotes": [
+        {
+          "text": "The impediment to action advances action. What stands in the way becomes the way.",
+          "source": "Meditations",
+          "verified": true
+        },
+        {
+          "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+          "source": "Meditations",
+          "verified": true
+        },
+        {
+          "text": "We suffer more often in imagination than in reality.",
+          "source": "Meditations (attributed, similar to Seneca)",
+          "verified": true
+        },
+        {
+          "text": "Waste no more time arguing about what a good man should be. Be one.",
+          "source": "Meditations, Book 10",
+          "verified": true
+        }
+      ],
+      "contexts": ["low_recovery", "any", "monday"]
+    },
+    {
+      "id": "david-goggins",
+      "name": "David Goggins",
+      "title": "Endurance Athlete & Motivator",
+      "era": "Present",
+      "domain": "mental-toughness",
+      "principles": [
+        "Embrace the suck - growth happens in discomfort.",
+        "The 40% rule: When your mind says quit, you're only 40% done.",
+        "Callous your mind through consistent hard work.",
+        "Take souls - outwork everyone who doubts you.",
+        "Stay hard - discipline equals freedom."
+      ],
+      "contextTriggers": {
+        "keywords": ["workout", "training", "tired", "quit", "push", "run", "lift", "hard", "intense"],
+        "situations": ["hard-workout-day", "feeling-weak", "want-to-quit", "intensive-training"],
+        "metrics": {
+          "intensiveTraining": true,
+          "fatigued": true
+        }
+      },
+      "insightTemplate": {
+        "morningGreeting": "Stay hard! Your mind will quit a thousand times before your body does.",
+        "focusAdvice": "When your mind says stop, you are only 40% done. Push through.",
+        "challengeReframe": "This discomfort is your teacher. Embrace it.",
+        "actionPrompt": "What is the hardest thing you can do today?",
+        "closingWisdom": "Nobody cares what you did yesterday. What are you going to do today?"
+      },
+      "actions": [
+        "Do one thing today that makes you uncomfortable.",
+        "When you want to quit, do 10 more reps/minutes.",
+        "Wake up 30 minutes earlier than planned.",
+        "Complete your hardest task before noon.",
+        "Run that extra mile or lift that extra set."
+      ],
+      "ifThens": [
+        "If I want to quit, then I will push for 10 more reps.",
+        "If I feel tired, then I will remember: I've survived worse.",
+        "If my alarm goes off, then I will get up immediately.",
+        "If I make an excuse, then I will counter it with action.",
+        "If the workout seems too hard, then that's exactly why I must do it."
+      ],
+      "questions": [
+        "Am I giving everything I have, or holding back?",
+        "What would the hardest version of me do right now?",
+        "Is this discomfort or actual danger?",
+        "Who am I when no one is watching?",
+        "What will I regret NOT doing today?"
+      ],
+      "quotes": [
+        {
+          "text": "You are in danger of living a life so comfortable that you will die without ever realizing your potential.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "Motivation is crap. When you're driven, whatever is in front of you will get destroyed.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "Don't stop when you're tired. Stop when you're done.",
+          "source": "Can't Hurt Me",
+          "verified": true
+        },
+        {
+          "text": "Nobody cares what you did yesterday. What have you done today to get better?",
+          "source": "Can't Hurt Me",
+          "verified": true
+        }
+      ],
+      "contexts": ["workout_day", "high_recovery", "monday"]
+    },
+    {
+      "id": "jocko-willink",
+      "name": "Jocko Willink",
+      "title": "Navy SEAL Commander",
+      "era": "Present",
+      "domain": "leadership",
+      "principles": [
+        "Discipline equals freedom.",
+        "Extreme ownership: own everything in your world.",
+        "Default aggressive - take the initiative.",
+        "Good. (Turn setbacks into opportunities.)",
+        "Detach and assess before reacting."
+      ],
+      "contextTriggers": {
+        "keywords": ["leadership", "team", "discipline", "responsibility", "failure", "setback", "ownership"],
+        "situations": ["leading-others", "team-challenges", "taking-ownership", "need-discipline"],
+        "metrics": {
+          "leadershipRole": true,
+          "teamConflict": true
+        }
+      },
+      "insightTemplate": {
+        "morningGreeting": "Get after it. Discipline is the path to freedom.",
+        "focusAdvice": "Take extreme ownership of everything in your world.",
+        "challengeReframe": "Something went wrong? Good. Now you can learn and improve.",
+        "actionPrompt": "What can you take ownership of today that you have been avoiding?",
+        "closingWisdom": "Discipline equals freedom."
+      },
+      "actions": [
+        "Wake up at 4:30 AM and attack the day.",
+        "Take ownership of one problem you've been blaming on others.",
+        "Make a decision you've been avoiding.",
+        "Lead from the front on a difficult task.",
+        "Have a difficult conversation you've been postponing."
+      ],
+      "ifThens": [
+        "If something goes wrong, then I will say 'Good' and find the opportunity.",
+        "If I blame someone else, then I will ask: What could I have done differently?",
+        "If I feel overwhelmed, then I will prioritize and execute one thing at a time.",
+        "If my alarm goes off, then feet hit the floor immediately.",
+        "If I face a problem, then I will take ownership first."
+      ],
+      "questions": [
+        "What am I avoiding that I need to face?",
+        "Am I leading or waiting to be led?",
+        "What would extreme ownership look like here?",
+        "Am I making excuses or finding solutions?",
+        "What decision am I avoiding?"
+      ],
+      "quotes": [
+        {
+          "text": "Discipline equals freedom.",
+          "source": "Discipline Equals Freedom: Field Manual",
+          "verified": true
+        },
+        {
+          "text": "Don't expect to be motivated every day. You must be DRIVEN.",
+          "source": "Discipline Equals Freedom: Field Manual",
+          "verified": true
+        },
+        {
+          "text": "There are no bad teams, only bad leaders.",
+          "source": "Extreme Ownership",
+          "verified": true
+        },
+        {
+          "text": "Get after it.",
+          "source": "Jocko Podcast",
+          "verified": true
+        }
+      ],
+      "contexts": ["low_recovery", "workout_day", "monday"]
+    },
+    {
+      "id": "seneca",
+      "name": "Seneca",
+      "title": "Stoic Philosopher",
+      "era": "4 BC - 65 AD",
+      "domain": "stoic-philosophy",
+      "principles": [
+        "Begin at once to live, and count each day as a separate life.",
+        "We suffer more in imagination than in reality.",
+        "Time is our most precious resource - waste nothing.",
+        "Rehearse adversity to be prepared when it arrives.",
+        "Associate with people who will make you better."
+      ],
+      "contextTriggers": {
+        "keywords": ["anxiety", "worry", "fear", "future", "time", "death", "overwhelmed"],
+        "situations": ["anxious-about-future", "feeling-overwhelmed", "time-pressure", "need-clarity"],
+        "metrics": {
+          "highAnxiety": true,
+          "busySchedule": true
+        }
+      },
+      "insightTemplate": {
+        "morningGreeting": "Seneca reminds you: Most of what we fear never comes to pass.",
+        "focusAdvice": "Value your time above all else - it is your only truly finite resource.",
+        "challengeReframe": "The anxiety you feel is imagination, not reality.",
+        "actionPrompt": "What would you do today if you knew this was your last?",
+        "closingWisdom": "It is not that we have a short time to live, but that we waste a lot of it."
+      },
+      "actions": [
+        "Practice negative visualization - imagine losing what you value.",
+        "Spend 15 minutes preparing for tomorrow's challenges.",
+        "Audit how you spent yesterday - was it meaningful?",
+        "Write a letter to yourself 10 years from now.",
+        "Fast from one luxury today to appreciate it more."
+      ],
+      "ifThens": [
+        "If I worry about the future, then I will prepare for the worst and act in the present.",
+        "If I feel comfortable, then I will seek voluntary discomfort.",
+        "If I waste time, then I will treat tomorrow as borrowed time.",
+        "If afraid, then I will do the thing I fear.",
+        "If angry, then I will wait before responding."
+      ],
+      "questions": [
+        "If today were my last, would I be satisfied with how I spent it?",
+        "What am I afraid of that I need to confront?",
+        "Am I living or merely existing?",
+        "What would I do differently if time were limited?",
+        "Am I surrounding myself with people who elevate me?"
+      ],
+      "quotes": [
+        {
+          "text": "It is not that we have a short time to live, but that we waste a lot of it.",
+          "source": "On the Shortness of Life",
+          "verified": true
+        },
+        {
+          "text": "Difficulties strengthen the mind, as labor does the body.",
+          "source": "Letters from a Stoic",
+          "verified": true
+        },
+        {
+          "text": "We suffer more often in imagination than in reality.",
+          "source": "Letters from a Stoic",
+          "verified": true
+        },
+        {
+          "text": "Begin at once to live, and count each separate day as a separate life.",
+          "source": "Letters from a Stoic",
+          "verified": true
+        }
+      ],
+      "contexts": ["any", "rest_day", "weekend"]
+    },
+    {
+      "id": "eliud-kipchoge",
+      "name": "Eliud Kipchoge",
+      "title": "Marathon World Record Holder",
+      "era": "Present",
+      "domain": "endurance",
+      "principles": [
+        "No human is limited.",
+        "Consistency is the key to success - show up every day.",
+        "The mind is the athlete - train it as hard as the body.",
+        "Run with joy - suffering is optional.",
+        "Patience in training, aggression in racing."
+      ],
+      "contextTriggers": {
+        "keywords": ["running", "marathon", "endurance", "patience", "consistency", "long run"],
+        "situations": ["endurance-training", "long-workout", "need-patience", "building-base"],
+        "metrics": {
+          "enduranceTraining": true,
+          "consistentEffort": true
+        }
+      },
+      "insightTemplate": {
+        "morningGreeting": "No human is limited. Run with joy today.",
+        "focusAdvice": "Focus on the process, not the outcome. Consistency wins.",
+        "challengeReframe": "The discomfort you feel is growth. Smile through it.",
+        "actionPrompt": "What small improvement can you make in today's training?",
+        "closingWisdom": "Only the disciplined ones are free in life."
+      },
+      "actions": [
+        "Run or train with a smile today.",
+        "Focus on the process, not the outcome.",
+        "Do your easy runs truly easy.",
+        "Write in a training journal after your workout.",
+        "Rest as deliberately as you train."
+      ],
+      "ifThens": [
+        "If the workout feels hard, then I will smile and lean into it.",
+        "If I miss a training day, then I will not dwell - I will show up tomorrow.",
+        "If I feel impatient for results, then I will trust the process.",
+        "If racing or competing, then I will give everything and hold nothing back.",
+        "If doubts arise, then I will remind myself: no human is limited."
+      ],
+      "questions": [
+        "Am I enjoying the process or just chasing the outcome?",
+        "Am I being consistent or searching for shortcuts?",
+        "Is my mind as trained as my body?",
+        "Am I running my own race or comparing to others?",
+        "What small improvement can I make today?"
+      ],
+      "quotes": [
+        {
+          "text": "No human is limited.",
+          "source": "Post-race interview after INEOS 1:59 Challenge",
+          "verified": true
+        },
+        {
+          "text": "I don't know where the limits are, but I would like to go there.",
+          "source": "Interview",
+          "verified": true
+        },
+        {
+          "text": "Only the disciplined ones are free in life.",
+          "source": "Interview",
+          "verified": true
+        },
+        {
+          "text": "Run with your heart, not your legs.",
+          "source": "Interview",
+          "verified": true
+        }
+      ],
+      "contexts": ["workout_day", "high_recovery", "any"]
+    }
+  ]
+}
