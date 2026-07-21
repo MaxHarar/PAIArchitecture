@@ -21,7 +21,7 @@
 
 PAI transforms [Claude Code](https://docs.anthropic.com/en/docs/claude-code) from a code assistant into an **autonomous AI agent** with its own workspace, integrations, persistent memory, and a 24/7 heartbeat loop. It monitors, acts, and grows independently while keeping you informed via Telegram.
 
-**Foundation: [PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com), built on his [The Algorithm](https://github.com/danielmiessler/TheAlgorithm). This repo is an evolved fork of [`danielmiessler/PAI`](https://github.com/danielmiessler/PAI) shipping **PAI 5.0.0** with **Algorithm v6.4.0** — adding the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.4.0.md`](PAI/ALGORITHM/v6.4.0.md) for the full spec.
+**Foundation: [PAI](https://github.com/danielmiessler/PAI)** by [Daniel Miessler](https://danielmiessler.com), built on his [The Algorithm](https://github.com/danielmiessler/TheAlgorithm). This repo is an evolved fork of [`danielmiessler/PAI`](https://github.com/danielmiessler/PAI) shipping **PAI 5.0.0** with **Algorithm v6.3.0** — adding the ISA (Ideal State Artifact), effort-tier thinking floors with a closed capability enumeration, and deliberate multi-vendor agent architecture. See [`PAI/ALGORITHM/v6.3.0.md`](PAI/ALGORITHM/v6.3.0.md) for the full spec.
 
 > **Why PAI?** Most AI tools are reactive — you ask, they answer. PAI is proactive. It checks your email, monitors your deployments, generates daily briefings, reviews PRs, and proposes automations — all while you sleep. Every task goes through a 7-phase reasoning algorithm with verifiable criteria, so nothing gets marked "done" without evidence.
 
@@ -515,8 +515,7 @@ PAI has a local text-to-speech system for spoken phase announcements and notific
 │   └── ...                       #   49 more skills
 │
 ├── PAI/ALGORITHM/                # The Algorithm
-│   ├── LATEST                    #   v6.4.0 (latest)
-│   ├── v6.4.0.md                 #   Full Algorithm spec
+│   ├── v6.3.0.md                 #   Full Algorithm spec
 │   ├── capabilities.md           #   Closed capability enumeration
 │   └── mode-detection.md         #   Effort-tier detection
 │
@@ -602,7 +601,9 @@ cp .env.template .env
 # 4. Create personal data directories
 mkdir -p skills/CORE/USER skills/PAI/USER MEMORY/{WORK,STATE,LEARNING/REFLECTIONS}
 
-# 5. Start the heartbeat (autonomous loop)
+# 5. Install and start the heartbeat (autonomous loop)
+cp Heartbeat/Config/com.pai.heartbeat*.plist ~/Library/LaunchAgents/
+sed -i '' "s|YOUR_USERNAME|$(whoami)|g" ~/Library/LaunchAgents/com.pai.heartbeat*.plist
 launchctl load ~/Library/LaunchAgents/com.pai.heartbeat.plist
 launchctl load ~/Library/LaunchAgents/com.pai.heartbeat-daily.plist
 launchctl load ~/Library/LaunchAgents/com.pai.heartbeat-nightly.plist
