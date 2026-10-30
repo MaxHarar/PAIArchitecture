@@ -149,7 +149,7 @@ flowchart LR
 |-----------|---------|---------------|
 | **Algorithm Engine** | 7-phase systematic reasoning | `skills/PAI/SKILL.md` + `Components/Algorithm/` |
 | **Skill System** | Domain-specific capabilities | `skills/` — 54 skill directories |
-| **Hook System** | Lifecycle event handlers | `hooks/` — 37 TypeScript hooks |
+| **Hook System** | Lifecycle event handlers | `hooks/` — 23 TypeScript hooks |
 | **Agent System** | Specialized AI workers | `agents/` — 18 agent definitions |
 | **Memory System** | Persistent cross-session context | `MEMORY/` — WORK, STATE, LEARNING |
 | **Gateway** | HTTP/WebSocket server | `Gateway/gateway.ts` — Bun.serve |
@@ -390,7 +390,7 @@ const server = new Server(
 
 ## Hooks
 
-PAI's **37 lifecycle hooks** fire on specific events, providing automatic behavior without explicit invocation. Key hooks include:
+PAI's **23 lifecycle hooks** fire on specific events, providing automatic behavior without explicit invocation. Key hooks include:
 
 | Hook | Event | Purpose |
 |------|-------|---------|
@@ -519,7 +519,7 @@ PAI has a local text-to-speech system for spoken phase announcements and notific
 │   ├── capabilities.md           #   Closed capability enumeration
 │   └── mode-detection.md         #   Effort-tier detection
 │
-├── hooks/                        # 37 lifecycle event handlers
+├── hooks/                        # 23 lifecycle event handlers
 │   ├── SecurityPipeline.hook.ts  #   Multi-inspector security pipeline
 │   ├── ISASync.hook.ts           #   Sync ISA to MEMORY/WORK
 │   ├── VoiceCompletion.hook.ts   #   Route voice to TTS
