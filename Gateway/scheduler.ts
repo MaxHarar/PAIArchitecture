@@ -25,8 +25,12 @@ export interface ScheduledMessage {
   voiceText?: string;
   /** Source that scheduled this (brain, cron, api) */
   source: string;
-  /** Whether this has been sent */
+  /** Whether this has been sent (or permanently given up on) */
   sent: boolean;
+  /** Failed delivery attempts so far */
+  attempts?: number;
+  /** True while a send is in flight, so overlapping ticks don't double-fire */
+  sending?: boolean;
   /** Creation timestamp */
   createdAt: string;
 }
@@ -42,7 +46,25 @@ let tickInterval: ReturnType<typeof setInterval> | null = null;
 // Telegram Bot API — Direct Send
 // ---------------------------------------------------------------------------
 
-async function sendTelegramText(text: string): Promise<boolean> {
+export interface TextSendResult {
+  ok: boolean;
+  /** Seconds Telegram asked us to wait (429 parameters.retry_after), if any */
+  retryAfterSec?: number;
+}
+
+async function describeFailure(res: Response): Promise<TextSendResult> {
+  let body = "";
+  let retryAfterSec: number | undefined;
+  try {
+    body = await res.text();
+    const parsed = JSON.parse(body) as { parameters?: { retry_after?: number } };
+    retryAfterSec = parsed.parameters?.retry_after;
+  } catch { /* non-JSON body */ }
+  console.error(`[scheduler] Telegram sendMessage failed: status=${res.status} body=${body.slice(0, 300)}`);
+  return { ok: false, retryAfterSec };
+}
+
+async function sendTelegramText(text: string): Promise<TextSendResult> {
   const botToken = getSecret("telegram-bot-token");
   const chatId = getSecret("telegram-chat-id");
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -62,21 +84,25 @@ async function sendTelegramText(text: string): Promise<boolean> {
         }),
       });
 
-      if (!res.ok) {
-        // Retry without Markdown (formatting errors)
-        await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: chatId, text: chunk }),
-        });
-      }
+      if (res.ok) continue;
+
+      // Only a 400 can be a Markdown parse error worth retrying as plain text.
+      // 429 (flood limit), 403 (bot blocked / wrong chat) etc. fail immediately.
+      if (res.status !== 400) return await describeFailure(res);
+
+      const retry = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text: chunk }),
+      });
+      if (!retry.ok) return await describeFailure(retry);
     } catch (err) {
       console.error("[scheduler] Failed to send Telegram text:", err);
-      return false;
+      return { ok: false };
     }
   }
 
-  return true;
+  return { ok: true };
 }
 
 async function sendTelegramVoice(voiceText: string): Promise<boolean> {
@@ -153,12 +179,13 @@ async function sendTelegramVoice(voiceText: string): Promise<boolean> {
 export async function sendOutbound(
   text: string,
   options: { voice?: boolean; voiceText?: string } = {},
-): Promise<{ success: boolean; messageId: string }> {
+): Promise<{ success: boolean; messageId: string; retryAfterSec?: number }> {
   const messageId = crypto.randomUUID();
 
   console.log(`[scheduler] Sending outbound message (${text.length} chars, voice=${options.voice ?? false})`);
 
-  const textSent = await sendTelegramText(text);
+  const textResult = await sendTelegramText(text);
+  const textSent = textResult.ok;
   let voiceSent = false;
 
   if (options.voice) {
@@ -168,7 +195,7 @@ export async function sendOutbound(
 
   console.log(`[scheduler] Outbound result: text=${textSent}, voice=${voiceSent}`);
 
-  return { success: textSent, messageId };
+  return { success: textSent, messageId, retryAfterSec: textResult.retryAfterSec };
 }
 
 /**
@@ -211,36 +238,69 @@ export function listScheduled(): ScheduledMessage[] {
   return Array.from(scheduled.values()).filter((m) => !m.sent);
 }
 
+/** Give up on a scheduled message after this many failed sends. */
+export const MAX_SEND_ATTEMPTS = 3;
+
+/**
+ * One scheduler pass: send every due message. A message is only marked sent
+ * when Telegram actually accepted it. Failures stay pending and are retried on
+ * a later tick (honouring Telegram's retry_after), up to MAX_SEND_ATTEMPTS.
+ * Exported for tests.
+ */
+export async function runSchedulerTick(
+  now: number = Date.now(),
+  send: typeof sendOutbound = sendOutbound,
+): Promise<void> {
+  for (const [id, msg] of scheduled) {
+    if (msg.sent || msg.sending) continue;
+    if (new Date(msg.sendAt).getTime() > now) continue;
+
+    msg.sending = true;
+    console.log(`[scheduler] Firing scheduled message ${id}`);
+
+    let success = false;
+    let retryAfterSec: number | undefined;
+    try {
+      ({ success, retryAfterSec } = await send(msg.text, {
+        voice: msg.voice,
+        voiceText: msg.voiceText,
+      }));
+    } catch (err) {
+      console.error(`[scheduler] Failed to send scheduled message ${id}:`, err);
+    } finally {
+      msg.sending = false;
+    }
+
+    if (success) {
+      msg.sent = true;
+      // Clean up sent messages after 1 hour
+      setTimeout(() => scheduled.delete(id), 60 * 60 * 1000);
+      continue;
+    }
+
+    msg.attempts = (msg.attempts ?? 0) + 1;
+    if (msg.attempts >= MAX_SEND_ATTEMPTS) {
+      msg.sent = true;
+      console.error(`[scheduler] Giving up on scheduled message ${id} after ${msg.attempts} failed attempts`);
+      setTimeout(() => scheduled.delete(id), 60 * 60 * 1000);
+      continue;
+    }
+
+    if (retryAfterSec && retryAfterSec > 0) {
+      msg.sendAt = new Date(now + retryAfterSec * 1000).toISOString();
+    }
+    console.warn(`[scheduler] Scheduled message ${id} failed (attempt ${msg.attempts}/${MAX_SEND_ATTEMPTS}); will retry at ${msg.sendAt}`);
+  }
+}
+
 /**
  * Start the scheduler tick (checks every 10 seconds).
  */
 export function startScheduler(): void {
   if (tickInterval) return;
 
-  tickInterval = setInterval(async () => {
-    const now = Date.now();
-
-    for (const [id, msg] of scheduled) {
-      if (msg.sent) continue;
-
-      const sendTime = new Date(msg.sendAt).getTime();
-      if (sendTime <= now) {
-        msg.sent = true;
-        console.log(`[scheduler] Firing scheduled message ${id}`);
-
-        try {
-          await sendOutbound(msg.text, {
-            voice: msg.voice,
-            voiceText: msg.voiceText,
-          });
-        } catch (err) {
-          console.error(`[scheduler] Failed to send scheduled message ${id}:`, err);
-        }
-
-        // Clean up sent messages after 1 hour
-        setTimeout(() => scheduled.delete(id), 60 * 60 * 1000);
-      }
-    }
+  tickInterval = setInterval(() => {
+    void runSchedulerTick();
   }, 10_000); // Check every 10 seconds
 
   console.log("[scheduler] Scheduler started (10s tick)");

@@ -140,13 +140,17 @@ const INJECTION_PATTERNS: RegExp[] = [
   // Role reassignment
   /pretend\s+(to\s+be|you\s+are)/i,
   /act\s+as\s+(if\s+you|a|an|my)/i,
-  /switch\s+to\s+.*mode/i,
-  /enter\s+.*mode/i,
+  // Bounded to two words between the verb and "mode" so ordinary prose like
+  // "enter your settings and pick dark mode" is not flagged.
+  /\bswitch\s+to\s+(\S+\s+){0,2}mode\b/i,
+  /\benter\s+(\S+\s+){0,2}mode\b/i,
   /you\s+must\s+now/i,
   /from\s+now\s+on,?\s+you/i,
 
   // Jailbreak patterns
-  /DAN\s*(mode)?/i,
+  // Case-sensitive and word-bounded: the jailbreak is written "DAN", and a
+  // loose /dan/i matches "guidance", "abundant", "Jordan", or a sender named Dan.
+  /\bDAN\b(\s+mode)?/,
   /do\s+anything\s+now/i,
   /jailbreak/i,
   /developer\s+mode/i,
@@ -186,6 +190,14 @@ const INJECTION_PATTERNS: RegExp[] = [
 ];
 
 /**
+ * Global-flag copies used only for replacement. Kept separate so the source
+ * list stays safe to use with .test() (a /g regex carries lastIndex state).
+ */
+const INJECTION_PATTERNS_GLOBAL: RegExp[] = INJECTION_PATTERNS.map(
+  (p) => new RegExp(p.source, p.flags.includes("g") ? p.flags : p.flags + "g"),
+);
+
+/**
  * Layer 2: Sanitize raw content string.
  * Truncates, strips control chars, strips XML-like tags, removes injection patterns.
  */
@@ -208,7 +220,9 @@ export function sanitizeContent(content: string): string {
   sanitized = sanitized.replace(/<\/?[a-zA-Z][^>]*>/g, "[tag-stripped]");
 
   // 5. Replace known injection patterns with a marker
-  for (const pattern of INJECTION_PATTERNS) {
+  //    Global flag is required: without it .replace strips only the first
+  //    occurrence, so repeating an injection phrase slips the second copy through.
+  for (const pattern of INJECTION_PATTERNS_GLOBAL) {
     sanitized = sanitized.replace(pattern, "[injection-pattern-stripped]");
   }
 
